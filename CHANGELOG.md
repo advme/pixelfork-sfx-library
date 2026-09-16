@@ -1,5 +1,35 @@
 # CHANGELOG
 
+## v0.2.1-A — fixed the harshness and the speaker glitch
+- Agent: A (Claude) · Date: 2026-09-16
+- Done: The owner reported the code sounds were harsh, pitched too high, and made a
+  tiny glitch on the speaker. All three were real and all three were mine.
+  **(1)** There was no tone control anywhere — every sound hit the speaker with its full
+  top end. Added a master tone stage: a −5.5 dB high-shelf above 4.2 kHz, a 12 kHz
+  lowpass, and a soft limiter that rounds off transient edges.
+  **(2)** Fundamentals sat about an octave too high and stacked partials pushed the real
+  energy to 4–6 kHz. Dropped the pitch on the coin, gem, star, sparkle, notify, tick,
+  toggle, crit, ice and laser recipes, and rebuilt `ui.tap`, `ui.back` and `ui.slider`
+  around a warm sine body instead of noise.
+  **(3)** Square and sawtooth waves with 4 ms attacks made the hard edge that clicks.
+  Swapped them for triangle everywhere the sound does not need to bite (lasers,
+  electricity and summoning keep theirs) and raised the default attack to 9 ms.
+  Also found a structural mistake: several recipes filtered noise with a **highpass**,
+  which has no upper limit and hands the speaker everything above the cutoff. Converted
+  those to bandpass. `weapon.zap` deliberately keeps its bright crackle — it is electricity.
+- Tested: Measured spectral centroid and the share of energy above 5 kHz for all 105
+  sounds, before and after, plus peak level. The numbers matched the complaint exactly:
+  `ui.slider` had **90% of its energy above 5 kHz** (centroid 13.2 kHz — essentially hiss)
+  and `ui.tap`, the most-played sound in any game, was at 51%.
+  After: median centroid **2668 Hz → 1246 Hz**, median high-frequency share **0.035**,
+  `ui.tap` 0.51 → 0.035, `ui.slider` 0.90 → 0.087, `pickup.gem` 0.49 → 0.095,
+  `reward.star` 0.49 → 0.066. Nothing silent, nothing clipping, and levels are more
+  even than before (quietest peak rose 0.104 → 0.181 thanks to the limiter).
+- Notes for next agent: when adding a `code` sound, check the share of energy above 5 kHz,
+  not just that it makes noise. Above ~0.25 it will sound harsh on a phone. Never filter a
+  noise layer with `highpass` — use `bandpass`, which has a top as well as a bottom.
+
+
 ## v0.2.0-A — 105 sounds, and a real synth engine
 - Agent: A (Claude) · Date: 2026-09-16
 - Done: Grew the pack from 14 sounds to **105**, covering shooting, footsteps, jumping,

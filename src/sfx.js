@@ -16,7 +16,7 @@
 (function (global) {
   'use strict';
 
-  var VERSION = '0.2.0';
+  var VERSION = '0.2.1';
   var STORE_KEY = 'pixelfork.sfx';
   var CATEGORIES = ['ui', 'game', 'reward', 'music'];
   var MAX_VOICES = 24;          // hard cap on simultaneous one-shots
@@ -76,8 +76,36 @@
     if (!AC) return null;
     ctx = new AC();
 
+    // ---- master tone stage -------------------------------------------------
+    // Raw synthesis is too bright for a phone speaker: the top end turns into
+    // a rasp and hard transients make the cone click. Every sound passes
+    // through a gentle high-shelf cut, a lowpass that removes the hiss nobody
+    // wants, and a soft limiter that rounds off transient edges.
     nodes.master = ctx.createGain();
-    nodes.master.connect(ctx.destination);
+
+    var shelf = ctx.createBiquadFilter();
+    shelf.type = 'highshelf';
+    shelf.frequency.value = 4200;
+    shelf.gain.value = -5.5;
+
+    var air = ctx.createBiquadFilter();
+    air.type = 'lowpass';
+    air.frequency.value = 12000;
+    air.Q.value = 0.7;
+
+    var limiter = ctx.createDynamicsCompressor();
+    limiter.threshold.value = -10;
+    limiter.knee.value = 8;
+    limiter.ratio.value = 10;
+    limiter.attack.value = 0.004;
+    limiter.release.value = 0.12;
+
+    nodes.master.connect(shelf);
+    shelf.connect(air);
+    air.connect(limiter);
+    limiter.connect(ctx.destination);
+    nodes.out = limiter;                    // what the speaker actually gets
+
     nodes.duck = ctx.createGain();          // music passes through this
     nodes.duck.connect(nodes.master);
 
@@ -208,7 +236,7 @@
   }
 
   function envelope(c, when, dur, peak, attack, hold) {
-    attack = attack == null ? 0.004 : attack;
+    attack = attack == null ? 0.009 : attack;
     hold = hold || 0;
     peak = Math.max(0.0001, peak);
     if (attack + hold > dur * 0.9) { attack = dur * 0.1; hold = 0; }
@@ -606,7 +634,8 @@
     debug: function () {
       return {
         context: ctx,
-        master: ctx ? nodes.master : null,
+        master: ctx ? nodes.out : null,
+        preTone: ctx ? nodes.master : null,
         state: ctx ? ctx.state : 'none',
         voices: voices.length,
         unlocked: unlocked,
