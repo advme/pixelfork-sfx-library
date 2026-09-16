@@ -173,6 +173,13 @@ def build(pack):
         manifest['spriteDuration'] = round(cursor, 4)
     else:
         manifest['sprite'] = None
+        # No source audio: drop any sprite left over from an earlier build, so
+        # dist never ships a file the manifest does not point at.
+        for stale in (pack + '.webm', pack + '.m4a'):
+            path = os.path.join(dist, stale)
+            if os.path.exists(path):
+                os.remove(path)
+                print('  removed stale ' + stale)
 
     # The runtime does not need the generation prompts; keep the bundle lean.
     for definition in manifest['sounds'].values():
