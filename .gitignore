@@ -1,0 +1,4 @@
+.DS_Store
+_archive/
+packs/*/sounds/_raw/
+*.tmp

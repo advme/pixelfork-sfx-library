@@ -1,0 +1,101 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>SFX + Super Casual UI — demo</title>
+
+<!-- The UI kit -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/advme/mobile-game-ui-library@v0.44.1-A/super-casual/dist/kit.css">
+<script src="https://cdn.jsdelivr.net/gh/advme/mobile-game-ui-library@v0.44.1-A/super-casual/dist/kit.js"></script>
+
+<!-- The SFX library -->
+<script src="../dist/sfx.js"></script>
+
+<style>
+  body { margin: 0; background: #2b6ea8; overflow: hidden; }
+  #hint { position: fixed; left: 0; right: 0; bottom: 6px; text-align: center;
+          font: 12px -apple-system, sans-serif; color: rgba(255,255,255,.75); z-index: 99; }
+</style>
+
+<!-- MENU -->
+<div class="sc-screen" id="menu" data-backdrop="dim">
+  <div class="sc-screen-top">
+    <div class="sc-counter" data-icon="coin" data-value="1250" data-size="sm"></div>
+  </div>
+  <div class="sc-screen-middle">
+    <h1 class="sc-title" data-color="gold" data-animate="drop">SOUND!</h1>
+  </div>
+  <div class="sc-screen-bottom">
+    <button class="sc-button" data-color="yellow" data-size="lg" id="play">PLAY</button>
+    <button class="sc-button" data-color="purple" id="openShop" data-tag="NEW">Shop</button>
+    <button class="sc-icon-button" data-icon="settings" id="openSettings" aria-label="Settings"></button>
+  </div>
+</div>
+
+<!-- HUD -->
+<div class="sc-screen" id="hud" hidden>
+  <div class="sc-screen-top">
+    <button class="sc-icon-button" data-icon="pause" id="pauseBtn" aria-label="Pause"></button>
+    <div class="sc-counter" data-icon="coin" data-value="0" id="coins" data-size="sm"></div>
+  </div>
+  <div class="sc-screen-middle">
+    <button class="sc-button" data-color="green" data-size="lg" id="tapme" data-sfx="coin.collect">TAP FOR COINS</button>
+  </div>
+  <div class="sc-screen-bottom">
+    <button class="sc-button" data-color="orange" id="win">Finish level</button>
+  </div>
+</div>
+
+<!-- WIN -->
+<div class="sc-screen" id="winScreen" data-backdrop="dim" hidden>
+  <div class="sc-screen-middle">
+    <h1 class="sc-title" data-color="gold" data-animate="drop">CLEAR!</h1>
+    <div class="sc-stars" data-value="0" data-layout="arc" data-size="lg" id="stars"></div>
+  </div>
+  <div class="sc-screen-bottom">
+    <button class="sc-button" data-color="green" data-size="lg" id="again">CONTINUE</button>
+  </div>
+</div>
+
+<!-- PAUSE -->
+<div class="sc-popup" id="pausePopup" data-title="PAUSED" hidden>
+  <div class="sc-popup-actions">
+    <button class="sc-button" data-color="green" onclick="SC.popup.close('pausePopup')">Resume</button>
+    <button class="sc-button" data-color="red" id="quit">Quit</button>
+  </div>
+</div>
+
+<div id="hint">Every sound below is automatic — no per-button code.</div>
+
+<script>
+  SFX.load('casual', { url: '../dist/casual.json' });
+  SFX.attach();          // ← the only sound line the whole UI needs
+
+  let coins = 0;
+  const coinsEl = document.getElementById('coins');
+
+  document.getElementById('play').onclick = () => {
+    SC.screen.hide('menu'); SC.screen.show('hud');
+    SFX.music('music.gameplay');            // no file yet: silently ignored
+  };
+  document.getElementById('tapme').onclick = () => {
+    SC.setValue(coinsEl, coins += 10, { animate: true });
+  };
+  document.getElementById('pauseBtn').onclick = () => SC.popup.open('pausePopup');
+  document.getElementById('quit').onclick = () => {
+    SC.popup.close('pausePopup'); SC.screen.hide('hud'); SC.screen.show('menu');
+  };
+  document.getElementById('win').onclick = () => {
+    SC.screen.hide('hud'); SC.screen.show('winScreen');
+    SFX.duck(0.25, 1800);                   // dip the music under the fanfare
+    SFX.play('state.win');
+    setTimeout(() => SFX.play('coin.pile'), 700);
+    // Stars: the kit fires "star" events, SFX.attach() turns them into a rising ladder.
+    setTimeout(() => SC.setValue(document.getElementById('stars'), 3), 900);
+  };
+  document.getElementById('again').onclick = () => {
+    SC.screen.hide('winScreen'); SC.screen.show('menu');
+    SC.setValue(document.getElementById('stars'), 0);
+  };
+  document.getElementById('openShop').onclick = () => SC.toast('Shop coming soon!', { kind: 'error' });
+  document.getElementById('openSettings').onclick = () => SC.toast('Settings', {});
+</script>

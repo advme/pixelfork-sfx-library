@@ -1,0 +1,308 @@
+{
+  "name": "casual",
+  "title": "Casual SFX Pack",
+  "description": "Juicy sound effects for hyper-casual and casual mobile web games. Designed to pair with the Super Casual UI Kit.",
+  "version": "0.1.0",
+  "style": "Modern mobile casual game audio: clean, bright, punchy, lightly processed. Not retro/8-bit, not cinematic/orchestral. Mono, dry (no long reverb tails), normalized to -1 dBFS peak.",
+  "sprite": null,
+  "sounds": {
+    "ui.tap": {
+      "category": "ui",
+      "whenToUse": "The player taps any button. The single most-used sound in the game.",
+      "tags": [
+        "button",
+        "press",
+        "click",
+        "select"
+      ],
+      "duration": 0.12,
+      "gain": 0.9,
+      "vary": 0.05,
+      "shape": "tap"
+    },
+    "ui.back": {
+      "category": "ui",
+      "whenToUse": "Back, close or cancel. The darker twin of ui.tap.",
+      "tags": [
+        "back",
+        "close",
+        "cancel",
+        "dismiss"
+      ],
+      "duration": 0.14,
+      "gain": 0.85,
+      "vary": 0.04,
+      "shape": "tap",
+      "rate": 0.78
+    },
+    "ui.whoosh": {
+      "category": "ui",
+      "whenToUse": "A popup opens or a screen slides in. Also good for cards dealing and panels sliding.",
+      "tags": [
+        "popup",
+        "transition",
+        "slide",
+        "open",
+        "swipe"
+      ],
+      "duration": 0.35,
+      "gain": 0.7,
+      "vary": 0.06,
+      "shape": "sweep"
+    },
+    "ui.toggle": {
+      "category": "ui",
+      "whenToUse": "A switch, checkbox or tab changes state.",
+      "tags": [
+        "switch",
+        "checkbox",
+        "tab",
+        "toggle"
+      ],
+      "duration": 0.1,
+      "gain": 0.8,
+      "vary": 0.05,
+      "shape": "blip"
+    },
+    "ui.error": {
+      "category": "ui",
+      "whenToUse": "The action is not allowed: not enough coins, locked level, wrong move.",
+      "tags": [
+        "error",
+        "denied",
+        "wrong",
+        "locked",
+        "invalid"
+      ],
+      "duration": 0.3,
+      "gain": 0.8,
+      "vary": 0.02,
+      "shape": "buzz",
+      "notes": [
+        330,
+        247
+      ],
+      "synth": {
+        "step": 0.11,
+        "dur": 0.16
+      }
+    },
+    "ui.tick": {
+      "category": "ui",
+      "whenToUse": "Countdown timer in its warning seconds, or a counter ticking up.",
+      "tags": [
+        "timer",
+        "countdown",
+        "tick",
+        "urgent"
+      ],
+      "duration": 0.08,
+      "gain": 0.7,
+      "vary": 0.03,
+      "shape": "blip",
+      "rate": 0.9,
+      "minGap": 60
+    },
+    "coin.collect": {
+      "category": "reward",
+      "whenToUse": "One coin, gem or pickup is collected. Plays many times in a row, so it is deliberately short.",
+      "tags": [
+        "coin",
+        "pickup",
+        "collect",
+        "gem",
+        "money"
+      ],
+      "duration": 0.18,
+      "gain": 0.85,
+      "vary": 0.09,
+      "shape": "chime",
+      "synth": {
+        "f0": 1318,
+        "f1": 1975,
+        "dur": 0.14,
+        "partials": [
+          1,
+          2
+        ]
+      }
+    },
+    "coin.pile": {
+      "category": "reward",
+      "whenToUse": "A burst of coins flies to the counter, or the reward total counts up.",
+      "tags": [
+        "coins",
+        "shower",
+        "burst",
+        "counter",
+        "cash"
+      ],
+      "duration": 0.9,
+      "gain": 0.8,
+      "vary": 0.03,
+      "shape": "chime",
+      "notes": [
+        1046,
+        1318,
+        1568,
+        1760,
+        2093
+      ],
+      "synth": {
+        "step": 0.06,
+        "dur": 0.18,
+        "partials": [
+          1,
+          2
+        ]
+      }
+    },
+    "reward.star": {
+      "category": "reward",
+      "whenToUse": "One star fills on a level-complete screen. Play it once per star with a rising pitch.",
+      "tags": [
+        "star",
+        "rating",
+        "level complete",
+        "score"
+      ],
+      "duration": 0.45,
+      "gain": 0.9,
+      "vary": 0.02,
+      "shape": "chime",
+      "synth": {
+        "f0": 880,
+        "f1": 1760,
+        "dur": 0.4,
+        "partials": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "reward.claim": {
+      "category": "reward",
+      "whenToUse": "The player claims a reward, buys an item, or opens a gift.",
+      "tags": [
+        "claim",
+        "purchase",
+        "buy",
+        "gift",
+        "collect"
+      ],
+      "duration": 0.7,
+      "gain": 0.9,
+      "vary": 0.02,
+      "shape": "chime",
+      "notes": [
+        784,
+        1046,
+        1318
+      ],
+      "synth": {
+        "step": 0.08,
+        "dur": 0.3
+      }
+    },
+    "reward.chest": {
+      "category": "reward",
+      "whenToUse": "A chest, box or crate opens and reveals its contents.",
+      "tags": [
+        "chest",
+        "open",
+        "loot",
+        "box",
+        "reveal"
+      ],
+      "duration": 1.2,
+      "gain": 0.95,
+      "vary": 0.02,
+      "shape": "sweep",
+      "synth": {
+        "dur": 0.9,
+        "f0": 300,
+        "f1": 3800,
+        "q": 1.4
+      }
+    },
+    "state.win": {
+      "category": "reward",
+      "whenToUse": "The level is completed. Plays once on the Success screen.",
+      "tags": [
+        "win",
+        "success",
+        "complete",
+        "fanfare",
+        "victory"
+      ],
+      "duration": 1.6,
+      "gain": 1,
+      "vary": 0,
+      "shape": "chime",
+      "notes": [
+        523,
+        659,
+        784,
+        1046
+      ],
+      "synth": {
+        "step": 0.13,
+        "dur": 0.45,
+        "partials": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "state.lose": {
+      "category": "reward",
+      "whenToUse": "The level is failed. Plays once on the Fail screen.",
+      "tags": [
+        "lose",
+        "fail",
+        "game over",
+        "defeat"
+      ],
+      "duration": 1.3,
+      "gain": 0.9,
+      "vary": 0,
+      "shape": "buzz",
+      "notes": [
+        392,
+        330,
+        262
+      ],
+      "synth": {
+        "step": 0.18,
+        "dur": 0.45
+      }
+    },
+    "feedback.powerup": {
+      "category": "game",
+      "whenToUse": "A booster, power-up or upgrade activates.",
+      "tags": [
+        "powerup",
+        "boost",
+        "upgrade",
+        "buff"
+      ],
+      "duration": 0.6,
+      "gain": 0.9,
+      "vary": 0.03,
+      "shape": "blip",
+      "notes": [
+        523,
+        698,
+        880,
+        1174
+      ],
+      "synth": {
+        "step": 0.055,
+        "dur": 0.16,
+        "wave": "triangle"
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SFX Library — preview</title>
+<style>
+  :root {
+    --bg: #14161c; --card: #1e212a; --line: #2e3340; --text: #e8eaf0;
+    --dim: #8d94a6; --accent: #ffd54a; --real: #4ade80; --stub: #7a8296;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 24px; background: var(--bg); color: var(--text);
+         font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  .sub { color: var(--dim); margin-bottom: 20px; font-size: 14px; }
+  .bar { position: sticky; top: 0; z-index: 5; background: var(--card);
+         border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px;
+         margin-bottom: 24px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
+  .bar label { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--dim); }
+  .bar input[type=range] { width: 110px; accent-color: var(--accent); }
+  button { font: inherit; cursor: pointer; border-radius: 8px; border: 1px solid var(--line);
+           background: #272b36; color: var(--text); padding: 7px 14px; }
+  button:hover { border-color: var(--accent); }
+  button:active { transform: translateY(1px); }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--dim);
+       margin: 28px 0 12px; }
+  .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
+  .top { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+  .name { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14px;
+          color: var(--accent); flex: 1; }
+  .tag { font-size: 10px; text-transform: uppercase; letter-spacing: .06em;
+         padding: 3px 7px; border-radius: 99px; }
+  .tag.real { background: rgba(74,222,128,.15); color: var(--real); }
+  .tag.stub { background: rgba(122,130,150,.2); color: var(--stub); }
+  .use { color: var(--dim); font-size: 13px; margin: 0 0 12px; }
+  .row { display: flex; gap: 8px; align-items: center; }
+  .meta { margin-left: auto; font-size: 12px; color: var(--stub); }
+  .note { background: rgba(255,213,74,.08); border: 1px solid rgba(255,213,74,.25);
+          border-radius: 10px; padding: 12px 14px; font-size: 13.5px; color: #e4d9b4; margin-bottom: 20px; }
+</style>
+
+<h1>SFX Library — preview</h1>
+<div class="sub" id="sub">loading…</div>
+
+<div class="note" id="note"></div>
+
+<div class="bar">
+  <button id="mute">🔊 Sound on</button>
+  <label>master <input type="range" id="v-master" min="0" max="1" step="0.05"></label>
+  <label>ui <input type="range" id="v-ui" min="0" max="1" step="0.05"></label>
+  <label>game <input type="range" id="v-game" min="0" max="1" step="0.05"></label>
+  <label>reward <input type="range" id="v-reward" min="0" max="1" step="0.05"></label>
+  <label>music <input type="range" id="v-music" min="0" max="1" step="0.05"></label>
+  <button id="spam">Tap ×12 (hear the pitch variation)</button>
+  <button id="stars">3 stars in a row</button>
+</div>
+
+<div id="out"></div>
+
+<script src="../dist/sfx.js"></script>
+<script>
+const CAT_ORDER = ['ui', 'game', 'reward', 'music'];
+
+SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
+  const names = SFX.list();
+  const real = names.filter(n => SFX.info(n) && SFX.info(n).start != null).length;
+
+  document.getElementById('sub').textContent =
+    names.length + ' sounds · ' + real + ' from real audio · ' + (names.length - real) + ' built-in stand-ins';
+
+  document.getElementById('note').innerHTML = real === names.length
+    ? 'Every sound in this pack is real audio. Listen through the whole board before publishing a version.'
+    : '<b>Stand-ins are playing for ' + (names.length - real) + ' sounds.</b> They exist so a game is never silent. ' +
+      'Generate the real ones with the prompts in <code>packs/casual/SOUND-PROMPTS.md</code>, drop the files into ' +
+      '<code>packs/casual/sounds/</code>, then run <code>python3 tools/build_pack.py casual</code> and reload this page.';
+
+  const groups = {};
+  names.forEach(n => {
+    const d = SFX.info(n) || {};
+    (groups[d.category || 'ui'] = groups[d.category || 'ui'] || []).push([n, d]);
+  });
+
+  const out = document.getElementById('out');
+  CAT_ORDER.filter(c => groups[c]).forEach(cat => {
+    const h = document.createElement('h2');
+    h.textContent = cat + ' — ' + groups[cat].length;
+    out.appendChild(h);
+
+    const grid = document.createElement('div');
+    grid.className = 'grid';
+    groups[cat].forEach(([name, d]) => {
+      const isReal = d.start != null;
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML =
+        '<div class="top"><span class="name"></span>' +
+        '<span class="tag ' + (isReal ? 'real">real audio' : 'stub">stand-in') + '</span></div>' +
+        '<p class="use"></p>' +
+        '<div class="row"><button>▶ Play</button>' +
+        (d.variations ? '<button data-v>▶ All ' + d.variations.length + ' takes</button>' : '') +
+        '<span class="meta">~' + (d.duration ?? '?') + 's</span></div>';
+      card.querySelector('.name').textContent = name;
+      card.querySelector('.use').textContent = d.whenToUse || '';
+      card.querySelector('button').onclick = () => SFX.play(name);
+      const v = card.querySelector('[data-v]');
+      if (v) v.onclick = () => d.variations.forEach((_, i) => setTimeout(() => SFX.play(name), i * 260));
+      grid.appendChild(card);
+    });
+    out.appendChild(grid);
+  });
+});
+
+// controls
+const muteBtn = document.getElementById('mute');
+muteBtn.onclick = () => {
+  const m = SFX.mute();
+  muteBtn.textContent = m ? '🔇 Sound off' : '🔊 Sound on';
+};
+['master', 'ui', 'game', 'reward', 'music'].forEach(c => {
+  const el = document.getElementById('v-' + c);
+  el.value = SFX.volume(c);
+  el.oninput = () => { SFX.volume(c, +el.value); SFX.play('ui.toggle'); };
+});
+document.getElementById('spam').onclick = () => {
+  for (let i = 0; i < 12; i++) setTimeout(() => SFX.play('ui.tap'), i * 90);
+};
+document.getElementById('stars').onclick = () => {
+  [1, 2, 3].forEach(n => setTimeout(() => SFX.play('reward.star', { rate: 1 + (n - 1) * 0.12 }), (n - 1) * 420));
+};
+</script>
