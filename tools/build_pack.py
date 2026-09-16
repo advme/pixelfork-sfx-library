@@ -64,8 +64,33 @@ def peak_db(path):
     return float(m.group(1)) if m else 0.0
 
 
-def prepare(src, dst, warnings):
-    """Trim silence at both ends, peak-normalize, fade the edges, 48 kHz mono."""
+def post_fx(fx):
+    """Per-sound repair, from registry.json -> postFx.
+
+    Generators bake in room reverb even when the prompt says "dry", which reads
+    as the sound being far away, and their output is often dull. These let a
+    sound be fixed without regenerating it:
+        tighten  seconds — hard-stop the sound here, killing a room tail
+        highpass Hz      — cut rumble that reads as distant boom
+        bright   dB      — high-shelf lift to restore presence
+        presence dB      — mid lift around 2.5 kHz, where "close" lives
+    """
+    chain = []
+    if fx.get('highpass'):
+        chain.append('highpass=f={}'.format(fx['highpass']))
+    if fx.get('presence'):
+        chain.append('equalizer=f=2500:t=q:w=1.2:g={}'.format(fx['presence']))
+    if fx.get('bright'):
+        chain.append('highshelf=f=5000:g={}'.format(fx['bright']))
+    if fx.get('tighten'):
+        t = float(fx['tighten'])
+        chain.append('afade=t=out:st={:.4f}:d={:.4f}'.format(max(0.0, t - 0.04), 0.04))
+        chain.append('atrim=end={:.4f}'.format(t))
+    return chain
+
+
+def prepare(src, dst, warnings, fx=None):
+    """Trim silence at both ends, repair, peak-normalize, fade edges, 48k mono."""
     src_peak = peak_db(src)
 
     # A generated file that comes back very quiet is a BAD generation, not a
@@ -94,6 +119,16 @@ def prepare(src, dst, warnings):
              '-ar', str(SAMPLE_RATE), '-ac', '1', '-c:a', 'pcm_s16le', tmp])
     if r.returncode != 0:
         sys.exit('ffmpeg failed on ' + src + '\n' + r.stderr[-800:])
+
+    fx_chain = post_fx(fx or {})
+    if fx_chain:
+        fixed = dst + '.fx.wav'
+        r = run(['ffmpeg', '-y', '-i', tmp, '-af', ','.join(fx_chain),
+                 '-ar', str(SAMPLE_RATE), '-ac', '1', '-c:a', 'pcm_s16le', fixed])
+        if r.returncode != 0:
+            sys.exit('postFx failed on ' + src + '\n' + r.stderr[-800:])
+        os.remove(tmp)
+        tmp = fixed
 
     dur = duration_of(tmp)
     if dur <= 0.02:
@@ -170,7 +205,7 @@ def build(pack):
         slices = []
         for i, src in enumerate(files):
             out = os.path.join(work, '{:03d}_{}_{}.wav'.format(len(pieces), name.replace('.', '_'), i))
-            dur = prepare(src, out, warnings)
+            dur = prepare(src, out, warnings, definition.get('postFx'))
             pieces.append(out)
             slices.append([round(cursor, 4), round(dur, 4)])
             cursor += dur + GAP
@@ -217,6 +252,7 @@ def build(pack):
     # The runtime does not need the generation prompts; keep the bundle lean.
     for definition in manifest['sounds'].values():
         definition.pop('prompt', None)
+        definition.pop('postFx', None)
         definition.pop('variationsWanted', None)
 
     with open(os.path.join(dist, pack + '.json'), 'w') as fh:

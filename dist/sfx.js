@@ -16,7 +16,7 @@
 (function (global) {
   'use strict';
 
-  var VERSION = '0.2.4';
+  var VERSION = '0.2.5';
   var STORE_KEY = 'pixelfork.sfx';
   var CATEGORIES = ['ui', 'game', 'reward', 'music'];
   var MAX_VOICES = 24;          // hard cap on simultaneous one-shots
@@ -76,22 +76,10 @@
     if (!AC) return null;
     ctx = new AC();
 
-    // ---- master tone stage -------------------------------------------------
-    // Raw synthesis is too bright for a phone speaker: the top end turns into
-    // a rasp and hard transients make the cone click. Every sound passes
-    // through a gentle high-shelf cut, a lowpass that removes the hiss nobody
-    // wants, and a soft limiter that rounds off transient edges.
+    // ---- master bus --------------------------------------------------------
+    // Only a soft limiter here, to round off transient edges. Tone shaping is
+    // NOT global: see the per-category tone chain below.
     nodes.master = ctx.createGain();
-
-    var shelf = ctx.createBiquadFilter();
-    shelf.type = 'highshelf';
-    shelf.frequency.value = 4200;
-    shelf.gain.value = -5.5;
-
-    var air = ctx.createBiquadFilter();
-    air.type = 'lowpass';
-    air.frequency.value = 12000;
-    air.Q.value = 0.7;
 
     var limiter = ctx.createDynamicsCompressor();
     limiter.threshold.value = -10;
@@ -100,9 +88,7 @@
     limiter.attack.value = 0.004;
     limiter.release.value = 0.12;
 
-    nodes.master.connect(shelf);
-    shelf.connect(air);
-    air.connect(limiter);
+    nodes.master.connect(limiter);
     limiter.connect(ctx.destination);
     nodes.out = limiter;                    // what the speaker actually gets
 
@@ -112,6 +98,24 @@
     CATEGORIES.forEach(function (c) {
       nodes[c] = ctx.createGain();
       nodes[c].connect(c === 'music' ? nodes.duck : nodes.master);
+
+      // Raw synthesis is too bright for a phone speaker, so synthesized sounds
+      // get a high-shelf cut and a lowpass. Recorded audio is already mastered
+      // and must NOT pass through this — doing so costs it about a quarter of
+      // its high end and makes it sound dull and far away.
+      var shelf = ctx.createBiquadFilter();
+      shelf.type = 'highshelf';
+      shelf.frequency.value = 4200;
+      shelf.gain.value = -5.5;
+
+      var air = ctx.createBiquadFilter();
+      air.type = 'lowpass';
+      air.frequency.value = 12000;
+      air.Q.value = 0.7;
+
+      shelf.connect(air);
+      air.connect(nodes[c]);
+      nodes['tone:' + c] = shelf;           // synthesized sounds enter here
     });
 
     applyGains();
@@ -428,7 +432,8 @@
       return src;
     }
 
-    synth(def, dest, when, rate, volume);
+    // Synthesized sounds go through the tone chain; recordings go in clean.
+    synth(def, nodes['tone:' + cat] || dest, when, rate, volume);
     return null;
   }
   play._warned = {};

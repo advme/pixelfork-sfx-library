@@ -1,5 +1,35 @@
 # CHANGELOG
 
+## v0.2.5-A — fixed the "far away / fake microphone" sound
+- Agent: A (Claude) · Date: 2026-09-16
+- Done: The owner reported the generated sounds felt distant, like a fake microphone.
+  Measuring found **two separate causes**, one mine and one from the generator.
+  **(1) Mine.** The master tone stage added in v0.2.1 (−5.5 dB shelf above 4.2 kHz plus a
+  12 kHz lowpass) existed to tame *synthesized* sounds, which are raw oscillators and
+  genuinely too bright. But it sat on the master bus, so it also processed the recorded
+  audio — which is already mastered — and stripped roughly a quarter of its high end
+  (`reward.chest` 48% → 36% of energy above 4 kHz, `break.glass` 86% → 79%). That dullness
+  is exactly what reads as a cheap microphone. Tone shaping is now **per-category and on the
+  synthesis path only**: synthesized sounds enter through the shelf, recordings go in clean.
+  The soft limiter stays on the master for everything.
+  **(2) The generator.** ElevenLabs baked room reverb into the pistol despite the prompt
+  asking for a dry close recording: it decayed over **626 ms**, where a genuinely dry source
+  like `break.glass` decays in 83 ms. That long tail is the "far away".
+  Added a `postFx` repair step to `build_pack.py` so a sound can be fixed without
+  regenerating it — `tighten` (hard-stop a room tail), `highpass` (cut distant rumble),
+  `presence` (lift 2.5 kHz, where "close" lives) and `bright` (high-shelf lift).
+- Tested: `weapon.pistol` now decays in **85 ms**, matching `break.glass` at 83 ms and
+  `reward.chest` at 78 ms, and its energy above 4 kHz went from 6% to 17%. The two long
+  decays left in the pack are `state.win` (989 ms) and `state.lose` (368 ms), which are
+  music and are supposed to ring.
+  Re-checked the mix after removing the shelf from the recorded path: generated sounds
+  average 0.645 peak against 0.535 for code, and are now brighter than the synthesized half
+  (33% vs 14% above 4 kHz), which is what real recordings should be.
+- Notes for next agent: `postFx` is per-sound and stripped from `dist/`, so it costs games
+  nothing. Reach for it before regenerating — a bad room tail is cheaper to cut than to
+  re-roll, and re-rolling often changes the character you already approved.
+
+
 ## v0.2.4-A — fixed the "laser pistol" and the blip at the end of sounds
 - Agent: A (Claude) · Date: 2026-09-16
 - Done: The owner reported that the generated pistol sounded like a laser gun and that

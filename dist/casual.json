@@ -2,7 +2,7 @@
   "name": "casual",
   "title": "Casual SFX Pack",
   "description": "Sound effects for hyper-casual and casual mobile web games. Designed to pair with the Super Casual UI Kit.",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "style": "Modern mobile casual game audio: clean, bright, punchy, lightly processed. Not retro/8-bit, not cinematic/orchestral. Mono, dry (no long reverb tails), normalized to -1 dBFS peak.",
   "sourceMeaning": {
     "code": "Synthesized by the runtime, permanently. No audio file, no download, infinite variation. These sounds are synthetic by nature so code beats a recording.",
@@ -784,19 +784,19 @@
         "shoot"
       ],
       "start": 0.0,
-      "dur": 0.8,
+      "dur": 0.13,
       "variations": [
         [
           0.0,
-          0.8
+          0.13
         ],
         [
-          1.05,
-          0.8
+          0.38,
+          0.13
         ],
         [
-          2.1001,
-          0.8
+          0.76,
+          0.13
         ]
       ]
     },
@@ -1884,7 +1884,7 @@
         "loot",
         "reveal"
       ],
-      "start": 3.1501,
+      "start": 1.14,
       "dur": 1.1073
     },
     "reward.jackpot": {
@@ -1914,7 +1914,7 @@
         "fanfare",
         "complete"
       ],
-      "start": 4.5074,
+      "start": 2.4973,
       "dur": 1.4925
     },
     "state.win.small": {
@@ -1962,7 +1962,7 @@
         "fail",
         "defeat"
       ],
-      "start": 6.2499,
+      "start": 4.2398,
       "dur": 1.48
     },
     "state.gameover": {
@@ -2170,7 +2170,7 @@
         "break",
         "ice"
       ],
-      "start": 7.98,
+      "start": 5.9699,
       "dur": 1.0
     },
     "break.wood": {
@@ -2638,5 +2638,5 @@
       ]
     }
   },
-  "spriteDuration": 9.23
+  "spriteDuration": 7.2199
 }
