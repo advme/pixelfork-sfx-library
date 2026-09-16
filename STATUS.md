@@ -1,9 +1,9 @@
 # STATUS
 
-**Last updated:** 2026-09-16 · by **A (Claude)** · version **v0.2.6-A**
+**Last updated:** 2026-09-16 · by **A (Claude)** · version **v0.2.7-A**
 
 ## Next task
-**Generate the remaining 39 sounds that need real audio** (15 of 54 are done). Open `packs/casual/SOUND-PROMPTS.md` — it lists only those, with a tuned prompt and the exact filename for each. Work down it in ElevenLabs Sound Effects, saving to `packs/casual/sounds/`. Start with the ones a game uses most: `state.win`, `state.lose`, `reward.chest`, the eight `step.*` surfaces, then `break.*` and `weapon.pistol`. Run `python3 tools/build_pack.py casual` as you go and listen on the preview board. The other 51 sounds are finished and need nothing.
+**Generate the remaining 29 sounds that need real audio** (25 of 54 are done). Open `packs/casual/SOUND-PROMPTS.md` — it lists only those, with a tuned prompt and the exact filename for each. Work down it in ElevenLabs Sound Effects, saving to `packs/casual/sounds/`. Start with the ones a game uses most: `state.win`, `state.lose`, `reward.chest`, the eight `step.*` surfaces, then `break.*` and `weapon.pistol`. Run `python3 tools/build_pack.py casual` as you go and listen on the preview board. The other 51 sounds are finished and need nothing.
 
 ## In progress
 _Nothing._

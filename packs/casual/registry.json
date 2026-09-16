@@ -2,7 +2,7 @@
   "name": "casual",
   "title": "Casual SFX Pack",
   "description": "Sound effects for hyper-casual and casual mobile web games. Designed to pair with the Super Casual UI Kit.",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "style": "Modern mobile casual game audio: clean, bright, punchy, lightly processed. Not retro/8-bit, not cinematic/orchestral. Mono, dry (no long reverb tails), normalized to -1 dBFS peak.",
   "sourceMeaning": {
     "code": "Synthesized by the runtime, permanently. No audio file, no download, infinite variation. These sounds are synthetic by nature so code beats a recording.",
@@ -883,7 +883,11 @@
         "swing",
         "blade"
       ],
-      "prompt": "Sword slashing through air, fast sharp metallic whoosh with a thin blade ring, dry, no impact at the end"
+      "prompt": "Loud sword slashing fast through the air, strong metallic whoosh with a blade ring, recorded close and dry, no impact at the end",
+      "postFx": {
+        "presence": 4,
+        "bright": 5
+      }
     },
     "weapon.sword.clash": {
       "source": "ai",
@@ -900,7 +904,11 @@
         "block",
         "metal"
       ],
-      "prompt": "Two metal swords clashing together, bright ringing steel impact with a shimmering metallic tail, dry close recording"
+      "prompt": "Loud clash of two steel swords striking together, strong ringing metal impact with a shimmering tail, recorded close and dry",
+      "postFx": {
+        "presence": 3,
+        "bright": 4
+      }
     },
     "weapon.cannon": {
       "source": "ai",
@@ -915,7 +923,11 @@
         "boom",
         "heavy"
       ],
-      "prompt": "Large cannon firing, enormous deep explosive boom with a powerful low rumble tail, distant and heavy"
+      "prompt": "Loud cannon firing, huge explosive blast with a hard cracking report at the front and a deep rumbling tail, recorded close outdoors",
+      "postFx": {
+        "presence": 6,
+        "bright": 8
+      }
     },
     "impact.punch": {
       "source": "ai",
@@ -951,7 +963,10 @@
         "armour",
         "robot"
       ],
-      "prompt": "Hard impact on thick metal, loud clang with a ringing metallic tail, dry close recording"
+      "prompt": "Hard impact on thick metal, loud clang with a ringing metallic tail, dry close recording",
+      "postFx": {
+        "presence": 3
+      }
     },
     "impact.wood": {
       "source": "ai",
@@ -967,7 +982,12 @@
         "crate",
         "thwack"
       ],
-      "prompt": "Hard impact on solid wood, sharp woody knock with a short dry thud, no reverb"
+      "prompt": "Loud hard impact on solid wood, strong woody knock with a short dry thud, recorded close, no reverb",
+      "postFx": {
+        "presence": 5,
+        "bright": 6,
+        "tighten": 0.35
+      }
     },
     "impact.thud": {
       "source": "code",
@@ -1101,7 +1121,10 @@
           }
         ]
       },
-      "prompt": "Critical hit sparkle layer for a game, bright metallic shing with a quick glittering shimmer, no impact thump, dry"
+      "prompt": "Loud metallic shing with a quick glittering shimmer, close and dry, no impact thump, no reverb",
+      "postFx": {
+        "bright": 5
+      }
     },
     "move.jump": {
       "source": "code",
@@ -1425,7 +1448,8 @@
       "postFx": {
         "tighten": 0.24,
         "presence": 3
-      }
+      },
+      "minLevelDb": -24
     },
     "step.metal": {
       "source": "ai",
@@ -1446,7 +1470,8 @@
       "postFx": {
         "tighten": 0.22,
         "presence": 3
-      }
+      },
+      "minLevelDb": -24
     },
     "step.snow": {
       "source": "ai",
@@ -1489,7 +1514,8 @@
       "postFx": {
         "tighten": 0.26,
         "presence": 3
-      }
+      },
+      "minLevelDb": -24
     },
     "step.sand": {
       "source": "ai",

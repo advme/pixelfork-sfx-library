@@ -19,7 +19,7 @@ edit the registry and run the tool again._
 **51 of the 105 sounds in this pack are made by code and need nothing from you.**
 This checklist is only the 54 that need real audio.
 
-**Progress: 15 of 54 generated.**
+**Progress: 25 of 54 generated.**
 
 ## game
 
@@ -47,33 +47,33 @@ This checklist is only the 54 that need real audio.
   - Target length: ~0.6s · generate **2 takes** (`weapon.bow.1.wav`, `weapon.bow.2.wav`, …)
   - Prompt: `Bow firing an arrow, taut string release with a woody thwack and the arrow whistling away quickly, dry outdoor recording`
 
-- [ ] **`weapon.sword.swing`** — Swinging a blade through the air and hitting nothing.
+- [x] **`weapon.sword.swing`** — Swinging a blade through the air and hitting nothing.
   - Target length: ~0.4s · generate **3 takes** (`weapon.sword.swing.1.wav`, `weapon.sword.swing.2.wav`, …)
-  - Prompt: `Sword slashing through air, fast sharp metallic whoosh with a thin blade ring, dry, no impact at the end`
+  - Prompt: `Loud sword slashing fast through the air, strong metallic whoosh with a blade ring, recorded close and dry, no impact at the end`
 
-- [ ] **`weapon.sword.clash`** — Two blades meeting, or a blade blocked by a shield.
+- [x] **`weapon.sword.clash`** — Two blades meeting, or a blade blocked by a shield.
   - Target length: ~0.7s · generate **2 takes** (`weapon.sword.clash.1.wav`, `weapon.sword.clash.2.wav`, …)
-  - Prompt: `Two metal swords clashing together, bright ringing steel impact with a shimmering metallic tail, dry close recording`
+  - Prompt: `Loud clash of two steel swords striking together, strong ringing metal impact with a shimmering tail, recorded close and dry`
 
-- [ ] **`weapon.cannon`** — A cannon, mortar or heavy artillery firing.
+- [x] **`weapon.cannon`** — A cannon, mortar or heavy artillery firing.
   - Target length: ~1.4s
-  - Prompt: `Large cannon firing, enormous deep explosive boom with a powerful low rumble tail, distant and heavy`
+  - Prompt: `Loud cannon firing, huge explosive blast with a hard cracking report at the front and a deep rumbling tail, recorded close outdoors`
 
 - [x] **`impact.punch`** — A fist or body hit connects.
   - Target length: ~0.3s · generate **3 takes** (`impact.punch.1.wav`, `impact.punch.2.wav`, …)
   - Prompt: `Punch impact on a body, dull heavy thump with a short slap on top, cartoon action movie style, dry`
 
-- [ ] **`impact.metal`** — Something hits metal: armour, a robot, a car, a pipe.
+- [x] **`impact.metal`** — Something hits metal: armour, a robot, a car, a pipe.
   - Target length: ~0.5s · generate **2 takes** (`impact.metal.1.wav`, `impact.metal.2.wav`, …)
   - Prompt: `Hard impact on thick metal, loud clang with a ringing metallic tail, dry close recording`
 
-- [ ] **`impact.wood`** — Something hits wood: a crate, a door, a bat, a tree.
+- [x] **`impact.wood`** — Something hits wood: a crate, a door, a bat, a tree.
   - Target length: ~0.35s · generate **2 takes** (`impact.wood.1.wav`, `impact.wood.2.wav`, …)
-  - Prompt: `Hard impact on solid wood, sharp woody knock with a short dry thud, no reverb`
+  - Prompt: `Loud hard impact on solid wood, strong woody knock with a short dry thud, recorded close, no reverb`
 
-- [ ] **`impact.crit`** — A critical hit or perfect timing. Layer it ON TOP of the normal hit sound.
+- [x] **`impact.crit`** — A critical hit or perfect timing. Layer it ON TOP of the normal hit sound.
   - Target length: ~0.5s
-  - Prompt: `Critical hit sparkle layer for a game, bright metallic shing with a quick glittering shimmer, no impact thump, dry`
+  - Prompt: `Loud metallic shing with a quick glittering shimmer, close and dry, no impact thump, no reverb`
 
 - [x] **`step.grass`** — One footstep on grass. Play per step; the library varies pitch and picks a different take each time.
   - Target length: ~0.25s · generate **5 takes** (`step.grass.1.wav`, `step.grass.2.wav`, …)
@@ -87,19 +87,19 @@ This checklist is only the 54 that need real audio.
   - Target length: ~0.25s · generate **5 takes** (`step.stone.1.wav`, `step.stone.2.wav`, …)
   - Prompt: `Single footstep on stone or concrete, firm hard scuff of a shoe sole, close and dry, no reverb`
 
-- [ ] **`step.gravel`** — One footstep on gravel. Play per step; the library varies pitch and picks a different take each time.
+- [x] **`step.gravel`** — One footstep on gravel. Play per step; the library varies pitch and picks a different take each time.
   - Target length: ~0.25s · generate **5 takes** (`step.gravel.1.wav`, `step.gravel.2.wav`, …)
   - Prompt: `Single footstep on gravel, crunchy scatter of small stones under a shoe, close and dry`
 
-- [ ] **`step.metal`** — One footstep on metal. Play per step; the library varies pitch and picks a different take each time.
+- [x] **`step.metal`** — One footstep on metal. Play per step; the library varies pitch and picks a different take each time.
   - Target length: ~0.25s · generate **5 takes** (`step.metal.1.wav`, `step.metal.2.wav`, …)
   - Prompt: `Single footstep on a metal grate or steel walkway, hollow metallic clank with a faint ring, close and dry`
 
-- [ ] **`step.snow`** — One footstep on snow. Play per step; the library varies pitch and picks a different take each time.
+- [x] **`step.snow`** — One footstep on snow. Play per step; the library varies pitch and picks a different take each time.
   - Target length: ~0.25s · generate **5 takes** (`step.snow.1.wav`, `step.snow.2.wav`, …)
   - Prompt: `Single footstep in fresh snow, tight squeaky crunch of compacting powder, close and dry`
 
-- [ ] **`step.water`** — One footstep on water. Play per step; the library varies pitch and picks a different take each time.
+- [x] **`step.water`** — One footstep on water. Play per step; the library varies pitch and picks a different take each time.
   - Target length: ~0.25s · generate **5 takes** (`step.water.1.wav`, `step.water.2.wav`, …)
   - Prompt: `Single footstep in a shallow puddle, wet splash with a light splatter, close and dry`
 

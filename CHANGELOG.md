@@ -1,5 +1,31 @@
 # CHANGELOG
 
+## v0.2.7-A — 10 more generated sounds (25 of 54 done)
+- Agent: A (Claude) · Date: 2026-09-17
+- Done: Generated `weapon.sword.swing`, `weapon.sword.clash`, `weapon.cannon`,
+  `impact.metal`, `impact.wood`, `impact.crit`, `step.gravel`, `step.metal`, `step.snow`
+  and `step.water` — 31 files including takes. 25 of the 54 audio sounds are now done.
+  Applied the v0.2.6 lesson **before** spending generations: four of these prompts asked
+  for "sharp", "bright" or "thin", which is what had been returning audio 20–40 dB too
+  quiet. Reworded them to ask for a loud close recording and moved the brightness into
+  `postFx`. It worked — both sword sounds came back at 0.0 dBFS and needed no retries,
+  where the old wording would almost certainly have failed.
+  `weapon.cannon` had the same problem in reverse: its prompt literally said "distant and
+  heavy", and asking for distance is asking for the dull, reverberant sound the owner
+  complained about in v0.2.5. Reworded to "recorded close outdoors", which fixed the level
+  (−15.3 → −0.3 dBFS).
+- Tested: Level, room decay, brightness and onset count on every new sound. The sword
+  sounds and `impact.crit` are bright and clean (68%, 68%, 89% of energy above 4 kHz),
+  impacts and footsteps all sit in range, and no source file was rejected.
+- Notes for next agent: `weapon.cannon` is still only 2% above 4 kHz even after rewording
+  and +8 dB of shelf. A cannon genuinely is a low-frequency event and the generator is
+  consistent about it, so this is probably correct — but it is the one in this batch most
+  worth a second opinion by ear.
+  Several footstep takes show two onsets inside 220 ms. That was investigated and left
+  alone: heel-then-toe is what a real footstep does, and cutting shorter starts removing
+  the step itself. Do not "fix" it without listening first.
+
+
 ## v0.2.6-A — 10 more generated sounds (15 of 54 done)
 - Agent: A (Claude) · Date: 2026-09-16
 - Done: Generated `step.grass`, `step.wood`, `step.stone`, `impact.punch`, `water.splash`,
