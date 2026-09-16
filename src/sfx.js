@@ -16,7 +16,7 @@
 (function (global) {
   'use strict';
 
-  var VERSION = '0.1.0';
+  var VERSION = '0.2.0';
   var STORE_KEY = 'pixelfork.sfx';
   var CATEGORIES = ['ui', 'game', 'reward', 'music'];
   var MAX_VOICES = 24;          // hard cap on simultaneous one-shots
@@ -181,81 +181,159 @@
     }
   }
 
-  /* --------------------------------------------------------- synth backup */
+  /* -------------------------------------------------------- synth engine */
 
-  // Tiny stand-in sounds so the library is usable before real audio exists.
-  // These are deliberately simple: they say "a coin was collected", not
-  // "this is the final sound of the game".
-  var SHAPES = {
-    blip:  { wave: 'square',   f0: 880,  f1: 1320, dur: 0.07, gain: 0.30 },
-    tap:   { wave: 'triangle', f0: 620,  f1: 520,  dur: 0.05, gain: 0.35 },
-    chime: { wave: 'sine',     f0: 1046, f1: 1568, dur: 0.30, gain: 0.30, partials: [1, 2, 3] },
-    thud:  { wave: 'sine',     f0: 180,  f1: 60,   dur: 0.18, gain: 0.45 },
-    buzz:  { wave: 'sawtooth', f0: 220,  f1: 110,  dur: 0.22, gain: 0.25 },
-    noise: { noise: true,      f0: 2200, f1: 400,  dur: 0.25, gain: 0.30, q: 1.2 },
-    sweep: { noise: true,      f0: 400,  f1: 4200, dur: 0.30, gain: 0.22, q: 2.0 }
-  };
+  // Some sounds in this library are MEANT to be code, permanently: lasers, UI
+  // blips, coin chimes, whooshes, energy hums, jumps, pitch ladders. They are
+  // synthetic by nature, so code beats a recording — infinite variation,
+  // perfect pitch control, zero download. Sounds with real-world texture
+  // (footsteps, guns, glass, voices, instruments) are generated as audio
+  // instead. Which is which is declared in registry.json → "source".
+  //
+  // A recipe is a stack of layers. Each layer is one of:
+  //   osc   { wave, f0, f1, dur, gain, at, curve, partials, vib }
+  //   noise { f0, f1, dur, gain, at, curve, filter: lowpass|bandpass|highpass, q }
+  //   fm    { f0, f1, ratio, index, index1, dur, gain, at }   ← bells, coins, metal
+  // "at" delays a layer, so you can put a click transient in front of a body.
 
-  function noiseBuffer(c, seconds) {
-    var len = Math.max(1, Math.floor(c.sampleRate * seconds));
-    var buf = c.createBuffer(1, len, c.sampleRate);
-    var d = buf.getChannelData(0);
+  var NOISE = null;
+
+  function noiseBuf(c) {
+    if (NOISE) return NOISE;
+    var len = Math.floor(c.sampleRate * 2);
+    NOISE = c.createBuffer(1, len, c.sampleRate);
+    var d = NOISE.getChannelData(0);
     for (var i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
-    return buf;
+    return NOISE;
   }
 
-  function synth(def, dest, when, rate, volume) {
-    var c = ctx;
-    var spec = Object.assign({}, SHAPES[def.shape] || SHAPES.blip, def.synth || {});
-    var notes = spec.notes || def.notes;          // arpeggio, e.g. win fanfare
-    var step = spec.step || 0.09;
-
-    if (notes && notes.length) {
-      notes.forEach(function (f, i) {
-        voiceOne(c, spec, dest, when + i * step, f * rate, volume * (spec.gain || 0.3));
-      });
-      return;
-    }
-    voiceOne(c, spec, dest, when, null, volume * (spec.gain || 0.3), rate);
+  function envelope(c, when, dur, peak, attack, hold) {
+    attack = attack == null ? 0.004 : attack;
+    hold = hold || 0;
+    peak = Math.max(0.0001, peak);
+    if (attack + hold > dur * 0.9) { attack = dur * 0.1; hold = 0; }
+    var g = c.createGain();
+    g.gain.setValueAtTime(0.0001, when);
+    g.gain.exponentialRampToValueAtTime(peak, when + attack);
+    if (hold) g.gain.setValueAtTime(peak, when + attack + hold);
+    g.gain.exponentialRampToValueAtTime(0.0001, when + dur);
+    return g;
   }
 
-  function voiceOne(c, spec, dest, when, fixedFreq, gain, rate) {
-    rate = rate || 1;
-    var dur = (spec.dur || 0.12) / rate;
-    var env = c.createGain();
+  function ramp(param, v0, v1, when, dur, curve) {
+    param.setValueAtTime(v0, when);
+    if (v1 == null || v1 === v0) return;
+    if (curve === 'lin') param.linearRampToValueAtTime(v1, when + dur);
+    else param.exponentialRampToValueAtTime(Math.max(1, v1), when + dur);
+  }
+
+  function layerOsc(c, L, dest, when, rate, vol, note) {
+    var dur = (L.dur || 0.15) / rate;
+    var base = L.f0 || 440;
+    var f0 = (note || base) * rate;
+    var f1 = L.f1 != null ? (note ? note * (L.f1 / base) : L.f1) * rate : null;
+    var env = envelope(c, when, dur, vol * (L.gain == null ? 1 : L.gain), L.attack, L.hold);
     env.connect(dest);
-    env.gain.setValueAtTime(0, when);
-    env.gain.linearRampToValueAtTime(gain, when + Math.min(0.012, dur * 0.2));
-    env.gain.exponentialRampToValueAtTime(0.0001, when + dur);
 
-    if (spec.noise) {
-      var src = c.createBufferSource();
-      src.buffer = noiseBuffer(c, dur);
-      var f = c.createBiquadFilter();
-      f.type = 'bandpass';
-      f.Q.value = spec.q || 1;
-      f.frequency.setValueAtTime(spec.f0 * rate, when);
-      f.frequency.exponentialRampToValueAtTime(Math.max(40, spec.f1 * rate), when + dur);
-      src.connect(f); f.connect(env);
-      src.start(when); src.stop(when + dur + 0.02);
-      track(src);
-      return;
-    }
-
-    var partials = spec.partials || [1];
-    partials.forEach(function (mult, i) {
+    (L.partials || [1]).forEach(function (mult, i) {
       var o = c.createOscillator();
-      o.type = spec.wave || 'square';
-      var f0 = (fixedFreq || spec.f0) * rate * mult;
-      var f1 = (fixedFreq ? fixedFreq * (spec.f1 / spec.f0) : spec.f1) * rate * mult;
-      o.frequency.setValueAtTime(f0, when);
-      o.frequency.exponentialRampToValueAtTime(Math.max(30, f1), when + dur);
+      o.type = L.wave || 'sine';
+      ramp(o.frequency, f0 * mult, f1 != null ? f1 * mult : null, when, dur, L.curve);
       var pg = c.createGain();
-      pg.gain.value = 1 / (i + 1);
+      pg.gain.value = (L.partialGains && L.partialGains[i] != null) ? L.partialGains[i] : 1 / (i + 1);
       o.connect(pg); pg.connect(env);
+      if (L.vib) {
+        var lfo = c.createOscillator(), lg = c.createGain();
+        lfo.frequency.value = L.vib.rate || 6;
+        lg.gain.value = L.vib.depth || 10;
+        lfo.connect(lg); lg.connect(o.frequency);
+        lfo.start(when); lfo.stop(when + dur + 0.02);
+      }
       o.start(when); o.stop(when + dur + 0.02);
       track(o);
     });
+  }
+
+  function layerNoise(c, L, dest, when, rate, vol) {
+    var dur = (L.dur || 0.2) / rate;
+    var src = c.createBufferSource();
+    src.buffer = noiseBuf(c);
+    src.loop = true;
+    var f = c.createBiquadFilter();
+    f.type = L.filter || 'bandpass';
+    f.Q.value = L.q || 1;
+    ramp(f.frequency, (L.f0 || 1000) * rate, L.f1 != null ? L.f1 * rate : null, when, dur, L.curve);
+    var env = envelope(c, when, dur, vol * (L.gain == null ? 1 : L.gain), L.attack, L.hold);
+    src.connect(f); f.connect(env); env.connect(dest);
+    src.start(when, Math.random() * 1.5);   // random offset = a different grain every time
+    src.stop(when + dur + 0.02);
+    track(src);
+  }
+
+  // Frequency modulation: the cheapest way to get a convincing bell, coin,
+  // metal clank or laser out of two oscillators.
+  function layerFM(c, L, dest, when, rate, vol, note) {
+    var dur = (L.dur || 0.3) / rate;
+    var carrier = (note || L.f0 || 660) * rate;
+    var o = c.createOscillator();
+    o.type = L.wave || 'sine';
+    ramp(o.frequency, carrier, L.f1 != null ? L.f1 * rate : null, when, dur, L.curve);
+
+    var m = c.createOscillator();
+    m.type = 'sine';
+    m.frequency.value = carrier * (L.ratio || 2);
+    var mg = c.createGain();
+    var i0 = L.index == null ? 200 : L.index;
+    mg.gain.setValueAtTime(Math.max(0.01, i0), when);
+    mg.gain.exponentialRampToValueAtTime(Math.max(0.01, L.index1 == null ? 0.01 : L.index1), when + dur);
+    m.connect(mg); mg.connect(o.frequency);
+
+    var env = envelope(c, when, dur, vol * (L.gain == null ? 1 : L.gain), L.attack, L.hold);
+    o.connect(env); env.connect(dest);
+    o.start(when); o.stop(when + dur + 0.02);
+    m.start(when); m.stop(when + dur + 0.02);
+    track(o); track(m);
+  }
+
+  var LAYER = { osc: layerOsc, noise: layerNoise, fm: layerFM };
+
+  // Presets, so a simple sound can say shape:"tap" instead of a layer stack.
+  var SHAPES = {
+    blip:  { layers: [{ type: 'osc', wave: 'square', f0: 880, f1: 1320, dur: 0.07, gain: 0.3 }] },
+    tap:   { layers: [
+              { type: 'osc', wave: 'triangle', f0: 620, f1: 520, dur: 0.05, gain: 0.35 },
+              { type: 'noise', filter: 'highpass', f0: 3200, f1: 2200, dur: 0.02, gain: 0.12 }] },
+    chime: { layers: [{ type: 'fm', f0: 1046, ratio: 3.5, index: 600, dur: 0.3, gain: 0.3 }] },
+    thud:  { layers: [{ type: 'osc', wave: 'sine', f0: 180, f1: 55, dur: 0.18, gain: 0.5 }] },
+    buzz:  { layers: [{ type: 'osc', wave: 'sawtooth', f0: 220, f1: 110, dur: 0.22, gain: 0.25 }] },
+    noise: { layers: [{ type: 'noise', filter: 'bandpass', f0: 2200, f1: 400, dur: 0.25, gain: 0.3, q: 1.2 }] },
+    sweep: { layers: [{ type: 'noise', filter: 'bandpass', f0: 400, f1: 4200, dur: 0.3, gain: 0.22, q: 2 }] }
+  };
+
+  // An "ai" sound with no audio file yet has no recipe of its own. Give it a
+  // plausible stand-in for its category rather than a generic blip.
+  var DEFAULT_SHAPE = { ui: 'tap', game: 'thud', reward: 'chime', music: 'sweep' };
+
+  function synth(def, dest, when, rate, volume) {
+    var c = ctx;
+    var recipe = def.synth || SHAPES[def.shape] || SHAPES[DEFAULT_SHAPE[def.category] || 'blip'];
+    var layers = recipe.layers || [recipe];
+    var notes = recipe.notes || def.notes;
+    var step = recipe.step || 0.09;
+    var gain = volume * (recipe.gain == null ? 1 : recipe.gain);
+
+    function stack(at, note) {
+      layers.forEach(function (L) {
+        var fn = LAYER[L.type || 'osc'];
+        if (fn) fn(c, L, dest, at + (L.at || 0) / rate, rate, gain, note);
+      });
+    }
+
+    if (notes && notes.length) {
+      notes.forEach(function (n, i) { stack(when + i * step / rate, n); });
+    } else {
+      stack(when, null);
+    }
   }
 
   function track(src) {

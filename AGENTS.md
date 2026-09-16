@@ -37,16 +37,21 @@ AI-GUIDE.md                      what an AI building a game reads. Keep it hones
 ```
 
 ## 4. How to add a sound (follow exactly)
-1. Add an entry to `packs/casual/registry.json` with: `category`, `whenToUse`, `tags`, `duration`, `gain`, `vary`, a **synth stand-in** (`shape` and optionally `notes`/`synth`), and a **`prompt`** for generating the real audio. Copy the shape of an existing entry.
+1. Add an entry to `packs/casual/registry.json` with `source`, `category`, `whenToUse`, `tags`, `duration`, `gain`, `vary`, then **either** a `synth` recipe (source `code`) **or** a `prompt` (source `ai`), or both for `hybrid`. Copy the shape of an existing entry.
 2. `python3 tools/make_prompts.py casual` — adds it to the owner's checklist.
 3. `python3 tools/make_guide.py casual` — adds it to the AI guide table.
 4. `python3 tools/build_pack.py casual` — rebuilds `dist/`.
-5. Listen: `python3 tools/serve.py 8766`, open `http://localhost:8766/tools/preview.html`. The new sound must play (as a stand-in until real audio arrives) and must not clip or click.
+5. Listen: `python3 tools/serve.py 8766`, open `http://localhost:8766/tools/preview.html`. Press **Check every sound makes noise** — nothing may be silent. A new `code` sound must land near the pack's loudness median (~0.30 peak on the master bus) and must not clip. Narrow-bandpass noise layers are the usual offender: they measure far quieter than they look on paper, so widen the Q and raise the gain until the meter agrees.
 6. If it is a UI-kit moment, wire it in `attach()` in `src/sfx.js` and check it in `demo/game.html`.
 7. Update **`STATUS.md`** and **`CHANGELOG.md`** (see §7).
 
 ## 5. Design rules (the owner approved these; never break them)
-- **Never synthesize the final sound in code.** The built-in synth is a *stand-in* so a game is never silent — it is not the product. Real sounds are generated from the prompt in the registry and dropped into `packs/<pack>/sounds/`. (Same rule as the UI kit's "never draw image assets with code".)
+- **Every sound declares how it is made, in `registry.json → source`:**
+  - `code` — synthesized by the runtime, permanently. No file, no download, infinite variation. Correct for sounds that are **synthetic by nature**: UI blips, lasers, coin chimes, whooshes, energy hums, jumps, pitch ladders. A recording would be *worse* here, because it cannot be repitched endlessly without sounding like a loop.
+  - `ai` — a generated audio file. Correct for sounds carrying **real-world material texture**: footsteps, guns, glass, wood, water, fire, engines, voices, musical fanfares. No oscillator fakes these.
+  - `hybrid` — a coded layer plus a generated layer.
+  The test when adding a sound: *could this exist without a physical object making it?* If yes, it is `code`. If it needs a material, a throat or an instrument, it is `ai`.
+- **Never give a `code` sound a prompt, and never leave an `ai` sound without one.** The merge script validates this; `build_pack.py` will not call a `code` sound "missing".
 - **Style:** modern mobile casual — clean, bright, punchy, dry. Not retro/8-bit, not cinematic/orchestral. The house style lives in `registry.json → style`; the prompts must stay consistent with it.
 - **Short.** UI sounds under 0.2s, pickups under 0.25s, only win/lose/chest go past 1s. A long sound in a game that fires it 40 times a minute is a bug.
 - **Mono, dry, peak-normalized to −1 dBFS.** `build_pack.py` does the normalizing; do not pre-bake reverb tails.

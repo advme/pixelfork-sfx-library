@@ -28,6 +28,9 @@ def main(pack):
             stem = os.path.splitext(f)[0]
             have.add(stem.rsplit('.', 1)[0] if stem.rsplit('.', 1)[-1].isdigit() else stem)
 
+    ai = {n: d for n, d in reg['sounds'].items() if d.get('source') in ('ai', 'hybrid')}
+    code_count = len(reg['sounds']) - len(ai)
+
     lines = [
         '# Sound prompts — {}'.format(reg['title']),
         '',
@@ -47,12 +50,15 @@ def main(pack):
         '',
         '> ' + reg.get('style', ''),
         '',
-        '**Progress: {} of {} sounds delivered.**'.format(len(have & set(reg['sounds'])), len(reg['sounds'])),
+        '**{} of the {} sounds in this pack are made by code and need nothing from you.**'.format(code_count, len(reg['sounds'])),
+        'This checklist is only the {} that need real audio.'.format(len(ai)),
+        '',
+        '**Progress: {} of {} generated.**'.format(len(have & set(ai)), len(ai)),
         '',
     ]
 
     by_cat = {}
-    for name, d in reg['sounds'].items():
+    for name, d in ai.items():
         by_cat.setdefault(d.get('category', 'ui'), []).append((name, d))
 
     for cat in sorted(by_cat):
@@ -72,8 +78,8 @@ def main(pack):
     out = os.path.join(pack_dir, 'SOUND-PROMPTS.md')
     with open(out, 'w') as fh:
         fh.write('\n'.join(lines))
-    print('Wrote {} ({} prompts, {} already delivered).'.format(
-        os.path.relpath(out, ROOT), len(reg['sounds']), len(have & set(reg['sounds']))))
+    print('Wrote {} — {} prompts to generate, {} already delivered. ({} more sounds need no audio at all.)'.format(
+        os.path.relpath(out, ROOT), len(ai), len(have & set(ai)), code_count))
 
 
 if __name__ == '__main__':

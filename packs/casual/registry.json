@@ -1,169 +1,2659 @@
 {
   "name": "casual",
   "title": "Casual SFX Pack",
-  "description": "Juicy sound effects for hyper-casual and casual mobile web games. Designed to pair with the Super Casual UI Kit.",
-  "version": "0.1.0",
+  "description": "Sound effects for hyper-casual and casual mobile web games. Designed to pair with the Super Casual UI Kit.",
+  "version": "0.2.0",
   "style": "Modern mobile casual game audio: clean, bright, punchy, lightly processed. Not retro/8-bit, not cinematic/orchestral. Mono, dry (no long reverb tails), normalized to -1 dBFS peak.",
+  "sourceMeaning": {
+    "code": "Synthesized by the runtime, permanently. No audio file, no download, infinite variation. These sounds are synthetic by nature so code beats a recording.",
+    "ai": "Generated as an audio file (ElevenLabs Sound Effects or similar) from the prompt below. These sounds carry real-world material texture that code cannot fake.",
+    "hybrid": "A coded layer plus a generated layer. The code part ships immediately; the audio part deepens it later."
+  },
   "sprite": null,
   "sounds": {
     "ui.tap": {
+      "source": "code",
       "category": "ui",
-      "whenToUse": "The player taps any button. The single most-used sound in the game.",
-      "tags": ["button", "press", "click", "select"],
-      "duration": 0.12,
+      "duration": 0.09,
       "gain": 0.9,
       "vary": 0.05,
-      "shape": "tap",
-      "prompt": "Short soft UI button tap for a mobile puzzle game, single clean woody pop with a light bright click on top, no reverb, no tail, 0.1 seconds"
+      "whenToUse": "The player taps any button. The most-used sound in the game.",
+      "tags": [
+        "button",
+        "press",
+        "click"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "wave": "triangle",
+            "f0": 660,
+            "f1": 520,
+            "dur": 0.05,
+            "gain": 0.35,
+            "type": "osc"
+          },
+          {
+            "filter": "highpass",
+            "f0": 3400,
+            "f1": 2200,
+            "dur": 0.025,
+            "gain": 0.13,
+            "type": "noise"
+          }
+        ]
+      }
     },
-    "ui.back": {
+    "ui.tap.soft": {
+      "source": "code",
       "category": "ui",
-      "whenToUse": "Back, close or cancel. The darker twin of ui.tap.",
-      "tags": ["back", "close", "cancel", "dismiss"],
-      "duration": 0.14,
-      "gain": 0.85,
-      "vary": 0.04,
-      "shape": "tap",
-      "rate": 0.78,
-      "prompt": "Short soft UI back button sound for a mobile game, muted low woody pop, slightly descending pitch, no reverb, 0.12 seconds"
-    },
-    "ui.whoosh": {
-      "category": "ui",
-      "whenToUse": "A popup opens or a screen slides in. Also good for cards dealing and panels sliding.",
-      "tags": ["popup", "transition", "slide", "open", "swipe"],
-      "duration": 0.35,
+      "duration": 0.07,
       "gain": 0.7,
       "vary": 0.06,
-      "shape": "sweep",
-      "prompt": "Quick soft air whoosh for a mobile game popup opening, filtered noise sweep rising then settling, smooth and clean, no reverb tail, 0.3 seconds"
+      "whenToUse": "Secondary taps: list rows, tab switches, small toggles. Quieter than ui.tap.",
+      "tags": [
+        "button",
+        "secondary",
+        "list"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "wave": "sine",
+            "f0": 520,
+            "f1": 430,
+            "dur": 0.045,
+            "gain": 0.28,
+            "type": "osc"
+          }
+        ]
+      }
     },
-    "ui.toggle": {
+    "ui.back": {
+      "source": "code",
       "category": "ui",
-      "whenToUse": "A switch, checkbox or tab changes state.",
-      "tags": ["switch", "checkbox", "tab", "toggle"],
       "duration": 0.1,
-      "gain": 0.8,
-      "vary": 0.05,
-      "shape": "blip",
-      "prompt": "Tiny crisp UI switch toggle click for a mobile game settings menu, single short plastic tick with a small pitch bump, dry, 0.08 seconds"
+      "gain": 0.85,
+      "vary": 0.04,
+      "whenToUse": "Back, close or cancel. The darker twin of ui.tap.",
+      "tags": [
+        "back",
+        "close",
+        "cancel"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "wave": "triangle",
+            "f0": 430,
+            "f1": 300,
+            "dur": 0.07,
+            "gain": 0.32,
+            "type": "osc"
+          },
+          {
+            "filter": "highpass",
+            "f0": 2600,
+            "f1": 1600,
+            "dur": 0.02,
+            "gain": 0.1,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "ui.confirm": {
+      "source": "code",
+      "category": "ui",
+      "duration": 0.25,
+      "gain": 0.9,
+      "vary": 0.02,
+      "whenToUse": "A choice is accepted: settings saved, difficulty picked, name entered.",
+      "tags": [
+        "confirm",
+        "accept",
+        "ok"
+      ],
+      "synth": {
+        "notes": [
+          784,
+          1046
+        ],
+        "step": 0.07,
+        "layers": [
+          {
+            "f0": 784,
+            "ratio": 2.0,
+            "index": 300,
+            "index1": 5,
+            "dur": 0.16,
+            "gain": 0.3,
+            "type": "fm"
+          }
+        ]
+      }
     },
     "ui.error": {
+      "source": "code",
       "category": "ui",
-      "whenToUse": "The action is not allowed: not enough coins, locked level, wrong move.",
-      "tags": ["error", "denied", "wrong", "locked", "invalid"],
       "duration": 0.3,
-      "gain": 0.8,
+      "gain": 0.85,
       "vary": 0.02,
-      "shape": "buzz",
-      "notes": [330, 247],
-      "synth": { "step": 0.11, "dur": 0.16 },
-      "prompt": "Gentle friendly error sound for a casual mobile game, two soft descending muted tones, discouraging but not harsh or alarming, dry, 0.3 seconds"
+      "whenToUse": "The action is not allowed: not enough coins, locked level, wrong move.",
+      "tags": [
+        "error",
+        "denied",
+        "invalid",
+        "locked"
+      ],
+      "synth": {
+        "notes": [
+          330,
+          247
+        ],
+        "step": 0.11,
+        "layers": [
+          {
+            "wave": "sawtooth",
+            "f0": 330,
+            "f1": 300,
+            "dur": 0.15,
+            "gain": 0.22,
+            "partials": [
+              1,
+              2
+            ],
+            "partialGains": [
+              1,
+              0.3
+            ],
+            "type": "osc"
+          }
+        ]
+      }
+    },
+    "ui.toggle": {
+      "source": "code",
+      "category": "ui",
+      "duration": 0.07,
+      "gain": 0.8,
+      "vary": 0.05,
+      "whenToUse": "A switch, checkbox or tab changes state.",
+      "tags": [
+        "switch",
+        "checkbox",
+        "tab"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "wave": "square",
+            "f0": 900,
+            "f1": 1250,
+            "dur": 0.04,
+            "gain": 0.22,
+            "type": "osc"
+          },
+          {
+            "filter": "highpass",
+            "f0": 4000,
+            "f1": 3000,
+            "dur": 0.015,
+            "gain": 0.1,
+            "type": "noise"
+          }
+        ]
+      }
     },
     "ui.tick": {
+      "source": "code",
       "category": "ui",
-      "whenToUse": "Countdown timer in its warning seconds, or a counter ticking up.",
-      "tags": ["timer", "countdown", "tick", "urgent"],
-      "duration": 0.08,
+      "duration": 0.06,
       "gain": 0.7,
       "vary": 0.03,
-      "shape": "blip",
-      "rate": 0.9,
       "minGap": 60,
-      "prompt": "Short clean clock tick for a mobile game countdown timer, single dry wooden tick with slight pitch, tense but light, 0.06 seconds"
+      "whenToUse": "Countdown timer in its warning seconds, or a number counting up.",
+      "tags": [
+        "timer",
+        "countdown",
+        "tick"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "wave": "square",
+            "f0": 1400,
+            "f1": 1200,
+            "dur": 0.025,
+            "gain": 0.2,
+            "type": "osc"
+          },
+          {
+            "filter": "bandpass",
+            "f0": 5000,
+            "f1": 4000,
+            "dur": 0.012,
+            "gain": 0.12,
+            "q": 2,
+            "type": "noise"
+          }
+        ]
+      }
     },
-    "coin.collect": {
-      "category": "reward",
-      "whenToUse": "One coin, gem or pickup is collected. Plays many times in a row, so it is deliberately short.",
-      "tags": ["coin", "pickup", "collect", "gem", "money"],
+    "ui.whoosh": {
+      "source": "code",
+      "category": "ui",
+      "duration": 0.3,
+      "gain": 0.7,
+      "vary": 0.07,
+      "whenToUse": "A popup opens or a screen slides in.",
+      "tags": [
+        "popup",
+        "transition",
+        "open",
+        "slide"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "filter": "bandpass",
+            "f0": 500,
+            "f1": 3600,
+            "dur": 0.22,
+            "gain": 1.435,
+            "q": 1.6,
+            "type": "noise"
+          },
+          {
+            "filter": "bandpass",
+            "f0": 3600,
+            "f1": 900,
+            "dur": 0.14,
+            "gain": 0.848,
+            "q": 1.6,
+            "at": 0.18,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "ui.swipe": {
+      "source": "code",
+      "category": "ui",
       "duration": 0.18,
+      "gain": 0.6,
+      "vary": 0.08,
+      "whenToUse": "The player swipes a card, page or carousel.",
+      "tags": [
+        "swipe",
+        "drag",
+        "carousel"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "filter": "bandpass",
+            "f0": 900,
+            "f1": 2800,
+            "dur": 0.13,
+            "gain": 1.357,
+            "q": 1.6,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "ui.notify": {
+      "source": "code",
+      "category": "ui",
+      "duration": 0.5,
       "gain": 0.85,
-      "vary": 0.09,
-      "variationsWanted": 3,
-      "shape": "chime",
-      "synth": { "f0": 1318, "f1": 1975, "dur": 0.14, "partials": [1, 2] },
-      "prompt": "Bright short coin pickup chime for a casual mobile game, small metallic bell ping with a quick upward pitch, clean and sweet, no reverb tail, 0.15 seconds"
-    },
-    "coin.pile": {
-      "category": "reward",
-      "whenToUse": "A burst of coins flies to the counter, or the reward total counts up.",
-      "tags": ["coins", "shower", "burst", "counter", "cash"],
-      "duration": 0.9,
-      "gain": 0.8,
-      "vary": 0.03,
-      "shape": "chime",
-      "notes": [1046, 1318, 1568, 1760, 2093],
-      "synth": { "step": 0.06, "dur": 0.18, "partials": [1, 2] },
-      "prompt": "Cascade of coins landing in a pile for a mobile game reward, many bright metallic tinkles overlapping in a rising shimmer, cheerful, clean, 0.9 seconds"
-    },
-    "reward.star": {
-      "category": "reward",
-      "whenToUse": "One star fills on a level-complete screen. Play it once per star with a rising pitch.",
-      "tags": ["star", "rating", "level complete", "score"],
-      "duration": 0.45,
-      "gain": 0.9,
       "vary": 0.02,
-      "shape": "chime",
-      "synth": { "f0": 880, "f1": 1760, "dur": 0.4, "partials": [1, 2, 3] },
-      "prompt": "Magical star earned chime for a mobile game level complete screen, bright glassy bell with a sparkle shimmer, rising, warm and rewarding, 0.4 seconds"
+      "whenToUse": "Something new appeared: a message, a gift, a quest, a friend request.",
+      "tags": [
+        "notification",
+        "alert",
+        "new",
+        "message"
+      ],
+      "synth": {
+        "notes": [
+          1046,
+          1568
+        ],
+        "step": 0.1,
+        "layers": [
+          {
+            "f0": 1046,
+            "ratio": 3.0,
+            "index": 400,
+            "index1": 3,
+            "dur": 0.3,
+            "gain": 0.26,
+            "type": "fm"
+          }
+        ]
+      }
     },
-    "reward.claim": {
-      "category": "reward",
-      "whenToUse": "The player claims a reward, buys an item, or opens a gift.",
-      "tags": ["claim", "purchase", "buy", "gift", "collect"],
-      "duration": 0.7,
-      "gain": 0.9,
-      "vary": 0.02,
-      "shape": "chime",
-      "notes": [784, 1046, 1318],
-      "synth": { "step": 0.08, "dur": 0.3 },
-      "prompt": "Satisfying reward claimed sound for a casual mobile game, bright three note rising sparkle with a soft magical shimmer, generous and happy, 0.7 seconds"
-    },
-    "reward.chest": {
-      "category": "reward",
-      "whenToUse": "A chest, box or crate opens and reveals its contents.",
-      "tags": ["chest", "open", "loot", "box", "reveal"],
-      "duration": 1.2,
-      "gain": 0.95,
-      "vary": 0.02,
-      "shape": "sweep",
-      "synth": { "dur": 0.9, "f0": 300, "f1": 3800, "q": 1.4 },
-      "prompt": "Treasure chest opening for a casual mobile game, wooden creak and metal latch click then a magical rising sparkle reveal with golden shimmer, 1.2 seconds"
-    },
-    "state.win": {
-      "category": "reward",
-      "whenToUse": "The level is completed. Plays once on the Success screen.",
-      "tags": ["win", "success", "complete", "fanfare", "victory"],
-      "duration": 1.6,
-      "gain": 1,
-      "vary": 0,
-      "shape": "chime",
-      "notes": [523, 659, 784, 1046],
-      "synth": { "step": 0.13, "dur": 0.45, "partials": [1, 2, 3] },
-      "prompt": "Short happy level complete fanfare for a casual mobile game, bright playful ascending melody on marimba and bells with a light cheerful sparkle ending, no orchestra, 1.5 seconds"
-    },
-    "state.lose": {
-      "category": "reward",
-      "whenToUse": "The level is failed. Plays once on the Fail screen.",
-      "tags": ["lose", "fail", "game over", "defeat"],
-      "duration": 1.3,
-      "gain": 0.9,
-      "vary": 0,
-      "shape": "buzz",
-      "notes": [392, 330, 262],
-      "synth": { "step": 0.18, "dur": 0.45 },
-      "prompt": "Gentle level failed sound for a casual mobile game, soft descending three note woodwind sigh, disappointed but friendly and encouraging, not dark or scary, 1.2 seconds"
-    },
-    "feedback.powerup": {
-      "category": "game",
-      "whenToUse": "A booster, power-up or upgrade activates.",
-      "tags": ["powerup", "boost", "upgrade", "buff"],
+    "ui.unlock": {
+      "source": "code",
+      "category": "ui",
       "duration": 0.6,
       "gain": 0.9,
       "vary": 0.03,
-      "shape": "blip",
-      "notes": [523, 698, 880, 1174],
-      "synth": { "step": 0.055, "dur": 0.16, "wave": "triangle" },
-      "prompt": "Power up activation for a casual mobile game, fast rising bubbly arpeggio with a bright energetic swell, positive and punchy, 0.6 seconds"
+      "whenToUse": "A level, skin, chapter or feature unlocks.",
+      "tags": [
+        "unlock",
+        "available",
+        "open"
+      ],
+      "synth": {
+        "notes": [
+          523,
+          784,
+          1046
+        ],
+        "step": 0.075,
+        "layers": [
+          {
+            "f0": 523,
+            "ratio": 2.0,
+            "index": 350,
+            "index1": 4,
+            "dur": 0.26,
+            "gain": 0.26,
+            "type": "fm"
+          }
+        ]
+      }
+    },
+    "ui.locked": {
+      "source": "code",
+      "category": "ui",
+      "duration": 0.25,
+      "gain": 0.8,
+      "vary": 0.02,
+      "whenToUse": "The player taps something still locked.",
+      "tags": [
+        "locked",
+        "denied",
+        "padlock"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "wave": "square",
+            "f0": 200,
+            "f1": 150,
+            "dur": 0.09,
+            "gain": 0.22,
+            "type": "osc"
+          },
+          {
+            "filter": "bandpass",
+            "f0": 1200,
+            "f1": 500,
+            "dur": 0.09,
+            "gain": 0.18,
+            "q": 3,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "ui.countdown": {
+      "source": "code",
+      "category": "ui",
+      "duration": 0.35,
+      "gain": 0.95,
+      "vary": 0,
+      "whenToUse": "3\u2026 2\u2026 1\u2026 before a level starts. Play once per number, then state.go.",
+      "tags": [
+        "countdown",
+        "start",
+        "321"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "wave": "square",
+            "f0": 660,
+            "f1": 660,
+            "dur": 0.18,
+            "gain": 0.3,
+            "hold": 0.08,
+            "type": "osc"
+          },
+          {
+            "wave": "sine",
+            "f0": 330,
+            "f1": 330,
+            "dur": 0.2,
+            "gain": 0.2,
+            "type": "osc"
+          }
+        ]
+      }
+    },
+    "ui.go": {
+      "source": "code",
+      "category": "ui",
+      "duration": 0.5,
+      "gain": 1.0,
+      "vary": 0,
+      "whenToUse": "The GO! at the end of a countdown, when gameplay starts.",
+      "tags": [
+        "go",
+        "start",
+        "begin"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "wave": "square",
+            "f0": 880,
+            "f1": 1320,
+            "dur": 0.3,
+            "gain": 0.32,
+            "hold": 0.12,
+            "type": "osc"
+          },
+          {
+            "filter": "bandpass",
+            "f0": 2000,
+            "f1": 6000,
+            "dur": 0.2,
+            "gain": 0.15,
+            "q": 1.5,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "ui.slider": {
+      "source": "code",
+      "category": "ui",
+      "duration": 0.04,
+      "gain": 0.5,
+      "vary": 0.1,
+      "minGap": 45,
+      "whenToUse": "A slider handle passes a step. Fires rapidly, so it is very short and quiet.",
+      "tags": [
+        "slider",
+        "drag",
+        "volume"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "filter": "highpass",
+            "f0": 5000,
+            "f1": 4000,
+            "dur": 0.012,
+            "gain": 0.231,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "ui.type": {
+      "source": "code",
+      "category": "ui",
+      "duration": 0.05,
+      "gain": 0.5,
+      "vary": 0.12,
+      "minGap": 35,
+      "whenToUse": "Letter-by-letter dialogue or name entry.",
+      "tags": [
+        "typewriter",
+        "dialogue",
+        "text"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "filter": "bandpass",
+            "f0": 2400,
+            "f1": 1800,
+            "dur": 0.018,
+            "gain": 1.172,
+            "q": 1.2,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "weapon.laser": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.2,
+      "gain": 0.85,
+      "vary": 0.07,
+      "minGap": 40,
+      "whenToUse": "Standard sci-fi blaster shot. The default for any space or robot shooter.",
+      "tags": [
+        "laser",
+        "shoot",
+        "blaster",
+        "sci-fi"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "wave": "sawtooth",
+            "f0": 1900,
+            "f1": 180,
+            "dur": 0.16,
+            "gain": 0.3,
+            "type": "osc"
+          },
+          {
+            "filter": "bandpass",
+            "f0": 4200,
+            "f1": 900,
+            "dur": 0.07,
+            "gain": 0.14,
+            "q": 1.2,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "weapon.laser.big": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.45,
+      "gain": 0.95,
+      "vary": 0.04,
+      "whenToUse": "Heavy or charged energy shot, boss cannon, ultimate ability.",
+      "tags": [
+        "laser",
+        "heavy",
+        "cannon",
+        "charged"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "wave": "sawtooth",
+            "f0": 900,
+            "f1": 70,
+            "dur": 0.38,
+            "gain": 0.34,
+            "type": "osc"
+          },
+          {
+            "wave": "square",
+            "f0": 260,
+            "f1": 45,
+            "dur": 0.32,
+            "gain": 0.2,
+            "type": "osc"
+          },
+          {
+            "filter": "lowpass",
+            "f0": 3000,
+            "f1": 300,
+            "dur": 0.3,
+            "gain": 0.2,
+            "q": 0.8,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "weapon.plasma": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.3,
+      "gain": 0.85,
+      "vary": 0.06,
+      "minGap": 40,
+      "whenToUse": "Softer, rounder energy shot \u2014 bubble guns, goo shooters, magic bolts.",
+      "tags": [
+        "plasma",
+        "bolt",
+        "magic",
+        "shoot"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "f0": 620,
+            "f1": 130,
+            "ratio": 1.5,
+            "index": 900,
+            "index1": 15,
+            "dur": 0.24,
+            "gain": 0.34,
+            "type": "fm"
+          }
+        ]
+      }
+    },
+    "weapon.charge": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.9,
+      "gain": 0.8,
+      "vary": 0.02,
+      "whenToUse": "Holding down a charged shot or an ability winding up.",
+      "tags": [
+        "charge",
+        "windup",
+        "power",
+        "hold"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "wave": "sawtooth",
+            "f0": 90,
+            "f1": 900,
+            "dur": 0.8,
+            "gain": 0.22,
+            "curve": "exp",
+            "vib": {
+              "rate": 7,
+              "depth": 14
+            },
+            "type": "osc"
+          },
+          {
+            "filter": "bandpass",
+            "f0": 600,
+            "f1": 5000,
+            "dur": 0.8,
+            "gain": 0.1,
+            "q": 3,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "weapon.throw": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.25,
+      "gain": 0.7,
+      "vary": 0.09,
+      "minGap": 40,
+      "whenToUse": "Throwing anything: a ball, a knife, a bomb, a grappling hook.",
+      "tags": [
+        "throw",
+        "toss",
+        "whoosh"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "filter": "bandpass",
+            "f0": 700,
+            "f1": 2600,
+            "dur": 0.18,
+            "gain": 0.9,
+            "q": 1.0,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "weapon.zap": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.28,
+      "gain": 0.85,
+      "vary": 0.08,
+      "whenToUse": "Electric attack, taser, lightning, short circuit.",
+      "tags": [
+        "electric",
+        "lightning",
+        "zap",
+        "shock"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "wave": "sawtooth",
+            "f0": 1400,
+            "f1": 600,
+            "dur": 0.2,
+            "gain": 0.2,
+            "vib": {
+              "rate": 45,
+              "depth": 380
+            },
+            "type": "osc"
+          },
+          {
+            "filter": "highpass",
+            "f0": 3000,
+            "f1": 6000,
+            "dur": 0.22,
+            "gain": 0.22,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "weapon.pistol": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.4,
+      "gain": 0.9,
+      "vary": 0.05,
+      "variationsWanted": 3,
+      "whenToUse": "A realistic handgun shot.",
+      "tags": [
+        "gun",
+        "pistol",
+        "gunshot",
+        "shoot"
+      ],
+      "prompt": "Single handgun gunshot, sharp dry crack with a short punchy tail, close perspective, no music, no reverb room"
+    },
+    "weapon.shotgun": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.7,
+      "gain": 1.0,
+      "vary": 0.04,
+      "variationsWanted": 2,
+      "whenToUse": "A shotgun blast.",
+      "tags": [
+        "shotgun",
+        "gun",
+        "blast"
+      ],
+      "prompt": "Single shotgun blast, deep powerful boom with a bright crack on top and a short pump action click after, dry close recording"
+    },
+    "weapon.rifle.auto": {
+      "source": "ai",
+      "category": "game",
+      "duration": 1.2,
+      "gain": 0.9,
+      "vary": 0.03,
+      "whenToUse": "A short burst of automatic fire. Loop or retrigger for sustained fire.",
+      "tags": [
+        "rifle",
+        "automatic",
+        "burst",
+        "machine gun"
+      ],
+      "prompt": "Short burst of automatic assault rifle fire, five rapid dry cracks with mechanical action, close perspective, no reverb"
+    },
+    "weapon.reload": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.9,
+      "gain": 0.8,
+      "vary": 0.03,
+      "whenToUse": "Reloading a weapon.",
+      "tags": [
+        "reload",
+        "magazine",
+        "mechanical",
+        "clip"
+      ],
+      "prompt": "Gun reload, magazine ejected and a fresh clip slapped in then the slide racked, crisp metallic mechanical clicks, dry close recording"
+    },
+    "weapon.empty": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.25,
+      "gain": 0.7,
+      "vary": 0.04,
+      "whenToUse": "Out of ammo \u2014 the trigger clicks on nothing.",
+      "tags": [
+        "empty",
+        "no ammo",
+        "click",
+        "dry fire"
+      ],
+      "prompt": "Empty gun dry fire click, small hollow metallic trigger click with no shot, dry and close"
+    },
+    "weapon.bow": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.6,
+      "gain": 0.8,
+      "vary": 0.06,
+      "variationsWanted": 2,
+      "whenToUse": "Firing a bow or crossbow.",
+      "tags": [
+        "bow",
+        "arrow",
+        "archery",
+        "crossbow"
+      ],
+      "prompt": "Bow firing an arrow, taut string release with a woody thwack and the arrow whistling away quickly, dry outdoor recording"
+    },
+    "weapon.sword.swing": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.4,
+      "gain": 0.8,
+      "vary": 0.07,
+      "variationsWanted": 3,
+      "whenToUse": "Swinging a blade through the air and hitting nothing.",
+      "tags": [
+        "sword",
+        "slash",
+        "swing",
+        "blade"
+      ],
+      "prompt": "Sword slashing through air, fast sharp metallic whoosh with a thin blade ring, dry, no impact at the end"
+    },
+    "weapon.sword.clash": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.7,
+      "gain": 0.9,
+      "vary": 0.05,
+      "variationsWanted": 2,
+      "whenToUse": "Two blades meeting, or a blade blocked by a shield.",
+      "tags": [
+        "sword",
+        "clash",
+        "parry",
+        "block",
+        "metal"
+      ],
+      "prompt": "Two metal swords clashing together, bright ringing steel impact with a shimmering metallic tail, dry close recording"
+    },
+    "weapon.cannon": {
+      "source": "ai",
+      "category": "game",
+      "duration": 1.4,
+      "gain": 1.0,
+      "vary": 0.03,
+      "whenToUse": "A cannon, mortar or heavy artillery firing.",
+      "tags": [
+        "cannon",
+        "artillery",
+        "boom",
+        "heavy"
+      ],
+      "prompt": "Large cannon firing, enormous deep explosive boom with a powerful low rumble tail, distant and heavy"
+    },
+    "impact.punch": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.3,
+      "gain": 0.85,
+      "vary": 0.07,
+      "variationsWanted": 3,
+      "whenToUse": "A fist or body hit connects.",
+      "tags": [
+        "punch",
+        "hit",
+        "melee",
+        "body"
+      ],
+      "prompt": "Punch impact on a body, dull heavy thump with a short slap on top, cartoon action movie style, dry"
+    },
+    "impact.metal": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.5,
+      "gain": 0.85,
+      "vary": 0.06,
+      "variationsWanted": 2,
+      "whenToUse": "Something hits metal: armour, a robot, a car, a pipe.",
+      "tags": [
+        "metal",
+        "clang",
+        "armour",
+        "robot"
+      ],
+      "prompt": "Hard impact on thick metal, loud clang with a ringing metallic tail, dry close recording"
+    },
+    "impact.wood": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.35,
+      "gain": 0.8,
+      "vary": 0.06,
+      "variationsWanted": 2,
+      "whenToUse": "Something hits wood: a crate, a door, a bat, a tree.",
+      "tags": [
+        "wood",
+        "knock",
+        "crate",
+        "thwack"
+      ],
+      "prompt": "Hard impact on solid wood, sharp woody knock with a short dry thud, no reverb"
+    },
+    "impact.thud": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.22,
+      "gain": 0.8,
+      "vary": 0.07,
+      "whenToUse": "A soft generic landing or bump. The cheapest impact \u2014 good for stylized games.",
+      "tags": [
+        "thud",
+        "bump",
+        "land",
+        "soft"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "wave": "sine",
+            "f0": 190,
+            "f1": 48,
+            "dur": 0.16,
+            "gain": 0.5,
+            "type": "osc"
+          },
+          {
+            "filter": "lowpass",
+            "f0": 1200,
+            "f1": 250,
+            "dur": 0.06,
+            "gain": 0.16,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "impact.bounce": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.18,
+      "gain": 0.75,
+      "vary": 0.1,
+      "minGap": 40,
+      "whenToUse": "A ball, bubble or character bounces off something.",
+      "tags": [
+        "bounce",
+        "ball",
+        "boing",
+        "rebound"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "wave": "sine",
+            "f0": 380,
+            "f1": 900,
+            "dur": 0.1,
+            "gain": 0.35,
+            "type": "osc"
+          },
+          {
+            "wave": "sine",
+            "f0": 180,
+            "f1": 90,
+            "dur": 0.09,
+            "gain": 0.22,
+            "type": "osc"
+          }
+        ]
+      }
+    },
+    "impact.miss": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.22,
+      "gain": 0.6,
+      "vary": 0.09,
+      "whenToUse": "An attack misses, or something flies past the player.",
+      "tags": [
+        "miss",
+        "whoosh",
+        "dodge",
+        "near"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "filter": "bandpass",
+            "f0": 1600,
+            "f1": 400,
+            "dur": 0.17,
+            "gain": 1.439,
+            "q": 1.4,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "impact.crit": {
+      "source": "hybrid",
+      "category": "game",
+      "duration": 0.5,
+      "gain": 1.0,
+      "vary": 0.03,
+      "whenToUse": "A critical hit or perfect timing. Layer it ON TOP of the normal hit sound.",
+      "tags": [
+        "critical",
+        "perfect",
+        "bonus",
+        "crit"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "f0": 1200,
+            "f1": 1800,
+            "ratio": 2.5,
+            "index": 700,
+            "index1": 8,
+            "dur": 0.35,
+            "gain": 0.3,
+            "type": "fm"
+          },
+          {
+            "filter": "highpass",
+            "f0": 6000,
+            "f1": 9000,
+            "dur": 0.2,
+            "gain": 0.12,
+            "type": "noise"
+          }
+        ]
+      },
+      "prompt": "Critical hit sparkle layer for a game, bright metallic shing with a quick glittering shimmer, no impact thump, dry"
+    },
+    "move.jump": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.16,
+      "gain": 0.8,
+      "vary": 0.07,
+      "whenToUse": "The character jumps.",
+      "tags": [
+        "jump",
+        "hop",
+        "leap"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "wave": "square",
+            "f0": 280,
+            "f1": 780,
+            "dur": 0.12,
+            "gain": 0.28,
+            "type": "osc"
+          },
+          {
+            "filter": "bandpass",
+            "f0": 900,
+            "f1": 2400,
+            "dur": 0.07,
+            "gain": 0.1,
+            "q": 2,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "move.jump.double": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.2,
+      "gain": 0.8,
+      "vary": 0.06,
+      "whenToUse": "A second or mid-air jump. Higher and airier than move.jump.",
+      "tags": [
+        "double jump",
+        "air",
+        "leap"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "wave": "triangle",
+            "f0": 520,
+            "f1": 1400,
+            "dur": 0.15,
+            "gain": 0.26,
+            "type": "osc"
+          },
+          {
+            "filter": "bandpass",
+            "f0": 1800,
+            "f1": 4200,
+            "dur": 0.12,
+            "gain": 0.12,
+            "q": 2,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "move.land": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.24,
+      "gain": 0.8,
+      "vary": 0.06,
+      "whenToUse": "The character lands after a jump or fall.",
+      "tags": [
+        "land",
+        "touchdown",
+        "drop"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "wave": "sine",
+            "f0": 220,
+            "f1": 50,
+            "dur": 0.17,
+            "gain": 0.45,
+            "type": "osc"
+          },
+          {
+            "filter": "lowpass",
+            "f0": 1600,
+            "f1": 300,
+            "dur": 0.09,
+            "gain": 0.18,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "move.dash": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.3,
+      "gain": 0.8,
+      "vary": 0.08,
+      "whenToUse": "A dash, dodge roll, boost or sudden burst of speed.",
+      "tags": [
+        "dash",
+        "dodge",
+        "boost",
+        "speed"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "filter": "bandpass",
+            "f0": 400,
+            "f1": 4000,
+            "dur": 0.14,
+            "gain": 0.8,
+            "q": 1.0,
+            "type": "noise"
+          },
+          {
+            "filter": "bandpass",
+            "f0": 4000,
+            "f1": 700,
+            "dur": 0.16,
+            "gain": 0.6,
+            "q": 1.0,
+            "at": 0.12,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "move.slide": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.5,
+      "gain": 0.7,
+      "vary": 0.05,
+      "whenToUse": "Sliding, skidding or braking along a surface.",
+      "tags": [
+        "slide",
+        "skid",
+        "brake",
+        "scrape"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "filter": "bandpass",
+            "f0": 2600,
+            "f1": 700,
+            "dur": 0.45,
+            "gain": 0.7,
+            "q": 0.9,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "move.teleport": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.55,
+      "gain": 0.85,
+      "vary": 0.04,
+      "whenToUse": "Teleporting, warping, spawning in or vanishing.",
+      "tags": [
+        "teleport",
+        "warp",
+        "spawn",
+        "vanish"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "f0": 300,
+            "f1": 2400,
+            "ratio": 2.5,
+            "index": 600,
+            "index1": 20,
+            "dur": 0.4,
+            "gain": 0.26,
+            "type": "fm"
+          },
+          {
+            "filter": "bandpass",
+            "f0": 800,
+            "f1": 6000,
+            "dur": 0.35,
+            "gain": 0.14,
+            "q": 2.5,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "move.fly": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.6,
+      "gain": 0.6,
+      "vary": 0.05,
+      "whenToUse": "A jetpack, hover or flight boost. Short burst, retrigger while held.",
+      "tags": [
+        "fly",
+        "jetpack",
+        "hover",
+        "thrust"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "filter": "lowpass",
+            "f0": 900,
+            "f1": 2200,
+            "dur": 0.55,
+            "gain": 0.532,
+            "q": 0.8,
+            "type": "noise"
+          },
+          {
+            "wave": "sawtooth",
+            "f0": 70,
+            "f1": 130,
+            "dur": 0.55,
+            "gain": 0.319,
+            "type": "osc"
+          }
+        ]
+      }
+    },
+    "step.grass": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.25,
+      "gain": 0.6,
+      "vary": 0.1,
+      "variationsWanted": 5,
+      "minGap": 90,
+      "whenToUse": "One footstep on grass. Play per step; the library varies pitch and picks a different take each time.",
+      "tags": [
+        "footstep",
+        "walk",
+        "run",
+        "grass"
+      ],
+      "prompt": "Single footstep on grass, soft dry rustle of blades with a light earthy scuff, close perspective, no reverb"
+    },
+    "step.wood": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.25,
+      "gain": 0.6,
+      "vary": 0.1,
+      "variationsWanted": 5,
+      "minGap": 90,
+      "whenToUse": "One footstep on wood. Play per step; the library varies pitch and picks a different take each time.",
+      "tags": [
+        "footstep",
+        "walk",
+        "run",
+        "wood"
+      ],
+      "prompt": "Single footstep on a hollow wooden floor, warm woody knock with a slight creak, close indoor recording, no reverb"
+    },
+    "step.stone": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.25,
+      "gain": 0.6,
+      "vary": 0.1,
+      "variationsWanted": 5,
+      "minGap": 90,
+      "whenToUse": "One footstep on stone. Play per step; the library varies pitch and picks a different take each time.",
+      "tags": [
+        "footstep",
+        "walk",
+        "run",
+        "stone"
+      ],
+      "prompt": "Single footstep on stone or concrete, firm hard scuff of a shoe sole, close and dry, no reverb"
+    },
+    "step.gravel": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.25,
+      "gain": 0.6,
+      "vary": 0.1,
+      "variationsWanted": 5,
+      "minGap": 90,
+      "whenToUse": "One footstep on gravel. Play per step; the library varies pitch and picks a different take each time.",
+      "tags": [
+        "footstep",
+        "walk",
+        "run",
+        "gravel"
+      ],
+      "prompt": "Single footstep on gravel, crunchy scatter of small stones under a shoe, close and dry"
+    },
+    "step.metal": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.25,
+      "gain": 0.6,
+      "vary": 0.1,
+      "variationsWanted": 5,
+      "minGap": 90,
+      "whenToUse": "One footstep on metal. Play per step; the library varies pitch and picks a different take each time.",
+      "tags": [
+        "footstep",
+        "walk",
+        "run",
+        "metal"
+      ],
+      "prompt": "Single footstep on a metal grate or steel walkway, hollow metallic clank with a faint ring, close and dry"
+    },
+    "step.snow": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.25,
+      "gain": 0.6,
+      "vary": 0.1,
+      "variationsWanted": 5,
+      "minGap": 90,
+      "whenToUse": "One footstep on snow. Play per step; the library varies pitch and picks a different take each time.",
+      "tags": [
+        "footstep",
+        "walk",
+        "run",
+        "snow"
+      ],
+      "prompt": "Single footstep in fresh snow, tight squeaky crunch of compacting powder, close and dry"
+    },
+    "step.water": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.25,
+      "gain": 0.6,
+      "vary": 0.1,
+      "variationsWanted": 5,
+      "minGap": 90,
+      "whenToUse": "One footstep on water. Play per step; the library varies pitch and picks a different take each time.",
+      "tags": [
+        "footstep",
+        "walk",
+        "run",
+        "water"
+      ],
+      "prompt": "Single footstep in a shallow puddle, wet splash with a light splatter, close and dry"
+    },
+    "step.sand": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.25,
+      "gain": 0.6,
+      "vary": 0.1,
+      "variationsWanted": 5,
+      "minGap": 90,
+      "whenToUse": "One footstep on sand. Play per step; the library varies pitch and picks a different take each time.",
+      "tags": [
+        "footstep",
+        "walk",
+        "run",
+        "sand"
+      ],
+      "prompt": "Single footstep in dry sand, soft granular shuffle with no hard impact, close and dry"
+    },
+    "move.swim": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.6,
+      "gain": 0.7,
+      "vary": 0.08,
+      "variationsWanted": 3,
+      "whenToUse": "A swimming stroke or moving through water.",
+      "tags": [
+        "swim",
+        "water",
+        "stroke"
+      ],
+      "prompt": "One swimming stroke in water, arm pulling through with a churning splash and bubbles, close perspective"
+    },
+    "move.climb": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.5,
+      "gain": 0.7,
+      "vary": 0.08,
+      "variationsWanted": 3,
+      "whenToUse": "Grabbing a ledge, climbing a rope or scrambling up.",
+      "tags": [
+        "climb",
+        "grab",
+        "ledge",
+        "rope"
+      ],
+      "prompt": "Climbing grab on a rocky ledge, hand slapping stone with a gritty scrape and a cloth rustle, close and dry"
+    },
+    "move.cloth": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.35,
+      "gain": 0.5,
+      "vary": 0.1,
+      "variationsWanted": 3,
+      "whenToUse": "A cape, dodge or quick body movement that needs fabric.",
+      "tags": [
+        "cloth",
+        "fabric",
+        "cape",
+        "dodge"
+      ],
+      "prompt": "Quick cloth movement, fabric swishing sharply through air like a cape flick, close and dry"
+    },
+    "voice.cheer": {
+      "source": "ai",
+      "category": "reward",
+      "duration": 1.5,
+      "gain": 0.85,
+      "vary": 0.02,
+      "whenToUse": "The player wins something big. Layer under state.win for extra celebration.",
+      "tags": [
+        "cheer",
+        "crowd",
+        "celebrate",
+        "yay"
+      ],
+      "prompt": "Small group of happy children cheering and clapping briefly, warm and joyful, short burst, dry close recording"
+    },
+    "voice.grunt": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.4,
+      "gain": 0.7,
+      "vary": 0.08,
+      "variationsWanted": 4,
+      "whenToUse": "The character jumps, lifts, swings or takes effort.",
+      "tags": [
+        "grunt",
+        "effort",
+        "jump",
+        "exertion"
+      ],
+      "prompt": "Short cartoon character effort grunt, light energetic hup sound, non verbal, dry close recording"
+    },
+    "voice.hurt": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.5,
+      "gain": 0.75,
+      "vary": 0.07,
+      "variationsWanted": 3,
+      "whenToUse": "The character takes damage.",
+      "tags": [
+        "hurt",
+        "damage",
+        "ouch",
+        "pain"
+      ],
+      "prompt": "Short cartoon character hurt sound, light non verbal ouch with a comic tone, not distressing, dry close recording"
+    },
+    "voice.laugh": {
+      "source": "ai",
+      "category": "reward",
+      "duration": 1.0,
+      "gain": 0.7,
+      "vary": 0.03,
+      "whenToUse": "A playful taunt, a mascot reaction, a funny fail.",
+      "tags": [
+        "laugh",
+        "giggle",
+        "taunt",
+        "fun"
+      ],
+      "prompt": "Short playful cartoon giggle, light friendly laughter, non verbal, dry close recording"
+    },
+    "pickup.coin": {
+      "source": "code",
+      "category": "reward",
+      "duration": 0.16,
+      "gain": 0.85,
+      "vary": 0.09,
+      "minGap": 30,
+      "whenToUse": "One coin collected. Fires constantly, so it is short and varies every time.",
+      "tags": [
+        "coin",
+        "pickup",
+        "money",
+        "collect"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "f0": 1318,
+            "f1": 1560,
+            "ratio": 3.0,
+            "index": 500,
+            "index1": 4,
+            "dur": 0.13,
+            "gain": 0.32,
+            "type": "fm"
+          }
+        ]
+      }
+    },
+    "pickup.gem": {
+      "source": "code",
+      "category": "reward",
+      "duration": 0.3,
+      "gain": 0.85,
+      "vary": 0.07,
+      "whenToUse": "A gem, crystal or premium currency is collected. Glassier than a coin.",
+      "tags": [
+        "gem",
+        "crystal",
+        "diamond",
+        "premium"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "f0": 1760,
+            "f1": 2100,
+            "ratio": 4.5,
+            "index": 700,
+            "index1": 3,
+            "dur": 0.28,
+            "gain": 0.28,
+            "type": "fm"
+          },
+          {
+            "filter": "highpass",
+            "f0": 7000,
+            "f1": 9000,
+            "dur": 0.1,
+            "gain": 0.07,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "pickup.heart": {
+      "source": "code",
+      "category": "reward",
+      "duration": 0.35,
+      "gain": 0.8,
+      "vary": 0.05,
+      "whenToUse": "A life, heart or health pickup.",
+      "tags": [
+        "heart",
+        "life",
+        "health",
+        "heal"
+      ],
+      "synth": {
+        "notes": [
+          784,
+          1046
+        ],
+        "step": 0.09,
+        "layers": [
+          {
+            "wave": "sine",
+            "f0": 784,
+            "f1": 800,
+            "dur": 0.22,
+            "gain": 0.3,
+            "partials": [
+              1,
+              2
+            ],
+            "partialGains": [
+              1,
+              0.35
+            ],
+            "type": "osc"
+          }
+        ]
+      }
+    },
+    "pickup.star": {
+      "source": "code",
+      "category": "reward",
+      "duration": 0.4,
+      "gain": 0.9,
+      "vary": 0.05,
+      "whenToUse": "A star or collectible token is picked up during gameplay.",
+      "tags": [
+        "star",
+        "collectible",
+        "token"
+      ],
+      "synth": {
+        "notes": [
+          1046,
+          1568
+        ],
+        "step": 0.08,
+        "layers": [
+          {
+            "f0": 1046,
+            "ratio": 3.0,
+            "index": 450,
+            "index1": 4,
+            "dur": 0.26,
+            "gain": 0.28,
+            "type": "fm"
+          }
+        ]
+      }
+    },
+    "pickup.key": {
+      "source": "code",
+      "category": "reward",
+      "duration": 0.4,
+      "gain": 0.85,
+      "vary": 0.05,
+      "whenToUse": "A key, card or quest item is picked up.",
+      "tags": [
+        "key",
+        "quest",
+        "item"
+      ],
+      "synth": {
+        "notes": [
+          659,
+          988,
+          1318
+        ],
+        "step": 0.07,
+        "layers": [
+          {
+            "f0": 659,
+            "ratio": 2.0,
+            "index": 400,
+            "index1": 5,
+            "dur": 0.2,
+            "gain": 0.26,
+            "type": "fm"
+          }
+        ]
+      }
+    },
+    "pickup.food": {
+      "source": "ai",
+      "category": "reward",
+      "duration": 0.5,
+      "gain": 0.75,
+      "vary": 0.08,
+      "variationsWanted": 3,
+      "whenToUse": "Eating: fruit, candy, a power snack. Organic and wet \u2014 code cannot fake this.",
+      "tags": [
+        "eat",
+        "food",
+        "fruit",
+        "chomp"
+      ],
+      "prompt": "Cartoon character eating, single juicy crunchy bite with a light wet chomp, playful, dry close recording"
+    },
+    "pickup.ammo": {
+      "source": "ai",
+      "category": "reward",
+      "duration": 0.35,
+      "gain": 0.7,
+      "vary": 0.06,
+      "variationsWanted": 2,
+      "whenToUse": "Ammo, tools or equipment picked up.",
+      "tags": [
+        "ammo",
+        "equip",
+        "gear",
+        "metal"
+      ],
+      "prompt": "Picking up ammunition, small metallic clink of shells and a quick gear rattle, dry close recording"
+    },
+    "coin.shower": {
+      "source": "code",
+      "category": "reward",
+      "duration": 1.0,
+      "gain": 0.85,
+      "vary": 0.02,
+      "whenToUse": "A burst of coins flies to the counter, or a reward total counts up.",
+      "tags": [
+        "coins",
+        "shower",
+        "burst",
+        "cash"
+      ],
+      "synth": {
+        "notes": [
+          1046,
+          1318,
+          1568,
+          1760,
+          2093,
+          2349
+        ],
+        "step": 0.055,
+        "layers": [
+          {
+            "f0": 1046,
+            "ratio": 3.0,
+            "index": 420,
+            "index1": 4,
+            "dur": 0.2,
+            "gain": 0.2,
+            "type": "fm"
+          }
+        ]
+      }
+    },
+    "coin.count": {
+      "source": "code",
+      "category": "reward",
+      "duration": 0.05,
+      "gain": 0.5,
+      "vary": 0.1,
+      "minGap": 40,
+      "whenToUse": "Each tick while a score or coin total counts up on a result screen.",
+      "tags": [
+        "count",
+        "score",
+        "tally",
+        "tick"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "f0": 1760,
+            "ratio": 3.0,
+            "index": 200,
+            "index1": 3,
+            "dur": 0.035,
+            "gain": 0.316,
+            "type": "fm"
+          }
+        ]
+      }
+    },
+    "reward.star": {
+      "source": "code",
+      "category": "reward",
+      "duration": 0.45,
+      "gain": 0.9,
+      "vary": 0.02,
+      "whenToUse": "One star fills on a level-complete screen. The library raises the pitch per star automatically.",
+      "tags": [
+        "star",
+        "rating",
+        "result"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "f0": 880,
+            "f1": 1000,
+            "ratio": 3.5,
+            "index": 800,
+            "index1": 5,
+            "dur": 0.4,
+            "gain": 0.3,
+            "type": "fm"
+          },
+          {
+            "filter": "highpass",
+            "f0": 6500,
+            "f1": 9000,
+            "dur": 0.18,
+            "gain": 0.06,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "reward.claim": {
+      "source": "code",
+      "category": "reward",
+      "duration": 0.65,
+      "gain": 0.9,
+      "vary": 0.02,
+      "whenToUse": "The player claims a reward, buys an item or opens a gift.",
+      "tags": [
+        "claim",
+        "buy",
+        "gift",
+        "collect"
+      ],
+      "synth": {
+        "notes": [
+          784,
+          1046,
+          1318
+        ],
+        "step": 0.08,
+        "layers": [
+          {
+            "f0": 784,
+            "ratio": 2.5,
+            "index": 500,
+            "index1": 5,
+            "dur": 0.3,
+            "gain": 0.27,
+            "type": "fm"
+          }
+        ]
+      }
+    },
+    "reward.chest": {
+      "source": "ai",
+      "category": "reward",
+      "duration": 1.5,
+      "gain": 0.95,
+      "vary": 0.02,
+      "whenToUse": "A chest, box or crate opens and reveals its contents.",
+      "tags": [
+        "chest",
+        "open",
+        "loot",
+        "reveal"
+      ],
+      "prompt": "Treasure chest opening, wooden creak and a heavy metal latch clunk followed by a magical golden sparkle reveal, warm and rewarding"
+    },
+    "reward.jackpot": {
+      "source": "ai",
+      "category": "reward",
+      "duration": 2.0,
+      "gain": 1.0,
+      "vary": 0,
+      "whenToUse": "A rare drop, jackpot or huge prize. The biggest reward sound in the game.",
+      "tags": [
+        "jackpot",
+        "rare",
+        "legendary",
+        "big win"
+      ],
+      "prompt": "Big jackpot win for a casual game, cascading bright bells and coins with a triumphant sparkle rise, celebratory and generous"
+    },
+    "state.win": {
+      "source": "ai",
+      "category": "reward",
+      "duration": 1.8,
+      "gain": 1.0,
+      "vary": 0,
+      "whenToUse": "The level is completed. Plays once on the Success screen.",
+      "tags": [
+        "win",
+        "success",
+        "fanfare",
+        "complete"
+      ],
+      "prompt": "Short happy level complete fanfare for a casual mobile game, bright playful ascending melody on marimba and glockenspiel with a cheerful sparkle ending, no orchestra, no drums"
+    },
+    "state.win.small": {
+      "source": "code",
+      "category": "reward",
+      "duration": 0.7,
+      "gain": 0.9,
+      "vary": 0.02,
+      "whenToUse": "A small win inside gameplay: a wave cleared, a goal met, a quest step done.",
+      "tags": [
+        "win",
+        "minor",
+        "goal",
+        "step"
+      ],
+      "synth": {
+        "notes": [
+          659,
+          880,
+          1318
+        ],
+        "step": 0.09,
+        "layers": [
+          {
+            "f0": 659,
+            "ratio": 2.0,
+            "index": 450,
+            "index1": 5,
+            "dur": 0.3,
+            "gain": 0.28,
+            "type": "fm"
+          }
+        ]
+      }
+    },
+    "state.lose": {
+      "source": "ai",
+      "category": "reward",
+      "duration": 1.5,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "The level is failed. Plays once on the Fail screen.",
+      "tags": [
+        "lose",
+        "fail",
+        "defeat"
+      ],
+      "prompt": "Gentle level failed sound for a casual mobile game, soft descending three note woodwind and marimba sigh, disappointed but friendly and encouraging, not dark"
+    },
+    "state.gameover": {
+      "source": "ai",
+      "category": "reward",
+      "duration": 2.2,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "The run is over for good \u2014 endless runner death, all lives lost.",
+      "tags": [
+        "game over",
+        "death",
+        "end"
+      ],
+      "prompt": "Game over sting for a casual mobile game, short descending melody with a soft final chord, gently final, warm not scary"
+    },
+    "state.levelup": {
+      "source": "ai",
+      "category": "reward",
+      "duration": 1.8,
+      "gain": 1.0,
+      "vary": 0,
+      "whenToUse": "The player levels up or ranks up.",
+      "tags": [
+        "level up",
+        "rank",
+        "promote",
+        "progress"
+      ],
+      "prompt": "Level up fanfare for a casual mobile game, bright rising melody on bells with a warm triumphant swell and sparkle, uplifting and short"
+    },
+    "state.newrecord": {
+      "source": "ai",
+      "category": "reward",
+      "duration": 2.0,
+      "gain": 1.0,
+      "vary": 0,
+      "whenToUse": "A new high score or personal best.",
+      "tags": [
+        "record",
+        "high score",
+        "best"
+      ],
+      "prompt": "New high score celebration for a casual mobile game, excited rising bell melody with a shimmering sparkle burst and a happy final chime"
+    },
+    "match.pop": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.14,
+      "gain": 0.8,
+      "vary": 0.1,
+      "minGap": 25,
+      "whenToUse": "A tile, bubble or block is cleared. The core match-3 sound.",
+      "tags": [
+        "pop",
+        "clear",
+        "match",
+        "bubble"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "wave": "sine",
+            "f0": 420,
+            "f1": 1500,
+            "dur": 0.06,
+            "gain": 0.35,
+            "type": "osc"
+          },
+          {
+            "filter": "bandpass",
+            "f0": 2600,
+            "f1": 1400,
+            "dur": 0.035,
+            "gain": 0.1,
+            "q": 2.5,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "match.combo": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.25,
+      "gain": 0.85,
+      "vary": 0.03,
+      "whenToUse": "A combo step. Play it once per combo level with a rising pitch \u2014 SFX.play('match.combo', { rate: 1 + n * 0.12 }).",
+      "tags": [
+        "combo",
+        "chain",
+        "streak",
+        "cascade"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "f0": 880,
+            "f1": 1100,
+            "ratio": 2.5,
+            "index": 500,
+            "index1": 6,
+            "dur": 0.2,
+            "gain": 0.3,
+            "type": "fm"
+          }
+        ]
+      }
+    },
+    "match.swap": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.12,
+      "gain": 0.65,
+      "vary": 0.08,
+      "whenToUse": "Two tiles swap places.",
+      "tags": [
+        "swap",
+        "move",
+        "slide",
+        "tile"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "filter": "bandpass",
+            "f0": 1200,
+            "f1": 2600,
+            "dur": 0.09,
+            "gain": 1.236,
+            "q": 2.0,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "match.blast": {
+      "source": "hybrid",
+      "category": "game",
+      "duration": 0.7,
+      "gain": 0.95,
+      "vary": 0.04,
+      "whenToUse": "A booster fires: rocket, bomb, lightning, rainbow clear.",
+      "tags": [
+        "booster",
+        "blast",
+        "bomb",
+        "special"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "filter": "lowpass",
+            "f0": 4000,
+            "f1": 300,
+            "dur": 0.5,
+            "gain": 0.3,
+            "q": 0.8,
+            "type": "noise"
+          },
+          {
+            "wave": "sine",
+            "f0": 200,
+            "f1": 55,
+            "dur": 0.4,
+            "gain": 0.4,
+            "type": "osc"
+          },
+          {
+            "f0": 1400,
+            "f1": 2200,
+            "ratio": 3,
+            "index": 600,
+            "index1": 6,
+            "dur": 0.35,
+            "gain": 0.18,
+            "type": "fm"
+          }
+        ]
+      },
+      "prompt": "Match three booster explosion, bright cartoon blast with sparkling debris and a satisfying low thump, playful not violent"
+    },
+    "match.shuffle": {
+      "source": "ai",
+      "category": "game",
+      "duration": 1.0,
+      "gain": 0.75,
+      "vary": 0.03,
+      "whenToUse": "The board reshuffles, or cards are dealt.",
+      "tags": [
+        "shuffle",
+        "deal",
+        "cards",
+        "reset"
+      ],
+      "prompt": "Shuffling and dealing playing cards quickly, crisp paper riffle and light slaps, dry close recording"
+    },
+    "break.glass": {
+      "source": "ai",
+      "category": "game",
+      "duration": 1.0,
+      "gain": 0.9,
+      "vary": 0.05,
+      "variationsWanted": 2,
+      "whenToUse": "Glass, ice or a crystal shatters.",
+      "tags": [
+        "glass",
+        "shatter",
+        "break",
+        "ice"
+      ],
+      "prompt": "Pane of glass shattering, bright sharp crack followed by many small shards tinkling to the ground, dry close recording"
+    },
+    "break.wood": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.8,
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2,
+      "whenToUse": "A crate, plank, barrel or door breaks apart.",
+      "tags": [
+        "wood",
+        "crate",
+        "splinter",
+        "break"
+      ],
+      "prompt": "Wooden crate smashing apart, sharp splintering crack with planks clattering down, dry close recording"
+    },
+    "break.stone": {
+      "source": "ai",
+      "category": "game",
+      "duration": 1.0,
+      "gain": 0.9,
+      "vary": 0.05,
+      "variationsWanted": 2,
+      "whenToUse": "Rock, brick or concrete breaks.",
+      "tags": [
+        "stone",
+        "rock",
+        "rubble",
+        "break"
+      ],
+      "prompt": "Stone block breaking apart, heavy dry crack with gravel and rubble scattering, close recording"
+    },
+    "break.pot": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.7,
+      "gain": 0.85,
+      "vary": 0.06,
+      "variationsWanted": 2,
+      "whenToUse": "A pot, vase or ceramic container smashes.",
+      "tags": [
+        "pot",
+        "ceramic",
+        "vase",
+        "smash"
+      ],
+      "prompt": "Clay pot smashing on the floor, bright ceramic crack with shards scattering, dry close recording"
+    },
+    "explosion.small": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.7,
+      "gain": 0.9,
+      "vary": 0.06,
+      "whenToUse": "A small stylized blast: a bomb, a popped enemy, a firework.",
+      "tags": [
+        "explosion",
+        "bomb",
+        "blast",
+        "small"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "filter": "lowpass",
+            "f0": 3600,
+            "f1": 180,
+            "dur": 0.55,
+            "gain": 0.4,
+            "q": 0.7,
+            "type": "noise"
+          },
+          {
+            "wave": "sine",
+            "f0": 140,
+            "f1": 38,
+            "dur": 0.45,
+            "gain": 0.5,
+            "type": "osc"
+          }
+        ]
+      }
+    },
+    "explosion.big": {
+      "source": "ai",
+      "category": "game",
+      "duration": 2.2,
+      "gain": 1.0,
+      "vary": 0.03,
+      "whenToUse": "A real, heavy explosion with debris and rumble.",
+      "tags": [
+        "explosion",
+        "big",
+        "boom",
+        "debris"
+      ],
+      "prompt": "Large explosion, powerful deep boom with a bright initial crack, followed by falling debris and a long low rumble tail"
+    },
+    "magic.sparkle": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.6,
+      "gain": 0.75,
+      "vary": 0.06,
+      "whenToUse": "A small magical shimmer: a glow, a wand touch, an item twinkling.",
+      "tags": [
+        "sparkle",
+        "magic",
+        "shimmer",
+        "twinkle"
+      ],
+      "synth": {
+        "notes": [
+          2093,
+          2637,
+          3136
+        ],
+        "step": 0.05,
+        "layers": [
+          {
+            "f0": 2093,
+            "ratio": 4.0,
+            "index": 300,
+            "index1": 3,
+            "dur": 0.25,
+            "gain": 0.16,
+            "type": "fm"
+          }
+        ]
+      }
+    },
+    "magic.heal": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.9,
+      "gain": 0.8,
+      "vary": 0.03,
+      "whenToUse": "Healing, restoring energy or refilling lives.",
+      "tags": [
+        "heal",
+        "restore",
+        "cure",
+        "energy"
+      ],
+      "synth": {
+        "notes": [
+          523,
+          659,
+          784,
+          1046
+        ],
+        "step": 0.1,
+        "layers": [
+          {
+            "wave": "sine",
+            "f0": 523,
+            "f1": 530,
+            "dur": 0.4,
+            "gain": 0.24,
+            "partials": [
+              1,
+              2,
+              3
+            ],
+            "partialGains": [
+              1,
+              0.4,
+              0.15
+            ],
+            "type": "osc"
+          }
+        ]
+      }
+    },
+    "magic.shield": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.9,
+      "gain": 0.8,
+      "vary": 0.04,
+      "whenToUse": "A shield, barrier or invincibility turns on.",
+      "tags": [
+        "shield",
+        "barrier",
+        "protect",
+        "invincible"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "f0": 220,
+            "f1": 330,
+            "ratio": 1.5,
+            "index": 400,
+            "index1": 40,
+            "dur": 0.8,
+            "gain": 0.26,
+            "vib": {
+              "rate": 5,
+              "depth": 6
+            },
+            "type": "fm"
+          },
+          {
+            "filter": "bandpass",
+            "f0": 1200,
+            "f1": 3000,
+            "dur": 0.5,
+            "gain": 0.08,
+            "q": 4,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "magic.buff": {
+      "source": "code",
+      "category": "game",
+      "duration": 0.6,
+      "gain": 0.85,
+      "vary": 0.04,
+      "whenToUse": "A booster, power-up or upgrade activates.",
+      "tags": [
+        "powerup",
+        "boost",
+        "upgrade",
+        "buff"
+      ],
+      "synth": {
+        "notes": [
+          523,
+          698,
+          880,
+          1174
+        ],
+        "step": 0.055,
+        "layers": [
+          {
+            "wave": "triangle",
+            "f0": 523,
+            "f1": 560,
+            "dur": 0.18,
+            "gain": 0.26,
+            "partials": [
+              1,
+              2
+            ],
+            "partialGains": [
+              1,
+              0.35
+            ],
+            "type": "osc"
+          }
+        ]
+      }
+    },
+    "magic.fire": {
+      "source": "ai",
+      "category": "game",
+      "duration": 1.0,
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2,
+      "whenToUse": "A fireball, flamethrower or burning attack. Fire texture is impossible in code.",
+      "tags": [
+        "fire",
+        "flame",
+        "burn",
+        "fireball"
+      ],
+      "prompt": "Fireball spell being cast, whooshing flame burst with crackling fire and a deep roar, magical and powerful"
+    },
+    "magic.ice": {
+      "source": "hybrid",
+      "category": "game",
+      "duration": 0.9,
+      "gain": 0.85,
+      "vary": 0.04,
+      "whenToUse": "Freezing, an ice attack, or something turning to crystal.",
+      "tags": [
+        "ice",
+        "freeze",
+        "frost",
+        "crystal"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "f0": 2400,
+            "f1": 900,
+            "ratio": 5.5,
+            "index": 900,
+            "index1": 10,
+            "dur": 0.6,
+            "gain": 0.2,
+            "type": "fm"
+          },
+          {
+            "filter": "highpass",
+            "f0": 5000,
+            "f1": 8000,
+            "dur": 0.5,
+            "gain": 0.12,
+            "type": "noise"
+          }
+        ]
+      },
+      "prompt": "Ice freezing spell, sharp crystalline crackle spreading with a cold shimmering tail, magical and icy"
+    },
+    "magic.summon": {
+      "source": "code",
+      "category": "game",
+      "duration": 1.2,
+      "gain": 0.85,
+      "vary": 0.03,
+      "whenToUse": "Summoning, a portal opening, a boss appearing.",
+      "tags": [
+        "summon",
+        "portal",
+        "appear",
+        "boss"
+      ],
+      "synth": {
+        "layers": [
+          {
+            "wave": "sawtooth",
+            "f0": 60,
+            "f1": 420,
+            "dur": 1.0,
+            "gain": 0.2,
+            "vib": {
+              "rate": 5,
+              "depth": 10
+            },
+            "type": "osc"
+          },
+          {
+            "f0": 300,
+            "f1": 1400,
+            "ratio": 2.5,
+            "index": 800,
+            "index1": 30,
+            "dur": 0.9,
+            "gain": 0.2,
+            "type": "fm"
+          },
+          {
+            "filter": "bandpass",
+            "f0": 400,
+            "f1": 4000,
+            "dur": 0.9,
+            "gain": 0.12,
+            "q": 2,
+            "type": "noise"
+          }
+        ]
+      }
+    },
+    "door.open": {
+      "source": "ai",
+      "category": "game",
+      "duration": 1.0,
+      "gain": 0.75,
+      "vary": 0.04,
+      "whenToUse": "A door, gate or hatch opens.",
+      "tags": [
+        "door",
+        "open",
+        "gate",
+        "creak"
+      ],
+      "prompt": "Heavy wooden door opening slowly, low creak of hinges with a final wooden thud, dry close recording"
+    },
+    "door.close": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.7,
+      "gain": 0.8,
+      "vary": 0.04,
+      "whenToUse": "A door, gate or hatch closes.",
+      "tags": [
+        "door",
+        "close",
+        "shut",
+        "slam"
+      ],
+      "prompt": "Heavy wooden door closing firmly, short creak then a solid thud and latch click, dry close recording"
+    },
+    "water.splash": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.8,
+      "gain": 0.8,
+      "vary": 0.07,
+      "variationsWanted": 3,
+      "whenToUse": "Something falls into water, or a big splash on impact.",
+      "tags": [
+        "splash",
+        "water",
+        "dive",
+        "wet"
+      ],
+      "prompt": "Object splashing into water, single strong splash with droplets falling after, close outdoor recording"
+    },
+    "fire.crackle": {
+      "source": "ai",
+      "category": "game",
+      "duration": 3.0,
+      "gain": 0.5,
+      "vary": 0.02,
+      "loopable": true,
+      "whenToUse": "A campfire, torch or burning object nearby. Loops.",
+      "tags": [
+        "fire",
+        "campfire",
+        "burn",
+        "ambience",
+        "loop"
+      ],
+      "prompt": "Campfire burning steadily, continuous soft crackling and popping of wood embers, seamless loop, no music"
+    },
+    "engine.start": {
+      "source": "ai",
+      "category": "game",
+      "duration": 1.8,
+      "gain": 0.85,
+      "vary": 0.03,
+      "whenToUse": "A car, kart or machine starts up.",
+      "tags": [
+        "engine",
+        "start",
+        "car",
+        "ignition"
+      ],
+      "prompt": "Car engine starting, starter motor cranking then the engine catching and settling into an idle, close recording"
+    },
+    "engine.loop": {
+      "source": "ai",
+      "category": "game",
+      "duration": 3.0,
+      "gain": 0.6,
+      "vary": 0.02,
+      "loopable": true,
+      "whenToUse": "An engine running while driving. Loops; change pitch with rate for speed.",
+      "tags": [
+        "engine",
+        "loop",
+        "drive",
+        "motor"
+      ],
+      "prompt": "Car engine running at a steady medium speed, continuous smooth motor drone, seamless loop, no music"
+    },
+    "vehicle.brake": {
+      "source": "ai",
+      "category": "game",
+      "duration": 1.2,
+      "gain": 0.85,
+      "vary": 0.05,
+      "whenToUse": "Hard braking, a handbrake turn or skidding to a stop.",
+      "tags": [
+        "brake",
+        "skid",
+        "tyres",
+        "screech"
+      ],
+      "prompt": "Car tyres screeching on asphalt during a hard brake, sharp rubber squeal fading out, close outdoor recording"
+    },
+    "vehicle.crash": {
+      "source": "ai",
+      "category": "game",
+      "duration": 1.5,
+      "gain": 1.0,
+      "vary": 0.04,
+      "whenToUse": "A vehicle collision.",
+      "tags": [
+        "crash",
+        "collision",
+        "wreck",
+        "metal"
+      ],
+      "prompt": "Car crash impact, heavy metal crunch with glass breaking and debris settling, dry close recording"
     }
   }
 }

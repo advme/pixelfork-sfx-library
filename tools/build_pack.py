@@ -120,7 +120,7 @@ def build(pack):
     os.makedirs(dist, exist_ok=True)
 
     work = tempfile.mkdtemp(prefix='sfxpack-')
-    pieces, cursor, built, missing = [], 0.0, [], []
+    pieces, cursor, built, missing, code_only = [], 0.0, [], [], []
 
     gap_file = os.path.join(work, '_gap.wav')
     silence(gap_file, GAP)
@@ -128,7 +128,11 @@ def build(pack):
     for name, definition in reg['sounds'].items():
         files = sources_for(name, sounds_dir)
         if not files:
-            missing.append(name)
+            # A "code" sound is finished by design — it never wants an audio file.
+            if definition.get('source') == 'code':
+                code_only.append(name)
+            else:
+                missing.append(name)
             definition.pop('start', None)
             definition.pop('dur', None)
             definition.pop('variations', None)
@@ -194,10 +198,11 @@ def build(pack):
     shutil.rmtree(work, ignore_errors=True)
 
     print('Pack "{}" v{}'.format(reg['name'], reg['version']))
-    print('  built from audio : {}'.format(len(built)))
+    print('  synthesized by code (done, no file needed) : {}'.format(len(code_only)))
+    print('  built from real audio                     : {}'.format(len(built)))
     for b in built:
         print('      ' + b)
-    print('  using stand-in   : {}'.format(len(missing)))
+    print('  still waiting for audio (stand-in playing) : {}'.format(len(missing)))
     for m in missing:
         print('      ' + m)
     if pieces:

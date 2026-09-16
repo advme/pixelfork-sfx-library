@@ -17,9 +17,19 @@ def main(pack):
     with open(os.path.join(ROOT, 'packs', pack, 'registry.json')) as fh:
         reg = json.load(fh)
 
-    rows = ['| Sound | Play it when | Category |', '|---|---|---|']
-    for name, d in sorted(reg['sounds'].items()):
-        rows.append('| `{}` | {} | {} |'.format(name, d.get('whenToUse', ''), d.get('category', 'ui')))
+    groups = {}
+    for name, d in reg['sounds'].items():
+        groups.setdefault(name.split('.')[0], []).append((name, d))
+
+    rows = []
+    for prefix in sorted(groups):
+        rows.append('')
+        rows.append('**`{}.*`**'.format(prefix))
+        rows.append('')
+        rows.append('| Sound | Play it when | Made by |')
+        rows.append('|---|---|---|')
+        for name, d in sorted(groups[prefix]):
+            rows.append('| `{}` | {} | {} |'.format(name, d.get('whenToUse', ''), d.get('source', '?')))
 
     table = '\n'.join(rows)
     guide_path = os.path.join(ROOT, 'AI-GUIDE.md')

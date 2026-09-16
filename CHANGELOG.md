@@ -1,5 +1,41 @@
 # CHANGELOG
 
+## v0.2.0-A — 105 sounds, and a real synth engine
+- Agent: A (Claude) · Date: 2026-09-16
+- Done: Grew the pack from 14 sounds to **105**, covering shooting, footsteps, jumping,
+  impacts, breaking, explosions, magic, pickups, puzzle moves, results, doors, water,
+  fire, vehicles and voices.
+  The important change is conceptual: every sound now declares **how it is made**.
+  `code` sounds are synthesized by the runtime *permanently* — not as placeholders —
+  because things like lasers, UI blips, coin chimes and whooshes are synthetic by nature,
+  and code repitches them forever without sounding like a loop. `ai` sounds are generated
+  audio files, because footsteps, guns, glass, fire, engines, voices and musical fanfares
+  carry material texture no oscillator fakes. That split is **51 code / 51 ai / 3 hybrid**,
+  so only 54 of the 105 need any work from the owner.
+  To make the code half real rather than a stand-in, replaced the toy synth with a proper
+  layered engine: oscillator, filtered-noise and FM layers, stacked with per-layer delay,
+  plus arpeggios, partials and vibrato. FM is what makes convincing coins, bells and metal.
+- Tested: Played all 105 in a real browser and measured each one on the master bus with a
+  sample-continuous meter (ScriptProcessor, not analyser snapshots — snapshots miss short
+  transients and gave numbers that moved between runs). Result: nothing silent, nothing
+  clipping, quietest 0.104, median 0.30, loudest 0.65.
+  Found and fixed a systematic flaw on the way: narrow-bandpass noise layers measured 4–6×
+  quieter than intended, so every whoosh, swipe, dash and miss was inaudible under music —
+  `ui.whoosh`, which fires on every popup, was the worst at 0.046. Widened the filters
+  (which also stops them whistling) and calibrated the gains from the measurements.
+  Also caught a contaminated measurement: an early run had the page's own audit playing
+  all 105 sounds *underneath* the meter, so those numbers were meaningless and were redone.
+- Notes for next agent: **`AGENTS.md` §5 rule 1 changed meaning.** It used to say "never
+  synthesize the final sound in code". That is now wrong — for half the pack, code *is*
+  the final sound. The rule is replaced by the `source` contract, with the test: could this
+  sound exist without a physical object making it?
+  No generated audio exists yet, so the 54 `ai` sounds play a rough category stand-in
+  (`ui`→tap, `game`→thud, `reward`→chime) and will sound generic until real files land.
+  `fire.crackle` and `engine.loop` are marked loopable but nothing checks they loop
+  seamlessly — generated files almost never do, and `build_pack.py` has no crossfade step.
+  The GitHub repo `advme/pixelfork-sfx-library` still does not exist, so the CDN URLs are dead.
+
+
 ## v0.1.0-A — the library works end to end
 - Agent: A (Claude) · Date: 2026-09-16
 - Done: First working version. A game adds 2 lines and calls `SFX.play('coin.collect')`.

@@ -38,7 +38,7 @@
     <div class="sc-counter" data-icon="coin" data-value="0" id="coins" data-size="sm"></div>
   </div>
   <div class="sc-screen-middle">
-    <button class="sc-button" data-color="green" data-size="lg" id="tapme" data-sfx="coin.collect">TAP FOR COINS</button>
+    <button class="sc-button" data-color="green" data-size="lg" id="tapme" data-sfx="pickup.coin">TAP FOR COINS</button>
   </div>
   <div class="sc-screen-bottom">
     <button class="sc-button" data-color="orange" id="win">Finish level</button>
@@ -88,7 +88,7 @@
     SC.screen.hide('hud'); SC.screen.show('winScreen');
     SFX.duck(0.25, 1800);                   // dip the music under the fanfare
     SFX.play('state.win');
-    setTimeout(() => SFX.play('coin.pile'), 700);
+    setTimeout(() => SFX.play('coin.shower'), 700);
     // Stars: the kit fires "star" events, SFX.attach() turns them into a rising ladder.
     setTimeout(() => SC.setValue(document.getElementById('stars'), 3), 900);
   };
