@@ -1,5 +1,31 @@
 # CHANGELOG
 
+## v0.2.2-A — first 5 generated sounds, and a generator tool
+- Agent: A (Claude) · Date: 2026-09-16
+- Done: Added `tools/generate_ai.py`, which generates the `ai` sounds straight from the
+  registry using the ElevenLabs Sound Effects API — prompts, durations and take counts all
+  come from `registry.json`, so what is generated is exactly what the library documents.
+  It skips files that already exist, so re-running costs nothing, and reads the API key
+  from `$ELEVENLABS_API_KEY`, `~/.config/elevenlabs/key` or a gitignored `.elevenlabs.key`,
+  never printing or committing it.
+  Generated the first 5 as a style test, chosen to span the hard cases: `state.win` and
+  `state.lose` (music), `reward.chest` (layered mechanical + magical), `break.glass`
+  (material texture) and `weapon.pistol` (sharp transient).
+- Tested: Confirmed all 5 play from the sprite rather than a stand-in, and that each one's
+  audible length matches its declared slice to within 5% — which is what proves the sprite
+  offsets are right and no sound bleeds into its neighbour.
+  Found a real mix problem while checking levels: `build_pack.py` normalizes every
+  generated file to −1 dBFS, which is correct for a file but left the generated sounds
+  roughly twice as loud as the synthesized half (peaks 0.68–0.84 against a code median of
+  0.37). Rather than hand-tune five gains, added a single `spriteTrim` (default 0.55)
+  applied to all sprite playback, so the remaining 49 sounds will balance automatically as
+  they arrive. After: generated average 0.565 against code average 0.496.
+- Notes for next agent: the owner judges these by ear — a sound that measures fine can
+  still be wrong. To redo one, edit its `prompt` in `registry.json` and run
+  `python3 tools/generate_ai.py <name> --force`. Per-pack balance can be overridden with
+  `spriteTrim` in the manifest if a future pack is mastered differently.
+
+
 ## v0.2.1-A — fixed the harshness and the speaker glitch
 - Agent: A (Claude) · Date: 2026-09-16
 - Done: The owner reported the code sounds were harsh, pitched too high, and made a

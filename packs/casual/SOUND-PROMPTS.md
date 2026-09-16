@@ -19,11 +19,11 @@ edit the registry and run the tool again._
 **51 of the 105 sounds in this pack are made by code and need nothing from you.**
 This checklist is only the 54 that need real audio.
 
-**Progress: 0 of 54 generated.**
+**Progress: 5 of 54 generated.**
 
 ## game
 
-- [ ] **`weapon.pistol`** — A realistic handgun shot.
+- [x] **`weapon.pistol`** — A realistic handgun shot.
   - Target length: ~0.4s · generate **3 takes** (`weapon.pistol.1.wav`, `weapon.pistol.2.wav`, …)
   - Prompt: `Single handgun gunshot, sharp dry crack with a short punchy tail, close perspective, no music, no reverb room`
 
@@ -135,7 +135,7 @@ This checklist is only the 54 that need real audio.
   - Target length: ~1.0s
   - Prompt: `Shuffling and dealing playing cards quickly, crisp paper riffle and light slaps, dry close recording`
 
-- [ ] **`break.glass`** — Glass, ice or a crystal shatters.
+- [x] **`break.glass`** — Glass, ice or a crystal shatters.
   - Target length: ~1.0s · generate **2 takes** (`break.glass.1.wav`, `break.glass.2.wav`, …)
   - Prompt: `Pane of glass shattering, bright sharp crack followed by many small shards tinkling to the ground, dry close recording`
 
@@ -213,7 +213,7 @@ This checklist is only the 54 that need real audio.
   - Target length: ~0.35s · generate **2 takes** (`pickup.ammo.1.wav`, `pickup.ammo.2.wav`, …)
   - Prompt: `Picking up ammunition, small metallic clink of shells and a quick gear rattle, dry close recording`
 
-- [ ] **`reward.chest`** — A chest, box or crate opens and reveals its contents.
+- [x] **`reward.chest`** — A chest, box or crate opens and reveals its contents.
   - Target length: ~1.5s
   - Prompt: `Treasure chest opening, wooden creak and a heavy metal latch clunk followed by a magical golden sparkle reveal, warm and rewarding`
 
@@ -221,11 +221,11 @@ This checklist is only the 54 that need real audio.
   - Target length: ~2.0s
   - Prompt: `Big jackpot win for a casual game, cascading bright bells and coins with a triumphant sparkle rise, celebratory and generous`
 
-- [ ] **`state.win`** — The level is completed. Plays once on the Success screen.
+- [x] **`state.win`** — The level is completed. Plays once on the Success screen.
   - Target length: ~1.8s
   - Prompt: `Short happy level complete fanfare for a casual mobile game, bright playful ascending melody on marimba and glockenspiel with a cheerful sparkle ending, no orchestra, no drums`
 
-- [ ] **`state.lose`** — The level is failed. Plays once on the Fail screen.
+- [x] **`state.lose`** — The level is failed. Plays once on the Fail screen.
   - Target length: ~1.5s
   - Prompt: `Gentle level failed sound for a casual mobile game, soft descending three note woodwind and marimba sigh, disappointed but friendly and encouraging, not dark`
 

@@ -2,14 +2,17 @@
   "name": "casual",
   "title": "Casual SFX Pack",
   "description": "Sound effects for hyper-casual and casual mobile web games. Designed to pair with the Super Casual UI Kit.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "style": "Modern mobile casual game audio: clean, bright, punchy, lightly processed. Not retro/8-bit, not cinematic/orchestral. Mono, dry (no long reverb tails), normalized to -1 dBFS peak.",
   "sourceMeaning": {
     "code": "Synthesized by the runtime, permanently. No audio file, no download, infinite variation. These sounds are synthetic by nature so code beats a recording.",
     "ai": "Generated as an audio file (ElevenLabs Sound Effects or similar) from the prompt below. These sounds carry real-world material texture that code cannot fake.",
     "hybrid": "A coded layer plus a generated layer. The code part ships immediately; the audio part deepens it later."
   },
-  "sprite": null,
+  "sprite": {
+    "webm": "casual.webm",
+    "m4a": "casual.m4a"
+  },
   "sounds": {
     "ui.tap": {
       "source": "code",
@@ -779,7 +782,9 @@
         "pistol",
         "gunshot",
         "shoot"
-      ]
+      ],
+      "start": 0.0,
+      "dur": 0.48
     },
     "weapon.shotgun": {
       "source": "ai",
@@ -1864,7 +1869,9 @@
         "open",
         "loot",
         "reveal"
-      ]
+      ],
+      "start": 0.73,
+      "dur": 1.1072
     },
     "reward.jackpot": {
       "source": "ai",
@@ -1892,7 +1899,9 @@
         "success",
         "fanfare",
         "complete"
-      ]
+      ],
+      "start": 2.0873,
+      "dur": 1.447
     },
     "state.win.small": {
       "source": "code",
@@ -1938,7 +1947,9 @@
         "lose",
         "fail",
         "defeat"
-      ]
+      ],
+      "start": 3.7843,
+      "dur": 1.48
     },
     "state.gameover": {
       "source": "ai",
@@ -2144,7 +2155,9 @@
         "shatter",
         "break",
         "ice"
-      ]
+      ],
+      "start": 5.5143,
+      "dur": 1.0
     },
     "break.wood": {
       "source": "ai",
@@ -2610,5 +2623,6 @@
         "metal"
       ]
     }
-  }
+  },
+  "spriteDuration": 6.7644
 }

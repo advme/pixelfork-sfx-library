@@ -2,3 +2,4 @@
 _archive/
 packs/*/sounds/_raw/
 *.tmp
+.elevenlabs.key

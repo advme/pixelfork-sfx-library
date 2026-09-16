@@ -16,7 +16,7 @@
 (function (global) {
   'use strict';
 
-  var VERSION = '0.2.1';
+  var VERSION = '0.2.2';
   var STORE_KEY = 'pixelfork.sfx';
   var CATEGORIES = ['ui', 'game', 'reward', 'music'];
   var MAX_VOICES = 24;          // hard cap on simultaneous one-shots
@@ -179,7 +179,11 @@
       })
       .then(function (manifest) {
         registerSounds(manifest);
-        packs[manifest.name || pack] = { manifest: manifest, buffer: null };
+        packs[manifest.name || pack] = {
+          manifest: manifest,
+          buffer: null,
+          trim: manifest.spriteTrim != null ? manifest.spriteTrim : 0.55
+        };
         if (!manifest.sprite) return null;          // names only, synth fallback
         var file = BASE + pickFormat(manifest.sprite);
         return fetch(file)
@@ -417,7 +421,7 @@
       src.buffer = buffer;
       src.playbackRate.value = rate;
       var g = c.createGain();
-      g.gain.value = volume;
+      g.gain.value = volume * (pack.trim == null ? 0.55 : pack.trim);
       src.connect(g); g.connect(dest);
       src.start(when, slice[0], slice[1]);
       track(src);
