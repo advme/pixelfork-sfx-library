@@ -31,6 +31,7 @@ import urllib.error
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 ENDPOINT = 'https://api.elevenlabs.io/v1/sound-generation'
 MIN_DURATION = 0.5          # the API's floor; build_pack trims the silence back off
 HEADROOM = 0.15             # a little room for the tail; more invites a SEQUENCE
@@ -162,6 +163,8 @@ def main():
     if not_ai:
         sys.exit('These are made by code and need no audio: ' + ', '.join(not_ai))
 
+    seq_dir = os.path.join(sounds_dir, '_seq')
+
     plan = []
     for name in targets:
         d = sounds[name]
@@ -189,6 +192,38 @@ def main():
     print()
     written, weak = [], []
     for name, d, takes in plan:
+        seq = d.get('sequence')
+        if seq:
+            # Generate ONE natural recording and cut it into takes. A generator
+            # asked for "a single footstep" must still fill the API's half-second
+            # floor and tends to return several steps crammed together; a real
+            # 3-second walk comes out natural and every step differs for free.
+            import split_takes
+            os.makedirs(seq_dir, exist_ok=True)
+            secs = seq.get('seconds', 3.0)
+            print('  generating {} as one {:.0f}s sequence …'.format(name, secs),
+                  end='', flush=True)
+            audio = generate(key, seq['prompt'], secs - HEADROOM)
+            lvl = peak_dbfs(audio)
+            raw = os.path.join(seq_dir, name + '.mp3')
+            with open(raw, 'wb') as fh:
+                fh.write(audio)
+            print(' {:.0f} KB  peak {}'.format(
+                len(audio) / 1024, '?' if lvl is None else '{:.1f} dBFS'.format(lvl)))
+
+            for old_file in os.listdir(sounds_dir):
+                stem = os.path.splitext(old_file)[0]
+                if stem == name or (stem.startswith(name + '.') and stem[len(name)+1:].isdigit()):
+                    os.remove(os.path.join(sounds_dir, old_file))
+
+            cut, total = split_takes.split(name, raw, takes, sounds_dir)
+            print('    cut {:.2f}s into {} takes: {}'.format(
+                total, len(cut), ', '.join('{:.0f}ms'.format(dur*1000) for _, dur in cut)))
+            if len(cut) < takes:
+                weak.append('{} (only {} of {} takes found)'.format(name, len(cut), takes))
+            written += [c[0] for c in cut]
+            continue
+
         for i in range(takes):
             suffix = '' if takes == 1 else '.{}'.format(i + 1)
             out = os.path.join(sounds_dir, '{}{}.mp3'.format(name, suffix))

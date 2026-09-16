@@ -2,7 +2,7 @@
   "name": "casual",
   "title": "Casual SFX Pack",
   "description": "Sound effects for hyper-casual and casual mobile web games. Designed to pair with the Super Casual UI Kit.",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "style": "Modern mobile casual game audio: clean, bright, punchy, lightly processed. Not retro/8-bit, not cinematic/orchestral. Mono, dry (no long reverb tails), normalized to -1 dBFS peak.",
   "sourceMeaning": {
     "code": "Synthesized by the runtime, permanently. No audio file, no download, infinite variation. These sounds are synthetic by nature so code beats a recording.",
@@ -1468,10 +1468,12 @@
       ],
       "prompt": "Single footstep on a metal grate or steel walkway, hollow metallic clank with a faint ring, close and dry",
       "postFx": {
-        "tighten": 0.22,
         "presence": 3
       },
-      "minLevelDb": -24
+      "sequence": {
+        "prompt": "Person walking at a steady pace on a metal grate walkway, five clear separate footsteps with hollow metallic clanks, recorded close and dry, no reverb, no music",
+        "seconds": 3.0
+      }
     },
     "step.snow": {
       "source": "ai",

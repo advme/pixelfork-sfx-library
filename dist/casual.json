@@ -2,7 +2,7 @@
   "name": "casual",
   "title": "Casual SFX Pack",
   "description": "Sound effects for hyper-casual and casual mobile web games. Designed to pair with the Super Casual UI Kit.",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "style": "Modern mobile casual game audio: clean, bright, punchy, lightly processed. Not retro/8-bit, not cinematic/orchestral. Mono, dry (no long reverb tails), normalized to -1 dBFS peak.",
   "sourceMeaning": {
     "code": "Synthesized by the runtime, permanently. No audio file, no download, infinite variation. These sounds are synthetic by nature so code beats a recording.",
@@ -1588,28 +1588,32 @@
         "run",
         "metal"
       ],
+      "sequence": {
+        "prompt": "Person walking at a steady pace on a metal grate walkway, five clear separate footsteps with hollow metallic clanks, recorded close and dry, no reverb, no music",
+        "seconds": 3.0
+      },
       "start": 29.3834,
-      "dur": 0.22,
+      "dur": 0.3887,
       "variations": [
         [
           29.3834,
-          0.22
+          0.3887
         ],
         [
-          29.8534,
-          0.22
+          30.0222,
+          0.4114
         ],
         [
-          30.3234,
-          0.22
+          30.6835,
+          0.3402
         ],
         [
-          30.7934,
-          0.22
+          31.2737,
+          0.153
         ],
         [
-          31.2634,
-          0.22
+          31.6768,
+          0.4188
         ]
       ]
     },
@@ -1627,27 +1631,27 @@
         "run",
         "snow"
       ],
-      "start": 31.7334,
+      "start": 32.3456,
       "dur": 0.22,
       "variations": [
         [
-          31.7334,
+          32.3456,
           0.22
         ],
         [
-          32.2034,
+          32.8156,
           0.22
         ],
         [
-          32.6734,
+          33.2856,
           0.22
         ],
         [
-          33.1434,
+          33.7556,
           0.22
         ],
         [
-          33.6134,
+          34.2256,
           0.22
         ]
       ]
@@ -1666,27 +1670,27 @@
         "run",
         "water"
       ],
-      "start": 34.0834,
+      "start": 34.6956,
       "dur": 0.26,
       "variations": [
         [
-          34.0834,
+          34.6956,
           0.26
         ],
         [
-          34.5934,
+          35.2056,
           0.26
         ],
         [
-          35.1034,
+          35.7156,
           0.26
         ],
         [
-          35.6134,
+          36.2256,
           0.26
         ],
         [
-          36.1234,
+          36.7356,
           0.26
         ]
       ]
@@ -2146,7 +2150,7 @@
         "loot",
         "reveal"
       ],
-      "start": 36.6334,
+      "start": 37.2456,
       "dur": 1.1073
     },
     "reward.jackpot": {
@@ -2176,7 +2180,7 @@
         "fanfare",
         "complete"
       ],
-      "start": 37.9907,
+      "start": 38.6029,
       "dur": 1.4925
     },
     "state.win.small": {
@@ -2224,7 +2228,7 @@
         "fail",
         "defeat"
       ],
-      "start": 39.7332,
+      "start": 40.3454,
       "dur": 1.48
     },
     "state.gameover": {
@@ -2432,7 +2436,7 @@
         "break",
         "ice"
       ],
-      "start": 41.4633,
+      "start": 42.0754,
       "dur": 1.0
     },
     "break.wood": {
@@ -2825,19 +2829,19 @@
         "dive",
         "wet"
       ],
-      "start": 42.7133,
+      "start": 43.3255,
       "dur": 1.2,
       "variations": [
         [
-          42.7133,
+          43.3255,
           1.2
         ],
         [
-          44.1634,
+          44.7755,
           0.927
         ],
         [
-          45.3404,
+          45.9525,
           1.2
         ]
       ]
@@ -2916,5 +2920,5 @@
       ]
     }
   },
-  "spriteDuration": 46.7904
+  "spriteDuration": 47.4026
 }

@@ -1,5 +1,30 @@
 # CHANGELOG
 
+## v0.2.8-A — generate a real walk, then cut it into takes
+- Agent: A (Claude) · Date: 2026-09-17
+- Done: The owner pointed out that generating footsteps one at a time was the wrong
+  approach, and they were right. A generator asked for "a single footstep" still has to
+  fill the API's half-second floor, so it pads or returns several steps crammed together —
+  which is why v0.2.6 needed a `tighten` postFx to hack the extra steps off.
+  Added **sequence mode**: a sound can declare a `sequence` block in the registry, and
+  `generate_ai.py` then generates ONE natural recording (a 3-second walk) and cuts it into
+  individual takes with `tools/split_takes.py`. The splitter finds each hit by rising
+  energy with a refractory gap, lowering its threshold until it finds the number of takes
+  asked for, then writes each one out normalized with fades on both edges.
+  This is strictly better: the model is good at a natural walk, and every step in a real
+  walk already differs, so the takes get their variation for free instead of from five
+  separate rolls of the dice.
+  Applied to `step.metal` as the trial.
+- Tested: `step.metal` is now 5 takes cut from one 3-second walk. Every take contains
+  **exactly one onset**, where the old approach left two steps inside several takes.
+  The takes vary naturally: 153–419 ms long, 23–45% of energy above 4 kHz.
+  The `tighten` hack is no longer needed for this sound and was removed from it.
+- Notes for next agent: if the owner approves, convert the other seven `step.*` surfaces
+  the same way, and consider it for anything else that is naturally repetitive —
+  `coin.collect`-style pickups, `match.pop`, `impact.punch`. The source recordings live in
+  `packs/casual/sounds/_seq/` and are gitignored; only the cut takes are committed.
+
+
 ## v0.2.7-A — 10 more generated sounds (25 of 54 done)
 - Agent: A (Claude) · Date: 2026-09-17
 - Done: Generated `weapon.sword.swing`, `weapon.sword.clash`, `weapon.cannon`,
