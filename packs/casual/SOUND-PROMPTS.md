@@ -19,31 +19,31 @@ edit the registry and run the tool again._
 **51 of the 105 sounds in this pack are made by code and need nothing from you.**
 This checklist is only the 54 that need real audio.
 
-**Progress: 5 of 54 generated.**
+**Progress: 15 of 54 generated.**
 
 ## game
 
 - [x] **`weapon.pistol`** — A realistic handgun shot.
   - Target length: ~0.4s · generate **3 takes** (`weapon.pistol.1.wav`, `weapon.pistol.2.wav`, …)
-  - Prompt: `Single handgun gunshot, sharp dry crack with a short punchy tail, close perspective, no music, no reverb room`
+  - Prompt: `Loud gunshot from a 9mm pistol fired once, sharp explosive bang with a hard crack and a short punchy decay, recorded close and dry`
 
-- [ ] **`weapon.shotgun`** — A shotgun blast.
+- [x] **`weapon.shotgun`** — A shotgun blast.
   - Target length: ~0.7s · generate **2 takes** (`weapon.shotgun.1.wav`, `weapon.shotgun.2.wav`, …)
   - Prompt: `Single shotgun blast, deep powerful boom with a bright crack on top and a short pump action click after, dry close recording`
 
-- [ ] **`weapon.rifle.auto`** — A short burst of automatic fire. Loop or retrigger for sustained fire.
+- [x] **`weapon.rifle.auto`** — A short burst of automatic fire. Loop or retrigger for sustained fire.
   - Target length: ~1.2s
   - Prompt: `Short burst of automatic assault rifle fire, five rapid dry cracks with mechanical action, close perspective, no reverb`
 
-- [ ] **`weapon.reload`** — Reloading a weapon.
+- [x] **`weapon.reload`** — Reloading a weapon.
   - Target length: ~0.9s
   - Prompt: `Gun reload, magazine ejected and a fresh clip slapped in then the slide racked, crisp metallic mechanical clicks, dry close recording`
 
-- [ ] **`weapon.empty`** — Out of ammo — the trigger clicks on nothing.
+- [x] **`weapon.empty`** — Out of ammo — the trigger clicks on nothing.
   - Target length: ~0.25s
   - Prompt: `Empty gun dry fire click, small hollow metallic trigger click with no shot, dry and close`
 
-- [ ] **`weapon.bow`** — Firing a bow or crossbow.
+- [x] **`weapon.bow`** — Firing a bow or crossbow.
   - Target length: ~0.6s · generate **2 takes** (`weapon.bow.1.wav`, `weapon.bow.2.wav`, …)
   - Prompt: `Bow firing an arrow, taut string release with a woody thwack and the arrow whistling away quickly, dry outdoor recording`
 
@@ -59,7 +59,7 @@ This checklist is only the 54 that need real audio.
   - Target length: ~1.4s
   - Prompt: `Large cannon firing, enormous deep explosive boom with a powerful low rumble tail, distant and heavy`
 
-- [ ] **`impact.punch`** — A fist or body hit connects.
+- [x] **`impact.punch`** — A fist or body hit connects.
   - Target length: ~0.3s · generate **3 takes** (`impact.punch.1.wav`, `impact.punch.2.wav`, …)
   - Prompt: `Punch impact on a body, dull heavy thump with a short slap on top, cartoon action movie style, dry`
 
@@ -75,15 +75,15 @@ This checklist is only the 54 that need real audio.
   - Target length: ~0.5s
   - Prompt: `Critical hit sparkle layer for a game, bright metallic shing with a quick glittering shimmer, no impact thump, dry`
 
-- [ ] **`step.grass`** — One footstep on grass. Play per step; the library varies pitch and picks a different take each time.
+- [x] **`step.grass`** — One footstep on grass. Play per step; the library varies pitch and picks a different take each time.
   - Target length: ~0.25s · generate **5 takes** (`step.grass.1.wav`, `step.grass.2.wav`, …)
-  - Prompt: `Single footstep on grass, soft dry rustle of blades with a light earthy scuff, close perspective, no reverb`
+  - Prompt: `Single loud close-up footstep on grass, crisp dry rustle of blades with an earthy scuff, recorded right next to the shoe, no reverb`
 
-- [ ] **`step.wood`** — One footstep on wood. Play per step; the library varies pitch and picks a different take each time.
+- [x] **`step.wood`** — One footstep on wood. Play per step; the library varies pitch and picks a different take each time.
   - Target length: ~0.25s · generate **5 takes** (`step.wood.1.wav`, `step.wood.2.wav`, …)
-  - Prompt: `Single footstep on a hollow wooden floor, warm woody knock with a slight creak, close indoor recording, no reverb`
+  - Prompt: `Single footstep on a hard hollow wooden floorboard, sharp bright woody knock with a crisp attack and a short hollow resonance, close dry recording, no reverb`
 
-- [ ] **`step.stone`** — One footstep on stone. Play per step; the library varies pitch and picks a different take each time.
+- [x] **`step.stone`** — One footstep on stone. Play per step; the library varies pitch and picks a different take each time.
   - Target length: ~0.25s · generate **5 takes** (`step.stone.1.wav`, `step.stone.2.wav`, …)
   - Prompt: `Single footstep on stone or concrete, firm hard scuff of a shoe sole, close and dry, no reverb`
 
@@ -171,7 +171,7 @@ This checklist is only the 54 that need real audio.
   - Target length: ~0.7s
   - Prompt: `Heavy wooden door closing firmly, short creak then a solid thud and latch click, dry close recording`
 
-- [ ] **`water.splash`** — Something falls into water, or a big splash on impact.
+- [x] **`water.splash`** — Something falls into water, or a big splash on impact.
   - Target length: ~0.8s · generate **3 takes** (`water.splash.1.wav`, `water.splash.2.wav`, …)
   - Prompt: `Object splashing into water, single strong splash with droplets falling after, close outdoor recording`
 

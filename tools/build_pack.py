@@ -35,7 +35,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GAP = 0.25          # seconds of silence between sounds in the sprite
 SAMPLE_RATE = 48000
 PEAK_TARGET_DB = -1.0
-LOW_LEVEL_DB = -20.0        # below this, a generated file is unusable
+LOW_LEVEL_DB = -20.0        # below this, a generated file is unusable.
+                            # Naturally soft sounds (grass, snow, cloth) can lower
+                            # their own floor with "minLevelDb" in the registry:
+                            # what makes boosting dangerous is a noisy source, and
+                            # a clean quiet one survives it fine.
 TRIM_BELOW_PEAK_DB = 45.0   # silence = this far under the file's own peak
 EXTS = ('.wav', '.mp3', '.m4a', '.aiff', '.aif', '.ogg', '.flac')
 
@@ -89,7 +93,7 @@ def post_fx(fx):
     return chain
 
 
-def prepare(src, dst, warnings, fx=None):
+def prepare(src, dst, warnings, fx=None, low_level_db=None):
     """Trim silence at both ends, repair, peak-normalize, fade edges, 48k mono."""
     src_peak = peak_db(src)
 
@@ -97,7 +101,8 @@ def prepare(src, dst, warnings, fx=None):
     # quiet sound. Normalizing it would raise its noise floor and codec
     # artifacts by the same amount and turn it into junk — which is exactly how
     # a -36 dBFS "pistol" once became a laser. Flag it instead of hiding it.
-    if src_peak < LOW_LEVEL_DB:
+    floor = LOW_LEVEL_DB if low_level_db is None else low_level_db
+    if src_peak < floor:
         warnings.append('{} is {:.1f} dBFS at source — too quiet to use; regenerate it '
                         '(normalizing would boost its noise by {:.0f} dB)'
                         .format(os.path.basename(src), src_peak, PEAK_TARGET_DB - src_peak))
@@ -205,7 +210,8 @@ def build(pack):
         slices = []
         for i, src in enumerate(files):
             out = os.path.join(work, '{:03d}_{}_{}.wav'.format(len(pieces), name.replace('.', '_'), i))
-            dur = prepare(src, out, warnings, definition.get('postFx'))
+            dur = prepare(src, out, warnings, definition.get('postFx'),
+                          definition.get('minLevelDb'))
             pieces.append(out)
             slices.append([round(cursor, 4), round(dur, 4)])
             cursor += dur + GAP
@@ -253,6 +259,7 @@ def build(pack):
     for definition in manifest['sounds'].values():
         definition.pop('prompt', None)
         definition.pop('postFx', None)
+        definition.pop('minLevelDb', None)
         definition.pop('variationsWanted', None)
 
     with open(os.path.join(dist, pack + '.json'), 'w') as fh:

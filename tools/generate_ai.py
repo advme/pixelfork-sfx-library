@@ -33,7 +33,8 @@ import urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENDPOINT = 'https://api.elevenlabs.io/v1/sound-generation'
 MIN_DURATION = 0.5          # the API's floor; build_pack trims the silence back off
-HEADROOM = 0.4              # ask for a little more than we need, then trim
+HEADROOM = 0.15             # a little room for the tail; more invites a SEQUENCE
+                            # (asking 0.65s for 'a single footstep' returns several)
 PROMPT_INFLUENCE = 0.5      # higher = follows the prompt more literally
 LOW_LEVEL_DB = -20.0        # a take quieter than this is unusable
 MAX_ATTEMPTS = 3            # generations vary, so a quiet one is worth retrying
@@ -91,7 +92,7 @@ def peak_dbfs(audio_bytes):
 def generate(key, text, seconds):
     body = json.dumps({
         'text': text,
-        'duration_seconds': max(MIN_DURATION, round(seconds + HEADROOM, 2)),
+        'duration_seconds': max(MIN_DURATION, round(seconds + min(HEADROOM, seconds * 0.5), 2)),
         'prompt_influence': PROMPT_INFLUENCE,
     }).encode()
     req = urllib.request.Request(ENDPOINT, data=body, method='POST', headers={
@@ -200,7 +201,8 @@ def main():
             for attempt in range(1, MAX_ATTEMPTS + 1):
                 cand = generate(key, d['prompt'], d.get('duration', 1.0))
                 lvl = peak_dbfs(cand)
-                if lvl is None or lvl >= LOW_LEVEL_DB:
+                floor = d.get('minLevelDb', LOW_LEVEL_DB)
+                if lvl is None or lvl >= floor:
                     audio, level = cand, lvl
                     break
                 print(' [{:.0f} dBFS, too quiet — retrying]'.format(lvl), end='', flush=True)
@@ -209,7 +211,7 @@ def main():
             with open(out, 'wb') as fh:
                 fh.write(audio)
             note = '' if level is None else '  peak {:.1f} dBFS'.format(level)
-            if level is not None and level < LOW_LEVEL_DB:
+            if level is not None and level < d.get('minLevelDb', LOW_LEVEL_DB):
                 note += '  << STILL TOO QUIET, reword the prompt'
                 weak.append(name)
             print(' {:.0f} KB{}'.format(len(audio) / 1024, note))

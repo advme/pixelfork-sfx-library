@@ -1,5 +1,35 @@
 # CHANGELOG
 
+## v0.2.6-A — 10 more generated sounds (15 of 54 done)
+- Agent: A (Claude) · Date: 2026-09-16
+- Done: Generated `step.grass`, `step.wood`, `step.stone`, `impact.punch`, `water.splash`,
+  `weapon.shotgun`, `weapon.rifle.auto`, `weapon.reload`, `weapon.empty` and `weapon.bow`
+  — 28 files including variation takes.
+  **Found a bug I had introduced in v0.2.4.** Asking the API for the target length plus
+  0.4s of headroom backfired on short sounds: the model fills whatever duration it is
+  given, so a request for "a single footstep" long enough to clear the API's 0.5s floor
+  came back as a **sequence** — `step.wood` contained five steps in one clip, which would
+  have made every footstep in a game sound like a stampede. Headroom is now 0.15s and
+  scaled to the sound's own length, and the eight `step.*` surfaces plus `impact.punch`
+  got a `tighten` postFx that cuts to the first hit regardless of what comes back.
+  Added a per-sound `minLevelDb`, because the blanket −20 dBFS floor is wrong for sounds
+  that are genuinely soft: grass, snow, sand and cloth now allow −26. What makes boosting
+  dangerous is a *noisy* source, not a quiet one.
+- Tested: Onset counting (with a 70 ms refractory gap, since a naive threshold count reads
+  14 "steps" in a 220 ms grass rustle) confirms one hit per take across the footstep sets.
+  `weapon.shotgun` correctly shows three, because its prompt asks for a pump-action click
+  after the blast. Checked brightness on every new sound; all are healthy except
+  `step.wood`.
+- Notes for next agent: **ElevenLabs reliably returns unusably quiet audio when a prompt
+  asks for "bright", "sharp", "thin" or "piercing".** It happened on the pistol and again
+  on `step.wood` (−26 to −44 dBFS). Ask for a loud, close recording and add the brightness
+  with `postFx.bright` instead — prompt for level, fix tone in the build.
+  `step.wood` is still only 8% energy above 4 kHz even after +12 dB of shelf; wood is a
+  naturally low-mid sound, but the owner should judge whether it reads as muffled.
+  Regenerating an already-good take is a bad trade: re-rolling `step.grass.1` turned a
+  −15.5 dBFS take into a −21 dBFS one.
+
+
 ## v0.2.5-A — fixed the "far away / fake microphone" sound
 - Agent: A (Claude) · Date: 2026-09-16
 - Done: The owner reported the generated sounds felt distant, like a fake microphone.

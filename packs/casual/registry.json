@@ -2,7 +2,7 @@
   "name": "casual",
   "title": "Casual SFX Pack",
   "description": "Sound effects for hyper-casual and casual mobile web games. Designed to pair with the Super Casual UI Kit.",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "style": "Modern mobile casual game audio: clean, bright, punchy, lightly processed. Not retro/8-bit, not cinematic/orchestral. Mono, dry (no long reverb tails), normalized to -1 dBFS peak.",
   "sourceMeaning": {
     "code": "Synthesized by the runtime, permanently. No audio file, no download, infinite variation. These sounds are synthetic by nature so code beats a recording.",
@@ -802,7 +802,11 @@
         "gun",
         "blast"
       ],
-      "prompt": "Single shotgun blast, deep powerful boom with a bright crack on top and a short pump action click after, dry close recording"
+      "prompt": "Single shotgun blast, deep powerful boom with a bright crack on top and a short pump action click after, dry close recording",
+      "postFx": {
+        "presence": 4,
+        "bright": 4
+      }
     },
     "weapon.rifle.auto": {
       "source": "ai",
@@ -927,7 +931,11 @@
         "melee",
         "body"
       ],
-      "prompt": "Punch impact on a body, dull heavy thump with a short slap on top, cartoon action movie style, dry"
+      "prompt": "Punch impact on a body, dull heavy thump with a short slap on top, cartoon action movie style, dry",
+      "postFx": {
+        "tighten": 0.3,
+        "highpass": 80
+      }
     },
     "impact.metal": {
       "source": "ai",
@@ -1347,7 +1355,12 @@
         "run",
         "grass"
       ],
-      "prompt": "Single footstep on grass, soft dry rustle of blades with a light earthy scuff, close perspective, no reverb"
+      "prompt": "Single loud close-up footstep on grass, crisp dry rustle of blades with an earthy scuff, recorded right next to the shoe, no reverb",
+      "postFx": {
+        "tighten": 0.15,
+        "presence": 3
+      },
+      "minLevelDb": -26
     },
     "step.wood": {
       "source": "ai",
@@ -1364,7 +1377,12 @@
         "run",
         "wood"
       ],
-      "prompt": "Single footstep on a hollow wooden floor, warm woody knock with a slight creak, close indoor recording, no reverb"
+      "prompt": "Single footstep on a hard hollow wooden floorboard, sharp bright woody knock with a crisp attack and a short hollow resonance, close dry recording, no reverb",
+      "postFx": {
+        "tighten": 0.15,
+        "presence": 7,
+        "bright": 12
+      }
     },
     "step.stone": {
       "source": "ai",
@@ -1381,7 +1399,12 @@
         "run",
         "stone"
       ],
-      "prompt": "Single footstep on stone or concrete, firm hard scuff of a shoe sole, close and dry, no reverb"
+      "prompt": "Single footstep on stone or concrete, firm hard scuff of a shoe sole, close and dry, no reverb",
+      "postFx": {
+        "tighten": 0.15,
+        "presence": 3,
+        "bright": 3
+      }
     },
     "step.gravel": {
       "source": "ai",
@@ -1398,7 +1421,11 @@
         "run",
         "gravel"
       ],
-      "prompt": "Single footstep on gravel, crunchy scatter of small stones under a shoe, close and dry"
+      "prompt": "Single footstep on gravel, crunchy scatter of small stones under a shoe, close and dry",
+      "postFx": {
+        "tighten": 0.24,
+        "presence": 3
+      }
     },
     "step.metal": {
       "source": "ai",
@@ -1415,7 +1442,11 @@
         "run",
         "metal"
       ],
-      "prompt": "Single footstep on a metal grate or steel walkway, hollow metallic clank with a faint ring, close and dry"
+      "prompt": "Single footstep on a metal grate or steel walkway, hollow metallic clank with a faint ring, close and dry",
+      "postFx": {
+        "tighten": 0.22,
+        "presence": 3
+      }
     },
     "step.snow": {
       "source": "ai",
@@ -1432,7 +1463,12 @@
         "run",
         "snow"
       ],
-      "prompt": "Single footstep in fresh snow, tight squeaky crunch of compacting powder, close and dry"
+      "prompt": "Single footstep in fresh snow, tight squeaky crunch of compacting powder, close and dry",
+      "postFx": {
+        "tighten": 0.22,
+        "presence": 3
+      },
+      "minLevelDb": -26
     },
     "step.water": {
       "source": "ai",
@@ -1449,7 +1485,11 @@
         "run",
         "water"
       ],
-      "prompt": "Single footstep in a shallow puddle, wet splash with a light splatter, close and dry"
+      "prompt": "Single footstep in a shallow puddle, wet splash with a light splatter, close and dry",
+      "postFx": {
+        "tighten": 0.26,
+        "presence": 3
+      }
     },
     "step.sand": {
       "source": "ai",
@@ -1466,7 +1506,12 @@
         "run",
         "sand"
       ],
-      "prompt": "Single footstep in dry sand, soft granular shuffle with no hard impact, close and dry"
+      "prompt": "Single footstep in dry sand, soft granular shuffle with no hard impact, close and dry",
+      "postFx": {
+        "tighten": 0.24,
+        "presence": 3
+      },
+      "minLevelDb": -26
     },
     "move.swim": {
       "source": "ai",
@@ -1513,7 +1558,8 @@
         "cape",
         "dodge"
       ],
-      "prompt": "Quick cloth movement, fabric swishing sharply through air like a cape flick, close and dry"
+      "prompt": "Quick cloth movement, fabric swishing sharply through air like a cape flick, close and dry",
+      "minLevelDb": -26
     },
     "voice.cheer": {
       "source": "ai",

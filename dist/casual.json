@@ -2,7 +2,7 @@
   "name": "casual",
   "title": "Casual SFX Pack",
   "description": "Sound effects for hyper-casual and casual mobile web games. Designed to pair with the Super Casual UI Kit.",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "style": "Modern mobile casual game audio: clean, bright, punchy, lightly processed. Not retro/8-bit, not cinematic/orchestral. Mono, dry (no long reverb tails), normalized to -1 dBFS peak.",
   "sourceMeaning": {
     "code": "Synthesized by the runtime, permanently. No audio file, no download, infinite variation. These sounds are synthetic by nature so code beats a recording.",
@@ -811,6 +811,18 @@
         "shotgun",
         "gun",
         "blast"
+      ],
+      "start": 1.14,
+      "dur": 1.08,
+      "variations": [
+        [
+          1.14,
+          1.08
+        ],
+        [
+          2.47,
+          0.8681
+        ]
       ]
     },
     "weapon.rifle.auto": {
@@ -825,7 +837,9 @@
         "automatic",
         "burst",
         "machine gun"
-      ]
+      ],
+      "start": 3.5882,
+      "dur": 1.6
     },
     "weapon.reload": {
       "source": "ai",
@@ -839,7 +853,9 @@
         "magazine",
         "mechanical",
         "clip"
-      ]
+      ],
+      "start": 5.4382,
+      "dur": 1.2004
     },
     "weapon.empty": {
       "source": "ai",
@@ -853,7 +869,9 @@
         "no ammo",
         "click",
         "dry fire"
-      ]
+      ],
+      "start": 6.8886,
+      "dur": 0.3143
     },
     "weapon.bow": {
       "source": "ai",
@@ -867,6 +885,18 @@
         "arrow",
         "archery",
         "crossbow"
+      ],
+      "start": 7.453,
+      "dur": 1.0,
+      "variations": [
+        [
+          7.453,
+          1.0
+        ],
+        [
+          8.703,
+          1.0
+        ]
       ]
     },
     "weapon.sword.swing": {
@@ -924,6 +954,22 @@
         "hit",
         "melee",
         "body"
+      ],
+      "start": 9.953,
+      "dur": 0.3,
+      "variations": [
+        [
+          9.953,
+          0.3
+        ],
+        [
+          10.503,
+          0.3
+        ],
+        [
+          11.053,
+          0.3
+        ]
       ]
     },
     "impact.metal": {
@@ -1337,6 +1383,30 @@
         "walk",
         "run",
         "grass"
+      ],
+      "start": 11.603,
+      "dur": 0.15,
+      "variations": [
+        [
+          11.603,
+          0.15
+        ],
+        [
+          12.003,
+          0.15
+        ],
+        [
+          12.403,
+          0.15
+        ],
+        [
+          12.803,
+          0.15
+        ],
+        [
+          13.203,
+          0.15
+        ]
       ]
     },
     "step.wood": {
@@ -1352,6 +1422,22 @@
         "walk",
         "run",
         "wood"
+      ],
+      "start": 13.603,
+      "dur": 0.15,
+      "variations": [
+        [
+          13.603,
+          0.15
+        ],
+        [
+          14.003,
+          0.15
+        ],
+        [
+          14.403,
+          0.15
+        ]
       ]
     },
     "step.stone": {
@@ -1367,6 +1453,30 @@
         "walk",
         "run",
         "stone"
+      ],
+      "start": 14.803,
+      "dur": 0.15,
+      "variations": [
+        [
+          14.803,
+          0.15
+        ],
+        [
+          15.203,
+          0.15
+        ],
+        [
+          15.603,
+          0.15
+        ],
+        [
+          16.003,
+          0.15
+        ],
+        [
+          16.403,
+          0.15
+        ]
       ]
     },
     "step.gravel": {
@@ -1884,7 +1994,7 @@
         "loot",
         "reveal"
       ],
-      "start": 1.14,
+      "start": 16.803,
       "dur": 1.1073
     },
     "reward.jackpot": {
@@ -1914,7 +2024,7 @@
         "fanfare",
         "complete"
       ],
-      "start": 2.4973,
+      "start": 18.1604,
       "dur": 1.4925
     },
     "state.win.small": {
@@ -1962,7 +2072,7 @@
         "fail",
         "defeat"
       ],
-      "start": 4.2398,
+      "start": 19.9029,
       "dur": 1.48
     },
     "state.gameover": {
@@ -2170,7 +2280,7 @@
         "break",
         "ice"
       ],
-      "start": 5.9699,
+      "start": 21.6329,
       "dur": 1.0
     },
     "break.wood": {
@@ -2562,6 +2672,22 @@
         "water",
         "dive",
         "wet"
+      ],
+      "start": 22.8829,
+      "dur": 1.2,
+      "variations": [
+        [
+          22.8829,
+          1.2
+        ],
+        [
+          24.333,
+          0.927
+        ],
+        [
+          25.51,
+          1.2
+        ]
       ]
     },
     "fire.crackle": {
@@ -2638,5 +2764,5 @@
       ]
     }
   },
-  "spriteDuration": 7.2199
+  "spriteDuration": 26.9601
 }
