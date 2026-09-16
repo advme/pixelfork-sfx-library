@@ -1,15 +1,17 @@
 # STATUS
 
-**Last updated:** 2026-09-16 · by **A (Claude)** · version **v0.2.9-A**
+**Last updated:** 2026-09-17 · by **A (Claude)** · version **v0.3.0-A**
 
 ## Next task
-**Generate the remaining 29 sounds that need real audio** (25 of 54 are done). Open `packs/casual/SOUND-PROMPTS.md` — it lists only those, with a tuned prompt and the exact filename for each. Work down it in ElevenLabs Sound Effects, saving to `packs/casual/sounds/`. Start with the ones a game uses most: `state.win`, `state.lose`, `reward.chest`, the eight `step.*` surfaces, then `break.*` and `weapon.pistol`. Run `python3 tools/build_pack.py casual` as you go and listen on the preview board. The other 51 sounds are finished and need nothing.
+**Publish it.** Create the public GitHub repo `advme/pixelfork-sfx-library`, push, tag `v0.3.0-A`,
+turn on GitHub Pages, then check that the jsDelivr URLs in `AI-GUIDE.md`, `llms.txt` and
+`README.md` actually load. Until that exists, no game can use the library.
 
 ## In progress
 _Nothing._
 
-## The catalog — 105 sounds
-| Group | Sounds | Code | Need audio |
+## The pack is complete — 105 sounds, all playable
+| Group | Sounds | Code | Audio |
 |---|---|---|---|
 | `break.*` | 4 | 0 | 4 |
 | `coin.*` | 2 | 2 | 0 |
@@ -31,7 +33,9 @@ _Nothing._
 | `water.*` | 1 | 0 | 1 |
 | `weapon.*` | 15 | 6 | 9 |
 
-**51 made by code** (final, no file, no download) · **54 need generated audio** (118 files including variations).
+**51 made by code** · **54 from generated audio** · **0 waiting**.
+Primary bundle `casual.webm` is 891 KB (Opus, what nearly every browser loads);
+`casual.m4a` fallback for older iOS is 1311 KB.
 
 ## Done
 | # | Piece | Where | Version |
@@ -42,19 +46,28 @@ _Nothing._
 | 4 | Music with crossfade + `SFX.duck()` | `src/sfx.js` | v0.1.0-A |
 | 5 | Auto-wiring into the Super Casual UI Kit (`SFX.attach()`) | `src/sfx.js` | v0.1.0-A |
 | 6 | Build pipeline: trim, normalize, sprite, webm + m4a | `tools/build_pack.py` | v0.1.0-A |
-| 7 | Layered synth engine (osc / filtered noise / FM, multi-layer, arpeggio) | `src/sfx.js` | v0.2.0-A |
-| 8 | Full catalog of 105 sounds, each declaring how it is made | `packs/casual/registry.json` | v0.2.0-A |
-| 9 | 51 finished code sounds, loudness-calibrated | `packs/casual/registry.json` | v0.2.0-A |
-| 10 | Source-aware tooling (prompts list only what needs audio) | `tools/` | v0.2.0-A |
-| 11 | Preview board with per-sound audit | `tools/preview.html` | v0.2.0-A |
+| 7 | Layered synth engine (osc / filtered noise / FM) | `src/sfx.js` | v0.2.0-A |
+| 8 | Catalog of 105 sounds, each declaring how it is made | `packs/casual/registry.json` | v0.2.0-A |
+| 9 | Tone shaping on the synthesis path only | `src/sfx.js` | v0.2.5-A |
+| 10 | `postFx` repair: tighten, highpass, presence, bright | `tools/build_pack.py` | v0.2.5-A |
+| 11 | ElevenLabs generator with level gate and auto-retry | `tools/generate_ai.py` | v0.2.2-A |
+| 12 | Sequence mode: generate a real walk, cut it into takes | `tools/split_takes.py` | v0.2.8-A |
+| 13 | All 54 audio sounds generated | `packs/casual/sounds/` | v0.3.0-A |
+| 14 | Seamless looping (`postFx.loop`) + `SFX.stop()` | both | v0.3.0-A |
+| 15 | Preview board with filters and per-sound audit | `tools/preview.html` | v0.2.3-A |
 
-## Left — after the audio arrives
-- **Music.** 3 short loops (menu, gameplay, tension). These stay separate streamed files, never in the sprite. A music model, not a sound-effects model.
-- **Ambience loops.** `fire.crackle` and `engine.loop` are marked loopable but nothing yet checks they loop seamlessly — a generated file almost never does. Needs a crossfade-loop step in `build_pack.py`.
-- **Publish.** Create the public GitHub repo `advme/pixelfork-sfx-library`, push, tag, turn on Pages, then check the jsDelivr URLs in `AI-GUIDE.md`, `llms.txt` and `README.md` load.
-- **Test pages.** A `tools/tests/` runner like the UI kit has: every registry name resolves, sprite offsets land inside the file, nothing clips, the pack stays under 1 MB.
-- **Real phone check.** iPhone + Android: first-tap unlock, the iOS silent switch, music surviving a phone call.
-- **Second pack.** The registry format supports more than one pack — an `arcade` or `realistic` pack can reuse the whole runtime.
+## Left
+- **Publish** (see Next task).
+- **Music.** Three short loops (menu, gameplay, tension). These stay separate streamed files,
+  never in the sprite, and want a music model rather than a sound-effects one.
+- **Test pages.** A `tools/tests/` runner like the UI kit has: every registry name resolves,
+  sprite offsets land inside the file, nothing clips, the primary bundle stays under 1 MB.
+- **Real phone check.** iPhone + Android: first-tap unlock, the iOS silent switch, music
+  surviving a phone call.
+- **Owner review.** Nothing in the pack has been judged by ear across the board yet; the
+  measurements only prove no sound is silent, clipping, distant or dull.
+- **Second pack.** The format already supports more than one — an `arcade` or `realistic`
+  pack can reuse the whole runtime.
 
 ## Links
 - Companion UI kit: `../Mobile Game UI Library` · https://advme.github.io/mobile-game-ui-library/

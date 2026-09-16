@@ -2,7 +2,7 @@
   "name": "casual",
   "title": "Casual SFX Pack",
   "description": "Sound effects for hyper-casual and casual mobile web games. Designed to pair with the Super Casual UI Kit.",
-  "version": "0.2.9",
+  "version": "0.3.0",
   "style": "Modern mobile casual game audio: clean, bright, punchy, lightly processed. Not retro/8-bit, not cinematic/orchestral. Mono, dry (no long reverb tails), normalized to -1 dBFS peak.",
   "sourceMeaning": {
     "code": "Synthesized by the runtime, permanently. No audio file, no download, infinite variation. These sounds are synthetic by nature so code beats a recording.",
@@ -1635,7 +1635,7 @@
         "jump",
         "exertion"
       ],
-      "prompt": "Short cartoon character effort grunt, light energetic hup sound, non verbal, dry close recording"
+      "prompt": "Short cartoon character effort grunt, light energetic hup sound, wordless, no speech, no words, dry close recording"
     },
     "voice.hurt": {
       "source": "ai",
@@ -1651,7 +1651,7 @@
         "ouch",
         "pain"
       ],
-      "prompt": "Short cartoon character hurt sound, light non verbal ouch with a comic tone, not distressing, dry close recording"
+      "prompt": "Short cartoon character hurt sound, light wordless, no speech, no words ouch with a comic tone, not distressing, dry close recording"
     },
     "voice.laugh": {
       "source": "ai",
@@ -1666,7 +1666,7 @@
         "taunt",
         "fun"
       ],
-      "prompt": "Short playful cartoon giggle, light friendly laughter, non verbal, dry close recording"
+      "prompt": "Short playful cartoon giggle, light friendly laughter, wordless, no speech, no words, dry close recording"
     },
     "pickup.coin": {
       "source": "code",
@@ -2030,7 +2030,10 @@
         "legendary",
         "big win"
       ],
-      "prompt": "Big jackpot win for a casual game, cascading bright bells and coins with a triumphant sparkle rise, celebratory and generous"
+      "prompt": "Loud jackpot win celebration, cascading bells and coins tumbling with a triumphant rising sparkle, recorded close, celebratory and generous",
+      "postFx": {
+        "bright": 3
+      }
     },
     "state.win": {
       "source": "ai",
@@ -2106,7 +2109,11 @@
         "death",
         "end"
       ],
-      "prompt": "Game over sting for a casual mobile game, short descending melody with a soft final chord, gently final, warm not scary"
+      "prompt": "Game over sting for a casual mobile game, short descending melody with a soft final chord, gently final, warm not scary",
+      "postFx": {
+        "presence": 6,
+        "bright": 6
+      }
     },
     "state.levelup": {
       "source": "ai",
@@ -2121,7 +2128,10 @@
         "promote",
         "progress"
       ],
-      "prompt": "Level up fanfare for a casual mobile game, bright rising melody on bells with a warm triumphant swell and sparkle, uplifting and short"
+      "prompt": "Loud level up fanfare, rising melody on glockenspiel and tubular bells with a warm triumphant swell, uplifting and short, recorded close",
+      "postFx": {
+        "bright": 3
+      }
     },
     "state.newrecord": {
       "source": "ai",
@@ -2274,7 +2284,10 @@
           }
         ]
       },
-      "prompt": "Match three booster explosion, bright cartoon blast with sparkling debris and a satisfying low thump, playful not violent"
+      "prompt": "Loud cartoon booster explosion for a match three game, punchy blast with glittering sparkle debris and a satisfying low thump, playful not violent, recorded close",
+      "postFx": {
+        "bright": 4
+      }
     },
     "match.shuffle": {
       "source": "ai",
@@ -2289,7 +2302,10 @@
         "cards",
         "reset"
       ],
-      "prompt": "Shuffling and dealing playing cards quickly, crisp paper riffle and light slaps, dry close recording"
+      "prompt": "Shuffling and dealing a deck of playing cards quickly, loud paper riffle and light card slaps, recorded close and dry",
+      "postFx": {
+        "presence": 3
+      }
     },
     "break.glass": {
       "source": "ai",
@@ -2321,7 +2337,10 @@
         "splinter",
         "break"
       ],
-      "prompt": "Wooden crate smashing apart, sharp splintering crack with planks clattering down, dry close recording"
+      "prompt": "Wooden crate smashing apart, loud splintering crack with planks clattering down, recorded close and dry",
+      "postFx": {
+        "presence": 4
+      }
     },
     "break.stone": {
       "source": "ai",
@@ -2353,7 +2372,10 @@
         "vase",
         "smash"
       ],
-      "prompt": "Clay pot smashing on the floor, bright ceramic crack with shards scattering, dry close recording"
+      "prompt": "Clay pot smashing on a tile floor, loud ceramic crack with shards scattering, recorded close and dry",
+      "postFx": {
+        "bright": 4
+      }
     },
     "explosion.small": {
       "source": "code",
@@ -2403,7 +2425,10 @@
         "boom",
         "debris"
       ],
-      "prompt": "Large explosion, powerful deep boom with a bright initial crack, followed by falling debris and a long low rumble tail"
+      "prompt": "Large explosion recorded close, powerful deep boom with a hard cracking report at the front, followed by falling debris and a long low rumble",
+      "postFx": {
+        "presence": 4
+      }
     },
     "magic.sparkle": {
       "source": "code",
@@ -2615,7 +2640,10 @@
           }
         ]
       },
-      "prompt": "Ice freezing spell, sharp crystalline crackle spreading with a cold shimmering tail, magical and icy"
+      "prompt": "Ice freezing spell, loud crystalline crackling spreading fast with a glassy shimmering tail, recorded close, magical and icy",
+      "postFx": {
+        "bright": 4
+      }
     },
     "magic.summon": {
       "source": "code",
@@ -2727,7 +2755,10 @@
         "ambience",
         "loop"
       ],
-      "prompt": "Campfire burning steadily, continuous soft crackling and popping of wood embers, seamless loop, no music"
+      "prompt": "Campfire burning steadily, continuous soft crackling and popping of wood embers, seamless loop, no music",
+      "postFx": {
+        "loop": 0.6
+      }
     },
     "engine.start": {
       "source": "ai",
@@ -2758,7 +2789,10 @@
         "drive",
         "motor"
       ],
-      "prompt": "Car engine running at a steady medium speed, continuous smooth motor drone, seamless loop, no music"
+      "prompt": "Car engine running at a steady medium speed, continuous smooth motor drone, seamless loop, no music",
+      "postFx": {
+        "loop": 1.2
+      }
     },
     "vehicle.brake": {
       "source": "ai",
@@ -2773,7 +2807,10 @@
         "tyres",
         "screech"
       ],
-      "prompt": "Car tyres screeching on asphalt during a hard brake, sharp rubber squeal fading out, close outdoor recording"
+      "prompt": "Car tyres screeching loudly on asphalt during a hard brake, rubber squeal fading out, recorded close outdoors",
+      "postFx": {
+        "presence": 3
+      }
     },
     "vehicle.crash": {
       "source": "ai",

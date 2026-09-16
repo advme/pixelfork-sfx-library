@@ -19,7 +19,7 @@ edit the registry and run the tool again._
 **51 of the 105 sounds in this pack are made by code and need nothing from you.**
 This checklist is only the 54 that need real audio.
 
-**Progress: 26 of 54 generated.**
+**Progress: 54 of 54 generated.**
 
 ## game
 
@@ -107,67 +107,67 @@ This checklist is only the 54 that need real audio.
   - Target length: ~0.25s · generate **5 takes** (`step.sand.1.wav`, `step.sand.2.wav`, …)
   - Prompt: `Single footstep in dry sand, soft granular shuffle with no hard impact, close and dry`
 
-- [ ] **`move.swim`** — A swimming stroke or moving through water.
+- [x] **`move.swim`** — A swimming stroke or moving through water.
   - Target length: ~0.6s · generate **3 takes** (`move.swim.1.wav`, `move.swim.2.wav`, …)
   - Prompt: `One swimming stroke in water, arm pulling through with a churning splash and bubbles, close perspective`
 
-- [ ] **`move.climb`** — Grabbing a ledge, climbing a rope or scrambling up.
+- [x] **`move.climb`** — Grabbing a ledge, climbing a rope or scrambling up.
   - Target length: ~0.5s · generate **3 takes** (`move.climb.1.wav`, `move.climb.2.wav`, …)
   - Prompt: `Climbing grab on a rocky ledge, hand slapping stone with a gritty scrape and a cloth rustle, close and dry`
 
-- [ ] **`move.cloth`** — A cape, dodge or quick body movement that needs fabric.
+- [x] **`move.cloth`** — A cape, dodge or quick body movement that needs fabric.
   - Target length: ~0.35s · generate **3 takes** (`move.cloth.1.wav`, `move.cloth.2.wav`, …)
   - Prompt: `Quick cloth movement, fabric swishing sharply through air like a cape flick, close and dry`
 
-- [ ] **`voice.grunt`** — The character jumps, lifts, swings or takes effort.
+- [x] **`voice.grunt`** — The character jumps, lifts, swings or takes effort.
   - Target length: ~0.4s · generate **4 takes** (`voice.grunt.1.wav`, `voice.grunt.2.wav`, …)
-  - Prompt: `Short cartoon character effort grunt, light energetic hup sound, non verbal, dry close recording`
+  - Prompt: `Short cartoon character effort grunt, light energetic hup sound, wordless, no speech, no words, dry close recording`
 
-- [ ] **`voice.hurt`** — The character takes damage.
+- [x] **`voice.hurt`** — The character takes damage.
   - Target length: ~0.5s · generate **3 takes** (`voice.hurt.1.wav`, `voice.hurt.2.wav`, …)
-  - Prompt: `Short cartoon character hurt sound, light non verbal ouch with a comic tone, not distressing, dry close recording`
+  - Prompt: `Short cartoon character hurt sound, light wordless, no speech, no words ouch with a comic tone, not distressing, dry close recording`
 
-- [ ] **`match.blast`** — A booster fires: rocket, bomb, lightning, rainbow clear.
+- [x] **`match.blast`** — A booster fires: rocket, bomb, lightning, rainbow clear.
   - Target length: ~0.7s
-  - Prompt: `Match three booster explosion, bright cartoon blast with sparkling debris and a satisfying low thump, playful not violent`
+  - Prompt: `Loud cartoon booster explosion for a match three game, punchy blast with glittering sparkle debris and a satisfying low thump, playful not violent, recorded close`
 
-- [ ] **`match.shuffle`** — The board reshuffles, or cards are dealt.
+- [x] **`match.shuffle`** — The board reshuffles, or cards are dealt.
   - Target length: ~1.0s
-  - Prompt: `Shuffling and dealing playing cards quickly, crisp paper riffle and light slaps, dry close recording`
+  - Prompt: `Shuffling and dealing a deck of playing cards quickly, loud paper riffle and light card slaps, recorded close and dry`
 
 - [x] **`break.glass`** — Glass, ice or a crystal shatters.
   - Target length: ~1.0s · generate **2 takes** (`break.glass.1.wav`, `break.glass.2.wav`, …)
   - Prompt: `Pane of glass shattering, bright sharp crack followed by many small shards tinkling to the ground, dry close recording`
 
-- [ ] **`break.wood`** — A crate, plank, barrel or door breaks apart.
+- [x] **`break.wood`** — A crate, plank, barrel or door breaks apart.
   - Target length: ~0.8s · generate **2 takes** (`break.wood.1.wav`, `break.wood.2.wav`, …)
-  - Prompt: `Wooden crate smashing apart, sharp splintering crack with planks clattering down, dry close recording`
+  - Prompt: `Wooden crate smashing apart, loud splintering crack with planks clattering down, recorded close and dry`
 
-- [ ] **`break.stone`** — Rock, brick or concrete breaks.
+- [x] **`break.stone`** — Rock, brick or concrete breaks.
   - Target length: ~1.0s · generate **2 takes** (`break.stone.1.wav`, `break.stone.2.wav`, …)
   - Prompt: `Stone block breaking apart, heavy dry crack with gravel and rubble scattering, close recording`
 
-- [ ] **`break.pot`** — A pot, vase or ceramic container smashes.
+- [x] **`break.pot`** — A pot, vase or ceramic container smashes.
   - Target length: ~0.7s · generate **2 takes** (`break.pot.1.wav`, `break.pot.2.wav`, …)
-  - Prompt: `Clay pot smashing on the floor, bright ceramic crack with shards scattering, dry close recording`
+  - Prompt: `Clay pot smashing on a tile floor, loud ceramic crack with shards scattering, recorded close and dry`
 
-- [ ] **`explosion.big`** — A real, heavy explosion with debris and rumble.
+- [x] **`explosion.big`** — A real, heavy explosion with debris and rumble.
   - Target length: ~2.2s
-  - Prompt: `Large explosion, powerful deep boom with a bright initial crack, followed by falling debris and a long low rumble tail`
+  - Prompt: `Large explosion recorded close, powerful deep boom with a hard cracking report at the front, followed by falling debris and a long low rumble`
 
-- [ ] **`magic.fire`** — A fireball, flamethrower or burning attack. Fire texture is impossible in code.
+- [x] **`magic.fire`** — A fireball, flamethrower or burning attack. Fire texture is impossible in code.
   - Target length: ~1.0s · generate **2 takes** (`magic.fire.1.wav`, `magic.fire.2.wav`, …)
   - Prompt: `Fireball spell being cast, whooshing flame burst with crackling fire and a deep roar, magical and powerful`
 
-- [ ] **`magic.ice`** — Freezing, an ice attack, or something turning to crystal.
+- [x] **`magic.ice`** — Freezing, an ice attack, or something turning to crystal.
   - Target length: ~0.9s
-  - Prompt: `Ice freezing spell, sharp crystalline crackle spreading with a cold shimmering tail, magical and icy`
+  - Prompt: `Ice freezing spell, loud crystalline crackling spreading fast with a glassy shimmering tail, recorded close, magical and icy`
 
-- [ ] **`door.open`** — A door, gate or hatch opens.
+- [x] **`door.open`** — A door, gate or hatch opens.
   - Target length: ~1.0s
   - Prompt: `Heavy wooden door opening slowly, low creak of hinges with a final wooden thud, dry close recording`
 
-- [ ] **`door.close`** — A door, gate or hatch closes.
+- [x] **`door.close`** — A door, gate or hatch closes.
   - Target length: ~0.7s
   - Prompt: `Heavy wooden door closing firmly, short creak then a solid thud and latch click, dry close recording`
 
@@ -175,41 +175,41 @@ This checklist is only the 54 that need real audio.
   - Target length: ~0.8s · generate **3 takes** (`water.splash.1.wav`, `water.splash.2.wav`, …)
   - Prompt: `Object splashing into water, single strong splash with droplets falling after, close outdoor recording`
 
-- [ ] **`fire.crackle`** — A campfire, torch or burning object nearby. Loops.
+- [x] **`fire.crackle`** — A campfire, torch or burning object nearby. Loops.
   - Target length: ~3.0s
   - Prompt: `Campfire burning steadily, continuous soft crackling and popping of wood embers, seamless loop, no music`
 
-- [ ] **`engine.start`** — A car, kart or machine starts up.
+- [x] **`engine.start`** — A car, kart or machine starts up.
   - Target length: ~1.8s
   - Prompt: `Car engine starting, starter motor cranking then the engine catching and settling into an idle, close recording`
 
-- [ ] **`engine.loop`** — An engine running while driving. Loops; change pitch with rate for speed.
+- [x] **`engine.loop`** — An engine running while driving. Loops; change pitch with rate for speed.
   - Target length: ~3.0s
   - Prompt: `Car engine running at a steady medium speed, continuous smooth motor drone, seamless loop, no music`
 
-- [ ] **`vehicle.brake`** — Hard braking, a handbrake turn or skidding to a stop.
+- [x] **`vehicle.brake`** — Hard braking, a handbrake turn or skidding to a stop.
   - Target length: ~1.2s
-  - Prompt: `Car tyres screeching on asphalt during a hard brake, sharp rubber squeal fading out, close outdoor recording`
+  - Prompt: `Car tyres screeching loudly on asphalt during a hard brake, rubber squeal fading out, recorded close outdoors`
 
-- [ ] **`vehicle.crash`** — A vehicle collision.
+- [x] **`vehicle.crash`** — A vehicle collision.
   - Target length: ~1.5s
   - Prompt: `Car crash impact, heavy metal crunch with glass breaking and debris settling, dry close recording`
 
 ## reward
 
-- [ ] **`voice.cheer`** — The player wins something big. Layer under state.win for extra celebration.
+- [x] **`voice.cheer`** — The player wins something big. Layer under state.win for extra celebration.
   - Target length: ~1.5s
   - Prompt: `Small group of happy children cheering and clapping briefly, warm and joyful, short burst, dry close recording`
 
-- [ ] **`voice.laugh`** — A playful taunt, a mascot reaction, a funny fail.
+- [x] **`voice.laugh`** — A playful taunt, a mascot reaction, a funny fail.
   - Target length: ~1.0s
-  - Prompt: `Short playful cartoon giggle, light friendly laughter, non verbal, dry close recording`
+  - Prompt: `Short playful cartoon giggle, light friendly laughter, wordless, no speech, no words, dry close recording`
 
-- [ ] **`pickup.food`** — Eating: fruit, candy, a power snack. Organic and wet — code cannot fake this.
+- [x] **`pickup.food`** — Eating: fruit, candy, a power snack. Organic and wet — code cannot fake this.
   - Target length: ~0.5s · generate **3 takes** (`pickup.food.1.wav`, `pickup.food.2.wav`, …)
   - Prompt: `Cartoon character eating, single juicy crunchy bite with a light wet chomp, playful, dry close recording`
 
-- [ ] **`pickup.ammo`** — Ammo, tools or equipment picked up.
+- [x] **`pickup.ammo`** — Ammo, tools or equipment picked up.
   - Target length: ~0.35s · generate **2 takes** (`pickup.ammo.1.wav`, `pickup.ammo.2.wav`, …)
   - Prompt: `Picking up ammunition, small metallic clink of shells and a quick gear rattle, dry close recording`
 
@@ -217,9 +217,9 @@ This checklist is only the 54 that need real audio.
   - Target length: ~1.5s
   - Prompt: `Treasure chest opening, wooden creak and a heavy metal latch clunk followed by a magical golden sparkle reveal, warm and rewarding`
 
-- [ ] **`reward.jackpot`** — A rare drop, jackpot or huge prize. The biggest reward sound in the game.
+- [x] **`reward.jackpot`** — A rare drop, jackpot or huge prize. The biggest reward sound in the game.
   - Target length: ~2.0s
-  - Prompt: `Big jackpot win for a casual game, cascading bright bells and coins with a triumphant sparkle rise, celebratory and generous`
+  - Prompt: `Loud jackpot win celebration, cascading bells and coins tumbling with a triumphant rising sparkle, recorded close, celebratory and generous`
 
 - [x] **`state.win`** — The level is completed. Plays once on the Success screen.
   - Target length: ~1.8s
@@ -229,14 +229,14 @@ This checklist is only the 54 that need real audio.
   - Target length: ~1.5s
   - Prompt: `Gentle level failed sound for a casual mobile game, soft descending three note woodwind and marimba sigh, disappointed but friendly and encouraging, not dark`
 
-- [ ] **`state.gameover`** — The run is over for good — endless runner death, all lives lost.
+- [x] **`state.gameover`** — The run is over for good — endless runner death, all lives lost.
   - Target length: ~2.2s
   - Prompt: `Game over sting for a casual mobile game, short descending melody with a soft final chord, gently final, warm not scary`
 
-- [ ] **`state.levelup`** — The player levels up or ranks up.
+- [x] **`state.levelup`** — The player levels up or ranks up.
   - Target length: ~1.8s
-  - Prompt: `Level up fanfare for a casual mobile game, bright rising melody on bells with a warm triumphant swell and sparkle, uplifting and short`
+  - Prompt: `Loud level up fanfare, rising melody on glockenspiel and tubular bells with a warm triumphant swell, uplifting and short, recorded close`
 
-- [ ] **`state.newrecord`** — A new high score or personal best.
+- [x] **`state.newrecord`** — A new high score or personal best.
   - Target length: ~2.0s
   - Prompt: `New high score celebration for a casual mobile game, excited rising bell melody with a shimmering sparkle burst and a happy final chime`

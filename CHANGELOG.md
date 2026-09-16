@@ -1,5 +1,39 @@
 # CHANGELOG
 
+## v0.3.0-A — the pack is complete: all 54 audio sounds generated
+- Agent: A (Claude) · Date: 2026-09-17
+- Done: Generated the final 28 sounds (46 files) — voices, musical stingers, breaking
+  glass/wood/stone/pottery, doors, explosions, magic, vehicles, swimming and climbing.
+  **All 105 sounds now play for real: 51 from code, 54 from generated audio, none on a
+  stand-in.**
+  Rewrote nine prompts *before* spending generations, because they contained the words that
+  had already cost us three rounds of rework — "bright", "sharp", "distant". The whole batch
+  came back with **zero rejected takes**, where earlier batches needed repeated retries.
+  Implemented **seamless looping** (`postFx.loop`), which had been an open item since v0.1.0.
+  A generator never returns a loop: its first and last samples are unrelated, so playing it
+  round clicks every cycle. The tail is now wrapped over the head by a crossfade, and the
+  edge fades are skipped for looping sounds because they would re-open the seam. Added
+  `opts.loop` to `SFX.play()` (looping a slice inside the sprite via loopStart/loopEnd) and
+  `SFX.stop(handle)` to end it.
+  Dropped the encode bitrates (Opus 96k→64k, AAC 128k→96k) to respect the pack's own size
+  rule: `casual.webm` is now **892 KB**, under the 1 MB limit, with the AAC fallback at
+  1311 KB. Verified the lower bitrate costs nothing — brightness is identical to the decimal.
+- Tested: All 105 sounds audited in the browser: none silent. Loops verified by measuring
+  the sample-to-sample jump where the end wraps to the beginning against a normal moment
+  mid-clip — `fire.crackle` 0.018 vs 0.276, `engine.loop` 0.146 vs 0.116, both seamless.
+  `engine.loop` needed a 1.2s crossfade where fire needed 0.6s: tonal material has to phase-
+  match, noisy material does not. Loop playback confirmed end to end — `fire.crackle` still
+  sounding at 5.5s (more than twice its 2.5s length) and silent immediately after
+  `SFX.stop()`.
+- Notes for next agent: `AGENTS.md` §5 now records the four rules this cost real work to
+  learn — describe the source instead of asking for tone, generate repetitive sounds as one
+  sequence and cut them, how to make and verify a loop, and the size limit applying to the
+  Opus bundle rather than the AAC fallback.
+  **Nothing has been judged by ear across the board.** Every measurement here proves only
+  that no sound is silent, clipping, distant or dull. `state.gameover` is the weakest on
+  paper (7% of energy above 2 kHz after repair) and is worth a listen.
+
+
 ## v0.2.9-A — all eight footstep surfaces cut from real walks
 - Agent: A (Claude) · Date: 2026-09-17
 - Done: Converted the remaining seven `step.*` surfaces to sequence mode, so all eight are

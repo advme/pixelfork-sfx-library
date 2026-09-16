@@ -68,6 +68,20 @@ def peak_db(path):
     return float(m.group(1)) if m else 0.0
 
 
+def make_seamless(src, dst, cross):
+    """Wrap a clip's tail over its head so it loops with no click or gap.
+
+    A generator never returns a seamless loop: its first and last samples are
+    unrelated, so playing it round gives an audible seam every cycle. Taking the
+    clip from `cross` onward and cross-fading its own head onto the end makes the
+    end and the beginning identical, which is what a loop needs.
+    """
+    r = run(['ffmpeg', '-y', '-i', src, '-i', src, '-filter_complex',
+             '[0:a]atrim=start={c}[a];[1:a]atrim=0:{c}[b];[a][b]acrossfade=d={c}[out]'.format(c=cross),
+             '-map', '[out]', '-ar', str(SAMPLE_RATE), '-ac', '1', '-c:a', 'pcm_s16le', dst])
+    return r.returncode == 0
+
+
 def post_fx(fx):
     """Per-sound repair, from registry.json -> postFx.
 
@@ -125,7 +139,8 @@ def prepare(src, dst, warnings, fx=None, low_level_db=None):
     if r.returncode != 0:
         sys.exit('ffmpeg failed on ' + src + '\n' + r.stderr[-800:])
 
-    fx_chain = post_fx(fx or {})
+    fx = fx or {}
+    fx_chain = post_fx(fx)
     if fx_chain:
         fixed = dst + '.fx.wav'
         r = run(['ffmpeg', '-y', '-i', tmp, '-af', ','.join(fx_chain),
@@ -135,6 +150,14 @@ def prepare(src, dst, warnings, fx=None, low_level_db=None):
         os.remove(tmp)
         tmp = fixed
 
+    if fx.get('loop'):
+        looped = dst + '.loop.wav'
+        if make_seamless(tmp, looped, float(fx['loop'])):
+            os.remove(tmp)
+            tmp = looped
+        else:
+            warnings.append(os.path.basename(src) + ' could not be made seamless')
+
     dur = duration_of(tmp)
     if dur <= 0.02:
         warnings.append(os.path.basename(src) + ' trimmed to nothing — regenerate it')
@@ -142,9 +165,12 @@ def prepare(src, dst, warnings, fx=None, low_level_db=None):
 
     # Normalize, then fade both edges so no slice can click at its boundary.
     gain = PEAK_TARGET_DB - peak_db(tmp)
-    fade_out = min(0.03, dur * 0.25)
-    chain = 'volume={:.2f}dB,afade=t=in:st=0:d=0.004,afade=t=out:st={:.4f}:d={:.4f}'.format(
-        gain, max(0.0, dur - fade_out), fade_out)
+    if fx.get('loop'):
+        chain = 'volume={:.2f}dB'.format(gain)          # edge fades would re-open the seam
+    else:
+        fade_out = min(0.03, dur * 0.25)
+        chain = 'volume={:.2f}dB,afade=t=in:st=0:d=0.004,afade=t=out:st={:.4f}:d={:.4f}'.format(
+            gain, max(0.0, dur - fade_out), fade_out)
     r = run(['ffmpeg', '-y', '-i', tmp, '-af', chain,
              '-ar', str(SAMPLE_RATE), '-ac', '1', '-c:a', 'pcm_s16le', dst])
     os.remove(tmp)
@@ -239,9 +265,9 @@ def build(pack):
         webm = os.path.join(dist, pack + '.webm')
         m4a = os.path.join(dist, pack + '.m4a')
         run(['ffmpeg', '-y', '-i', sprite_wav, '-c:a', 'libopus',
-             '-b:a', '96k', '-vbr', 'on', '-application', 'audio', webm])
+             '-b:a', '64k', '-vbr', 'on', '-application', 'audio', webm])
         run(['ffmpeg', '-y', '-i', sprite_wav, '-c:a', 'aac',
-             '-b:a', '128k', '-movflags', '+faststart', m4a])
+             '-b:a', '96k', '-movflags', '+faststart', m4a])
 
         manifest['sprite'] = {'webm': pack + '.webm', 'm4a': pack + '.m4a'}
         manifest['spriteDuration'] = round(cursor, 4)

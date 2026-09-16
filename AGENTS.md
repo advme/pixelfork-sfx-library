@@ -51,6 +51,18 @@ AI-GUIDE.md                      what an AI building a game reads. Keep it hones
   - `ai` — a generated audio file. Correct for sounds carrying **real-world material texture**: footsteps, guns, glass, wood, water, fire, engines, voices, musical fanfares. No oscillator fakes these.
   - `hybrid` — a coded layer plus a generated layer.
   The test when adding a sound: *could this exist without a physical object making it?* If yes, it is `code`. If it needs a material, a throat or an instrument, it is `ai`.
+- **Describe the source in a prompt; never ask for the tone.** Asking a generator for "bright",
+  "sharp", "thin" or "piercing" reliably returns audio 20–40 dB too quiet — it happened on the
+  pistol, `step.wood` and others. Naming what makes the sound ("hard leather shoes on a hollow
+  wooden floor", "clay pot on tile") gets the same brightness at a usable level. Ask for a **loud,
+  close** recording and add any lift with `postFx.bright` / `postFx.presence`. "Distant" is the same
+  trap in reverse: it returns the dull, reverberant sound that reads as a cheap microphone.
+- **Sounds that repeat should be generated as one real sequence and cut up.** A generator asked for
+  "a single footstep" still has to fill the API's 0.5s floor and returns several crammed together.
+  Give the sound a `sequence` block instead: `generate_ai.py` makes one 3-second recording and
+  `tools/split_takes.py` cuts it into takes. Every take is then a genuinely different footfall, and
+  it costs one generation instead of five. The source recordings are cached in
+  `packs/<pack>/sounds/_seq/` (gitignored) so takes can be re-cut without regenerating.
 - **Never give a `code` sound a prompt, and never leave an `ai` sound without one.** The merge script validates this; `build_pack.py` will not call a `code` sound "missing".
 - **Style:** modern mobile casual — clean, bright, punchy, dry. Not retro/8-bit, not cinematic/orchestral. The house style lives in `registry.json → style`; the prompts must stay consistent with it.
 - **Short.** UI sounds under 0.2s, pickups under 0.25s, only win/lose/chest go past 1s. A long sound in a game that fires it 40 times a minute is a bug.
@@ -59,7 +71,8 @@ AI-GUIDE.md                      what an AI building a game reads. Keep it hones
 - **Names are a contract.** `category.thing` in lower case. Once a name ships, renaming it breaks every game that uses it — add an alias instead.
 - **Never play audio before the player's first tap.** Browsers block it. The runtime unlocks itself; do not work around this.
 - **Never let a missing sound throw.** Unknown names warn once and fall back to a stand-in.
-- **Every sound must earn its place in the sprite.** The whole pack should stay under ~1 MB.
+- **Every sound must earn its place in the sprite.** The primary pack (`casual.webm`, Opus, what nearly every browser loads) must stay under **1 MB**; the `.m4a` AAC fallback for older iOS is allowed to be larger. Check the sizes `build_pack.py` prints after every build.
+- **A sound that must loop needs `postFx.loop`.** A generator never returns a seamless loop — its first and last samples are unrelated, so playing it round clicks every cycle. `loop` wraps the tail over the head by the given number of seconds. Tonal material (an engine) needs a much longer overlap than noisy material (fire): 1.2s against 0.6s here. Verify by comparing the sample-to-sample jump at the wrap against a normal moment mid-clip; they should be about equal.
 
 ## 6. Git workflow
 - Work on `main` in small commits. Don't rewrite history.

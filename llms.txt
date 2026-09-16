@@ -2,6 +2,6 @@
 > Game sound effects for AI-generated web games. No install: 2 lines, then SFX.play('coin.collect').
 
 - AI guide (start here): https://advme.github.io/pixelfork-sfx-library/AI-GUIDE.md
-- Add to a game: <script src="https://cdn.jsdelivr.net/gh/advme/pixelfork-sfx-library@v0.2.0-A/dist/sfx.js"></script> then SFX.load('casual'); SFX.attach();
-- Every sound, machine-readable: https://cdn.jsdelivr.net/gh/advme/pixelfork-sfx-library@v0.2.0-A/dist/casual.json
+- Add to a game: <script src="https://cdn.jsdelivr.net/gh/advme/pixelfork-sfx-library@v0.3.0-A/dist/sfx.js"></script> then SFX.load('casual'); SFX.attach();
+- Every sound, machine-readable: https://cdn.jsdelivr.net/gh/advme/pixelfork-sfx-library@v0.3.0-A/dist/casual.json
 - Pairs with the Super Casual UI Kit: https://advme.github.io/mobile-game-ui-library/AI-GUIDE.md

@@ -2,7 +2,7 @@
   "name": "casual",
   "title": "Casual SFX Pack",
   "description": "Sound effects for hyper-casual and casual mobile web games. Designed to pair with the Super Casual UI Kit.",
-  "version": "0.2.9",
+  "version": "0.3.0",
   "style": "Modern mobile casual game audio: clean, bright, punchy, lightly processed. Not retro/8-bit, not cinematic/orchestral. Mono, dry (no long reverb tails), normalized to -1 dBFS peak.",
   "sourceMeaning": {
     "code": "Synthesized by the runtime, permanently. No audio file, no download, infinite variation. These sounds are synthetic by nature so code beats a recording.",
@@ -1777,6 +1777,22 @@
         "swim",
         "water",
         "stroke"
+      ],
+      "start": 42.6401,
+      "dur": 0.72,
+      "variations": [
+        [
+          42.6401,
+          0.72
+        ],
+        [
+          43.6102,
+          0.72
+        ],
+        [
+          44.5802,
+          0.6337
+        ]
       ]
     },
     "move.climb": {
@@ -1791,6 +1807,22 @@
         "grab",
         "ledge",
         "rope"
+      ],
+      "start": 45.4639,
+      "dur": 0.539,
+      "variations": [
+        [
+          45.4639,
+          0.539
+        ],
+        [
+          46.2529,
+          0.3472
+        ],
+        [
+          46.8502,
+          0.5622
+        ]
       ]
     },
     "move.cloth": {
@@ -1805,6 +1837,22 @@
         "fabric",
         "cape",
         "dodge"
+      ],
+      "start": 47.6623,
+      "dur": 0.48,
+      "variations": [
+        [
+          47.6623,
+          0.48
+        ],
+        [
+          48.3924,
+          0.394
+        ],
+        [
+          49.0364,
+          0.3648
+        ]
       ]
     },
     "voice.cheer": {
@@ -1819,7 +1867,9 @@
         "crowd",
         "celebrate",
         "yay"
-      ]
+      ],
+      "start": 49.6511,
+      "dur": 1.4539
     },
     "voice.grunt": {
       "source": "ai",
@@ -1833,6 +1883,26 @@
         "effort",
         "jump",
         "exertion"
+      ],
+      "start": 51.355,
+      "dur": 0.52,
+      "variations": [
+        [
+          51.355,
+          0.52
+        ],
+        [
+          52.1251,
+          0.52
+        ],
+        [
+          52.8951,
+          0.3805
+        ],
+        [
+          53.5257,
+          0.52
+        ]
       ]
     },
     "voice.hurt": {
@@ -1847,6 +1917,22 @@
         "damage",
         "ouch",
         "pain"
+      ],
+      "start": 54.2957,
+      "dur": 0.64,
+      "variations": [
+        [
+          54.2957,
+          0.64
+        ],
+        [
+          55.1857,
+          0.64
+        ],
+        [
+          56.0758,
+          0.64
+        ]
       ]
     },
     "voice.laugh": {
@@ -1861,7 +1947,9 @@
         "giggle",
         "taunt",
         "fun"
-      ]
+      ],
+      "start": 56.9658,
+      "dur": 0.7547
     },
     "pickup.coin": {
       "source": "code",
@@ -2044,6 +2132,22 @@
         "food",
         "fruit",
         "chomp"
+      ],
+      "start": 57.9705,
+      "dur": 0.5299,
+      "variations": [
+        [
+          57.9705,
+          0.5299
+        ],
+        [
+          58.7505,
+          0.4933
+        ],
+        [
+          59.4938,
+          0.5768
+        ]
       ]
     },
     "pickup.ammo": {
@@ -2058,6 +2162,18 @@
         "equip",
         "gear",
         "metal"
+      ],
+      "start": 60.3206,
+      "dur": 0.3254,
+      "variations": [
+        [
+          60.3206,
+          0.3254
+        ],
+        [
+          60.896,
+          0.3435
+        ]
       ]
     },
     "coin.shower": {
@@ -2206,7 +2322,7 @@
         "loot",
         "reveal"
       ],
-      "start": 42.6401,
+      "start": 61.4895,
       "dur": 1.1073
     },
     "reward.jackpot": {
@@ -2221,7 +2337,9 @@
         "rare",
         "legendary",
         "big win"
-      ]
+      ],
+      "start": 62.8468,
+      "dur": 1.4815
     },
     "state.win": {
       "source": "ai",
@@ -2236,7 +2354,7 @@
         "fanfare",
         "complete"
       ],
-      "start": 43.9974,
+      "start": 64.5782,
       "dur": 1.4925
     },
     "state.win.small": {
@@ -2284,7 +2402,7 @@
         "fail",
         "defeat"
       ],
-      "start": 45.7399,
+      "start": 66.3207,
       "dur": 1.48
     },
     "state.gameover": {
@@ -2298,7 +2416,9 @@
         "game over",
         "death",
         "end"
-      ]
+      ],
+      "start": 68.0508,
+      "dur": 2.32
     },
     "state.levelup": {
       "source": "ai",
@@ -2312,7 +2432,9 @@
         "rank",
         "promote",
         "progress"
-      ]
+      ],
+      "start": 70.6208,
+      "dur": 1.7072
     },
     "state.newrecord": {
       "source": "ai",
@@ -2325,7 +2447,9 @@
         "record",
         "high score",
         "best"
-      ]
+      ],
+      "start": 72.578,
+      "dur": 2.12
     },
     "match.pop": {
       "source": "code",
@@ -2463,7 +2587,9 @@
             "type": "fm"
           }
         ]
-      }
+      },
+      "start": 74.9481,
+      "dur": 0.84
     },
     "match.shuffle": {
       "source": "ai",
@@ -2477,7 +2603,9 @@
         "deal",
         "cards",
         "reset"
-      ]
+      ],
+      "start": 76.0381,
+      "dur": 0.8299
     },
     "break.glass": {
       "source": "ai",
@@ -2492,7 +2620,7 @@
         "break",
         "ice"
       ],
-      "start": 47.47,
+      "start": 77.118,
       "dur": 1.0
     },
     "break.wood": {
@@ -2507,6 +2635,18 @@
         "crate",
         "splinter",
         "break"
+      ],
+      "start": 78.368,
+      "dur": 0.92,
+      "variations": [
+        [
+          78.368,
+          0.92
+        ],
+        [
+          79.538,
+          0.92
+        ]
       ]
     },
     "break.stone": {
@@ -2521,6 +2661,18 @@
         "rock",
         "rubble",
         "break"
+      ],
+      "start": 80.7081,
+      "dur": 0.9357,
+      "variations": [
+        [
+          80.7081,
+          0.9357
+        ],
+        [
+          81.8938,
+          0.9742
+        ]
       ]
     },
     "break.pot": {
@@ -2535,6 +2687,18 @@
         "ceramic",
         "vase",
         "smash"
+      ],
+      "start": 83.118,
+      "dur": 0.84,
+      "variations": [
+        [
+          83.118,
+          0.84
+        ],
+        [
+          84.208,
+          0.84
+        ]
       ]
     },
     "explosion.small": {
@@ -2584,7 +2748,9 @@
         "big",
         "boom",
         "debris"
-      ]
+      ],
+      "start": 85.2981,
+      "dur": 2.32
     },
     "magic.sparkle": {
       "source": "code",
@@ -2756,6 +2922,18 @@
         "flame",
         "burn",
         "fireball"
+      ],
+      "start": 87.8681,
+      "dur": 0.9476,
+      "variations": [
+        [
+          87.8681,
+          0.9476
+        ],
+        [
+          89.0657,
+          0.8771
+        ]
       ]
     },
     "magic.ice": {
@@ -2793,7 +2971,9 @@
             "q": 1.2
           }
         ]
-      }
+      },
+      "start": 90.1928,
+      "dur": 1.04
     },
     "magic.summon": {
       "source": "code",
@@ -2856,7 +3036,9 @@
         "open",
         "gate",
         "creak"
-      ]
+      ],
+      "start": 91.4828,
+      "dur": 0.8023
     },
     "door.close": {
       "source": "ai",
@@ -2870,7 +3052,9 @@
         "close",
         "shut",
         "slam"
-      ]
+      ],
+      "start": 92.5351,
+      "dur": 0.84
     },
     "water.splash": {
       "source": "ai",
@@ -2885,19 +3069,19 @@
         "dive",
         "wet"
       ],
-      "start": 48.72,
+      "start": 93.6251,
       "dur": 1.2,
       "variations": [
         [
-          48.72,
+          93.6251,
           1.2
         ],
         [
-          50.1701,
+          95.0751,
           0.927
         ],
         [
-          51.3471,
+          96.2522,
           1.2
         ]
       ]
@@ -2916,7 +3100,9 @@
         "burn",
         "ambience",
         "loop"
-      ]
+      ],
+      "start": 97.7022,
+      "dur": 2.52
     },
     "engine.start": {
       "source": "ai",
@@ -2930,7 +3116,9 @@
         "start",
         "car",
         "ignition"
-      ]
+      ],
+      "start": 100.4722,
+      "dur": 1.92
     },
     "engine.loop": {
       "source": "ai",
@@ -2945,7 +3133,9 @@
         "loop",
         "drive",
         "motor"
-      ]
+      ],
+      "start": 102.6423,
+      "dur": 1.92
     },
     "vehicle.brake": {
       "source": "ai",
@@ -2959,7 +3149,9 @@
         "skid",
         "tyres",
         "screech"
-      ]
+      ],
+      "start": 104.8123,
+      "dur": 1.32
     },
     "vehicle.crash": {
       "source": "ai",
@@ -2973,8 +3165,10 @@
         "collision",
         "wreck",
         "metal"
-      ]
+      ],
+      "start": 106.3824,
+      "dur": 1.64
     }
   },
-  "spriteDuration": 52.7971
+  "spriteDuration": 108.2724
 }

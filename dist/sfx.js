@@ -16,7 +16,7 @@
 (function (global) {
   'use strict';
 
-  var VERSION = '0.2.9';
+  var VERSION = '0.3.0';
   var STORE_KEY = 'pixelfork.sfx';
   var CATEGORIES = ['ui', 'game', 'reward', 'music'];
   var MAX_VOICES = 24;          // hard cap on simultaneous one-shots
@@ -427,7 +427,15 @@
       var g = c.createGain();
       g.gain.value = volume * (pack.trim == null ? 0.55 : pack.trim);
       src.connect(g); g.connect(dest);
-      src.start(when, slice[0], slice[1]);
+      if (opts.loop) {
+        // Loop inside the sprite: the slice repeats, nothing after it is heard.
+        src.loop = true;
+        src.loopStart = slice[0];
+        src.loopEnd = slice[0] + slice[1];
+        src.start(when, slice[0]);
+      } else {
+        src.start(when, slice[0], slice[1]);
+      }
       track(src);
       return src;
     }
@@ -608,6 +616,19 @@
     play: play,
     music: playMusic,
     stopMusic: stopMusic,
+    // Stop one looping/long sound started by play(). Returns true if it stopped.
+    stop: function (handle, fade) {
+      if (!handle || !ctx) return false;
+      try {
+        if (fade) {
+          var g = ctx.createGain();
+          handle.stop(ctx.currentTime + fade);
+        } else {
+          handle.stop();
+        }
+        return true;
+      } catch (e) { return false; }
+    },
     duck: duck,
     attach: attach,
     unlock: unlock,
