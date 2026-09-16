@@ -23,6 +23,14 @@
   button:active { transform: translateY(1px); }
   h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--dim);
        margin: 28px 0 12px; }
+  .filters { top: 62px; gap: 8px; }
+  .flabel { font-size: 13px; color: var(--dim); margin-right: 2px; }
+  button.f[aria-pressed="true"] { border-color: var(--accent); color: var(--accent);
+                                  background: rgba(255,213,74,.1); }
+  .filters input[type=search] { font: inherit; background: #272b36; color: var(--text);
+       border: 1px solid var(--line); border-radius: 8px; padding: 7px 12px; min-width: 200px; }
+  .filters input[type=search]:focus { outline: none; border-color: var(--accent); }
+  .empty { color: var(--dim); font-size: 14px; padding: 20px 2px; }
   .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
   .top { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
@@ -58,6 +66,17 @@
   <button id="audit">Check every sound makes noise</button>
 </div>
 
+<div class="bar filters">
+  <span class="flabel">Show</span>
+  <button class="f" data-filter="all">All</button>
+  <button class="f" data-filter="code">Code</button>
+  <button class="f" data-filter="ai">ElevenLabs</button>
+  <button class="f" data-filter="real">· generated</button>
+  <button class="f" data-filter="stub">· still to do</button>
+  <input type="search" id="q" placeholder="search name or use…" autocomplete="off">
+  <span class="meta" id="shown"></span>
+</div>
+
 <div id="out"></div>
 
 <script src="../dist/sfx.js"></script>
@@ -85,41 +104,86 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
       'Generate those with the prompts in <code>packs/casual/SOUND-PROMPTS.md</code>, drop the files into ' +
       '<code>packs/casual/sounds/</code>, then run <code>python3 tools/build_pack.py casual</code> and reload.';
 
-  const groups = {};
-  names.forEach(n => {
-    const d = SFX.info(n) || {};
-    (groups[d.category || 'ui'] = groups[d.category || 'ui'] || []).push([n, d]);
-  });
+  // 'ai' covers both the generated ones and the ones still waiting for audio.
+  const matches = (n, f) => f === 'all' || (f === 'ai' ? state(n) !== 'code' : state(n) === f);
+
+  let filter = 'all', query = '';
+  try { filter = localStorage.getItem('sfx.preview.filter') || 'all'; } catch (e) {}
 
   const out = document.getElementById('out');
-  CAT_ORDER.filter(c => groups[c]).forEach(cat => {
-    const h = document.createElement('h2');
-    h.textContent = cat + ' — ' + groups[cat].length;
-    out.appendChild(h);
+  const shown = document.getElementById('shown');
 
-    const grid = document.createElement('div');
-    grid.className = 'grid';
-    groups[cat].forEach(([name, d]) => {
-      const st = state(name);
-      const label = { real: 'real audio', code: 'code', stub: 'needs audio' }[st];
-      const card = document.createElement('div');
-      card.className = 'card';
-      card.innerHTML =
-        '<div class="top"><span class="name"></span>' +
-        '<span class="tag ' + st + '">' + label + '</span></div>' +
-        '<p class="use"></p>' +
-        '<div class="row"><button>▶ Play</button>' +
-        (d.variations ? '<button data-v>▶ All ' + d.variations.length + ' takes</button>' : '') +
-        '<span class="meta">~' + (d.duration ?? '?') + 's</span></div>';
-      card.querySelector('.name').textContent = name;
-      card.querySelector('.use').textContent = d.whenToUse || '';
-      card.querySelector('button').onclick = () => SFX.play(name);
-      const v = card.querySelector('[data-v]');
-      if (v) v.onclick = () => d.variations.forEach((_, i) => setTimeout(() => SFX.play(name), i * 260));
-      grid.appendChild(card);
+  function render() {
+    const q = query.trim().toLowerCase();
+    const visible = names.filter(n => matches(n, filter) &&
+      (!q || n.toLowerCase().includes(q) ||
+       ((SFX.info(n) || {}).whenToUse || '').toLowerCase().includes(q)));
+
+    shown.textContent = visible.length === names.length
+      ? names.length + ' sounds'
+      : visible.length + ' of ' + names.length + ' shown';
+
+    document.querySelectorAll('button.f').forEach(b =>
+      b.setAttribute('aria-pressed', String(b.dataset.filter === filter)));
+
+    const groups = {};
+    visible.forEach(n => {
+      const d = SFX.info(n) || {};
+      (groups[d.category || 'ui'] = groups[d.category || 'ui'] || []).push([n, d]);
     });
-    out.appendChild(grid);
+
+    out.textContent = '';
+    if (!visible.length) {
+      const e = document.createElement('p');
+      e.className = 'empty';
+      e.textContent = 'Nothing matches that.';
+      out.appendChild(e);
+      return;
+    }
+
+    CAT_ORDER.filter(c => groups[c]).forEach(cat => {
+      const h = document.createElement('h2');
+      h.textContent = cat + ' — ' + groups[cat].length;
+      out.appendChild(h);
+
+      const grid = document.createElement('div');
+      grid.className = 'grid';
+      groups[cat].forEach(([name, d]) => {
+        const st = state(name);
+        const label = { real: 'real audio', code: 'code', stub: 'needs audio' }[st];
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML =
+          '<div class="top"><span class="name"></span>' +
+          '<span class="tag ' + st + '">' + label + '</span></div>' +
+          '<p class="use"></p>' +
+          '<div class="row"><button>▶ Play</button>' +
+          (d.variations ? '<button data-v>▶ All ' + d.variations.length + ' takes</button>' : '') +
+          '<span class="meta">~' + (d.duration ?? '?') + 's</span></div>';
+        card.querySelector('.name').textContent = name;
+        card.querySelector('.use').textContent = d.whenToUse || '';
+        card.querySelector('button').onclick = () => SFX.play(name);
+        const v = card.querySelector('[data-v]');
+        if (v) v.onclick = () => d.variations.forEach((_, i) => setTimeout(() => SFX.play(name), i * 260));
+        grid.appendChild(card);
+      });
+      out.appendChild(grid);
+    });
+  }
+
+  document.querySelectorAll('button.f').forEach(b => {
+    const n = { all: names.length, code: count('code'), ai: count('real') + count('stub'),
+                real: count('real'), stub: count('stub') }[b.dataset.filter];
+    b.textContent += ' (' + n + ')';
+    b.onclick = () => {
+      filter = b.dataset.filter;
+      try { localStorage.setItem('sfx.preview.filter', filter); } catch (e) {}
+      render();
+    };
   });
+  document.getElementById('q').oninput = e => { query = e.target.value; render(); };
+
+  render();
 });
 
 // controls
