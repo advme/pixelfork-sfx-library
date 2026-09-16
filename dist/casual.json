@@ -2,7 +2,7 @@
   "name": "casual",
   "title": "Casual SFX Pack",
   "description": "Sound effects for hyper-casual and casual mobile web games. Designed to pair with the Super Casual UI Kit.",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "style": "Modern mobile casual game audio: clean, bright, punchy, lightly processed. Not retro/8-bit, not cinematic/orchestral. Mono, dry (no long reverb tails), normalized to -1 dBFS peak.",
   "sourceMeaning": {
     "code": "Synthesized by the runtime, permanently. No audio file, no download, infinite variation. These sounds are synthetic by nature so code beats a recording.",
@@ -1440,28 +1440,32 @@
         "run",
         "grass"
       ],
+      "sequence": {
+        "prompt": "Person walking at a steady pace on grass, five clear separate footsteps with dry rustling blades and earthy scuffs, recorded close and loud, no reverb, no music",
+        "seconds": 3.0
+      },
       "start": 21.7334,
-      "dur": 0.15,
+      "dur": 0.3799,
       "variations": [
         [
           21.7334,
-          0.15
+          0.3799
         ],
         [
-          22.1334,
-          0.15
+          22.3633,
+          0.2246
         ],
         [
-          22.5334,
-          0.15
+          22.8379,
+          0.3795
         ],
         [
-          22.9334,
-          0.15
+          23.4675,
+          0.3795
         ],
         [
-          23.3334,
-          0.15
+          24.0969,
+          0.3432
         ]
       ]
     },
@@ -1479,20 +1483,28 @@
         "run",
         "wood"
       ],
-      "start": 23.7334,
-      "dur": 0.15,
+      "sequence": {
+        "prompt": "Person in hard leather shoes walking at a steady pace on a hollow wooden stage floor, five clear separate footsteps with loud knocking heel clicks and hollow resonance, recorded close and loud, no reverb, no music",
+        "seconds": 3.0
+      },
+      "start": 24.6901,
+      "dur": 0.2981,
       "variations": [
         [
-          23.7334,
-          0.15
+          24.6901,
+          0.2981
         ],
         [
-          24.1334,
-          0.15
+          25.2382,
+          0.2833
         ],
         [
-          24.5334,
-          0.15
+          25.7715,
+          0.231
+        ],
+        [
+          26.2525,
+          0.263
         ]
       ]
     },
@@ -1510,28 +1522,32 @@
         "run",
         "stone"
       ],
-      "start": 24.9334,
-      "dur": 0.15,
+      "sequence": {
+        "prompt": "Person walking at a steady pace on stone pavement, five clear separate footsteps with firm hard scuffs of shoe soles, recorded close and loud, no reverb, no music",
+        "seconds": 3.0
+      },
+      "start": 26.7656,
+      "dur": 0.186,
       "variations": [
         [
-          24.9334,
-          0.15
+          26.7656,
+          0.186
         ],
         [
-          25.3334,
-          0.15
+          27.2015,
+          0.2333
         ],
         [
-          25.7334,
-          0.15
+          27.6848,
+          0.2531
         ],
         [
-          26.1334,
-          0.15
+          28.1879,
+          0.1113
         ],
         [
-          26.5334,
-          0.15
+          28.5492,
+          0.1493
         ]
       ]
     },
@@ -1549,28 +1565,32 @@
         "run",
         "gravel"
       ],
-      "start": 26.9334,
-      "dur": 0.24,
+      "sequence": {
+        "prompt": "Person walking at a steady pace on loose gravel, five clear separate footsteps with crunching scattering small stones, recorded close and loud, no reverb, no music",
+        "seconds": 3.0
+      },
+      "start": 28.9484,
+      "dur": 0.2818,
       "variations": [
         [
-          26.9334,
-          0.24
+          28.9484,
+          0.2818
         ],
         [
-          27.4234,
-          0.24
+          29.4803,
+          0.357
         ],
         [
-          27.9134,
-          0.24
+          30.0873,
+          0.3785
         ],
         [
-          28.4034,
-          0.24
+          30.7158,
+          0.149
         ],
         [
-          28.8934,
-          0.24
+          31.1147,
+          0.3386
         ]
       ]
     },
@@ -1592,28 +1612,28 @@
         "prompt": "Person walking at a steady pace on a metal grate walkway, five clear separate footsteps with hollow metallic clanks, recorded close and dry, no reverb, no music",
         "seconds": 3.0
       },
-      "start": 29.3834,
-      "dur": 0.3887,
+      "start": 31.7034,
+      "dur": 0.3579,
       "variations": [
         [
-          29.3834,
-          0.3887
+          31.7034,
+          0.3579
         ],
         [
-          30.0222,
-          0.4114
+          32.3113,
+          0.3708
         ],
         [
-          30.6835,
+          32.932,
           0.3402
         ],
         [
-          31.2737,
-          0.153
+          33.5222,
+          0.151
         ],
         [
-          31.6768,
-          0.4188
+          33.9232,
+          0.3784
         ]
       ]
     },
@@ -1631,28 +1651,32 @@
         "run",
         "snow"
       ],
-      "start": 32.3456,
-      "dur": 0.22,
+      "sequence": {
+        "prompt": "Person walking at a steady pace through fresh deep snow, five clear separate footsteps with tight squeaky crunches of compacting powder, recorded close and loud, no reverb, no music",
+        "seconds": 3.0
+      },
+      "start": 34.5516,
+      "dur": 0.2032,
       "variations": [
         [
-          32.3456,
-          0.22
+          34.5516,
+          0.2032
         ],
         [
-          32.8156,
-          0.22
+          35.0049,
+          0.3362
         ],
         [
-          33.2856,
-          0.22
+          35.5911,
+          0.3799
         ],
         [
-          33.7556,
-          0.22
+          36.221,
+          0.2185
         ],
         [
-          34.2256,
-          0.22
+          36.6895,
+          0.2071
         ]
       ]
     },
@@ -1670,28 +1694,32 @@
         "run",
         "water"
       ],
-      "start": 34.6956,
-      "dur": 0.26,
+      "sequence": {
+        "prompt": "Person walking at a steady pace through a shallow puddle, five clear separate footsteps with wet splashes and light splatter, recorded close and loud, no reverb, no music",
+        "seconds": 3.0
+      },
+      "start": 37.1466,
+      "dur": 0.3579,
       "variations": [
         [
-          34.6956,
-          0.26
+          37.1466,
+          0.3579
         ],
         [
-          35.2056,
-          0.26
+          37.7544,
+          0.2991
         ],
         [
-          35.7156,
-          0.26
+          38.3035,
+          0.3414
         ],
         [
-          36.2256,
-          0.26
+          38.8949,
+          0.3782
         ],
         [
-          36.7356,
-          0.26
+          39.5232,
+          0.3795
         ]
       ]
     },
@@ -1708,6 +1736,34 @@
         "walk",
         "run",
         "sand"
+      ],
+      "sequence": {
+        "prompt": "Person walking at a steady pace on dry sand, five clear separate footsteps with soft granular shuffles, recorded close and loud, no reverb, no music",
+        "seconds": 3.0
+      },
+      "start": 40.1527,
+      "dur": 0.1871,
+      "variations": [
+        [
+          40.1527,
+          0.1871
+        ],
+        [
+          40.5899,
+          0.2241
+        ],
+        [
+          41.064,
+          0.2139
+        ],
+        [
+          41.5279,
+          0.2405
+        ],
+        [
+          42.0184,
+          0.3717
+        ]
       ]
     },
     "move.swim": {
@@ -2150,7 +2206,7 @@
         "loot",
         "reveal"
       ],
-      "start": 37.2456,
+      "start": 42.6401,
       "dur": 1.1073
     },
     "reward.jackpot": {
@@ -2180,7 +2236,7 @@
         "fanfare",
         "complete"
       ],
-      "start": 38.6029,
+      "start": 43.9974,
       "dur": 1.4925
     },
     "state.win.small": {
@@ -2228,7 +2284,7 @@
         "fail",
         "defeat"
       ],
-      "start": 40.3454,
+      "start": 45.7399,
       "dur": 1.48
     },
     "state.gameover": {
@@ -2436,7 +2492,7 @@
         "break",
         "ice"
       ],
-      "start": 42.0754,
+      "start": 47.47,
       "dur": 1.0
     },
     "break.wood": {
@@ -2829,19 +2885,19 @@
         "dive",
         "wet"
       ],
-      "start": 43.3255,
+      "start": 48.72,
       "dur": 1.2,
       "variations": [
         [
-          43.3255,
+          48.72,
           1.2
         ],
         [
-          44.7755,
+          50.1701,
           0.927
         ],
         [
-          45.9525,
+          51.3471,
           1.2
         ]
       ]
@@ -2920,5 +2976,5 @@
       ]
     }
   },
-  "spriteDuration": 47.4026
+  "spriteDuration": 52.7971
 }

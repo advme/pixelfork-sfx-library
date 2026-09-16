@@ -38,29 +38,43 @@ def envelope(x):
 
 
 def find_hits(x, want, min_gap_ms=140):
-    """Locate the start of each distinct hit, strongest first, then in time order."""
+    """Find EVERY hit in the recording, then pick which ones to keep.
+
+    Returns (chosen, all_hits). Both matter: `chosen` are the takes we want,
+    but the cut has to end at the next hit in `all_hits`, not the next chosen
+    one — otherwise a quieter step between two loud ones gets swallowed into
+    the take before it, and that take then contains two footsteps.
+    """
     e = envelope(x)
     if len(e) < 3 or e.max() <= 0:
-        return []
+        return [], []
     rise = np.diff(e, prepend=e[0])
     rise[rise < 0] = 0
+    if rise.max() <= 0:
+        return [], []
     gap = max(1, int(min_gap_ms / 1000 * SR / HOP))
 
-    # Walk down the threshold until we find at least as many hits as we want.
-    for frac in (0.45, 0.35, 0.25, 0.18, 0.12, 0.08):
+    # Go down to a low threshold so weak hits are found too, then stop as soon
+    # as more hits appear than we asked for.
+    best = []
+    for frac in (0.45, 0.35, 0.25, 0.18, 0.12, 0.08, 0.05):
         thr = rise.max() * frac
         hits, last = [], -10**9
         for i, v in enumerate(rise):
-            if v > thr and e[i] > e.max() * 0.12 and i - last > gap:
+            if v > thr and e[i] > e.max() * 0.10 and i - last > gap:
                 hits.append((i, float(v)))
                 last = i
-        if len(hits) >= want:
+        if len(hits) > len(best):
+            best = hits
+        if len(hits) >= want + 1:
             break
-    if not hits:
-        return []
-    hits.sort(key=lambda h: -h[1])          # keep the strongest
-    hits = sorted(i for i, _ in hits[:want])
-    return hits
+    if not best:
+        return [], []
+
+    all_hits = sorted(i for i, _ in best)
+    strongest = sorted(best, key=lambda h: -h[1])[:want]
+    chosen = sorted(i for i, _ in strongest)
+    return chosen, all_hits
 
 
 def write_take(x, start, end, out_path):
@@ -83,19 +97,21 @@ def write_take(x, start, end, out_path):
     return p.returncode == 0
 
 
-def split(name, src, want, out_dir, pre_ms=18, max_ms=420):
+def split(name, src, want, out_dir, pre_ms=18, max_ms=380):
     x = decode(src)
     if not len(x):
         sys.exit('Could not decode ' + src)
-    hits = find_hits(x, want)
-    if not hits:
+    chosen, all_hits = find_hits(x, want)
+    if not chosen:
         sys.exit('No hits found in ' + src)
 
     written = []
-    for k, h in enumerate(hits):
+    for k, h in enumerate(chosen):
         start = int(h * HOP - pre_ms / 1000 * SR)
-        nxt = hits[k + 1] * HOP if k + 1 < len(hits) else len(x)
-        end = int(min(nxt - 0.010 * SR, start + max_ms / 1000 * SR, len(x)))
+        # End at the very next hit of ANY strength, so no take can hold two.
+        later = [a for a in all_hits if a > h]
+        nxt = later[0] * HOP if later else len(x)
+        end = int(min(nxt - 0.012 * SR, start + max_ms / 1000 * SR, len(x)))
         out = os.path.join(out_dir, '{}.{}.wav'.format(name, k + 1))
         if write_take(x, start, end, out):
             written.append((out, (end - start) / SR))

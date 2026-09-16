@@ -1,5 +1,34 @@
 # CHANGELOG
 
+## v0.2.9-A — all eight footstep surfaces cut from real walks
+- Agent: A (Claude) · Date: 2026-09-17
+- Done: Converted the remaining seven `step.*` surfaces to sequence mode, so all eight are
+  now cut from a real 3-second walk instead of being generated one step at a time:
+  grass, gravel, metal, sand, snow, stone, water, wood. Seven generations replaced
+  thirty-five, and every take now carries the natural variation of a different footfall.
+  **Found and fixed a real bug in the splitter.** It picked the strongest N onsets as take
+  starts but ended each take at the next *selected* onset — so a quieter step sitting
+  between two loud ones was swallowed into the take before it, and that take then held two
+  footsteps. It now detects every hit at a low threshold and ends each cut at the next hit
+  of **any** strength. `step.stone` went from two steps in two of its takes to one each.
+  Re-cutting used the cached walks in `packs/casual/sounds/_seq/`, so fixing the bug cost
+  no generations at all — which is the reason those are kept.
+  `step.wood` came back 69% below 500 Hz with no knock in it, and EQ could not invent what
+  was not there (2% → 5% above 2 kHz at +12 dB of shelf). Regenerating it as "hard leather
+  shoes on a hollow wooden stage floor with knocking heel clicks" fixed it properly:
+  **15% above 2 kHz**, and still loud at −2.9 dBFS. Describing the *source* gets brightness
+  where asking for "bright" only gets quiet audio.
+- Tested: Every take on all eight surfaces holds exactly one footstep. Verified by onset
+  gaps rather than onset counts: a footstep in these walks lands every ~600 ms and no take
+  exceeds 380 ms, so the extra onsets on grass, gravel, sand and snow (largest inner gap
+  208 ms) are crunch texture inside one step — which is what those surfaces should sound
+  like. Counting onsets alone falsely flagged them; counting the gaps settled it.
+- Notes for next agent: sequence mode suits anything naturally repetitive. Obvious next
+  candidates are `match.pop`, `impact.punch` and coin pickups. `step.wood` yields 4 takes
+  rather than 5 because its walk only has four clear steps; that is fine, the runtime just
+  cycles four.
+
+
 ## v0.2.8-A — generate a real walk, then cut it into takes
 - Agent: A (Claude) · Date: 2026-09-17
 - Done: The owner pointed out that generating footsteps one at a time was the wrong

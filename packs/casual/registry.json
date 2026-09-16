@@ -2,7 +2,7 @@
   "name": "casual",
   "title": "Casual SFX Pack",
   "description": "Sound effects for hyper-casual and casual mobile web games. Designed to pair with the Super Casual UI Kit.",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "style": "Modern mobile casual game audio: clean, bright, punchy, lightly processed. Not retro/8-bit, not cinematic/orchestral. Mono, dry (no long reverb tails), normalized to -1 dBFS peak.",
   "sourceMeaning": {
     "code": "Synthesized by the runtime, permanently. No audio file, no download, infinite variation. These sounds are synthetic by nature so code beats a recording.",
@@ -1380,10 +1380,12 @@
       ],
       "prompt": "Single loud close-up footstep on grass, crisp dry rustle of blades with an earthy scuff, recorded right next to the shoe, no reverb",
       "postFx": {
-        "tighten": 0.15,
         "presence": 3
       },
-      "minLevelDb": -26
+      "sequence": {
+        "prompt": "Person walking at a steady pace on grass, five clear separate footsteps with dry rustling blades and earthy scuffs, recorded close and loud, no reverb, no music",
+        "seconds": 3.0
+      }
     },
     "step.wood": {
       "source": "ai",
@@ -1402,9 +1404,13 @@
       ],
       "prompt": "Single footstep on a hard hollow wooden floorboard, sharp bright woody knock with a crisp attack and a short hollow resonance, close dry recording, no reverb",
       "postFx": {
-        "tighten": 0.15,
-        "presence": 7,
-        "bright": 12
+        "highpass": 160,
+        "presence": 6,
+        "bright": 6
+      },
+      "sequence": {
+        "prompt": "Person in hard leather shoes walking at a steady pace on a hollow wooden stage floor, five clear separate footsteps with loud knocking heel clicks and hollow resonance, recorded close and loud, no reverb, no music",
+        "seconds": 3.0
       }
     },
     "step.stone": {
@@ -1424,9 +1430,12 @@
       ],
       "prompt": "Single footstep on stone or concrete, firm hard scuff of a shoe sole, close and dry, no reverb",
       "postFx": {
-        "tighten": 0.15,
         "presence": 3,
         "bright": 3
+      },
+      "sequence": {
+        "prompt": "Person walking at a steady pace on stone pavement, five clear separate footsteps with firm hard scuffs of shoe soles, recorded close and loud, no reverb, no music",
+        "seconds": 3.0
       }
     },
     "step.gravel": {
@@ -1446,10 +1455,12 @@
       ],
       "prompt": "Single footstep on gravel, crunchy scatter of small stones under a shoe, close and dry",
       "postFx": {
-        "tighten": 0.24,
         "presence": 3
       },
-      "minLevelDb": -24
+      "sequence": {
+        "prompt": "Person walking at a steady pace on loose gravel, five clear separate footsteps with crunching scattering small stones, recorded close and loud, no reverb, no music",
+        "seconds": 3.0
+      }
     },
     "step.metal": {
       "source": "ai",
@@ -1492,10 +1503,12 @@
       ],
       "prompt": "Single footstep in fresh snow, tight squeaky crunch of compacting powder, close and dry",
       "postFx": {
-        "tighten": 0.22,
         "presence": 3
       },
-      "minLevelDb": -26
+      "sequence": {
+        "prompt": "Person walking at a steady pace through fresh deep snow, five clear separate footsteps with tight squeaky crunches of compacting powder, recorded close and loud, no reverb, no music",
+        "seconds": 3.0
+      }
     },
     "step.water": {
       "source": "ai",
@@ -1514,10 +1527,12 @@
       ],
       "prompt": "Single footstep in a shallow puddle, wet splash with a light splatter, close and dry",
       "postFx": {
-        "tighten": 0.26,
         "presence": 3
       },
-      "minLevelDb": -24
+      "sequence": {
+        "prompt": "Person walking at a steady pace through a shallow puddle, five clear separate footsteps with wet splashes and light splatter, recorded close and loud, no reverb, no music",
+        "seconds": 3.0
+      }
     },
     "step.sand": {
       "source": "ai",
@@ -1536,10 +1551,12 @@
       ],
       "prompt": "Single footstep in dry sand, soft granular shuffle with no hard impact, close and dry",
       "postFx": {
-        "tighten": 0.24,
         "presence": 3
       },
-      "minLevelDb": -26
+      "sequence": {
+        "prompt": "Person walking at a steady pace on dry sand, five clear separate footsteps with soft granular shuffles, recorded close and loud, no reverb, no music",
+        "seconds": 3.0
+      }
     },
     "move.swim": {
       "source": "ai",

@@ -19,7 +19,7 @@ edit the registry and run the tool again._
 **51 of the 105 sounds in this pack are made by code and need nothing from you.**
 This checklist is only the 54 that need real audio.
 
-**Progress: 25 of 54 generated.**
+**Progress: 26 of 54 generated.**
 
 ## game
 
@@ -103,7 +103,7 @@ This checklist is only the 54 that need real audio.
   - Target length: ~0.25s · generate **5 takes** (`step.water.1.wav`, `step.water.2.wav`, …)
   - Prompt: `Single footstep in a shallow puddle, wet splash with a light splatter, close and dry`
 
-- [ ] **`step.sand`** — One footstep on sand. Play per step; the library varies pitch and picks a different take each time.
+- [x] **`step.sand`** — One footstep on sand. Play per step; the library varies pitch and picks a different take each time.
   - Target length: ~0.25s · generate **5 takes** (`step.sand.1.wav`, `step.sand.2.wav`, …)
   - Prompt: `Single footstep in dry sand, soft granular shuffle with no hard impact, close and dry`
 
