@@ -2,7 +2,7 @@
   "name": "casual",
   "title": "Casual SFX Pack",
   "description": "Sound effects for hyper-casual and casual mobile web games. Designed to pair with the Super Casual UI Kit.",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "style": "Modern mobile casual game audio: clean, bright, punchy, lightly processed. Not retro/8-bit, not cinematic/orchestral. Mono, dry (no long reverb tails), normalized to -1 dBFS peak.",
   "sourceMeaning": {
     "code": "Synthesized by the runtime, permanently. No audio file, no download, infinite variation. These sounds are synthetic by nature so code beats a recording.",
@@ -781,7 +781,7 @@
         "gunshot",
         "shoot"
       ],
-      "prompt": "Single handgun gunshot, sharp dry crack with a short punchy tail, close perspective, no music, no reverb room"
+      "prompt": "Loud gunshot from a 9mm pistol fired once, sharp explosive bang with a hard crack and a short punchy decay, recorded close and dry"
     },
     "weapon.shotgun": {
       "source": "ai",

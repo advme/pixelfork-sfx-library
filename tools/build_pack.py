@@ -35,6 +35,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GAP = 0.25          # seconds of silence between sounds in the sprite
 SAMPLE_RATE = 48000
 PEAK_TARGET_DB = -1.0
+LOW_LEVEL_DB = -20.0        # below this, a generated file is unusable
+TRIM_BELOW_PEAK_DB = 45.0   # silence = this far under the file's own peak
 EXTS = ('.wav', '.mp3', '.m4a', '.aiff', '.aif', '.ogg', '.flac')
 
 
@@ -62,22 +64,48 @@ def peak_db(path):
     return float(m.group(1)) if m else 0.0
 
 
-def prepare(src, dst):
-    """Trim silence at both ends, peak-normalize, 48 kHz mono."""
+def prepare(src, dst, warnings):
+    """Trim silence at both ends, peak-normalize, fade the edges, 48 kHz mono."""
+    src_peak = peak_db(src)
+
+    # A generated file that comes back very quiet is a BAD generation, not a
+    # quiet sound. Normalizing it would raise its noise floor and codec
+    # artifacts by the same amount and turn it into junk — which is exactly how
+    # a -36 dBFS "pistol" once became a laser. Flag it instead of hiding it.
+    if src_peak < LOW_LEVEL_DB:
+        warnings.append('{} is {:.1f} dBFS at source — too quiet to use; regenerate it '
+                        '(normalizing would boost its noise by {:.0f} dB)'
+                        .format(os.path.basename(src), src_peak, PEAK_TARGET_DB - src_peak))
+
+    # Trim relative to THIS file's own peak, not an absolute dB value. An
+    # absolute threshold leaves a near-silent gap followed by a stray blip
+    # whenever a file has a low-level tail, which is heard as a click or a
+    # little pitched burst at the very end.
+    thresh = max(-60.0, src_peak - TRIM_BELOW_PEAK_DB)
     trim = (
-        'silenceremove=start_periods=1:start_silence=0:start_threshold=-50dB,'
+        'silenceremove=start_periods=1:start_silence=0:start_threshold={t}dB:detection=peak,'
         'areverse,'
-        'silenceremove=start_periods=1:start_silence=0.02:start_threshold=-50dB,'
+        'silenceremove=start_periods=1:start_silence=0.01:start_threshold={t}dB:detection=peak,'
         'areverse'
-    )
+    ).format(t=round(thresh, 1))
+
     tmp = dst + '.trim.wav'
     r = run(['ffmpeg', '-y', '-i', src, '-af', trim,
              '-ar', str(SAMPLE_RATE), '-ac', '1', '-c:a', 'pcm_s16le', tmp])
     if r.returncode != 0:
         sys.exit('ffmpeg failed on ' + src + '\n' + r.stderr[-800:])
 
+    dur = duration_of(tmp)
+    if dur <= 0.02:
+        warnings.append(os.path.basename(src) + ' trimmed to nothing — regenerate it')
+        dur = max(dur, 0.05)
+
+    # Normalize, then fade both edges so no slice can click at its boundary.
     gain = PEAK_TARGET_DB - peak_db(tmp)
-    r = run(['ffmpeg', '-y', '-i', tmp, '-af', 'volume={:.2f}dB'.format(gain),
+    fade_out = min(0.03, dur * 0.25)
+    chain = 'volume={:.2f}dB,afade=t=in:st=0:d=0.004,afade=t=out:st={:.4f}:d={:.4f}'.format(
+        gain, max(0.0, dur - fade_out), fade_out)
+    r = run(['ffmpeg', '-y', '-i', tmp, '-af', chain,
              '-ar', str(SAMPLE_RATE), '-ac', '1', '-c:a', 'pcm_s16le', dst])
     os.remove(tmp)
     if r.returncode != 0:
@@ -119,6 +147,7 @@ def build(pack):
     dist = os.path.join(ROOT, 'dist')
     os.makedirs(dist, exist_ok=True)
 
+    warnings = []
     work = tempfile.mkdtemp(prefix='sfxpack-')
     pieces, cursor, built, missing, code_only = [], 0.0, [], [], []
 
@@ -141,7 +170,7 @@ def build(pack):
         slices = []
         for i, src in enumerate(files):
             out = os.path.join(work, '{:03d}_{}_{}.wav'.format(len(pieces), name.replace('.', '_'), i))
-            dur = prepare(src, out)
+            dur = prepare(src, out, warnings)
             pieces.append(out)
             slices.append([round(cursor, 4), round(dur, 4)])
             cursor += dur + GAP
@@ -210,6 +239,10 @@ def build(pack):
             p = os.path.join(dist, f)
             print('  {:<14} {:>8.1f} KB'.format(f, os.path.getsize(p) / 1024))
     print('  dist/{}.json and dist/sfx.js written.'.format(pack))
+    if warnings:
+        print('\n  PROBLEMS WITH SOURCE AUDIO ({}):'.format(len(warnings)))
+        for w in warnings:
+            print('    ! ' + w)
 
 
 if __name__ == '__main__':

@@ -24,13 +24,19 @@ import argparse
 import json
 import os
 import sys
+import subprocess
+import re
+import tempfile
 import urllib.error
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENDPOINT = 'https://api.elevenlabs.io/v1/sound-generation'
 MIN_DURATION = 0.5          # the API's floor; build_pack trims the silence back off
+HEADROOM = 0.4              # ask for a little more than we need, then trim
 PROMPT_INFLUENCE = 0.5      # higher = follows the prompt more literally
+LOW_LEVEL_DB = -20.0        # a take quieter than this is unusable
+MAX_ATTEMPTS = 3            # generations vary, so a quiet one is worth retrying
 
 
 def api_key():
@@ -68,10 +74,24 @@ def existing(name, sounds_dir):
     return out
 
 
+def peak_dbfs(audio_bytes):
+    """Peak level of an in-memory mp3, via ffmpeg. None if it cannot be read."""
+    with tempfile.NamedTemporaryFile(suffix='.mp3', delete=False) as fh:
+        fh.write(audio_bytes)
+        tmp = fh.name
+    try:
+        r = subprocess.run(['ffmpeg', '-i', tmp, '-af', 'volumedetect', '-f', 'null', '-'],
+                           capture_output=True, text=True)
+        m = re.search(r'max_volume:\s*(-?\d+(?:\.\d+)?) dB', r.stderr)
+        return float(m.group(1)) if m else None
+    finally:
+        os.unlink(tmp)
+
+
 def generate(key, text, seconds):
     body = json.dumps({
         'text': text,
-        'duration_seconds': max(MIN_DURATION, round(seconds, 2)),
+        'duration_seconds': max(MIN_DURATION, round(seconds + HEADROOM, 2)),
         'prompt_influence': PROMPT_INFLUENCE,
     }).encode()
     req = urllib.request.Request(ENDPOINT, data=body, method='POST', headers={
@@ -166,19 +186,38 @@ def main():
 
     key = api_key()
     print()
-    written = []
+    written, weak = [], []
     for name, d, takes in plan:
         for i in range(takes):
             suffix = '' if takes == 1 else '.{}'.format(i + 1)
             out = os.path.join(sounds_dir, '{}{}.mp3'.format(name, suffix))
             print('  generating {}{} …'.format(name, suffix), end='', flush=True)
-            audio = generate(key, d['prompt'], d.get('duration', 1.0))
+
+            # A take that comes back very quiet is a failed generation. Keeping
+            # it would mean build_pack normalizes its noise floor up by 30+ dB,
+            # which is how a whisper-quiet pistol turns into a laser. Retry.
+            audio, level = None, None
+            for attempt in range(1, MAX_ATTEMPTS + 1):
+                cand = generate(key, d['prompt'], d.get('duration', 1.0))
+                lvl = peak_dbfs(cand)
+                if lvl is None or lvl >= LOW_LEVEL_DB:
+                    audio, level = cand, lvl
+                    break
+                print(' [{:.0f} dBFS, too quiet — retrying]'.format(lvl), end='', flush=True)
+                audio, level = cand, lvl
+
             with open(out, 'wb') as fh:
                 fh.write(audio)
-            print(' {:.0f} KB'.format(len(audio) / 1024))
+            note = '' if level is None else '  peak {:.1f} dBFS'.format(level)
+            if level is not None and level < LOW_LEVEL_DB:
+                note += '  << STILL TOO QUIET, reword the prompt'
+                weak.append(name)
+            print(' {:.0f} KB{}'.format(len(audio) / 1024, note))
             written.append(out)
 
     print('\nWrote {} file(s) to packs/casual/sounds/'.format(len(written)))
+    if weak:
+        print('Too quiet even after retries, reword their prompts: ' + ', '.join(sorted(set(weak))))
     print('Next: python3 tools/build_pack.py casual   then listen on tools/preview.html')
 
 

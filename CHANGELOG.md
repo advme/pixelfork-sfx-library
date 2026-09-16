@@ -1,5 +1,38 @@
 # CHANGELOG
 
+## v0.2.4-A — fixed the "laser pistol" and the blip at the end of sounds
+- Agent: A (Claude) · Date: 2026-09-16
+- Done: The owner reported that the generated pistol sounded like a laser gun and that
+  sounds had a pitched artifact at the very end. Both were real, and both were caused by
+  `build_pack.py`, not by ElevenLabs.
+  **(1)** The generated pistol came back at **−36.6 dBFS** — a whisper. `build_pack.py`
+  peak-normalizes every file to −1 dBFS, so it applied a **+35.6 dB boost**, raising the
+  file's noise floor and codec artifacts by the same amount and turning them into a loud
+  tonal whine. Added a low-level check: any source under −20 dBFS is now reported as
+  unusable instead of being silently amplified. `generate_ai.py` measures each take as it
+  arrives and automatically retries a quiet one, so bad takes never reach the pack.
+  **(2)** The trailing-silence trim used an **absolute** −50 dB threshold. When a file
+  decays below that and then has a low-level blip at the very end, the trim stops at the
+  blip and keeps both it and the near-silent gap before it — heard as a little pitched
+  burst after the sound has finished. The threshold is now **relative to each file's own
+  peak** (−45 dB under it), and every slice gets a 4 ms fade in and up to a 30 ms fade out
+  so no sprite slice can click at its boundary.
+  Also asked the API for a little more duration than the target length, since the trim
+  removes the excess and a very short request gave the model no room.
+- Tested: Measured every generated slice out of the built sprite. All five tails now
+  read clean; `state.lose`, which previously jumped from −73 dB back up to −45 dB at its
+  very end, now decays to −66.8 dB and stays there.
+  Regenerated the pistol: three takes at −1 to −4 dBFS instead of −36.6, and `build_pack`
+  reports no source problems.
+- Notes for next agent: the pistol still measures **bass-heavy** — 23–32% of its onset
+  energy is above 2 kHz, where a genuinely broadband source like `break.glass` reads 92%.
+  That is ElevenLabs' character for this prompt, not a pipeline bug. An attempt to brighten
+  it by asking for "thin and piercing with very little bass" produced takes at −20 to −40
+  dBFS, which the new level gate caught and rejected. If it still sounds wrong to the
+  owner, the fix is a per-sound EQ step in `build_pack.py` (highpass + high-shelf lift)
+  rather than more prompt roulette.
+
+
 ## v0.2.2-A — first 5 generated sounds, and a generator tool
 - Agent: A (Claude) · Date: 2026-09-16
 - Done: Added `tools/generate_ai.py`, which generates the `ai` sounds straight from the
