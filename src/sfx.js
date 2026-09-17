@@ -16,7 +16,7 @@
 (function (global) {
   'use strict';
 
-  var VERSION = '0.4.0';
+  var VERSION = '0.5.0';
   var STORE_KEY = 'pixelfork.sfx';
   var CATEGORIES = ['ui', 'game', 'reward', 'music'];
   var MAX_VOICES = 24;          // hard cap on simultaneous one-shots

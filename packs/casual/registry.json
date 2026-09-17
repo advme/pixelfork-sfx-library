@@ -4826,7 +4826,7 @@
       "source": "ai",
       "category": "game",
       "whenToUse": "Engine held at maximum revs. Loops.",
-      "duration": 6.0,
+      "duration": 10.0,
       "tags": [
         "redline",
         "max",
@@ -4837,7 +4837,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.5
+        "loop": 2.5
       },
       "loopable": true
     },
@@ -5215,7 +5215,7 @@
       "source": "ai",
       "category": "game",
       "whenToUse": "The indicator ticks. Loops.",
-      "duration": 3.0,
+      "duration": 10.0,
       "tags": [
         "indicator",
         "blinker",
@@ -5226,7 +5226,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.8
+        "loop": 2.5
       },
       "loopable": true
     },
@@ -5463,7 +5463,11 @@
       "prompt": "Revolver firing a single round, loud deep cracking report, recorded close and dry",
       "gain": 0.85,
       "vary": 0.05,
-      "variationsWanted": 2
+      "variationsWanted": 3,
+      "sequence": {
+        "seconds": 3.0,
+        "prompt": "Revolver being fired several times in a row at a shooting range, loud cracking reports with the hammer cocking between shots, recorded close and dry"
+      }
     },
     "gun.silenced": {
       "source": "ai",
@@ -6062,7 +6066,7 @@
       "source": "ai",
       "category": "game",
       "whenToUse": "A ship or base alarm. Loops.",
-      "duration": 4.0,
+      "duration": 10.0,
       "tags": [
         "alarm",
         "alert",
@@ -6073,7 +6077,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.0
+        "loop": 3.0
       },
       "loopable": true
     },

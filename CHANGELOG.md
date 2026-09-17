@@ -1,5 +1,33 @@
 # CHANGELOG
 
+## v0.5.0-A — depth pass: 373 sounds
+- Agent: A (Claude) · Date: 2026-09-17
+- Done: Added 153 sounds, taking the library from 220 to **373**. The point of this pass was
+  depth rather than breadth — one sound per concept is not enough to build a game with.
+  Cars got the whole engine state machine: idle, start, start-fail, stall, off, accelerate,
+  decelerate, cruise, redline, rev blip, drift, skid, handbrake, sustained tyre squeal,
+  up/downshift, turbo spool, blow-off, nitro, backfire, suspension, wall scrape, plus doors,
+  window, seatbelt, indicator and wipers — with motorbikes, trucks and race events alongside.
+  Also deepened firearms, melee, elemental magic as **cast + impact pairs**, sci-fi combat,
+  six more footstep surfaces plus a running variant, water, fire, weather, doors, horror,
+  kitchen, office, animals and sports.
+- Tested: All 373 render and play; none silent. 42 loops, 143 sounds with multiple takes,
+  22 cut from real sequences.
+  Loop seams were checked only on **tonal/periodic** material, because that is the only kind
+  where a seam is audible — noise has large sample-to-sample jumps by nature and nothing to
+  phase-match. Three rhythmic loops failed and were fixed by regenerating a 10s source with a
+  longer crossfade: `car.indicator` 9.66x → 0.17x RMS, `car.redline` 1.58x → 1.02x,
+  `scifi.alarm` 2.38x → 0.69x (the alarm needed a 3s overlap; 1.5s and 4s were both worse,
+  because the crossfade has to land on the klaxon's period).
+- Notes for next agent: **the validator caught 28 of my own prompts** using "sharp", "bright",
+  "thin" and "piercing" — the wording that returns audio 20-40 dB too quiet. I had written
+  them myself, two versions after recording the rule. The check is what made that free
+  instead of 28 wasted generations; keep running it before every batch.
+  Single-shot firearms remain the most common failure: `gun.revolver` came back at −30 dBFS
+  three times and was only fixed by sequence mode (−0.2 dBFS), the same way the pistol,
+  racket and balloon were. Reach for sequence mode early on anything percussive.
+
+
 ## v0.4.0-A — 220 sounds, and a loop button on every one
 - Agent: A (Claude) · Date: 2026-09-17
 - Done: Expanded the library from 105 to **220 sounds** — 115 new ones generated with

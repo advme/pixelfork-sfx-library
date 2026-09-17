@@ -7,7 +7,7 @@ Ready-made game sound effects for AI-generated web games. **You never create or 
 ## 1. Add it (2 lines)
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/advme/pixelfork-sfx-library@v0.3.0-A/dist/sfx.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/advme/pixelfork-sfx-library@v0.5.0-A/dist/sfx.js"></script>
 <script>SFX.load('casual'); SFX.attach();</script>
 ```
 
