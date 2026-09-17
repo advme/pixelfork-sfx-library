@@ -2,7 +2,7 @@
   "name": "casual",
   "title": "Casual SFX Pack",
   "description": "Sound effects for hyper-casual and casual mobile web games. Designed to pair with the Super Casual UI Kit.",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "style": "Modern mobile casual game audio: clean, bright, punchy, lightly processed. Not retro/8-bit, not cinematic/orchestral. Mono, dry (no long reverb tails), normalized to -1 dBFS peak.",
   "sourceMeaning": {
     "code": "Synthesized by the runtime, permanently. No audio file, no download, infinite variation. These sounds are synthetic by nature so code beats a recording.",
@@ -3168,7 +3168,2512 @@
       ],
       "start": 106.3824,
       "dur": 1.64
+    },
+    "animal.dog.bark": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A dog barks \u2014 pet, guard, companion or enemy.",
+      "duration": 0.8,
+      "tags": [
+        "dog",
+        "bark",
+        "pet",
+        "animal"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 108.2724,
+      "dur": 0.92,
+      "variations": [
+        [
+          108.2724,
+          0.92
+        ],
+        [
+          109.4424,
+          0.4007
+        ],
+        [
+          110.0932,
+          0.542
+        ]
+      ]
+    },
+    "animal.cat.meow": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A cat meows \u2014 pet or character.",
+      "duration": 0.9,
+      "tags": [
+        "cat",
+        "meow",
+        "pet",
+        "animal"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 110.8852,
+      "dur": 1.04,
+      "variations": [
+        [
+          110.8852,
+          1.04
+        ],
+        [
+          112.1752,
+          1.04
+        ]
+      ]
+    },
+    "animal.bird.chirp": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A small bird chirps \u2014 collectible, ambience accent, cute character.",
+      "duration": 0.6,
+      "tags": [
+        "bird",
+        "chirp",
+        "tweet",
+        "animal"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 113.4653,
+      "dur": 0.72,
+      "variations": [
+        [
+          113.4653,
+          0.72
+        ],
+        [
+          114.4353,
+          0.72
+        ],
+        [
+          115.4054,
+          0.7198
+        ]
+      ]
+    },
+    "animal.horse.neigh": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A horse whinnies \u2014 mount, race, farm.",
+      "duration": 1.2,
+      "tags": [
+        "horse",
+        "neigh",
+        "mount",
+        "animal"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 116.3751,
+      "dur": 1.2547
+    },
+    "animal.cow.moo": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A cow lows \u2014 farm game, idle animal.",
+      "duration": 1.4,
+      "tags": [
+        "cow",
+        "moo",
+        "farm",
+        "animal"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 117.8799,
+      "dur": 1.3372
+    },
+    "animal.sheep.bleat": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A sheep bleats \u2014 farm game, idle animal.",
+      "duration": 1.0,
+      "tags": [
+        "sheep",
+        "bleat",
+        "farm",
+        "animal"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 119.4671,
+      "dur": 1.12
+    },
+    "animal.chicken.cluck": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A chicken clucks \u2014 farm game, egg collection.",
+      "duration": 0.8,
+      "tags": [
+        "chicken",
+        "cluck",
+        "farm",
+        "animal"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 120.8371,
+      "dur": 0.7719,
+      "variations": [
+        [
+          120.8371,
+          0.7719
+        ],
+        [
+          121.859,
+          0.8039
+        ]
+      ]
+    },
+    "animal.pig.oink": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A pig oinks \u2014 farm game, idle animal.",
+      "duration": 0.8,
+      "tags": [
+        "pig",
+        "oink",
+        "farm",
+        "animal"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 122.9129,
+      "dur": 0.7167
+    },
+    "animal.frog.croak": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A frog croaks \u2014 pond, swamp, collectible creature.",
+      "duration": 0.7,
+      "tags": [
+        "frog",
+        "croak",
+        "pond",
+        "animal"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 123.8797,
+      "dur": 0.7328,
+      "variations": [
+        [
+          123.8797,
+          0.7328
+        ],
+        [
+          124.8625,
+          0.7312
+        ]
+      ]
+    },
+    "animal.wolf.howl": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A wolf howls \u2014 night, danger, boss approach.",
+      "duration": 2.2,
+      "tags": [
+        "wolf",
+        "howl",
+        "night",
+        "danger"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 125.8437,
+      "dur": 2.1905
+    },
+    "animal.snake.hiss": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A snake hisses \u2014 enemy warning, trap.",
+      "duration": 1.0,
+      "tags": [
+        "snake",
+        "hiss",
+        "enemy",
+        "warning"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 128.2842,
+      "dur": 1.12
+    },
+    "animal.bee.buzz": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An insect buzzes past \u2014 bee, fly, wasp enemy.",
+      "duration": 1.2,
+      "tags": [
+        "bee",
+        "buzz",
+        "insect",
+        "fly"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 129.6543,
+      "dur": 1.32,
+      "variations": [
+        [
+          129.6543,
+          1.32
+        ],
+        [
+          131.2243,
+          1.1387
+        ]
+      ]
+    },
+    "creature.roar": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A big monster or boss roars.",
+      "duration": 1.8,
+      "tags": [
+        "roar",
+        "monster",
+        "boss",
+        "beast"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 132.613,
+      "dur": 1.92
+    },
+    "creature.growl": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A creature growls a warning before attacking.",
+      "duration": 1.2,
+      "tags": [
+        "growl",
+        "monster",
+        "threat",
+        "enemy"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 134.783,
+      "dur": 1.2602,
+      "variations": [
+        [
+          134.783,
+          1.2602
+        ],
+        [
+          136.2933,
+          1.284
+        ]
+      ]
+    },
+    "creature.squeak": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A small cute creature squeaks \u2014 slime, pet, critter.",
+      "duration": 0.5,
+      "tags": [
+        "squeak",
+        "cute",
+        "critter",
+        "slime"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 137.8273,
+      "dur": 0.64,
+      "variations": [
+        [
+          137.8273,
+          0.64
+        ],
+        [
+          138.7173,
+          0.64
+        ],
+        [
+          139.6074,
+          0.64
+        ]
+      ]
+    },
+    "creature.die": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An enemy is defeated and vanishes.",
+      "duration": 0.9,
+      "tags": [
+        "death",
+        "defeat",
+        "enemy",
+        "vanish"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 140.4974,
+      "dur": 1.04,
+      "variations": [
+        [
+          140.4974,
+          1.04
+        ],
+        [
+          141.7874,
+          0.9839
+        ]
+      ]
+    },
+    "ambience.wind": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Open outdoor wind. Loops behind gameplay.",
+      "duration": 10.0,
+      "tags": [
+        "wind",
+        "outdoor",
+        "ambience",
+        "loop"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "loopable": true,
+      "start": 143.0213,
+      "dur": 8.12
+    },
+    "ambience.rain": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Rainfall. Loops behind gameplay.",
+      "duration": 4.0,
+      "tags": [
+        "rain",
+        "weather",
+        "ambience",
+        "loop"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "loopable": true,
+      "start": 151.3914,
+      "dur": 3.12
+    },
+    "ambience.forest": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Daytime forest with birds. Loops.",
+      "duration": 4.0,
+      "tags": [
+        "forest",
+        "birds",
+        "nature",
+        "loop"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "loopable": true,
+      "start": 154.7614,
+      "dur": 3.12
+    },
+    "ambience.waves": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Sea shore. Loops.",
+      "duration": 4.0,
+      "tags": [
+        "waves",
+        "sea",
+        "beach",
+        "loop"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "loopable": true,
+      "start": 158.1314,
+      "dur": 3.12
+    },
+    "ambience.cave": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Underground cave with drips. Loops.",
+      "duration": 10.0,
+      "tags": [
+        "cave",
+        "underground",
+        "drip",
+        "loop"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "loopable": true,
+      "start": 161.5015,
+      "dur": 8.12
+    },
+    "ambience.night": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Night outdoors with crickets. Loops.",
+      "duration": 4.0,
+      "tags": [
+        "night",
+        "crickets",
+        "ambience",
+        "loop"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "loopable": true,
+      "start": 169.8715,
+      "dur": 3.12
+    },
+    "ambience.crowd": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Busy crowd murmur \u2014 market, stadium, town. Loops.",
+      "duration": 4.0,
+      "tags": [
+        "crowd",
+        "people",
+        "market",
+        "loop"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "loopable": true,
+      "start": 173.2415,
+      "dur": 3.12
+    },
+    "weather.thunder": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A thunderclap \u2014 storm, dramatic moment.",
+      "duration": 2.5,
+      "tags": [
+        "thunder",
+        "storm",
+        "lightning",
+        "weather"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 176.6116,
+      "dur": 2.5689
+    },
+    "nature.leaves": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Rustling foliage \u2014 walking through bushes, searching undergrowth.",
+      "duration": 0.9,
+      "tags": [
+        "leaves",
+        "bush",
+        "rustle",
+        "foliage"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 179.4304,
+      "dur": 0.9168,
+      "variations": [
+        [
+          179.4304,
+          0.9168
+        ],
+        [
+          180.5973,
+          1.04
+        ],
+        [
+          181.8873,
+          1.04
+        ]
+      ]
+    },
+    "nature.water.flow": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A running stream. Loops.",
+      "duration": 4.0,
+      "tags": [
+        "stream",
+        "river",
+        "water",
+        "loop"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "loopable": true,
+      "start": 183.1773,
+      "dur": 3.12
+    },
+    "crowd.applause": {
+      "source": "ai",
+      "category": "reward",
+      "whenToUse": "The crowd applauds \u2014 win screen, big achievement.",
+      "duration": 2.5,
+      "tags": [
+        "applause",
+        "clap",
+        "crowd",
+        "celebrate"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 186.5473,
+      "dur": 2.64
+    },
+    "crowd.boo": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The crowd boos \u2014 failure, bad move.",
+      "duration": 1.8,
+      "tags": [
+        "boo",
+        "crowd",
+        "fail",
+        "disapproval"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 189.4374,
+      "dur": 1.92
+    },
+    "crowd.gasp": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The crowd gasps \u2014 a surprise, a near miss.",
+      "duration": 1.2,
+      "tags": [
+        "gasp",
+        "surprise",
+        "crowd",
+        "shock"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 191.6074,
+      "dur": 1.0624
+    },
+    "voice.countdown.go": {
+      "source": "ai",
+      "category": "ui",
+      "whenToUse": "A voice shouts GO at the start of a race or round.",
+      "duration": 0.8,
+      "tags": [
+        "go",
+        "start",
+        "race",
+        "voice"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 192.9198,
+      "dur": 0.92
+    },
+    "voice.yay": {
+      "source": "ai",
+      "category": "reward",
+      "whenToUse": "A happy child voice reacts to a reward.",
+      "duration": 1.0,
+      "tags": [
+        "yay",
+        "happy",
+        "child",
+        "celebrate"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 194.0899,
+      "dur": 1.12,
+      "variations": [
+        [
+          194.0899,
+          1.12
+        ],
+        [
+          195.4599,
+          1.12
+        ]
+      ]
+    },
+    "voice.aww": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A disappointed reaction to a loss.",
+      "duration": 1.0,
+      "tags": [
+        "aww",
+        "disappointed",
+        "sad",
+        "reaction"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 196.8299,
+      "dur": 1.12
+    },
+    "horror.heartbeat": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A heartbeat under tension \u2014 low health, chase, hiding. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "heartbeat",
+        "tension",
+        "pulse",
+        "loop"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "loopable": true,
+      "start": 198.2,
+      "dur": 1.72
+    },
+    "horror.whisper": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An unsettling whisper \u2014 ghost, haunting, secret.",
+      "duration": 2.0,
+      "tags": [
+        "whisper",
+        "ghost",
+        "creepy",
+        "voice"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 200.17,
+      "dur": 2.0635
+    },
+    "horror.creak": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A door or floorboard creaks slowly \u2014 suspense.",
+      "duration": 2.0,
+      "tags": [
+        "creak",
+        "door",
+        "suspense",
+        "wood"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 202.4836,
+      "dur": 2.0619,
+      "variations": [
+        [
+          202.4836,
+          2.0619
+        ],
+        [
+          204.7955,
+          1.9959
+        ]
+      ]
+    },
+    "horror.jumpscare": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A sudden scare hit.",
+      "duration": 1.5,
+      "tags": [
+        "jumpscare",
+        "scare",
+        "shock",
+        "sting"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 207.0414,
+      "dur": 1.64
+    },
+    "horror.breathing": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Nervous breathing \u2014 low health, hiding, stamina.",
+      "duration": 2.5,
+      "tags": [
+        "breathing",
+        "panic",
+        "hide",
+        "stamina"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 208.9314,
+      "dur": 2.2171
+    },
+    "horror.bell": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A distant church bell tolls \u2014 dread, time passing.",
+      "duration": 3.0,
+      "tags": [
+        "bell",
+        "toll",
+        "church",
+        "dread"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 211.3985,
+      "dur": 3.12
+    },
+    "sport.ball.kick": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A ball is kicked or struck hard.",
+      "duration": 0.5,
+      "tags": [
+        "kick",
+        "ball",
+        "football",
+        "strike"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 214.7686,
+      "dur": 0.1796,
+      "variations": [
+        [
+          214.7686,
+          0.1796
+        ],
+        [
+          215.1982,
+          0.64
+        ],
+        [
+          216.0882,
+          0.64
+        ]
+      ]
+    },
+    "sport.ball.bounce": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A ball bounces on a hard surface.",
+      "duration": 0.4,
+      "tags": [
+        "bounce",
+        "ball",
+        "dribble",
+        "basketball"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "sequence": {
+        "prompt": "Basketball being dribbled repeatedly on a hard wooden court, five clear separate bounces, loud and close, dry recording",
+        "seconds": 3.0
+      },
+      "start": 216.9782,
+      "dur": 0.3732,
+      "variations": [
+        [
+          216.9782,
+          0.3732
+        ],
+        [
+          217.6014,
+          0.3243
+        ],
+        [
+          218.1757,
+          0.3713
+        ],
+        [
+          218.797,
+          0.3282
+        ]
+      ]
+    },
+    "sport.net.swish": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A ball passes cleanly through a net \u2014 basket scored.",
+      "duration": 0.6,
+      "tags": [
+        "swish",
+        "net",
+        "score",
+        "basket"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 219.3752,
+      "dur": 0.72,
+      "variations": [
+        [
+          219.3752,
+          0.72
+        ],
+        [
+          220.3453,
+          0.6366
+        ]
+      ]
+    },
+    "sport.whistle": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A referee whistle \u2014 round start, foul, time up.",
+      "duration": 0.9,
+      "tags": [
+        "whistle",
+        "referee",
+        "start",
+        "stop"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 221.2319,
+      "dur": 1.04,
+      "variations": [
+        [
+          221.2319,
+          1.04
+        ],
+        [
+          222.5219,
+          1.04
+        ]
+      ]
+    },
+    "sport.bat.hit": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A bat or club strikes a ball.",
+      "duration": 0.5,
+      "tags": [
+        "bat",
+        "hit",
+        "baseball",
+        "club"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 223.812,
+      "dur": 0.1236,
+      "variations": [
+        [
+          223.812,
+          0.1236
+        ],
+        [
+          224.1856,
+          0.2407
+        ]
+      ]
+    },
+    "sport.racket.hit": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A racket strikes a ball \u2014 tennis, padel, squash.",
+      "duration": 0.4,
+      "tags": [
+        "racket",
+        "tennis",
+        "hit",
+        "serve"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "sequence": {
+        "seconds": 3.0,
+        "prompt": "Tennis rally with a racket striking the ball hard several times, loud taut string thwacks, recorded close on court, dry outdoor recording"
+      },
+      "start": 224.6763,
+      "dur": 0.3664,
+      "variations": [
+        [
+          224.6763,
+          0.3664
+        ],
+        [
+          225.2927,
+          0.3769
+        ],
+        [
+          225.9195,
+          0.3249
+        ],
+        [
+          226.4944,
+          0.3794
+        ]
+      ]
+    },
+    "sport.buzzer": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An end-of-round buzzer.",
+      "duration": 1.2,
+      "tags": [
+        "buzzer",
+        "end",
+        "time up",
+        "horn"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 227.1238,
+      "dur": 1.32
+    },
+    "sport.start.gun": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A starting pistol fires \u2014 race begins.",
+      "duration": 0.8,
+      "tags": [
+        "start",
+        "race",
+        "gun",
+        "begin"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 228.6939,
+      "dur": 0.92
+    },
+    "tool.hammer": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Hammering a nail \u2014 building, crafting, repair.",
+      "duration": 0.5,
+      "tags": [
+        "hammer",
+        "nail",
+        "build",
+        "craft"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "sequence": {
+        "prompt": "Hammering a nail into a wooden plank with a steel hammer, five clear separate strikes, loud and close, dry recording",
+        "seconds": 3.0
+      },
+      "start": 229.8639,
+      "dur": 0.2196,
+      "variations": [
+        [
+          229.8639,
+          0.2196
+        ],
+        [
+          230.3335,
+          0.2331
+        ],
+        [
+          230.8166,
+          0.2375
+        ],
+        [
+          231.3041,
+          0.2459
+        ]
+      ]
+    },
+    "tool.saw": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Sawing wood \u2014 building, crafting.",
+      "duration": 1.6,
+      "tags": [
+        "saw",
+        "wood",
+        "cut",
+        "craft"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 231.8,
+      "dur": 1.5671
+    },
+    "tool.chop.wood": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An axe splits a log.",
+      "duration": 0.8,
+      "tags": [
+        "axe",
+        "chop",
+        "wood",
+        "log"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 233.6171,
+      "dur": 0.92,
+      "variations": [
+        [
+          233.6171,
+          0.92
+        ],
+        [
+          234.7871,
+          0.616
+        ],
+        [
+          235.6531,
+          0.92
+        ]
+      ]
+    },
+    "tool.pickaxe": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Mining stone with a pickaxe.",
+      "duration": 0.7,
+      "tags": [
+        "pickaxe",
+        "mine",
+        "stone",
+        "dig"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "sequence": {
+        "prompt": "Mining a rock face with a steel pickaxe, five clear separate strikes with stone chips falling, loud and close, dry recording",
+        "seconds": 3.0
+      },
+      "start": 236.8231,
+      "dur": 0.1654,
+      "variations": [
+        [
+          236.8231,
+          0.1654
+        ],
+        [
+          237.2386,
+          0.208
+        ],
+        [
+          237.6966,
+          0.1602
+        ],
+        [
+          238.1068,
+          0.3736
+        ]
+      ]
+    },
+    "tool.dig": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Digging with a shovel \u2014 farming, treasure, burying.",
+      "duration": 0.9,
+      "tags": [
+        "dig",
+        "shovel",
+        "soil",
+        "spade"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 238.7304,
+      "dur": 1.04,
+      "variations": [
+        [
+          238.7304,
+          1.04
+        ],
+        [
+          240.0205,
+          1.04
+        ],
+        [
+          241.3105,
+          1.04
+        ]
+      ]
+    },
+    "tool.drill": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A power drill runs \u2014 repair, construction.",
+      "duration": 1.5,
+      "tags": [
+        "drill",
+        "power tool",
+        "build",
+        "repair"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 242.6005,
+      "dur": 1.64
+    },
+    "tool.wrench": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A spanner or ratchet turns \u2014 repair, machinery.",
+      "duration": 0.8,
+      "tags": [
+        "wrench",
+        "ratchet",
+        "repair",
+        "bolt"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 244.4906,
+      "dur": 0.92,
+      "variations": [
+        [
+          244.4906,
+          0.92
+        ],
+        [
+          245.6606,
+          0.7499
+        ]
+      ]
+    },
+    "craft.forge": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Hammering hot metal on an anvil \u2014 smithing, upgrading.",
+      "duration": 0.9,
+      "tags": [
+        "forge",
+        "anvil",
+        "smith",
+        "metal"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 246.6605,
+      "dur": 1.04,
+      "variations": [
+        [
+          246.6605,
+          1.04
+        ],
+        [
+          247.9505,
+          1.04
+        ],
+        [
+          249.2406,
+          1.04
+        ]
+      ]
+    },
+    "craft.sew": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Stitching fabric \u2014 tailoring, crafting.",
+      "duration": 0.9,
+      "tags": [
+        "sew",
+        "stitch",
+        "fabric",
+        "tailor"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 250.5306,
+      "dur": 0.7042,
+      "variations": [
+        [
+          250.5306,
+          0.7042
+        ],
+        [
+          251.4848,
+          0.7621
+        ]
+      ]
+    },
+    "farm.plant": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Seeds are planted in soil.",
+      "duration": 0.7,
+      "tags": [
+        "plant",
+        "seed",
+        "sow",
+        "farm"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 252.4969,
+      "dur": 0.5896,
+      "variations": [
+        [
+          252.4969,
+          0.5896
+        ],
+        [
+          253.3366,
+          0.84
+        ]
+      ]
+    },
+    "farm.harvest": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A crop is pulled or cut \u2014 harvesting.",
+      "duration": 0.8,
+      "tags": [
+        "harvest",
+        "crop",
+        "pick",
+        "farm"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 254.4266,
+      "dur": 0.92,
+      "variations": [
+        [
+          254.4266,
+          0.92
+        ],
+        [
+          255.5966,
+          0.7879
+        ],
+        [
+          256.6345,
+          0.7664
+        ]
+      ]
+    },
+    "farm.water": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Watering plants from a can.",
+      "duration": 1.4,
+      "tags": [
+        "water",
+        "can",
+        "pour",
+        "plants"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 257.6509,
+      "dur": 1.52
+    },
+    "cook.sizzle": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Food frying in a pan. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "sizzle",
+        "fry",
+        "pan",
+        "cook"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "loopable": true,
+      "start": 259.4209,
+      "dur": 2.32
+    },
+    "cook.chop": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Chopping food on a board.",
+      "duration": 0.5,
+      "tags": [
+        "chop",
+        "knife",
+        "board",
+        "prep"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "sequence": {
+        "prompt": "Chopping a vegetable quickly on a wooden board with a kitchen knife, five clear separate cuts, loud and close, dry recording",
+        "seconds": 3.0
+      },
+      "start": 261.991,
+      "dur": 0.3795,
+      "variations": [
+        [
+          261.991,
+          0.3795
+        ],
+        [
+          262.6205,
+          0.3363
+        ],
+        [
+          263.2068,
+          0.1889
+        ],
+        [
+          263.6456,
+          0.1905
+        ]
+      ]
+    },
+    "cook.pour": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Liquid poured into a container.",
+      "duration": 1.3,
+      "tags": [
+        "pour",
+        "liquid",
+        "drink",
+        "fill"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 264.0862,
+      "dur": 1.3159
+    },
+    "cook.boil": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Water boiling in a pot. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "boil",
+        "bubble",
+        "pot",
+        "water"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "loopable": true,
+      "start": 265.6521,
+      "dur": 2.32
+    },
+    "cook.oven.ding": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An oven or microwave finishes.",
+      "duration": 1.2,
+      "tags": [
+        "ding",
+        "oven",
+        "timer",
+        "ready"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 268.2221,
+      "dur": 1.32
+    },
+    "cook.fridge.open": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A fridge or cabinet opens.",
+      "duration": 1.0,
+      "tags": [
+        "fridge",
+        "open",
+        "door",
+        "seal"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 269.7921,
+      "dur": 0.8758
+    },
+    "object.zip": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A zip fastens \u2014 bag, jacket, inventory.",
+      "duration": 0.6,
+      "tags": [
+        "zip",
+        "bag",
+        "close",
+        "fasten"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 270.9179,
+      "dur": 0.72,
+      "variations": [
+        [
+          270.9179,
+          0.72
+        ],
+        [
+          271.8879,
+          0.5973
+        ]
+      ]
+    },
+    "object.paper.crumple": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Paper is crushed \u2014 discard, delete, note.",
+      "duration": 0.9,
+      "tags": [
+        "paper",
+        "crumple",
+        "discard",
+        "note"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 272.7353,
+      "dur": 1.0014,
+      "variations": [
+        [
+          272.7353,
+          1.0014
+        ],
+        [
+          273.9867,
+          0.9545
+        ]
+      ]
+    },
+    "object.page.turn": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A page turns \u2014 book, journal, tutorial.",
+      "duration": 0.6,
+      "tags": [
+        "page",
+        "book",
+        "turn",
+        "journal"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 275.1912,
+      "dur": 0.5577,
+      "variations": [
+        [
+          275.1912,
+          0.5577
+        ],
+        [
+          275.9989,
+          0.5894
+        ],
+        [
+          276.8383,
+          0.7029
+        ]
+      ]
+    },
+    "object.book.close": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A book shuts \u2014 menu closed, chapter done.",
+      "duration": 0.8,
+      "tags": [
+        "book",
+        "close",
+        "shut",
+        "thud"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 277.7912,
+      "dur": 0.92
+    },
+    "object.keyboard": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Typing on a keyboard \u2014 hacking, terminal, chat.",
+      "duration": 0.4,
+      "tags": [
+        "keyboard",
+        "type",
+        "computer",
+        "key"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "sequence": {
+        "prompt": "Typing quickly on a mechanical computer keyboard, several loud separate key presses, close dry recording",
+        "seconds": 3.0
+      },
+      "start": 278.9612,
+      "dur": 0.1764,
+      "variations": [
+        [
+          278.9612,
+          0.1764
+        ],
+        [
+          279.3876,
+          0.2497
+        ],
+        [
+          279.8874,
+          0.3134
+        ],
+        [
+          280.4508,
+          0.1544
+        ],
+        [
+          280.8552,
+          0.3683
+        ]
+      ]
+    },
+    "object.camera": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A camera shutter \u2014 photo, capture, screenshot.",
+      "duration": 0.5,
+      "tags": [
+        "camera",
+        "shutter",
+        "photo",
+        "snap"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 281.4734,
+      "dur": 0.64
+    },
+    "object.clock.tick": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A clock ticking \u2014 timer pressure. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "clock",
+        "tick",
+        "timer",
+        "pressure"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "loopable": true,
+      "start": 282.3635,
+      "dur": 2.2635
+    },
+    "object.lock": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A padlock or bolt clicks shut or open.",
+      "duration": 0.6,
+      "tags": [
+        "lock",
+        "padlock",
+        "bolt",
+        "secure"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 284.877,
+      "dur": 0.72,
+      "variations": [
+        [
+          284.877,
+          0.72
+        ],
+        [
+          285.847,
+          0.72
+        ]
+      ]
+    },
+    "object.chain": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Chains rattle \u2014 gate, prison, anchor.",
+      "duration": 1.0,
+      "tags": [
+        "chain",
+        "rattle",
+        "metal",
+        "gate"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 286.8171,
+      "dur": 1.0268,
+      "variations": [
+        [
+          286.8171,
+          1.0268
+        ],
+        [
+          288.0938,
+          1.12
+        ]
+      ]
+    },
+    "object.rope": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Rope creaks under tension \u2014 pulling, climbing, bridge.",
+      "duration": 1.0,
+      "tags": [
+        "rope",
+        "creak",
+        "pull",
+        "tension"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 289.4639,
+      "dur": 1.0634
+    },
+    "object.glass.clink": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Glasses clink \u2014 toast, potion, bottle.",
+      "duration": 0.6,
+      "tags": [
+        "glass",
+        "clink",
+        "bottle",
+        "toast"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 290.7773,
+      "dur": 0.6156,
+      "variations": [
+        [
+          290.7773,
+          0.6156
+        ],
+        [
+          291.6429,
+          0.2638
+        ]
+      ]
+    },
+    "object.coin.drop": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A coin falls onto a hard surface.",
+      "duration": 0.8,
+      "tags": [
+        "coin",
+        "drop",
+        "metal",
+        "money"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 292.1566,
+      "dur": 0.563,
+      "variations": [
+        [
+          292.1566,
+          0.563
+        ],
+        [
+          292.9696,
+          0.6098
+        ],
+        [
+          293.8294,
+          0.8065
+        ]
+      ]
+    },
+    "object.switch": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A physical switch or lever is thrown.",
+      "duration": 0.4,
+      "tags": [
+        "switch",
+        "lever",
+        "toggle",
+        "mechanical"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 294.8859,
+      "dur": 0.52,
+      "variations": [
+        [
+          294.8859,
+          0.52
+        ],
+        [
+          295.656,
+          0.52
+        ]
+      ]
+    },
+    "object.balloon.pop": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A balloon bursts \u2014 party, target, bubble.",
+      "duration": 0.5,
+      "tags": [
+        "balloon",
+        "pop",
+        "burst",
+        "party"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "sequence": {
+        "seconds": 3.0,
+        "prompt": "Several party balloons being burst one after another right next to the microphone, loud explosive rubber pops, dry indoor recording"
+      },
+      "start": 296.426,
+      "dur": 0.1586,
+      "variations": [
+        [
+          296.426,
+          0.1586
+        ],
+        [
+          296.8347,
+          0.38
+        ]
+      ]
+    },
+    "object.firework": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A firework launches and bursts \u2014 celebration.",
+      "duration": 2.5,
+      "tags": [
+        "firework",
+        "celebrate",
+        "burst",
+        "party"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 297.4647,
+      "dur": 2.64
+    },
+    "vehicle.horn": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A car horn sounds.",
+      "duration": 0.9,
+      "tags": [
+        "horn",
+        "car",
+        "beep",
+        "traffic"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 300.3547,
+      "dur": 0.6045,
+      "variations": [
+        [
+          300.3547,
+          0.6045
+        ],
+        [
+          301.2092,
+          1.04
+        ]
+      ]
+    },
+    "vehicle.rev": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An engine revs hard \u2014 boost, start line, showing off.",
+      "duration": 1.6,
+      "tags": [
+        "rev",
+        "engine",
+        "throttle",
+        "boost"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 302.4992,
+      "dur": 1.6761
+    },
+    "vehicle.gear": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A gear change \u2014 racing, machinery.",
+      "duration": 0.5,
+      "tags": [
+        "gear",
+        "shift",
+        "transmission",
+        "race"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 304.4253,
+      "dur": 0.3976,
+      "variations": [
+        [
+          304.4253,
+          0.3976
+        ],
+        [
+          305.0729,
+          0.3754
+        ]
+      ]
+    },
+    "vehicle.helicopter": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Helicopter rotors overhead. Loops.",
+      "duration": 10.0,
+      "tags": [
+        "helicopter",
+        "rotor",
+        "flying",
+        "loop"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "loopable": true,
+      "start": 305.6984,
+      "dur": 8.12
+    },
+    "vehicle.plane": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A plane passes overhead.",
+      "duration": 3.0,
+      "tags": [
+        "plane",
+        "aircraft",
+        "flyby",
+        "jet"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 314.0684,
+      "dur": 2.8909
+    },
+    "vehicle.train": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A train passes or pulls away.",
+      "duration": 3.5,
+      "tags": [
+        "train",
+        "rail",
+        "locomotive",
+        "station"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 317.2094,
+      "dur": 3.64
+    },
+    "vehicle.boat": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A small boat motor runs. Loops.",
+      "duration": 10.0,
+      "tags": [
+        "boat",
+        "motor",
+        "water",
+        "loop"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "loopable": true,
+      "start": 321.0994,
+      "dur": 8.12
+    },
+    "vehicle.bike": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A bicycle bell rings.",
+      "duration": 0.9,
+      "tags": [
+        "bicycle",
+        "bell",
+        "ring",
+        "bike"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 329.4694,
+      "dur": 1.04
+    },
+    "machine.robot.servo": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A robot joint moves \u2014 mech, turret, droid.",
+      "duration": 0.7,
+      "tags": [
+        "robot",
+        "servo",
+        "mech",
+        "move"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 330.7595,
+      "dur": 0.7539,
+      "variations": [
+        [
+          330.7595,
+          0.7539
+        ],
+        [
+          331.7634,
+          0.84
+        ],
+        [
+          332.8534,
+          0.798
+        ]
+      ]
+    },
+    "machine.steam": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Steam vents \u2014 machinery, valve, pressure release.",
+      "duration": 1.4,
+      "tags": [
+        "steam",
+        "vent",
+        "pressure",
+        "hiss"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 333.9015,
+      "dur": 1.52,
+      "variations": [
+        [
+          333.9015,
+          1.52
+        ],
+        [
+          335.6715,
+          1.52
+        ]
+      ]
+    },
+    "machine.conveyor": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A conveyor or factory line runs. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "conveyor",
+        "factory",
+        "machine",
+        "loop"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "loopable": true,
+      "start": 337.4416,
+      "dur": 2.32
+    },
+    "machine.elevator": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A lift arrives and the doors open.",
+      "duration": 2.0,
+      "tags": [
+        "elevator",
+        "lift",
+        "doors",
+        "arrive"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 340.0116,
+      "dur": 2.12
+    },
+    "scifi.scanner": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A scanner sweeps \u2014 detection, radar, search.",
+      "duration": 1.4,
+      "tags": [
+        "scanner",
+        "scan",
+        "detect",
+        "radar"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 342.3817,
+      "dur": 1.52
+    },
+    "scifi.airlock": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A pressurised door opens \u2014 spaceship, vault, lab.",
+      "duration": 2.0,
+      "tags": [
+        "airlock",
+        "door",
+        "spaceship",
+        "vault"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 344.1517,
+      "dur": 2.12
+    },
+    "scifi.powerdown": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A machine or system powers down.",
+      "duration": 1.8,
+      "tags": [
+        "powerdown",
+        "shutdown",
+        "off",
+        "fail"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 346.5217,
+      "dur": 1.92
+    },
+    "scifi.powerup": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A machine or system powers up.",
+      "duration": 1.8,
+      "tags": [
+        "powerup",
+        "boot",
+        "start",
+        "charge"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 348.6918,
+      "dur": 1.8578
+    },
+    "scifi.glitch": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A digital error or corruption \u2014 hacking, damage, static.",
+      "duration": 0.8,
+      "tags": [
+        "glitch",
+        "digital",
+        "error",
+        "corrupt"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 350.7995,
+      "dur": 0.92,
+      "variations": [
+        [
+          350.7995,
+          0.92
+        ],
+        [
+          351.9696,
+          0.92
+        ],
+        [
+          353.1396,
+          0.92
+        ]
+      ]
+    },
+    "scifi.hologram": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A hologram appears or flickers.",
+      "duration": 1.2,
+      "tags": [
+        "hologram",
+        "projection",
+        "flicker",
+        "appear"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 354.3097,
+      "dur": 1.32
+    },
+    "rpg.potion": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A potion is drunk \u2014 healing, buff.",
+      "duration": 1.2,
+      "tags": [
+        "potion",
+        "drink",
+        "heal",
+        "buff"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 355.8797,
+      "dur": 0.7876,
+      "variations": [
+        [
+          355.8797,
+          0.7876
+        ],
+        [
+          356.9173,
+          0.7044
+        ]
+      ]
+    },
+    "rpg.scroll": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A scroll or map unrolls.",
+      "duration": 1.0,
+      "tags": [
+        "scroll",
+        "parchment",
+        "map",
+        "unroll"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 357.8717,
+      "dur": 1.022
+    },
+    "rpg.armor.equip": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Armour or heavy gear is put on.",
+      "duration": 0.9,
+      "tags": [
+        "armor",
+        "equip",
+        "gear",
+        "metal"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 359.1437,
+      "dur": 1.04,
+      "variations": [
+        [
+          359.1437,
+          1.04
+        ],
+        [
+          360.4338,
+          1.04
+        ]
+      ]
+    },
+    "rpg.sword.draw": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A blade is drawn from a sheath.",
+      "duration": 0.8,
+      "tags": [
+        "sword",
+        "draw",
+        "unsheath",
+        "blade"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 361.7238,
+      "dur": 0.92,
+      "variations": [
+        [
+          361.7238,
+          0.92
+        ],
+        [
+          362.8938,
+          0.92
+        ]
+      ]
+    },
+    "rpg.spell.cast": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A generic spell is cast.",
+      "duration": 1.3,
+      "tags": [
+        "spell",
+        "cast",
+        "magic",
+        "incantation"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 364.0639,
+      "dur": 1.44
+    },
+    "rpg.curse": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A dark spell or debuff lands.",
+      "duration": 1.5,
+      "tags": [
+        "curse",
+        "debuff",
+        "dark",
+        "evil"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 365.7539,
+      "dur": 1.3779
+    },
+    "rpg.enchant": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An item is enchanted or blessed.",
+      "duration": 1.8,
+      "tags": [
+        "enchant",
+        "bless",
+        "upgrade",
+        "magic"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 367.3818,
+      "dur": 1.92
+    },
+    "rpg.quest.accept": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A quest is accepted or a journal updates.",
+      "duration": 1.2,
+      "tags": [
+        "quest",
+        "accept",
+        "journal",
+        "task"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 369.5518,
+      "dur": 0.8757
+    },
+    "rpg.gold": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A pile of gold coins is gathered.",
+      "duration": 1.2,
+      "tags": [
+        "gold",
+        "coins",
+        "treasure",
+        "loot"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 370.6776,
+      "dur": 1.32,
+      "variations": [
+        [
+          370.6776,
+          1.32
+        ],
+        [
+          372.2476,
+          1.2309
+        ]
+      ]
+    },
+    "rpg.trap": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A trap springs \u2014 spikes, snare, alarm.",
+      "duration": 0.9,
+      "tags": [
+        "trap",
+        "spring",
+        "spikes",
+        "snare"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 373.7285,
+      "dur": 1.04,
+      "variations": [
+        [
+          373.7285,
+          1.04
+        ],
+        [
+          375.0186,
+          1.04
+        ]
+      ]
+    },
+    "game.spawn": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An enemy or object appears in the world.",
+      "duration": 0.9,
+      "tags": [
+        "spawn",
+        "appear",
+        "enemy",
+        "summon"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 376.3086,
+      "dur": 1.04
+    },
+    "game.checkpoint": {
+      "source": "ai",
+      "category": "reward",
+      "whenToUse": "A checkpoint is reached \u2014 progress saved.",
+      "duration": 1.4,
+      "tags": [
+        "checkpoint",
+        "save",
+        "progress",
+        "flag"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 377.5986,
+      "dur": 1.52
+    },
+    "game.wave.start": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A new wave or round begins \u2014 tower defence, survival.",
+      "duration": 1.8,
+      "tags": [
+        "wave",
+        "round",
+        "start",
+        "horde"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 379.3687,
+      "dur": 1.1465
+    },
+    "game.tower.place": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A tower, building or block is placed.",
+      "duration": 0.7,
+      "tags": [
+        "place",
+        "build",
+        "tower",
+        "construct"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 380.7652,
+      "dur": 0.4563,
+      "variations": [
+        [
+          380.7652,
+          0.4563
+        ],
+        [
+          381.4715,
+          0.3407
+        ]
+      ]
+    },
+    "game.shield.break": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A shield or barrier shatters.",
+      "duration": 1.0,
+      "tags": [
+        "shield",
+        "break",
+        "barrier",
+        "armor"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 382.0622,
+      "dur": 1.12
+    },
+    "game.bullet.whizby": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A projectile flies close past the player.",
+      "duration": 0.6,
+      "tags": [
+        "whizby",
+        "bullet",
+        "near miss",
+        "pass"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 383.4323,
+      "dur": 0.4825,
+      "variations": [
+        [
+          383.4323,
+          0.4825
+        ],
+        [
+          384.1648,
+          0.3897
+        ],
+        [
+          384.8045,
+          0.4492
+        ]
+      ]
+    },
+    "game.ricochet": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A bullet or projectile bounces off metal or stone.",
+      "duration": 0.8,
+      "tags": [
+        "ricochet",
+        "bounce",
+        "deflect",
+        "metal"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 385.5037,
+      "dur": 0.7229,
+      "variations": [
+        [
+          385.5037,
+          0.7229
+        ],
+        [
+          386.4766,
+          0.92
+        ],
+        [
+          387.6467,
+          0.7046
+        ]
+      ]
+    },
+    "game.portal": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A portal opens or is entered.",
+      "duration": 2.0,
+      "tags": [
+        "portal",
+        "warp",
+        "gate",
+        "dimension"
+      ],
+      "gain": 0.85,
+      "vary": 0.05,
+      "start": 388.6013,
+      "dur": 1.8856
     }
   },
-  "spriteDuration": 108.2724
+  "spriteDuration": 390.7368
 }

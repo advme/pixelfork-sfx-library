@@ -31,6 +31,10 @@
        border: 1px solid var(--line); border-radius: 8px; padding: 7px 12px; min-width: 200px; }
   .filters input[type=search]:focus { outline: none; border-color: var(--accent); }
   .empty { color: var(--dim); font-size: 14px; padding: 20px 2px; }
+  button.looping { border-color: var(--accent); color: var(--accent);
+                   background: rgba(255,213,74,.12); }
+  .card.looping { border-color: rgba(255,213,74,.5); }
+  .takeno { font-size: 11px; color: var(--accent); margin-left: 2px; }
   .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
   .top { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
@@ -113,7 +117,7 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
   const out = document.getElementById('out');
   const shown = document.getElementById('shown');
 
-  function render() {
+  let render = function () {
     const q = query.trim().toLowerCase();
     const visible = names.filter(n => matches(n, filter) &&
       (!q || n.toLowerCase().includes(q) ||
@@ -153,23 +157,86 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
         const label = { real: 'real audio', code: 'code', stub: 'needs audio' }[st];
         const card = document.createElement('div');
         card.className = 'card';
+        const takes = d.variations ? d.variations.length : 1;
         card.innerHTML =
           '<div class="top"><span class="name"></span>' +
           '<span class="tag ' + st + '">' + label + '</span></div>' +
           '<p class="use"></p>' +
-          '<div class="row"><button>▶ Play</button>' +
-          (d.variations ? '<button data-v>▶ All ' + d.variations.length + ' takes</button>' : '') +
+          '<div class="row"><button data-play>▶ Play</button>' +
+          '<button data-loop title="Loop this sound">⟳ Loop</button>' +
+          (takes > 1 ? '<button data-v>▶ All ' + takes + ' takes</button>' : '') +
+          '<span class="takeno"></span>' +
           '<span class="meta">~' + (d.duration ?? '?') + 's</span></div>';
         card.querySelector('.name').textContent = name;
         card.querySelector('.use').textContent = d.whenToUse || '';
-        card.querySelector('button').onclick = () => SFX.play(name);
+        card.querySelector('[data-play]').onclick = () => SFX.play(name);
         const v = card.querySelector('[data-v]');
         if (v) v.onclick = () => d.variations.forEach((_, i) => setTimeout(() => SFX.play(name), i * 260));
+        wireLoop(card, name, d, takes);
         grid.appendChild(card);
       });
       out.appendChild(grid);
     });
+  };
+
+  // ---- per-sound looping -------------------------------------------------
+  // A sound marked loopable has been built with a crossfade, so it can loop
+  // inside the sprite with no gap. Everything else is a one-shot, so looping it
+  // means replaying it on a timer — and when it has several takes we step
+  // through them in turn, which is what the game does over repeated plays.
+  let active = null;                       // only one sound loops at a time
+
+  function stopLoop() {
+    if (!active) return;
+    if (active.handle) SFX.stop(active.handle);
+    if (active.timer) clearTimeout(active.timer);
+    active.btn.classList.remove('looping');
+    active.btn.textContent = '⟳ Loop';
+    active.card.classList.remove('looping');
+    active.counter.textContent = '';
+    active = null;
   }
+
+  function wireLoop(card, name, d, takes) {
+    const btn = card.querySelector('[data-loop]');
+    const counter = card.querySelector('.takeno');
+
+    btn.onclick = () => {
+      const wasMe = active && active.btn === btn;
+      stopLoop();
+      if (wasMe) return;                   // second click stops
+
+      btn.classList.add('looping');
+      btn.textContent = '■ Stop';
+      card.classList.add('looping');
+      active = { btn, card, counter, handle: null, timer: null };
+
+      if (d.loopable) {
+        // Seamless: the runtime loops the slice itself, no gap at all.
+        active.handle = SFX.play(name, { loop: true });
+        counter.textContent = 'seamless';
+        return;
+      }
+
+      // One-shot: replay on a timer, stepping through the takes in turn.
+      let i = 0;
+      const gap = Math.max(90, (d.duration || 0.3) * 1000 + 70);
+      const tick = () => {
+        if (!active || active.btn !== btn) return;
+        SFX.play(name);
+        counter.textContent = takes > 1 ? 'take ' + (i % takes + 1) + '/' + takes : '';
+        i++;
+        active.timer = setTimeout(tick, gap);
+      };
+      tick();
+    };
+  }
+
+  // Re-rendering throws away the cards, so stop any loop attached to them.
+  const _render = render;
+  render = function () { stopLoop(); _render(); };
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') stopLoop(); });
 
   document.querySelectorAll('button.f').forEach(b => {
     const n = { all: names.length, code: count('code'), ai: count('real') + count('stub'),

@@ -3080,7 +3080,7 @@
       "source": "ai",
       "category": "game",
       "whenToUse": "Open outdoor wind. Loops behind gameplay.",
-      "duration": 4.0,
+      "duration": 10.0,
       "tags": [
         "wind",
         "outdoor",
@@ -3091,7 +3091,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.0
+        "loop": 2.0
       },
       "loopable": true
     },
@@ -3156,7 +3156,7 @@
       "source": "ai",
       "category": "game",
       "whenToUse": "Underground cave with drips. Loops.",
-      "duration": 4.0,
+      "duration": 10.0,
       "tags": [
         "cave",
         "underground",
@@ -3167,7 +3167,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.0
+        "loop": 2.0
       },
       "loopable": true
     },
@@ -3365,7 +3365,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.8
+        "loop": 1.4
       },
       "loopable": true
     },
@@ -3543,7 +3543,11 @@
       "prompt": "Loud tennis racket striking a ball, taut string thwack, dry outdoor recording",
       "gain": 0.85,
       "vary": 0.05,
-      "variationsWanted": 3
+      "variationsWanted": 4,
+      "sequence": {
+        "seconds": 3.0,
+        "prompt": "Tennis rally with a racket striking the ball hard several times, loud taut string thwacks, recorded close on court, dry outdoor recording"
+      }
     },
     "sport.buzzer": {
       "source": "ai",
@@ -3856,9 +3860,12 @@
         "timer",
         "ready"
       ],
-      "prompt": "Loud kitchen oven timer dinging once, clear metallic bell chime with a ringing decay, dry recording",
+      "prompt": "Kitchen timer bell struck hard by its hammer, loud bright metallic ding with a long ringing decay, microphone right next to the bell",
       "gain": 0.85,
-      "vary": 0.05
+      "vary": 0.05,
+      "postFx": {
+        "presence": 4
+      }
     },
     "cook.fridge.open": {
       "source": "ai",
@@ -4101,7 +4108,11 @@
       "prompt": "Loud balloon popping close to the microphone, sharp rubber burst, dry recording",
       "gain": 0.85,
       "vary": 0.05,
-      "variationsWanted": 2
+      "variationsWanted": 3,
+      "sequence": {
+        "seconds": 3.0,
+        "prompt": "Several party balloons being burst one after another right next to the microphone, loud explosive rubber pops, dry indoor recording"
+      }
     },
     "object.firework": {
       "source": "ai",
@@ -4169,7 +4180,7 @@
       "source": "ai",
       "category": "game",
       "whenToUse": "Helicopter rotors overhead. Loops.",
-      "duration": 3.5,
+      "duration": 10.0,
       "tags": [
         "helicopter",
         "rotor",
@@ -4180,7 +4191,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.0
+        "loop": 2.0
       },
       "loopable": true
     },
@@ -4218,7 +4229,7 @@
       "source": "ai",
       "category": "game",
       "whenToUse": "A small boat motor runs. Loops.",
-      "duration": 3.5,
+      "duration": 10.0,
       "tags": [
         "boat",
         "motor",
@@ -4229,7 +4240,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.0
+        "loop": 2.0
       },
       "loopable": true
     },

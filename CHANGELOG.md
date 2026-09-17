@@ -1,5 +1,37 @@
 # CHANGELOG
 
+## v0.4.0-A — 220 sounds, and a loop button on every one
+- Agent: A (Claude) · Date: 2026-09-17
+- Done: Expanded the library from 105 to **220 sounds** — 115 new ones generated with
+  ElevenLabs: animals, nature and ambience beds, crowd and human reactions, horror, sports,
+  tools and crafting, farming, cooking, everyday object foley, vehicles, machines, sci-fi,
+  RPG abilities and more gameplay. 169 of the 220 now come from real audio.
+  **Removed the 1 MB pack limit** from `AGENTS.md`. It was my own judgment call rather than
+  a requirement, and it was standing in the way of simply collecting sounds.
+  Added a **loop button to every sound on the preview board**, as asked. It does the right
+  thing per sound: a sound built with a crossfade loops seamlessly inside the sprite, while
+  a one-shot is replayed on a timer — and when it has several takes, the loop steps through
+  them in turn and shows which one is playing. One sound loops at a time, Escape stops it.
+  Three sounds that had failed the level gate (`sport.racket.hit`, `object.balloon.pop`,
+  `cook.oven.ding`) were fixed rather than shipped quiet: the two percussive ones moved to
+  sequence mode, which took them from −36.8 and −31.6 dBFS to **0.0 dBFS**.
+- Tested: All 220 audited in the browser — none silent. Loop buttons verified both ways:
+  `step.metal` repeated 12 times in 3 seconds while cycling its 5 takes, and `ambience.rain`
+  played continuously for 8 seconds from a 3.12-second slice with zero silent blocks.
+  Both stop cleanly.
+- Notes for next agent: **my loop-seam tests were unreliable and I nearly acted on them.**
+  Measuring the jump where the end wraps to the beginning flagged wind, cave and boil as
+  broken while passing rain — yet rain's absolute jump (2.49× RMS) was *larger* than all
+  three. Noise has big sample-to-sample jumps by nature and no phase to break, so a seam in
+  it is inaudible; only periodic material (rotor, engine) genuinely suffers. The lesson:
+  judge a loop seam by whether the material is tonal, and let the owner's ears settle the
+  noisy ones. `vehicle.helicopter` was the one real case and was fixed by generating a 10s
+  source with a 2s crossfade (1.60× → 0.86× RMS), the same fix that worked for the boat.
+  The pack is now 3.1 MB (Opus) / 4.9 MB (AAC). That is a real download for a mobile web
+  game; if it becomes a problem, split it into themed packs — the runtime already merges
+  several packs into one namespace, so no game code would change.
+
+
 ## v0.3.0-A — the pack is complete: all 54 audio sounds generated
 - Agent: A (Claude) · Date: 2026-09-17
 - Done: Generated the final 28 sounds (46 files) — voices, musical stingers, breaking
