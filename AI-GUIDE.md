@@ -31,6 +31,35 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 
 <!-- SOUNDS:START -->
 
+**`ambience.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `ambience.cave` | Underground cave with drips. Loops. | ai |
+| `ambience.crowd` | Busy crowd murmur — market, stadium, town. Loops. | ai |
+| `ambience.forest` | Daytime forest with birds. Loops. | ai |
+| `ambience.night` | Night outdoors with crickets. Loops. | ai |
+| `ambience.rain` | Rainfall. Loops behind gameplay. | ai |
+| `ambience.waves` | Sea shore. Loops. | ai |
+| `ambience.wind` | Open outdoor wind. Loops behind gameplay. | ai |
+
+**`animal.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `animal.bee.buzz` | An insect buzzes past — bee, fly, wasp enemy. | ai |
+| `animal.bird.chirp` | A small bird chirps — collectible, ambience accent, cute character. | ai |
+| `animal.cat.meow` | A cat meows — pet or character. | ai |
+| `animal.chicken.cluck` | A chicken clucks — farm game, egg collection. | ai |
+| `animal.cow.moo` | A cow lows — farm game, idle animal. | ai |
+| `animal.dog.bark` | A dog barks — pet, guard, companion or enemy. | ai |
+| `animal.frog.croak` | A frog croaks — pond, swamp, collectible creature. | ai |
+| `animal.horse.neigh` | A horse whinnies — mount, race, farm. | ai |
+| `animal.pig.oink` | A pig oinks — farm game, idle animal. | ai |
+| `animal.sheep.bleat` | A sheep bleats — farm game, idle animal. | ai |
+| `animal.snake.hiss` | A snake hisses — enemy warning, trap. | ai |
+| `animal.wolf.howl` | A wolf howls — night, danger, boss approach. | ai |
+
 **`break.*`**
 
 | Sound | Play it when | Made by |
@@ -46,6 +75,41 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 |---|---|---|
 | `coin.count` | Each tick while a score or coin total counts up on a result screen. | code |
 | `coin.shower` | A burst of coins flies to the counter, or a reward total counts up. | code |
+
+**`cook.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `cook.boil` | Water boiling in a pot. Loops. | ai |
+| `cook.chop` | Chopping food on a board. | ai |
+| `cook.fridge.open` | A fridge or cabinet opens. | ai |
+| `cook.oven.ding` | An oven or microwave finishes. | ai |
+| `cook.pour` | Liquid poured into a container. | ai |
+| `cook.sizzle` | Food frying in a pan. Loops. | ai |
+
+**`craft.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `craft.forge` | Hammering hot metal on an anvil — smithing, upgrading. | ai |
+| `craft.sew` | Stitching fabric — tailoring, crafting. | ai |
+
+**`creature.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `creature.die` | An enemy is defeated and vanishes. | ai |
+| `creature.growl` | A creature growls a warning before attacking. | ai |
+| `creature.roar` | A big monster or boss roars. | ai |
+| `creature.squeak` | A small cute creature squeaks — slime, pet, critter. | ai |
+
+**`crowd.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `crowd.applause` | The crowd applauds — win screen, big achievement. | ai |
+| `crowd.boo` | The crowd boos — failure, bad move. | ai |
+| `crowd.gasp` | The crowd gasps — a surprise, a near miss. | ai |
 
 **`door.*`**
 
@@ -68,11 +132,43 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `explosion.big` | A real, heavy explosion with debris and rumble. | ai |
 | `explosion.small` | A small stylized blast: a bomb, a popped enemy, a firework. | code |
 
+**`farm.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `farm.harvest` | A crop is pulled or cut — harvesting. | ai |
+| `farm.plant` | Seeds are planted in soil. | ai |
+| `farm.water` | Watering plants from a can. | ai |
+
 **`fire.*`**
 
 | Sound | Play it when | Made by |
 |---|---|---|
 | `fire.crackle` | A campfire, torch or burning object nearby. Loops. | ai |
+
+**`game.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `game.bullet.whizby` | A projectile flies close past the player. | ai |
+| `game.checkpoint` | A checkpoint is reached — progress saved. | ai |
+| `game.portal` | A portal opens or is entered. | ai |
+| `game.ricochet` | A bullet or projectile bounces off metal or stone. | ai |
+| `game.shield.break` | A shield or barrier shatters. | ai |
+| `game.spawn` | An enemy or object appears in the world. | ai |
+| `game.tower.place` | A tower, building or block is placed. | ai |
+| `game.wave.start` | A new wave or round begins — tower defence, survival. | ai |
+
+**`horror.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `horror.bell` | A distant church bell tolls — dread, time passing. | ai |
+| `horror.breathing` | Nervous breathing — low health, hiding, stamina. | ai |
+| `horror.creak` | A door or floorboard creaks slowly — suspense. | ai |
+| `horror.heartbeat` | A heartbeat under tension — low health, chase, hiding. Loops. | ai |
+| `horror.jumpscare` | A sudden scare hit. | ai |
+| `horror.whisper` | An unsettling whisper — ghost, haunting, secret. | ai |
 
 **`impact.*`**
 
@@ -85,6 +181,15 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `impact.punch` | A fist or body hit connects. | ai |
 | `impact.thud` | A soft generic landing or bump. The cheapest impact — good for stylized games. | code |
 | `impact.wood` | Something hits wood: a crate, a door, a bat, a tree. | ai |
+
+**`machine.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `machine.conveyor` | A conveyor or factory line runs. Loops. | ai |
+| `machine.elevator` | A lift arrives and the doors open. | ai |
+| `machine.robot.servo` | A robot joint moves — mech, turret, droid. | ai |
+| `machine.steam` | Steam vents — machinery, valve, pressure release. | ai |
 
 **`magic.*`**
 
@@ -123,6 +228,33 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `move.swim` | A swimming stroke or moving through water. | ai |
 | `move.teleport` | Teleporting, warping, spawning in or vanishing. | code |
 
+**`nature.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `nature.leaves` | Rustling foliage — walking through bushes, searching undergrowth. | ai |
+| `nature.water.flow` | A running stream. Loops. | ai |
+
+**`object.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `object.balloon.pop` | A balloon bursts — party, target, bubble. | ai |
+| `object.book.close` | A book shuts — menu closed, chapter done. | ai |
+| `object.camera` | A camera shutter — photo, capture, screenshot. | ai |
+| `object.chain` | Chains rattle — gate, prison, anchor. | ai |
+| `object.clock.tick` | A clock ticking — timer pressure. Loops. | ai |
+| `object.coin.drop` | A coin falls onto a hard surface. | ai |
+| `object.firework` | A firework launches and bursts — celebration. | ai |
+| `object.glass.clink` | Glasses clink — toast, potion, bottle. | ai |
+| `object.keyboard` | Typing on a keyboard — hacking, terminal, chat. | ai |
+| `object.lock` | A padlock or bolt clicks shut or open. | ai |
+| `object.page.turn` | A page turns — book, journal, tutorial. | ai |
+| `object.paper.crumple` | Paper is crushed — discard, delete, note. | ai |
+| `object.rope` | Rope creaks under tension — pulling, climbing, bridge. | ai |
+| `object.switch` | A physical switch or lever is thrown. | ai |
+| `object.zip` | A zip fastens — bag, jacket, inventory. | ai |
+
 **`pickup.*`**
 
 | Sound | Play it when | Made by |
@@ -143,6 +275,45 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `reward.claim` | The player claims a reward, buys an item or opens a gift. | code |
 | `reward.jackpot` | A rare drop, jackpot or huge prize. The biggest reward sound in the game. | ai |
 | `reward.star` | One star fills on a level-complete screen. The library raises the pitch per star automatically. | code |
+
+**`rpg.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `rpg.armor.equip` | Armour or heavy gear is put on. | ai |
+| `rpg.curse` | A dark spell or debuff lands. | ai |
+| `rpg.enchant` | An item is enchanted or blessed. | ai |
+| `rpg.gold` | A pile of gold coins is gathered. | ai |
+| `rpg.potion` | A potion is drunk — healing, buff. | ai |
+| `rpg.quest.accept` | A quest is accepted or a journal updates. | ai |
+| `rpg.scroll` | A scroll or map unrolls. | ai |
+| `rpg.spell.cast` | A generic spell is cast. | ai |
+| `rpg.sword.draw` | A blade is drawn from a sheath. | ai |
+| `rpg.trap` | A trap springs — spikes, snare, alarm. | ai |
+
+**`scifi.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `scifi.airlock` | A pressurised door opens — spaceship, vault, lab. | ai |
+| `scifi.glitch` | A digital error or corruption — hacking, damage, static. | ai |
+| `scifi.hologram` | A hologram appears or flickers. | ai |
+| `scifi.powerdown` | A machine or system powers down. | ai |
+| `scifi.powerup` | A machine or system powers up. | ai |
+| `scifi.scanner` | A scanner sweeps — detection, radar, search. | ai |
+
+**`sport.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `sport.ball.bounce` | A ball bounces on a hard surface. | ai |
+| `sport.ball.kick` | A ball is kicked or struck hard. | ai |
+| `sport.bat.hit` | A bat or club strikes a ball. | ai |
+| `sport.buzzer` | An end-of-round buzzer. | ai |
+| `sport.net.swish` | A ball passes cleanly through a net — basket scored. | ai |
+| `sport.racket.hit` | A racket strikes a ball — tennis, padel, squash. | ai |
+| `sport.start.gun` | A starting pistol fires — race begins. | ai |
+| `sport.whistle` | A referee whistle — round start, foul, time up. | ai |
 
 **`state.*`**
 
@@ -167,6 +338,18 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `step.stone` | One footstep on stone. Play per step; the library varies pitch and picks a different take each time. | ai |
 | `step.water` | One footstep on water. Play per step; the library varies pitch and picks a different take each time. | ai |
 | `step.wood` | One footstep on wood. Play per step; the library varies pitch and picks a different take each time. | ai |
+
+**`tool.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `tool.chop.wood` | An axe splits a log. | ai |
+| `tool.dig` | Digging with a shovel — farming, treasure, burying. | ai |
+| `tool.drill` | A power drill runs — repair, construction. | ai |
+| `tool.hammer` | Hammering a nail — building, crafting, repair. | ai |
+| `tool.pickaxe` | Mining stone with a pickaxe. | ai |
+| `tool.saw` | Sawing wood — building, crafting. | ai |
+| `tool.wrench` | A spanner or ratchet turns — repair, machinery. | ai |
 
 **`ui.*`**
 
@@ -193,17 +376,28 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 
 | Sound | Play it when | Made by |
 |---|---|---|
+| `vehicle.bike` | A bicycle bell rings. | ai |
+| `vehicle.boat` | A small boat motor runs. Loops. | ai |
 | `vehicle.brake` | Hard braking, a handbrake turn or skidding to a stop. | ai |
 | `vehicle.crash` | A vehicle collision. | ai |
+| `vehicle.gear` | A gear change — racing, machinery. | ai |
+| `vehicle.helicopter` | Helicopter rotors overhead. Loops. | ai |
+| `vehicle.horn` | A car horn sounds. | ai |
+| `vehicle.plane` | A plane passes overhead. | ai |
+| `vehicle.rev` | An engine revs hard — boost, start line, showing off. | ai |
+| `vehicle.train` | A train passes or pulls away. | ai |
 
 **`voice.*`**
 
 | Sound | Play it when | Made by |
 |---|---|---|
+| `voice.aww` | A disappointed reaction to a loss. | ai |
 | `voice.cheer` | The player wins something big. Layer under state.win for extra celebration. | ai |
+| `voice.countdown.go` | A voice shouts GO at the start of a race or round. | ai |
 | `voice.grunt` | The character jumps, lifts, swings or takes effort. | ai |
 | `voice.hurt` | The character takes damage. | ai |
 | `voice.laugh` | A playful taunt, a mascot reaction, a funny fail. | ai |
+| `voice.yay` | A happy child voice reacts to a reward. | ai |
 
 **`water.*`**
 
@@ -230,6 +424,12 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `weapon.sword.swing` | Swinging a blade through the air and hitting nothing. | ai |
 | `weapon.throw` | Throwing anything: a ball, a knife, a bomb, a grappling hook. | code |
 | `weapon.zap` | Electric attack, taser, lightning, short circuit. | code |
+
+**`weather.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `weather.thunder` | A thunderclap — storm, dramatic moment. | ai |
 <!-- SOUNDS:END -->
 
 Machine-readable, with durations and offsets: `dist/casual.json`.

@@ -71,7 +71,8 @@ AI-GUIDE.md                      what an AI building a game reads. Keep it hones
 - **Names are a contract.** `category.thing` in lower case. Once a name ships, renaming it breaks every game that uses it — add an alias instead.
 - **Never play audio before the player's first tap.** Browsers block it. The runtime unlocks itself; do not work around this.
 - **Never let a missing sound throw.** Unknown names warn once and fall back to a stand-in.
-- **Every sound must earn its place in the sprite.** The primary pack (`casual.webm`, Opus, what nearly every browser loads) must stay under **1 MB**; the `.m4a` AAC fallback for older iOS is allowed to be larger. Check the sizes `build_pack.py` prints after every build.
+- **No size limit.** Collect as many sounds as the library usefully needs. If a pack ever gets
+  big enough to hurt load time, split it into a second pack — never drop sounds for size.
 - **A sound that must loop needs `postFx.loop`.** A generator never returns a seamless loop — its first and last samples are unrelated, so playing it round clicks every cycle. `loop` wraps the tail over the head by the given number of seconds. Tonal material (an engine) needs a much longer overlap than noisy material (fire): 1.2s against 0.6s here. Verify by comparing the sample-to-sample jump at the wrap against a normal moment mid-clip; they should be about equal.
 
 ## 6. Git workflow
