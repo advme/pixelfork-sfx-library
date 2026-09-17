@@ -107,6 +107,52 @@ def post_fx(fx):
     return chain
 
 
+def prepare_music(src, dst_base, warnings, fx=None):
+    """Prepare one music bed: normalize, make it loop, keep it STEREO.
+
+    Music is not packed into the sprite. A game should download the one track it
+    is playing, not every track in the library, and a music bed collapsed to mono
+    sounds flat. So each track is encoded as its own stereo file and the runtime
+    streams it.
+    """
+    peak = peak_db(src)
+    if peak < LOW_LEVEL_DB:
+        warnings.append('{} is {:.1f} dBFS at source — regenerate it'.format(
+            os.path.basename(src), peak))
+
+    tmp = dst_base + '.wav'
+    r = run(['ffmpeg', '-y', '-i', src, '-ar', str(SAMPLE_RATE), '-ac', '2',
+             '-c:a', 'pcm_s16le', tmp])
+    if r.returncode != 0:
+        sys.exit('ffmpeg failed on ' + src + '\n' + r.stderr[-800:])
+
+    cross = float((fx or {}).get('loop') or 0)
+    if cross:
+        looped = dst_base + '.loop.wav'
+        if make_seamless(tmp, looped, cross):
+            os.remove(tmp); tmp = looped
+        else:
+            warnings.append(os.path.basename(src) + ' could not be made seamless')
+
+    gain = PEAK_TARGET_DB - peak_db(tmp)
+    norm = dst_base + '.norm.wav'
+    # No edge fades: they would re-open the loop seam every cycle.
+    r = run(['ffmpeg', '-y', '-i', tmp, '-af', 'volume={:.2f}dB'.format(gain),
+             '-ar', str(SAMPLE_RATE), '-ac', '2', '-c:a', 'pcm_s16le', norm])
+    os.remove(tmp)
+    if r.returncode != 0:
+        sys.exit('ffmpeg failed normalizing ' + src + '\n' + r.stderr[-800:])
+
+    webm, m4a = dst_base + '.webm', dst_base + '.m4a'
+    run(['ffmpeg', '-y', '-i', norm, '-c:a', 'libopus', '-b:a', '128k',
+         '-vbr', 'on', '-application', 'audio', webm])
+    run(['ffmpeg', '-y', '-i', norm, '-c:a', 'aac', '-b:a', '160k',
+         '-movflags', '+faststart', m4a])
+    dur = duration_of(norm)
+    os.remove(norm)
+    return dur
+
+
 def prepare(src, dst, warnings, fx=None, low_level_db=None):
     """Trim silence at both ends, repair, peak-normalize, fade edges, 48k mono."""
     src_peak = peak_db(src)
@@ -220,7 +266,27 @@ def build(pack):
     gap_file = os.path.join(work, '_gap.wav')
     silence(gap_file, GAP)
 
+    music_dir = os.path.join(pack_dir, 'music')
+    dist_music = os.path.join(dist, 'music')
+    music_built = []
+
     for name, definition in reg['sounds'].items():
+        if definition.get('stream'):
+            # Music: its own stereo file, never part of the sprite.
+            src = os.path.join(music_dir, name + '.mp3')
+            if not os.path.exists(src):
+                missing.append(name + ' (music)')
+                continue
+            os.makedirs(dist_music, exist_ok=True)
+            dur = prepare_music(src, os.path.join(dist_music, name),
+                                warnings, definition.get('postFx'))
+            definition['files'] = {'webm': 'music/' + name + '.webm',
+                                   'm4a': 'music/' + name + '.m4a'}
+            definition['dur'] = round(dur, 3)
+            definition.pop('start', None)
+            music_built.append('{} ({:.0f}s)'.format(name, dur))
+            continue
+
         files = sources_for(name, sounds_dir)
         if not files:
             # A "code" sound is finished by design — it never wants an audio file.
@@ -286,6 +352,7 @@ def build(pack):
         definition.pop('prompt', None)
         definition.pop('postFx', None)
         definition.pop('minLevelDb', None)
+        definition.pop('music', None)
         definition.pop('variationsWanted', None)
 
     with open(os.path.join(dist, pack + '.json'), 'w') as fh:
@@ -307,6 +374,11 @@ def build(pack):
         for f in (pack + '.webm', pack + '.m4a'):
             p = os.path.join(dist, f)
             print('  {:<14} {:>8.1f} KB'.format(f, os.path.getsize(p) / 1024))
+    if music_built:
+        total_kb = sum(os.path.getsize(os.path.join(dist_music, f))
+                       for f in os.listdir(dist_music) if f.endswith('.webm')) / 1024
+        print('  music (streamed separately)                : {} tracks, {:.0f} KB total'
+              .format(len(music_built), total_kb))
     print('  dist/{}.json and dist/sfx.js written.'.format(pack))
     if warnings:
         print('\n  PROBLEMS WITH SOURCE AUDIO ({}):'.format(len(warnings)))

@@ -61,8 +61,9 @@ AI-GUIDE.md                      what an AI building a game reads. Keep it hones
   "a single footstep" still has to fill the API's 0.5s floor and returns several crammed together.
   Give the sound a `sequence` block instead: `generate_ai.py` makes one 3-second recording and
   `tools/split_takes.py` cuts it into takes. Every take is then a genuinely different footfall, and
-  it costs one generation instead of five. The source recordings are cached in
-  `packs/<pack>/sounds/_seq/` (gitignored) so takes can be re-cut without regenerating.
+  it costs one generation instead of five. The source recordings are kept in
+  `packs/<pack>/sounds/_seq/` **and committed**, so takes can be re-cut later without
+  paying to regenerate them — that is the whole point of keeping them.
 - **Never give a `code` sound a prompt, and never leave an `ai` sound without one.** The merge script validates this; `build_pack.py` will not call a `code` sound "missing".
 - **Style:** modern mobile casual — clean, bright, punchy, dry. Not retro/8-bit, not cinematic/orchestral. The house style lives in `registry.json → style`; the prompts must stay consistent with it.
 - **Short.** UI sounds under 0.2s, pickups under 0.25s, only win/lose/chest go past 1s. A long sound in a game that fires it 40 times a minute is a bug.

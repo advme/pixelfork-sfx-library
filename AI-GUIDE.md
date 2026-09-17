@@ -359,6 +359,41 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `move.swim` | A swimming stroke or moving through water. | ai |
 | `move.teleport` | Teleporting, warping, spawning in or vanishing. | code |
 
+**`music.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `music.action.1` | Shooters, brawlers and combat. Tense and driving without being oppressive. | ai |
+| `music.action.2` | Shooters, brawlers and combat. Tense and driving without being oppressive. | ai |
+| `music.action.3` | Shooters, brawlers and combat. Tense and driving without being oppressive. | ai |
+| `music.adventure.1` | Adventure, exploration and RPG overworld. | ai |
+| `music.adventure.2` | Adventure, exploration and RPG overworld. | ai |
+| `music.adventure.3` | Adventure, exploration and RPG overworld. | ai |
+| `music.boss.1` | Boss fights and final showdowns. The most intense music in the game. | ai |
+| `music.boss.2` | Boss fights and final showdowns. The most intense music in the game. | ai |
+| `music.boss.3` | Boss fights and final showdowns. The most intense music in the game. | ai |
+| `music.casual.1` | Match-3, puzzle and casual games. Light and friendly, never distracting. | ai |
+| `music.casual.2` | Match-3, puzzle and casual games. Light and friendly, never distracting. | ai |
+| `music.casual.3` | Match-3, puzzle and casual games. Light and friendly, never distracting. | ai |
+| `music.cozy.1` | Farming, idle, life sim and crafting. Warm and unhurried. | ai |
+| `music.cozy.2` | Farming, idle, life sim and crafting. Warm and unhurried. | ai |
+| `music.cozy.3` | Farming, idle, life sim and crafting. Warm and unhurried. | ai |
+| `music.horror.1` | Horror, survival and tension. Sparse and unsettling. | ai |
+| `music.horror.2` | Horror, survival and tension. Sparse and unsettling. | ai |
+| `music.horror.3` | Horror, survival and tension. Sparse and unsettling. | ai |
+| `music.hypercasual.1` | Hyper-casual games: one-tap, endless runner, arcade. Simple and driving. | ai |
+| `music.hypercasual.2` | Hyper-casual games: one-tap, endless runner, arcade. Simple and driving. | ai |
+| `music.hypercasual.3` | Hyper-casual games: one-tap, endless runner, arcade. Simple and driving. | ai |
+| `music.menu.1` | Main menu, lobby, shop and between-level screens. | ai |
+| `music.menu.2` | Main menu, lobby, shop and between-level screens. | ai |
+| `music.menu.3` | Main menu, lobby, shop and between-level screens. | ai |
+| `music.racing.1` | Racing and driving games. High energy electronic. | ai |
+| `music.racing.2` | Racing and driving games. High energy electronic. | ai |
+| `music.racing.3` | Racing and driving games. High energy electronic. | ai |
+| `music.scifi.1` | Sci-fi, space and cyberpunk. | ai |
+| `music.scifi.2` | Sci-fi, space and cyberpunk. | ai |
+| `music.scifi.3` | Sci-fi, space and cyberpunk. | ai |
+
 **`nature.*`**
 
 | Sound | Play it when | Made by |
@@ -639,6 +674,25 @@ Check from code: `SFX.list()`, `SFX.list('reward')`, `SFX.has('coin.collect')`, 
 <button class="sc-button" data-sfx="reward.claim">Claim</button>
 <button class="sc-button" data-sfx="none">Silent</button>
 ```
+
+## 4b. Music
+
+30 looping tracks, three per genre: `casual`, `hypercasual`, `action`, `racing`, `adventure`,
+`boss`, `horror`, `cozy`, `scifi`, `menu`.
+
+```js
+SFX.music('music.casual.2');        // starts, loops forever, crossfades from whatever was playing
+SFX.music('music.boss.1');          // switching tracks crossfades automatically
+SFX.duck(0.25, 1500);               // dip the music under a win or a big moment
+SFX.stopMusic();                    // fade out
+```
+
+Music is **not** part of the sound sprite: each track is its own stereo file and only the one
+you play is downloaded. Tracks loop gaplessly, so a bed can run for as long as the player
+stays on a screen.
+
+Start music from a real tap (the Play button, not the loading screen) — browsers block audio
+until the player has interacted.
 
 ## 5. Volume, mute and the settings screen
 

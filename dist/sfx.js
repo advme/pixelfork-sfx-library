@@ -16,7 +16,7 @@
 (function (global) {
   'use strict';
 
-  var VERSION = '0.5.0';
+  var VERSION = '0.6.0';
   var STORE_KEY = 'pixelfork.sfx';
   var CATEGORIES = ['ui', 'game', 'reward', 'music'];
   var MAX_VOICES = 24;          // hard cap on simultaneous one-shots
@@ -31,7 +31,7 @@
   var voices = [];              // live one-shot sources
   var lastPlay = {};            // name -> timestamp, for throttling
   var lastVariant = {};         // name -> last variation index used
-  var music = { name: null, src: null, gain: null };
+  var music = { name: null, src: null, gain: null, token: 0 };
   var unlocked = false;
   var attached = false;
   var readyResolve;
@@ -457,42 +457,77 @@
 
   /* ---------------------------------------------------------------- music */
 
+  var musicCache = {};          // name -> decoded AudioBuffer
+
+  function musicUrl(def, opts) {
+    if (opts && opts.url) return opts.url;
+    if (def.files) return BASE + pickFormat(def.files);
+    if (def.file) return BASE + def.file;
+    return null;
+  }
+
+  // Music loops with an AudioBufferSourceNode, not <audio loop>. An audio
+  // element inserts a small gap every time it wraps, which would undo the
+  // crossfade the track was built with. A buffer source loops sample-exactly.
   function playMusic(name, opts) {
     opts = opts || {};
     var c = ensureContext();
     if (!c) return;
-    if (music.name === name) return;
-    var fade = opts.fade != null ? opts.fade : 0.6;
+    if (music.name === name && music.src) return;
+
+    var fade = opts.fade != null ? opts.fade : 0.8;
     stopMusic(fade);
     if (!name) return;
 
     var def = sounds[name] || {};
-    var url = def.file ? BASE + def.file : opts.url;
-    if (!url) { music.name = name; return; }      // nothing to stream yet
+    var url = musicUrl(def, opts);
+    if (!url) { music.name = name; return; }   // no track file yet: stay silent
 
-    var el = new Audio(url);
-    el.loop = opts.loop !== false;
-    el.crossOrigin = 'anonymous';
-    var src = c.createMediaElementSource(el);
-    var g = c.createGain();
-    g.gain.setValueAtTime(0, c.currentTime);
-    g.gain.linearRampToValueAtTime(1, c.currentTime + fade);
-    src.connect(g); g.connect(nodes.music);
-    el.play().catch(function () { /* blocked until a gesture; unlock() retries */ });
-    music = { name: name, src: el, gain: g };
+    music.name = name;
+    var token = ++music.token;
+
+    function start(buffer) {
+      if (token !== music.token) return;       // a newer call won the race
+      var src = c.createBufferSource();
+      src.buffer = buffer;
+      src.loop = opts.loop !== false;
+      var g = c.createGain();
+      g.gain.setValueAtTime(0.0001, c.currentTime);
+      g.gain.linearRampToValueAtTime(1, c.currentTime + fade);
+      src.connect(g); g.connect(nodes.music);
+      src.start(0);
+      music.src = src;
+      music.gain = g;
+      emit('music', { name: name });
+    }
+
+    if (musicCache[name]) { start(musicCache[name]); return; }
+
+    fetch(url)
+      .then(function (r) {
+        if (!r.ok) throw new Error(url + ' -> ' + r.status);
+        return r.arrayBuffer();
+      })
+      .then(function (data) { return c.decodeAudioData(data); })
+      .then(function (buf) { musicCache[name] = buf; start(buf); })
+      .catch(function (err) {
+        if (global.console) console.warn('[SFX] music "' + name + '" could not load.', err.message);
+      });
   }
 
   function stopMusic(fade) {
+    music.token++;
     if (!music.src) { music.name = null; return; }
-    var el = music.src, g = music.gain;
-    fade = fade != null ? fade : 0.4;
+    var src = music.src, g = music.gain;
+    fade = fade != null ? fade : 0.5;
     if (g && ctx) {
-      g.gain.cancelScheduledValues(ctx.currentTime);
-      g.gain.setValueAtTime(g.gain.value, ctx.currentTime);
-      g.gain.linearRampToValueAtTime(0, ctx.currentTime + fade);
+      var t = ctx.currentTime;
+      g.gain.cancelScheduledValues(t);
+      g.gain.setValueAtTime(Math.max(0.0001, g.gain.value), t);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + fade);
     }
-    setTimeout(function () { try { el.pause(); } catch (e) {} }, fade * 1000 + 50);
-    music = { name: null, src: null, gain: null };
+    try { src.stop(ctx.currentTime + fade + 0.05); } catch (e) { /* already stopped */ }
+    music = { name: null, src: null, gain: null, token: music.token };
   }
 
   // Dip the music so a big moment (win, reward) cuts through.
@@ -603,8 +638,8 @@
   if (global.document) {
     global.document.addEventListener('visibilitychange', function () {
       if (!ctx) return;
-      if (global.document.hidden) { if (music.src) music.src.pause(); ctx.suspend(); }
-      else { ctx.resume(); if (music.src) music.src.play().catch(function () {}); }
+      if (global.document.hidden) { ctx.suspend(); }
+      else { ctx.resume(); }
     });
   }
 
@@ -665,6 +700,7 @@
       return {
         context: ctx,
         master: ctx ? nodes.out : null,
+        duckGain: ctx ? nodes.duck.gain.value : null,
         preTone: ctx ? nodes.master : null,
         state: ctx ? ctx.state : 'none',
         voices: voices.length,

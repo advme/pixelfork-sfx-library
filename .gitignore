@@ -3,4 +3,3 @@ _archive/
 packs/*/sounds/_raw/
 *.tmp
 .elevenlabs.key
-packs/casual/sounds/_seq/

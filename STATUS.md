@@ -1,6 +1,6 @@
 # STATUS
 
-**Last updated:** 2026-09-17 · by **A (Claude)** · version **v0.5.0-A**
+**Last updated:** 2026-09-17 · by **A (Claude)** · version **v0.6.0-A**
 
 ## Next task
 **Listen through the board and flag what is wrong.** Nothing in the pack has been judged by
@@ -14,7 +14,7 @@ check the jsDelivr URLs in `AI-GUIDE.md`, `llms.txt` and `README.md` load.
 ## In progress
 _Nothing._
 
-## The pack — 373 sounds, all playable
+## The pack — 403 sounds, all playable (30 of them music)
 | Group | Sounds |
 |---|---|
 | `ambience.*` | 7 |

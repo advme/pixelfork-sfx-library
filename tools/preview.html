@@ -34,6 +34,8 @@
   button.looping { border-color: var(--accent); color: var(--accent);
                    background: rgba(255,213,74,.12); }
   .card.looping { border-color: rgba(255,213,74,.5); }
+  .card.playing { border-color: rgba(96,165,250,.6); }
+  .tag.music { background: rgba(192,132,252,.16); color: #c084fc; }
   .takeno { font-size: 11px; color: var(--accent); margin-left: 2px; }
   .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
@@ -91,6 +93,7 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
   const names = SFX.list();
   const state = n => {
     const d = SFX.info(n) || {};
+    if (d.files || d.file) return 'real';                     // music: its own streamed file
     if (d.start != null) return 'real';                       // audio file in the sprite
     if (d.source === 'code') return 'code';                   // finished, made by code
     return 'stub';                                            // AI sound, audio not generated yet
@@ -169,7 +172,11 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
           '<span class="meta">~' + (d.duration ?? '?') + 's</span></div>';
         card.querySelector('.name').textContent = name;
         card.querySelector('.use').textContent = d.whenToUse || '';
-        card.querySelector('[data-play]').onclick = () => SFX.play(name);
+        const isMusic = d.category === 'music';
+        card.querySelector('[data-play]').onclick = () => {
+          if (isMusic) { SFX.music(name); markMusic(card, name); }
+          else SFX.play(name);
+        };
         const v = card.querySelector('[data-v]');
         if (v) v.onclick = () => d.variations.forEach((_, i) => setTimeout(() => SFX.play(name), i * 260));
         wireLoop(card, name, d, takes);
@@ -186,8 +193,14 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
   // through them in turn, which is what the game does over repeated plays.
   let active = null;                       // only one sound loops at a time
 
+  function markMusic(card, name) {
+    document.querySelectorAll('.card.playing').forEach(c => c.classList.remove('playing'));
+    card.classList.add('playing');
+  }
+
   function stopLoop() {
     if (!active) return;
+    if (active.music) SFX.stopMusic(0.3);
     if (active.handle) SFX.stop(active.handle);
     if (active.timer) clearTimeout(active.timer);
     active.btn.classList.remove('looping');
@@ -205,6 +218,17 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
       const wasMe = active && active.btn === btn;
       stopLoop();
       if (wasMe) return;                   // second click stops
+
+      if (d.category === 'music') {
+        // Music streams and loops itself; just start it and mark the card.
+        btn.classList.add('looping');
+        btn.textContent = '■ Stop';
+        card.classList.add('looping');
+        counter.textContent = 'streaming loop';
+        active = { btn, card, counter, handle: null, timer: null, music: true };
+        SFX.music(name);
+        return;
+      }
 
       btn.classList.add('looping');
       btn.textContent = '■ Stop';
@@ -276,6 +300,7 @@ document.getElementById('audit').onclick = async () => {
   an.fftSize = 2048; d.master.connect(an);
   const buf = new Float32Array(an.fftSize), silent = [];
   for (const n of SFX.list()) {
+    if ((SFX.info(n) || {}).category === 'music') continue;   // long beds, checked by ear
     btn.textContent = 'Checking ' + n + '…';
     let peak = 0;
     SFX.play(n);

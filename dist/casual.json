@@ -2,7 +2,7 @@
   "name": "casual",
   "title": "Casual SFX Pack",
   "description": "Sound effects for hyper-casual and casual mobile web games. Designed to pair with the Super Casual UI Kit.",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "style": "Modern mobile casual game audio: clean, bright, punchy, lightly processed. Not retro/8-bit, not cinematic/orchestral. Mono, dry (no long reverb tails), normalized to -1 dBFS peak.",
   "sourceMeaning": {
     "code": "Synthesized by the runtime, permanently. No audio file, no download, infinite variation. These sounds are synthetic by nature so code beats a recording.",
@@ -8950,6 +8950,606 @@
       "loopable": true,
       "start": 805.6996,
       "dur": 4.5854
+    },
+    "music.casual.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Match-3, puzzle and casual games. Light and friendly, never distracting.",
+      "tags": [
+        "music",
+        "loop",
+        "casual"
+      ],
+      "files": {
+        "webm": "music/music.casual.1.webm",
+        "m4a": "music/music.casual.1.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.casual.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Match-3, puzzle and casual games. Light and friendly, never distracting.",
+      "tags": [
+        "music",
+        "loop",
+        "casual"
+      ],
+      "files": {
+        "webm": "music/music.casual.2.webm",
+        "m4a": "music/music.casual.2.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.casual.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Match-3, puzzle and casual games. Light and friendly, never distracting.",
+      "tags": [
+        "music",
+        "loop",
+        "casual"
+      ],
+      "files": {
+        "webm": "music/music.casual.3.webm",
+        "m4a": "music/music.casual.3.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.hypercasual.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Hyper-casual games: one-tap, endless runner, arcade. Simple and driving.",
+      "tags": [
+        "music",
+        "loop",
+        "hypercasual"
+      ],
+      "files": {
+        "webm": "music/music.hypercasual.1.webm",
+        "m4a": "music/music.hypercasual.1.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.hypercasual.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Hyper-casual games: one-tap, endless runner, arcade. Simple and driving.",
+      "tags": [
+        "music",
+        "loop",
+        "hypercasual"
+      ],
+      "files": {
+        "webm": "music/music.hypercasual.2.webm",
+        "m4a": "music/music.hypercasual.2.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.hypercasual.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Hyper-casual games: one-tap, endless runner, arcade. Simple and driving.",
+      "tags": [
+        "music",
+        "loop",
+        "hypercasual"
+      ],
+      "files": {
+        "webm": "music/music.hypercasual.3.webm",
+        "m4a": "music/music.hypercasual.3.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.action.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Shooters, brawlers and combat. Tense and driving without being oppressive.",
+      "tags": [
+        "music",
+        "loop",
+        "action"
+      ],
+      "files": {
+        "webm": "music/music.action.1.webm",
+        "m4a": "music/music.action.1.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.action.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Shooters, brawlers and combat. Tense and driving without being oppressive.",
+      "tags": [
+        "music",
+        "loop",
+        "action"
+      ],
+      "files": {
+        "webm": "music/music.action.2.webm",
+        "m4a": "music/music.action.2.m4a"
+      },
+      "dur": 28.0
+    },
+    "music.action.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Shooters, brawlers and combat. Tense and driving without being oppressive.",
+      "tags": [
+        "music",
+        "loop",
+        "action"
+      ],
+      "files": {
+        "webm": "music/music.action.3.webm",
+        "m4a": "music/music.action.3.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.racing.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Racing and driving games. High energy electronic.",
+      "tags": [
+        "music",
+        "loop",
+        "racing"
+      ],
+      "files": {
+        "webm": "music/music.racing.1.webm",
+        "m4a": "music/music.racing.1.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.racing.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Racing and driving games. High energy electronic.",
+      "tags": [
+        "music",
+        "loop",
+        "racing"
+      ],
+      "files": {
+        "webm": "music/music.racing.2.webm",
+        "m4a": "music/music.racing.2.m4a"
+      },
+      "dur": 30.078
+    },
+    "music.racing.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Racing and driving games. High energy electronic.",
+      "tags": [
+        "music",
+        "loop",
+        "racing"
+      ],
+      "files": {
+        "webm": "music/music.racing.3.webm",
+        "m4a": "music/music.racing.3.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.adventure.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Adventure, exploration and RPG overworld.",
+      "tags": [
+        "music",
+        "loop",
+        "adventure"
+      ],
+      "files": {
+        "webm": "music/music.adventure.1.webm",
+        "m4a": "music/music.adventure.1.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.adventure.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Adventure, exploration and RPG overworld.",
+      "tags": [
+        "music",
+        "loop",
+        "adventure"
+      ],
+      "files": {
+        "webm": "music/music.adventure.2.webm",
+        "m4a": "music/music.adventure.2.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.adventure.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Adventure, exploration and RPG overworld.",
+      "tags": [
+        "music",
+        "loop",
+        "adventure"
+      ],
+      "files": {
+        "webm": "music/music.adventure.3.webm",
+        "m4a": "music/music.adventure.3.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.boss.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Boss fights and final showdowns. The most intense music in the game.",
+      "tags": [
+        "music",
+        "loop",
+        "boss"
+      ],
+      "files": {
+        "webm": "music/music.boss.1.webm",
+        "m4a": "music/music.boss.1.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.boss.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Boss fights and final showdowns. The most intense music in the game.",
+      "tags": [
+        "music",
+        "loop",
+        "boss"
+      ],
+      "files": {
+        "webm": "music/music.boss.2.webm",
+        "m4a": "music/music.boss.2.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.boss.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Boss fights and final showdowns. The most intense music in the game.",
+      "tags": [
+        "music",
+        "loop",
+        "boss"
+      ],
+      "files": {
+        "webm": "music/music.boss.3.webm",
+        "m4a": "music/music.boss.3.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.horror.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Horror, survival and tension. Sparse and unsettling.",
+      "tags": [
+        "music",
+        "loop",
+        "horror"
+      ],
+      "files": {
+        "webm": "music/music.horror.1.webm",
+        "m4a": "music/music.horror.1.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.horror.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Horror, survival and tension. Sparse and unsettling.",
+      "tags": [
+        "music",
+        "loop",
+        "horror"
+      ],
+      "files": {
+        "webm": "music/music.horror.2.webm",
+        "m4a": "music/music.horror.2.m4a"
+      },
+      "dur": 28.026
+    },
+    "music.horror.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Horror, survival and tension. Sparse and unsettling.",
+      "tags": [
+        "music",
+        "loop",
+        "horror"
+      ],
+      "files": {
+        "webm": "music/music.horror.3.webm",
+        "m4a": "music/music.horror.3.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.cozy.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Farming, idle, life sim and crafting. Warm and unhurried.",
+      "tags": [
+        "music",
+        "loop",
+        "cozy"
+      ],
+      "files": {
+        "webm": "music/music.cozy.1.webm",
+        "m4a": "music/music.cozy.1.m4a"
+      },
+      "dur": 28.0
+    },
+    "music.cozy.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Farming, idle, life sim and crafting. Warm and unhurried.",
+      "tags": [
+        "music",
+        "loop",
+        "cozy"
+      ],
+      "files": {
+        "webm": "music/music.cozy.2.webm",
+        "m4a": "music/music.cozy.2.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.cozy.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Farming, idle, life sim and crafting. Warm and unhurried.",
+      "tags": [
+        "music",
+        "loop",
+        "cozy"
+      ],
+      "files": {
+        "webm": "music/music.cozy.3.webm",
+        "m4a": "music/music.cozy.3.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.scifi.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Sci-fi, space and cyberpunk.",
+      "tags": [
+        "music",
+        "loop",
+        "scifi"
+      ],
+      "files": {
+        "webm": "music/music.scifi.1.webm",
+        "m4a": "music/music.scifi.1.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.scifi.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Sci-fi, space and cyberpunk.",
+      "tags": [
+        "music",
+        "loop",
+        "scifi"
+      ],
+      "files": {
+        "webm": "music/music.scifi.2.webm",
+        "m4a": "music/music.scifi.2.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.scifi.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Sci-fi, space and cyberpunk.",
+      "tags": [
+        "music",
+        "loop",
+        "scifi"
+      ],
+      "files": {
+        "webm": "music/music.scifi.3.webm",
+        "m4a": "music/music.scifi.3.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.menu.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Main menu, lobby, shop and between-level screens.",
+      "tags": [
+        "music",
+        "loop",
+        "menu"
+      ],
+      "files": {
+        "webm": "music/music.menu.1.webm",
+        "m4a": "music/music.menu.1.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.menu.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Main menu, lobby, shop and between-level screens.",
+      "tags": [
+        "music",
+        "loop",
+        "menu"
+      ],
+      "files": {
+        "webm": "music/music.menu.2.webm",
+        "m4a": "music/music.menu.2.m4a"
+      },
+      "dur": 28.078
+    },
+    "music.menu.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Main menu, lobby, shop and between-level screens.",
+      "tags": [
+        "music",
+        "loop",
+        "menu"
+      ],
+      "files": {
+        "webm": "music/music.menu.3.webm",
+        "m4a": "music/music.menu.3.m4a"
+      },
+      "dur": 28.078
     }
   },
   "spriteDuration": 810.535

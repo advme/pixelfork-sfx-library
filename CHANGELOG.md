@@ -1,5 +1,36 @@
 # CHANGELOG
 
+## v0.6.0-A — 30 looping music tracks across 10 genres
+- Agent: A (Claude) · Date: 2026-09-17
+- Done: Added **30 music beds, three per genre** — casual, hyper-casual, action, racing,
+  adventure, boss, horror, cozy, sci-fi and menu — bringing the library to **403 sounds**.
+  Music needed a separate pipeline end to end, because it is not a sound effect:
+  * a different API (`/v1/music`, not `/v1/sound-generation`), wrapped in the new
+    `tools/generate_music.py`;
+  * **stereo**, since a music bed folded to mono sounds flat;
+  * **streamed as its own file** rather than packed into the sprite, so a game downloads
+    only the track it is playing instead of all 12 MB of music;
+  * looped with the same `postFx.loop` crossfade the ambiences use.
+  **Rewrote music playback in the runtime.** It used an `<audio loop>` element, which
+  inserts a small gap every time it wraps — that would have thrown away the crossfade each
+  track was built with. Music now decodes to a buffer and loops with an
+  AudioBufferSourceNode, which repeats sample-exactly, and crossfades between tracks.
+- Tested: 29 of the 30 tracks were seamless on the first build; `music.racing.2` needed a
+  2s crossfade instead of 4s and is now 0.79x RMS. Playback verified in the browser:
+  the music streams and plays (peak 0.49), switching tracks crossfades with **zero silent
+  blocks**, and a track ran **31 seconds past its own 28.1-second loop point with no gap**,
+  which is the proof that the gapless loop works. Ducking confirmed by reading the duck
+  gain directly: 1.0 → 0.297 → 1.0.
+- Notes for next agent: I twice reached a wrong conclusion from a sloppy measurement here.
+  Ducking looked broken when measured through the audio, because music level varies on its
+  own; reading the gain node settled it. And sweeping a crossfade by rebuilding the whole
+  pack took minutes per attempt until I tested the single file directly instead — do that.
+  Music sources in `packs/casual/music/` and the sequence sources in `sounds/_seq/` are now
+  **committed**. They had been gitignored, which contradicted the reason for keeping them:
+  without them in the repo, nobody else can re-cut or re-loop a sound without paying to
+  regenerate it.
+
+
 ## v0.5.0-A — depth pass: 373 sounds
 - Agent: A (Claude) · Date: 2026-09-17
 - Done: Added 153 sounds, taking the library from 220 to **373**. The point of this pass was

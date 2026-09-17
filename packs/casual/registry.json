@@ -2,7 +2,7 @@
   "name": "casual",
   "title": "Casual SFX Pack",
   "description": "Sound effects for hyper-casual and casual mobile web games. Designed to pair with the Super Casual UI Kit.",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "style": "Modern mobile casual game audio: clean, bright, punchy, lightly processed. Not retro/8-bit, not cinematic/orchestral. Mono, dry (no long reverb tails), normalized to -1 dBFS peak.",
   "sourceMeaning": {
     "code": "Synthesized by the runtime, permanently. No audio file, no download, infinite variation. These sounds are synthetic by nature so code beats a recording.",
@@ -7325,6 +7325,666 @@
         "loop": 1.5
       },
       "loopable": true
+    },
+    "music.casual.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Match-3, puzzle and casual games. Light and friendly, never distracting.",
+      "tags": [
+        "music",
+        "loop",
+        "casual"
+      ],
+      "music": {
+        "prompt": "Cheerful casual mobile puzzle game background music, bouncy marimba and pizzicato strings over a light shuffle beat, warm and playful, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.casual.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Match-3, puzzle and casual games. Light and friendly, never distracting.",
+      "tags": [
+        "music",
+        "loop",
+        "casual"
+      ],
+      "music": {
+        "prompt": "Sweet casual mobile game background music, glockenspiel and ukulele with soft hand percussion, sunny and relaxed, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.casual.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Match-3, puzzle and casual games. Light and friendly, never distracting.",
+      "tags": [
+        "music",
+        "loop",
+        "casual"
+      ],
+      "music": {
+        "prompt": "Playful casual puzzle game background music, bubbly synth plucks and light claps with a walking bassline, curious and upbeat, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.hypercasual.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Hyper-casual games: one-tap, endless runner, arcade. Simple and driving.",
+      "tags": [
+        "music",
+        "loop",
+        "hypercasual"
+      ],
+      "music": {
+        "prompt": "Hyper casual mobile arcade game music, punchy minimal electronic beat with a simple catchy synth hook, energetic and repetitive, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.hypercasual.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Hyper-casual games: one-tap, endless runner, arcade. Simple and driving.",
+      "tags": [
+        "music",
+        "loop",
+        "hypercasual"
+      ],
+      "music": {
+        "prompt": "Hyper casual endless runner music, driving four on the floor electronic beat with bright chiptune style lead, relentless and fun, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.hypercasual.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Hyper-casual games: one-tap, endless runner, arcade. Simple and driving.",
+      "tags": [
+        "music",
+        "loop",
+        "hypercasual"
+      ],
+      "music": {
+        "prompt": "Hyper casual arcade game music, bouncy electro pop groove with a bright plucky synth riff and claps, light and addictive, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.action.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Shooters, brawlers and combat. Tense and driving without being oppressive.",
+      "tags": [
+        "music",
+        "loop",
+        "action"
+      ],
+      "music": {
+        "prompt": "Action game combat background music, driving rock drums with palm muted electric guitar and a dark synth bass, urgent and powerful, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.action.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Shooters, brawlers and combat. Tense and driving without being oppressive.",
+      "tags": [
+        "music",
+        "loop",
+        "action"
+      ],
+      "music": {
+        "prompt": "Action game battle music, aggressive electronic percussion with distorted bass and tense string stabs, relentless and dangerous, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.action.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Shooters, brawlers and combat. Tense and driving without being oppressive.",
+      "tags": [
+        "music",
+        "loop",
+        "action"
+      ],
+      "music": {
+        "prompt": "Action shooter background music, industrial drum groove with gritty synth arpeggios and a low brass pulse, militaristic and driving, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.racing.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Racing and driving games. High energy electronic.",
+      "tags": [
+        "music",
+        "loop",
+        "racing"
+      ],
+      "music": {
+        "prompt": "Racing game background music, high energy electronic dance beat with a driving synth bass and euphoric lead, adrenaline fuelled, very fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.racing.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Racing and driving games. High energy electronic.",
+      "tags": [
+        "music",
+        "loop",
+        "racing"
+      ],
+      "music": {
+        "prompt": "Arcade racing game music, aggressive big beat breaks with a distorted electro bassline and sirens, reckless and fast, very fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 2.0
+      }
+    },
+    "music.racing.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Racing and driving games. High energy electronic.",
+      "tags": [
+        "music",
+        "loop",
+        "racing"
+      ],
+      "music": {
+        "prompt": "Street racing game music, dark pulsing techno groove with a hypnotic synth riff and tight hats, sleek and relentless, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.adventure.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Adventure, exploration and RPG overworld.",
+      "tags": [
+        "music",
+        "loop",
+        "adventure"
+      ],
+      "music": {
+        "prompt": "Fantasy adventure game exploration music, warm orchestral strings and woodwinds with a gentle harp, hopeful and wide open, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.adventure.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Adventure, exploration and RPG overworld.",
+      "tags": [
+        "music",
+        "loop",
+        "adventure"
+      ],
+      "music": {
+        "prompt": "Fantasy RPG overworld music, noble french horn melody over light orchestral strings and soft percussion, heroic and inviting, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.adventure.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Adventure, exploration and RPG overworld.",
+      "tags": [
+        "music",
+        "loop",
+        "adventure"
+      ],
+      "music": {
+        "prompt": "Adventure game exploration music, acoustic guitar and flute with soft hand drums, earthy and curious, relaxed medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.boss.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Boss fights and final showdowns. The most intense music in the game.",
+      "tags": [
+        "music",
+        "loop",
+        "boss"
+      ],
+      "music": {
+        "prompt": "Video game boss battle music, thunderous orchestral percussion with menacing low brass and frantic strings, epic and overwhelming, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.boss.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Boss fights and final showdowns. The most intense music in the game.",
+      "tags": [
+        "music",
+        "loop",
+        "boss"
+      ],
+      "music": {
+        "prompt": "Video game boss fight music, heavy electronic drums with a snarling distorted bass and dissonant synth brass, threatening and huge, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.boss.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Boss fights and final showdowns. The most intense music in the game.",
+      "tags": [
+        "music",
+        "loop",
+        "boss"
+      ],
+      "music": {
+        "prompt": "Final boss battle music, pounding taiko drums with a dark choir-like synth pad and driving strings, apocalyptic and grand, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.horror.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Horror, survival and tension. Sparse and unsettling.",
+      "tags": [
+        "music",
+        "loop",
+        "horror"
+      ],
+      "music": {
+        "prompt": "Horror game background music, sparse dissonant strings with a low droning bass and occasional metallic scrapes, unsettling and slow, very slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.horror.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Horror, survival and tension. Sparse and unsettling.",
+      "tags": [
+        "music",
+        "loop",
+        "horror"
+      ],
+      "music": {
+        "prompt": "Survival horror background music, dark ambient synth pad with distant detuned piano notes and a quiet heartbeat pulse, dread filled, very slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.horror.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Horror, survival and tension. Sparse and unsettling.",
+      "tags": [
+        "music",
+        "loop",
+        "horror"
+      ],
+      "music": {
+        "prompt": "Psychological horror game music, creeping atonal drone with faint music box chimes and breathing textures, deeply uneasy, very slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.cozy.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Farming, idle, life sim and crafting. Warm and unhurried.",
+      "tags": [
+        "music",
+        "loop",
+        "cozy"
+      ],
+      "music": {
+        "prompt": "Cozy farming game background music, gentle acoustic guitar and accordion with soft brushed drums, warm and homely, relaxed tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.cozy.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Farming, idle, life sim and crafting. Warm and unhurried.",
+      "tags": [
+        "music",
+        "loop",
+        "cozy"
+      ],
+      "music": {
+        "prompt": "Cozy life simulation music, soft piano and mellow flute over light strings, peaceful and comforting, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.cozy.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Farming, idle, life sim and crafting. Warm and unhurried.",
+      "tags": [
+        "music",
+        "loop",
+        "cozy"
+      ],
+      "music": {
+        "prompt": "Cozy crafting game music, mellow jazz guitar with upright bass and brushed drums, easy going and content, relaxed tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.scifi.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Sci-fi, space and cyberpunk.",
+      "tags": [
+        "music",
+        "loop",
+        "scifi"
+      ],
+      "music": {
+        "prompt": "Science fiction game background music, pulsing synthwave arpeggios with a deep analog bass and wide pads, futuristic and cool, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.scifi.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Sci-fi, space and cyberpunk.",
+      "tags": [
+        "music",
+        "loop",
+        "scifi"
+      ],
+      "music": {
+        "prompt": "Space exploration game music, vast ambient synth pads with slow shimmering arpeggios, weightless and vast, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.scifi.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Sci-fi, space and cyberpunk.",
+      "tags": [
+        "music",
+        "loop",
+        "scifi"
+      ],
+      "music": {
+        "prompt": "Cyberpunk game background music, gritty industrial synth groove with a distorted bassline and neon lead, dark and urban, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.menu.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Main menu, lobby, shop and between-level screens.",
+      "tags": [
+        "music",
+        "loop",
+        "menu"
+      ],
+      "music": {
+        "prompt": "Game main menu background music, calm ambient synth pad with a simple repeating piano motif, welcoming and unobtrusive, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.menu.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Main menu, lobby, shop and between-level screens.",
+      "tags": [
+        "music",
+        "loop",
+        "menu"
+      ],
+      "music": {
+        "prompt": "Game lobby background music, chilled lo-fi hip hop beat with warm keys and vinyl texture, laid back and easy, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.menu.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Main menu, lobby, shop and between-level screens.",
+      "tags": [
+        "music",
+        "loop",
+        "menu"
+      ],
+      "music": {
+        "prompt": "Game shop screen music, light plucky synth loop with soft bells and a gentle groove, pleasant and neutral, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
     }
   }
 }
