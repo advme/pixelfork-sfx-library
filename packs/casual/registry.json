@@ -2,7 +2,7 @@
   "name": "casual",
   "title": "Casual SFX Pack",
   "description": "Sound effects for hyper-casual and casual mobile web games. Designed to pair with the Super Casual UI Kit.",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "style": "Modern mobile casual game audio: clean, bright, punchy, lightly processed. Not retro/8-bit, not cinematic/orchestral. Mono, dry (no long reverb tails), normalized to -1 dBFS peak.",
   "sourceMeaning": {
     "code": "Synthesized by the runtime, permanently. No audio file, no download, infinite variation. These sounds are synthetic by nature so code beats a recording.",
@@ -781,7 +781,7 @@
         "gunshot",
         "shoot"
       ],
-      "prompt": "Loud gunshot from a 9mm pistol fired once, sharp explosive bang with a hard crack and a short punchy decay, recorded close and dry",
+      "prompt": "Loud gunshot from a 9mm pistol fired once, hard explosive bang with a hard crack and a short punchy decay, recorded close and dry",
       "postFx": {
         "tighten": 0.13,
         "highpass": 200,
@@ -802,7 +802,7 @@
         "gun",
         "blast"
       ],
-      "prompt": "Single shotgun blast, deep powerful boom with a bright crack on top and a short pump action click after, dry close recording",
+      "prompt": "Single shotgun blast, deep powerful boom with a ringing crack on top and a short pump action click after, dry close recording",
       "postFx": {
         "presence": 4,
         "bright": 4
@@ -836,7 +836,10 @@
         "mechanical",
         "clip"
       ],
-      "prompt": "Gun reload, magazine ejected and a fresh clip slapped in then the slide racked, crisp metallic mechanical clicks, dry close recording"
+      "prompt": "Gun reload, magazine ejected and a fresh clip slapped in then the slide racked, clean metallic mechanical clicks, dry close recording",
+      "postFx": {
+        "presence": 3
+      }
     },
     "weapon.empty": {
       "source": "ai",
@@ -1378,7 +1381,7 @@
         "run",
         "grass"
       ],
-      "prompt": "Single loud close-up footstep on grass, crisp dry rustle of blades with an earthy scuff, recorded right next to the shoe, no reverb",
+      "prompt": "Single loud close-up footstep on grass, clean dry rustle of blades with an earthy scuff, recorded right next to the shoe, no reverb",
       "postFx": {
         "presence": 3
       },
@@ -1402,7 +1405,7 @@
         "run",
         "wood"
       ],
-      "prompt": "Single footstep on a hard hollow wooden floorboard, sharp bright woody knock with a crisp attack and a short hollow resonance, close dry recording, no reverb",
+      "prompt": "Single footstep on a hard hollow wooden floorboard, hard ringing woody knock with a clean attack and a short hollow resonance, close dry recording, no reverb",
       "postFx": {
         "highpass": 160,
         "presence": 6,
@@ -2048,7 +2051,10 @@
         "fanfare",
         "complete"
       ],
-      "prompt": "Short happy level complete fanfare for a casual mobile game, bright playful ascending melody on marimba and glockenspiel with a cheerful sparkle ending, no orchestra, no drums"
+      "prompt": "Short happy level complete fanfare for a casual mobile game, ringing playful ascending melody on marimba and glockenspiel with a cheerful sparkle ending, no orchestra, no drums",
+      "postFx": {
+        "presence": 3
+      }
     },
     "state.win.small": {
       "source": "code",
@@ -2321,7 +2327,10 @@
         "break",
         "ice"
       ],
-      "prompt": "Pane of glass shattering, bright sharp crack followed by many small shards tinkling to the ground, dry close recording"
+      "prompt": "Pane of glass shattering, ringing hard crack followed by many small shards tinkling to the ground, dry close recording",
+      "postFx": {
+        "presence": 3
+      }
     },
     "break.wood": {
       "source": "ai",
@@ -2993,9 +3002,12 @@
         "enemy",
         "warning"
       ],
-      "prompt": "Loud snake hissing close up, sustained sharp air hiss, dry recording",
+      "prompt": "Loud snake hissing close up, sustained fast air hiss, dry recording",
       "gain": 0.85,
-      "vary": 0.05
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
     },
     "animal.bee.buzz": {
       "source": "ai",
@@ -3220,9 +3232,12 @@
         "lightning",
         "weather"
       ],
-      "prompt": "Loud thunderclap recorded close, sharp cracking strike followed by a long deep rolling rumble",
+      "prompt": "Loud thunderclap recorded close, hard cracking strike followed by a long deep rolling rumble",
       "gain": 0.85,
-      "vary": 0.05
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
     },
     "nature.leaves": {
       "source": "ai",
@@ -3300,9 +3315,12 @@
         "crowd",
         "shock"
       ],
-      "prompt": "Loud crowd of people gasping in surprise together, short sharp intake of breath, dry recording",
+      "prompt": "Loud crowd of people gasping in surprise together, short hard intake of breath, dry recording",
       "gain": 0.85,
-      "vary": 0.05
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
     },
     "voice.countdown.go": {
       "source": "ai",
@@ -3472,13 +3490,16 @@
         "dribble",
         "basketball"
       ],
-      "prompt": "Loud basketball bouncing once on a hard wooden court, sharp rubber impact, dry indoor recording",
+      "prompt": "Loud basketball bouncing once on a hard wooden court, hard rubber impact, dry indoor recording",
       "gain": 0.85,
       "vary": 0.05,
       "variationsWanted": 4,
       "sequence": {
         "prompt": "Basketball being dribbled repeatedly on a hard wooden court, five clear separate bounces, loud and close, dry recording",
         "seconds": 3.0
+      },
+      "postFx": {
+        "presence": 3
       }
     },
     "sport.net.swish": {
@@ -3575,9 +3596,12 @@
         "gun",
         "begin"
       ],
-      "prompt": "Loud starting pistol firing once at a race, sharp cracking report, dry outdoor recording",
+      "prompt": "Loud starting pistol firing once at a race, hard cracking report, dry outdoor recording",
       "gain": 0.85,
-      "vary": 0.05
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
     },
     "tool.hammer": {
       "source": "ai",
@@ -3708,10 +3732,13 @@
         "smith",
         "metal"
       ],
-      "prompt": "Loud blacksmith hammer striking hot metal on a steel anvil, bright ringing clang, dry workshop recording",
+      "prompt": "Loud blacksmith hammer striking hot metal on a steel anvil, ringing ringing clang, dry workshop recording",
       "gain": 0.85,
       "vary": 0.05,
-      "variationsWanted": 3
+      "variationsWanted": 3,
+      "postFx": {
+        "presence": 3
+      }
     },
     "craft.sew": {
       "source": "ai",
@@ -3806,13 +3833,16 @@
         "board",
         "prep"
       ],
-      "prompt": "Loud sharp kitchen knife chopping a vegetable on a wooden board, single clean cut, dry recording",
+      "prompt": "Loud hard kitchen knife chopping a vegetable on a wooden board, single clean cut, dry recording",
       "gain": 0.85,
       "vary": 0.05,
       "variationsWanted": 4,
       "sequence": {
         "prompt": "Chopping a vegetable quickly on a wooden board with a kitchen knife, five clear separate cuts, loud and close, dry recording",
         "seconds": 3.0
+      },
+      "postFx": {
+        "presence": 3
       }
     },
     "cook.pour": {
@@ -3860,7 +3890,7 @@
         "timer",
         "ready"
       ],
-      "prompt": "Kitchen timer bell struck hard by its hammer, loud bright metallic ding with a long ringing decay, microphone right next to the bell",
+      "prompt": "Kitchen timer bell struck hard by its hammer, loud ringing metallic ding with a long ringing decay, microphone right next to the bell",
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
@@ -3909,10 +3939,13 @@
         "discard",
         "note"
       ],
-      "prompt": "Loud sheet of paper being crumpled into a ball in two hands, crisp crackling, dry close recording",
+      "prompt": "Loud sheet of paper being crumpled into a ball in two hands, clean crackling, dry close recording",
       "gain": 0.85,
       "vary": 0.05,
-      "variationsWanted": 2
+      "variationsWanted": 2,
+      "postFx": {
+        "presence": 3
+      }
     },
     "object.page.turn": {
       "source": "ai",
@@ -4105,13 +4138,16 @@
         "burst",
         "party"
       ],
-      "prompt": "Loud balloon popping close to the microphone, sharp rubber burst, dry recording",
+      "prompt": "Loud balloon popping close to the microphone, hard rubber burst, dry recording",
       "gain": 0.85,
       "vary": 0.05,
       "variationsWanted": 3,
       "sequence": {
         "seconds": 3.0,
         "prompt": "Several party balloons being burst one after another right next to the microphone, loud explosive rubber pops, dry indoor recording"
+      },
+      "postFx": {
+        "presence": 3
       }
     },
     "object.firework": {
@@ -4125,9 +4161,12 @@
         "burst",
         "party"
       ],
-      "prompt": "Loud firework whistling upward then bursting with a bright crackling explosion, outdoor recording",
+      "prompt": "Loud firework whistling upward then bursting with a ringing crackling explosion, outdoor recording",
       "gain": 0.85,
-      "vary": 0.05
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
     },
     "vehicle.horn": {
       "source": "ai",
@@ -4255,9 +4294,12 @@
         "ring",
         "bike"
       ],
-      "prompt": "Loud bicycle bell ringing twice, bright metallic ping, dry outdoor recording",
+      "prompt": "Loud bicycle bell ringing twice, ringing metallic ping, dry outdoor recording",
       "gain": 0.85,
-      "vary": 0.05
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
     },
     "machine.robot.servo": {
       "source": "ai",
@@ -4286,10 +4328,13 @@
         "pressure",
         "hiss"
       ],
-      "prompt": "Loud burst of pressurised steam venting from a metal valve, sharp hissing release, dry recording",
+      "prompt": "Loud burst of pressurised steam venting from a metal valve, forceful hissing release, dry recording",
       "gain": 0.85,
       "vary": 0.05,
-      "variationsWanted": 2
+      "variationsWanted": 2,
+      "postFx": {
+        "presence": 3
+      }
     },
     "machine.conveyor": {
       "source": "ai",
@@ -4490,9 +4535,12 @@
         "magic",
         "incantation"
       ],
-      "prompt": "Loud magic spell being cast, swirling energy rush with a bright magical shimmer and a deep whoosh",
+      "prompt": "Loud magic spell being cast, swirling energy rush with a ringing magical shimmer and a deep whoosh",
       "gain": 0.85,
-      "vary": 0.05
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
     },
     "rpg.curse": {
       "source": "ai",
@@ -4582,9 +4630,12 @@
         "enemy",
         "summon"
       ],
-      "prompt": "Loud magical spawn sound, quick rising whoosh with a bright energetic pop as something appears",
+      "prompt": "Loud magical spawn sound, quick rising whoosh with a ringing energetic pop as something appears",
       "gain": 0.85,
-      "vary": 0.05
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
     },
     "game.checkpoint": {
       "source": "ai",
@@ -4643,9 +4694,12 @@
         "barrier",
         "armor"
       ],
-      "prompt": "Loud energy shield shattering, bright crystalline crack with an electric fizzing collapse",
+      "prompt": "Loud energy shield shattering, ringing crystalline crack with an electric fizzing collapse",
       "gain": 0.85,
-      "vary": 0.05
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
     },
     "game.bullet.whizby": {
       "source": "ai",
@@ -4658,10 +4712,13 @@
         "near miss",
         "pass"
       ],
-      "prompt": "Loud bullet whizzing fast past the microphone, sharp air zip with a doppler pitch drop, dry recording",
+      "prompt": "Loud bullet whizzing fast past the microphone, fast air zip with a doppler pitch drop, dry recording",
       "gain": 0.85,
       "vary": 0.05,
-      "variationsWanted": 3
+      "variationsWanted": 3,
+      "postFx": {
+        "presence": 3
+      }
     },
     "game.ricochet": {
       "source": "ai",
@@ -4674,10 +4731,13 @@
         "deflect",
         "metal"
       ],
-      "prompt": "Loud bullet ricocheting off metal, sharp metallic ping with a whining departure, dry recording",
+      "prompt": "Loud bullet ricocheting off metal, ringing metallic ping with a whining departure, dry recording",
       "gain": 0.85,
       "vary": 0.05,
-      "variationsWanted": 3
+      "variationsWanted": 3,
+      "postFx": {
+        "presence": 3
+      }
     },
     "game.portal": {
       "source": "ai",
@@ -4693,6 +4753,2574 @@
       "prompt": "Loud magical portal opening, deep swirling vortex with rising energy and an otherworldly hum",
       "gain": 0.85,
       "vary": 0.05
+    },
+    "car.idle": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Engine idling while parked or waiting on the grid. Loops.",
+      "duration": 8.0,
+      "tags": [
+        "idle",
+        "engine",
+        "park",
+        "loop"
+      ],
+      "prompt": "Car engine idling steadily while parked, continuous low rumbling tickover, microphone close to the exhaust",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 2.0
+      },
+      "loopable": true
+    },
+    "car.accelerate": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The car pulls away and gains speed.",
+      "duration": 3.0,
+      "tags": [
+        "accelerate",
+        "speed up",
+        "launch",
+        "throttle"
+      ],
+      "prompt": "Car engine accelerating hard from standstill, rising roar climbing through the rev range, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "car.decelerate": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The driver lifts off and the car slows.",
+      "duration": 2.5,
+      "tags": [
+        "decelerate",
+        "slow",
+        "lift off",
+        "coast"
+      ],
+      "prompt": "Car engine decelerating as the driver lifts off the throttle, falling roar settling to a burble, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "car.cruise": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Steady driving at speed. Loops under gameplay.",
+      "duration": 8.0,
+      "tags": [
+        "cruise",
+        "driving",
+        "steady",
+        "loop"
+      ],
+      "prompt": "Car engine running at a steady cruising speed on a motorway, continuous even roar, microphone close to the engine",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 2.0
+      },
+      "loopable": true
+    },
+    "car.redline": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Engine held at maximum revs. Loops.",
+      "duration": 6.0,
+      "tags": [
+        "redline",
+        "max",
+        "scream",
+        "loop"
+      ],
+      "prompt": "Car engine screaming at maximum revs held at the redline, continuous high pitched roar, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.5
+      },
+      "loopable": true
+    },
+    "car.rev.blip": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A quick throttle blip \u2014 showing off, gear match.",
+      "duration": 1.2,
+      "tags": [
+        "rev",
+        "blip",
+        "throttle",
+        "revving"
+      ],
+      "prompt": "Car engine given a quick hard throttle blip, hard rise and fall of the revs, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "car.start": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The ignition turns and the engine catches.",
+      "duration": 2.5,
+      "tags": [
+        "start",
+        "ignition",
+        "crank",
+        "begin"
+      ],
+      "prompt": "Car ignition starting, starter motor cranking then the engine firing up into an idle, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "car.start.fail": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The engine cranks but will not start.",
+      "duration": 2.5,
+      "tags": [
+        "fail",
+        "stall",
+        "crank",
+        "dead"
+      ],
+      "prompt": "Car engine failing to start, starter motor cranking repeatedly without the engine catching, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "car.stall": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The engine cuts out.",
+      "duration": 1.5,
+      "tags": [
+        "stall",
+        "cut out",
+        "die",
+        "off"
+      ],
+      "prompt": "Car engine stalling and dying, revs dropping away into silence with a mechanical shudder, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "car.off": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The driver switches the engine off.",
+      "duration": 1.8,
+      "tags": [
+        "off",
+        "shutdown",
+        "stop",
+        "park"
+      ],
+      "prompt": "Car engine being switched off, revs falling away with a final mechanical settle, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "car.drift": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The car slides sideways through a corner.",
+      "duration": 3.0,
+      "tags": [
+        "drift",
+        "slide",
+        "sideways",
+        "powerslide"
+      ],
+      "prompt": "Car tyres sliding sideways across asphalt in a long drift, sustained rubber squeal with the engine roaring behind",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "car.skid": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A short tyre chirp \u2014 hard turn, quick stop.",
+      "duration": 1.0,
+      "tags": [
+        "skid",
+        "chirp",
+        "tyre",
+        "grip"
+      ],
+      "prompt": "Car tyres chirping briefly on asphalt during a hard turn, short rubber scrub, recorded close outdoors",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "car.handbrake": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A handbrake turn.",
+      "duration": 2.0,
+      "tags": [
+        "handbrake",
+        "spin",
+        "turn",
+        "slide"
+      ],
+      "prompt": "Car handbrake lever ratcheting up followed by tyres breaking traction and squealing across asphalt",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "car.tyre.squeal": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Sustained tyre scrub through a long corner. Loops.",
+      "duration": 6.0,
+      "tags": [
+        "squeal",
+        "tyre",
+        "corner",
+        "loop"
+      ],
+      "prompt": "Car tyres squealing continuously while cornering hard on asphalt, sustained rubber scrub, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.5
+      },
+      "loopable": true
+    },
+    "car.gear.up": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An upshift.",
+      "duration": 0.6,
+      "tags": [
+        "gear",
+        "upshift",
+        "shift",
+        "transmission"
+      ],
+      "prompt": "Car gear lever being shifted up a gear, solid mechanical clunk of the gate, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "car.gear.down": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A downshift, often with a throttle blip.",
+      "duration": 0.9,
+      "tags": [
+        "gear",
+        "downshift",
+        "shift",
+        "blip"
+      ],
+      "prompt": "Car downshifting a gear with a quick throttle blip, mechanical gate clunk with a rev flare, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "car.turbo.spool": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The turbo spools up under load.",
+      "duration": 2.0,
+      "tags": [
+        "turbo",
+        "spool",
+        "whistle",
+        "boost"
+      ],
+      "prompt": "Car turbocharger spooling up under load, rising mechanical whistle building over the engine, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "car.turbo.blowoff": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The blow-off valve releases on a gear change.",
+      "duration": 0.8,
+      "tags": [
+        "blowoff",
+        "dump",
+        "psh",
+        "turbo"
+      ],
+      "prompt": "Car turbo blow off valve releasing pressure, forceful hissing whoosh of escaping air, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "car.nitro": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Nitrous boost fires.",
+      "duration": 2.5,
+      "tags": [
+        "nitro",
+        "boost",
+        "nos",
+        "surge"
+      ],
+      "prompt": "Nitrous boost firing in a race car, forceful hissing surge with the engine roar leaping in pitch",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "car.backfire": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The exhaust backfires \u2014 pops and bangs.",
+      "duration": 1.0,
+      "tags": [
+        "backfire",
+        "pop",
+        "bang",
+        "exhaust"
+      ],
+      "prompt": "Car exhaust backfiring, loud hard popping bangs from the tailpipe, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "car.suspension": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The car lands or crosses a bump.",
+      "duration": 0.9,
+      "tags": [
+        "suspension",
+        "bump",
+        "land",
+        "jolt"
+      ],
+      "prompt": "Car suspension compressing hard as the car lands over a bump, metallic thump with a spring rebound",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "car.scrape": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The car scrapes along a wall or barrier.",
+      "duration": 1.8,
+      "tags": [
+        "scrape",
+        "wall",
+        "graze",
+        "metal"
+      ],
+      "prompt": "Car body scraping hard along a metal barrier, sustained grinding metal with sparks, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "car.crash.light": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A minor collision \u2014 bump, tap, fender bender.",
+      "duration": 1.2,
+      "tags": [
+        "crash",
+        "bump",
+        "collision",
+        "minor"
+      ],
+      "prompt": "Light car collision, dull metallic bump with plastic trim rattling, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "car.horn.long": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A long angry horn blast.",
+      "duration": 2.0,
+      "tags": [
+        "horn",
+        "angry",
+        "blast",
+        "traffic"
+      ],
+      "prompt": "Car horn held down in a long angry blast, recorded close outdoors",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "car.door.open": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A car door opens.",
+      "duration": 1.2,
+      "tags": [
+        "door",
+        "open",
+        "car",
+        "handle"
+      ],
+      "prompt": "Car door handle being pulled and the door swinging open, metallic latch and hinge, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "car.door.close": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A car door shuts.",
+      "duration": 1.0,
+      "tags": [
+        "door",
+        "close",
+        "slam",
+        "car"
+      ],
+      "prompt": "Car door being shut firmly, solid heavy thunk of the latch, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "car.window": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An electric window winds down.",
+      "duration": 1.5,
+      "tags": [
+        "window",
+        "electric",
+        "wind",
+        "glass"
+      ],
+      "prompt": "Electric car window winding down, small motor whirring with glass sliding in the seal, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "car.seatbelt": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A seatbelt is pulled and clicked in.",
+      "duration": 1.5,
+      "tags": [
+        "seatbelt",
+        "click",
+        "buckle",
+        "safety"
+      ],
+      "prompt": "Car seatbelt being pulled out and clicked into the buckle, webbing zip with a plastic click, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "car.indicator": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The indicator ticks. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "indicator",
+        "blinker",
+        "tick",
+        "loop"
+      ],
+      "prompt": "Car indicator relay ticking steadily, continuous even clicking, recorded close in the cabin",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 0.8
+      },
+      "loopable": true
+    },
+    "car.wiper": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Windscreen wipers sweep. Loops.",
+      "duration": 4.0,
+      "tags": [
+        "wiper",
+        "rain",
+        "sweep",
+        "loop"
+      ],
+      "prompt": "Car windscreen wipers sweeping back and forth across wet glass, continuous rubber squeak, recorded in the cabin",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.0
+      },
+      "loopable": true
+    },
+    "moto.idle": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A motorbike idles. Loops.",
+      "duration": 6.0,
+      "tags": [
+        "motorbike",
+        "idle",
+        "engine",
+        "loop"
+      ],
+      "prompt": "Motorcycle engine idling, continuous uneven thumping tickover, microphone close to the exhaust",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.5
+      },
+      "loopable": true
+    },
+    "moto.rev": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A motorbike revs hard.",
+      "duration": 2.0,
+      "tags": [
+        "motorbike",
+        "rev",
+        "throttle",
+        "bike"
+      ],
+      "prompt": "Motorcycle engine revved hard, fast rising snarl from the exhaust, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "moto.pass": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A motorbike flies past.",
+      "duration": 2.5,
+      "tags": [
+        "motorbike",
+        "pass",
+        "flyby",
+        "doppler"
+      ],
+      "prompt": "Motorcycle speeding past the microphone at high speed, rising then falling doppler roar, outdoor recording",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "truck.horn": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An air horn blasts.",
+      "duration": 2.0,
+      "tags": [
+        "truck",
+        "horn",
+        "air horn",
+        "lorry"
+      ],
+      "prompt": "Large truck air horn blasting twice, deep powerful honk, recorded outdoors",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "truck.airbrake": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Air brakes release with a hiss.",
+      "duration": 1.5,
+      "tags": [
+        "airbrake",
+        "hiss",
+        "truck",
+        "stop"
+      ],
+      "prompt": "Truck air brakes releasing with a hard pressurised hiss, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "truck.idle": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A diesel truck idles. Loops.",
+      "duration": 8.0,
+      "tags": [
+        "truck",
+        "diesel",
+        "idle",
+        "loop"
+      ],
+      "prompt": "Large diesel truck engine idling, continuous deep clattering rumble, microphone close to the engine",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 2.0
+      },
+      "loopable": true
+    },
+    "race.light": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A starting light changes on the grid.",
+      "duration": 0.8,
+      "tags": [
+        "light",
+        "grid",
+        "start",
+        "beep"
+      ],
+      "prompt": "Motorsport starting light beeping once on the grid, single clear electronic tone, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "race.lap": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A lap is completed.",
+      "duration": 1.2,
+      "tags": [
+        "lap",
+        "split",
+        "timing",
+        "checkpoint"
+      ],
+      "prompt": "Racing game lap completed sound, clear electronic double chime with a satisfying confirmation tone",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "race.finish": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The chequered flag \u2014 race over.",
+      "duration": 2.5,
+      "tags": [
+        "finish",
+        "flag",
+        "win",
+        "race over"
+      ],
+      "prompt": "Race finish line moment, crowd cheering with an air horn blast as a car speeds past, outdoor recording",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "race.flag.wave": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A flag snaps in the wind.",
+      "duration": 1.0,
+      "tags": [
+        "flag",
+        "wave",
+        "cloth",
+        "snap"
+      ],
+      "prompt": "Large flag snapping and flapping hard in strong wind, heavy cloth cracking, outdoor recording",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "gun.smg": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A submachine gun burst.",
+      "duration": 1.5,
+      "tags": [
+        "smg",
+        "burst",
+        "automatic",
+        "rapid"
+      ],
+      "prompt": "Submachine gun firing a rapid burst, fast dry cracking shots with mechanical action, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "gun.sniper": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A sniper rifle fires.",
+      "duration": 2.0,
+      "tags": [
+        "sniper",
+        "rifle",
+        "long range",
+        "boom"
+      ],
+      "prompt": "Sniper rifle firing a single shot, huge cracking report with a long decaying tail, recorded outdoors",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "gun.revolver": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A revolver fires.",
+      "duration": 1.0,
+      "tags": [
+        "revolver",
+        "pistol",
+        "western",
+        "shot"
+      ],
+      "prompt": "Revolver firing a single round, loud deep cracking report, recorded close and dry",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "gun.silenced": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A suppressed shot.",
+      "duration": 0.7,
+      "tags": [
+        "silenced",
+        "suppressed",
+        "stealth",
+        "muffled"
+      ],
+      "prompt": "Suppressed pistol firing a single round, muffled thumping report with the slide cycling, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "gun.minigun": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A minigun spins up and fires. Loops.",
+      "duration": 4.0,
+      "tags": [
+        "minigun",
+        "gatling",
+        "spin",
+        "loop"
+      ],
+      "prompt": "Minigun firing continuously at high rate, rapid overlapping shots with a spinning barrel whine",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.0
+      },
+      "loopable": true
+    },
+    "gun.shell.drop": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A spent shell hits the ground.",
+      "duration": 1.0,
+      "tags": [
+        "shell",
+        "casing",
+        "brass",
+        "drop"
+      ],
+      "prompt": "Spent brass shell casing bouncing on a concrete floor, ringing metallic tinkling, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "gun.mag.out": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A magazine is ejected.",
+      "duration": 0.7,
+      "tags": [
+        "magazine",
+        "eject",
+        "reload",
+        "clip"
+      ],
+      "prompt": "Gun magazine being released and dropping free, metallic click with a clatter, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "gun.mag.in": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A fresh magazine is seated.",
+      "duration": 0.7,
+      "tags": [
+        "magazine",
+        "insert",
+        "reload",
+        "clip"
+      ],
+      "prompt": "Fresh gun magazine being slapped firmly into the receiver, solid metallic clack, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "gun.bolt": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The bolt or slide is pulled.",
+      "duration": 0.6,
+      "tags": [
+        "bolt",
+        "slide",
+        "rack",
+        "charge"
+      ],
+      "prompt": "Rifle bolt being pulled back and released, heavy metallic rack, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "gun.grenade.pin": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A grenade pin is pulled.",
+      "duration": 0.7,
+      "tags": [
+        "grenade",
+        "pin",
+        "pull",
+        "metal"
+      ],
+      "prompt": "Grenade safety pin being pulled out with the lever springing off, small metallic clicks, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "gun.grenade.throw": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A grenade is thrown.",
+      "duration": 0.8,
+      "tags": [
+        "grenade",
+        "throw",
+        "toss",
+        "arc"
+      ],
+      "prompt": "Grenade being thrown through the air, cloth swish with a metallic tumble, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "gun.rocket.launch": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A rocket launcher fires.",
+      "duration": 2.0,
+      "tags": [
+        "rocket",
+        "launch",
+        "missile",
+        "rpg"
+      ],
+      "prompt": "Rocket launcher firing, huge whooshing ignition with a roaring rocket motor departing, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "gun.flamethrower": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A flamethrower burns. Loops.",
+      "duration": 4.0,
+      "tags": [
+        "flamethrower",
+        "fire",
+        "burn",
+        "loop"
+      ],
+      "prompt": "Flamethrower burning continuously, roaring jet of flame with crackling fire, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.0
+      },
+      "loopable": true
+    },
+    "gun.crossbow": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A crossbow looses a bolt.",
+      "duration": 0.9,
+      "tags": [
+        "crossbow",
+        "bolt",
+        "shoot",
+        "medieval"
+      ],
+      "prompt": "Crossbow firing a bolt, taut string snapping forward with a wooden thunk, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "gun.reload.shotgun": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Shells are pumped into a shotgun.",
+      "duration": 2.0,
+      "tags": [
+        "shotgun",
+        "pump",
+        "reload",
+        "shell"
+      ],
+      "prompt": "Shotgun being loaded with shells and pumped, mechanical metallic racking, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "melee.stab": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A blade goes in.",
+      "duration": 0.7,
+      "tags": [
+        "stab",
+        "pierce",
+        "blade",
+        "thrust"
+      ],
+      "prompt": "Knife stabbing into a melon, wet penetrating impact, recorded close, cartoon action style",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "melee.block": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A hit is blocked on a shield.",
+      "duration": 0.8,
+      "tags": [
+        "block",
+        "shield",
+        "parry",
+        "defend"
+      ],
+      "prompt": "Sword striking a wooden shield with a metal boss, loud blocking impact with a ringing clang, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "melee.parry": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A blade is deflected at the last moment.",
+      "duration": 0.7,
+      "tags": [
+        "parry",
+        "deflect",
+        "riposte",
+        "clash"
+      ],
+      "prompt": "Two sword blades scraping and deflecting off each other, quick metallic ring, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "melee.sheathe": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A blade is put away.",
+      "duration": 0.9,
+      "tags": [
+        "sheathe",
+        "holster",
+        "put away",
+        "scabbard"
+      ],
+      "prompt": "Steel sword being slid back into a leather scabbard, metallic scraping slide, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "melee.axe.swing": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A heavy axe swings.",
+      "duration": 0.7,
+      "tags": [
+        "axe",
+        "swing",
+        "heavy",
+        "whoosh"
+      ],
+      "prompt": "Heavy battle axe swinging through the air, deep slow air whoosh, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "melee.hammer.swing": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A war hammer swings.",
+      "duration": 0.8,
+      "tags": [
+        "hammer",
+        "swing",
+        "heavy",
+        "maul"
+      ],
+      "prompt": "Heavy war hammer swinging through the air, deep booming air whoosh, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "melee.spear": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A spear thrusts.",
+      "duration": 0.6,
+      "tags": [
+        "spear",
+        "thrust",
+        "pike",
+        "stab"
+      ],
+      "prompt": "Wooden spear thrusting fast through the air, fast air whoosh with a shaft rattle, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "melee.whip": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A whip cracks.",
+      "duration": 0.8,
+      "tags": [
+        "whip",
+        "crack",
+        "lash",
+        "snap"
+      ],
+      "prompt": "Leather whip cracking hard, hard explosive snap with a leather hiss, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "melee.kick": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A heavy kick lands.",
+      "duration": 0.5,
+      "tags": [
+        "kick",
+        "boot",
+        "impact",
+        "body"
+      ],
+      "prompt": "Heavy boot kicking into a body, dull thudding impact with cloth, cartoon action style, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "melee.dodge": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A dodge or evade \u2014 body moving fast.",
+      "duration": 0.5,
+      "tags": [
+        "dodge",
+        "evade",
+        "duck",
+        "move"
+      ],
+      "prompt": "Fast body movement dodging, quick cloth and air whoosh, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "magic.lightning.cast": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A lightning spell is cast.",
+      "duration": 1.4,
+      "tags": [
+        "lightning",
+        "cast",
+        "electric",
+        "storm"
+      ],
+      "prompt": "Lightning spell being cast, crackling electrical charge building into a hard thunderous discharge",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "magic.lightning.hit": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Lightning strikes a target.",
+      "duration": 1.2,
+      "tags": [
+        "lightning",
+        "hit",
+        "zap",
+        "strike"
+      ],
+      "prompt": "Lightning bolt striking a target, violent electrical crack with a sizzling aftermath",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "magic.fire.cast": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A fire spell winds up.",
+      "duration": 1.3,
+      "tags": [
+        "fire",
+        "cast",
+        "flame",
+        "conjure"
+      ],
+      "prompt": "Fire spell being conjured, swelling roar of flames gathering with a whooshing ignition",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "magic.fire.hit": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A fireball lands.",
+      "duration": 1.2,
+      "tags": [
+        "fire",
+        "impact",
+        "explode",
+        "burn"
+      ],
+      "prompt": "Fireball impacting a target, explosive burst of flame with crackling burning aftermath",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "magic.ice.cast": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An ice spell winds up.",
+      "duration": 1.3,
+      "tags": [
+        "ice",
+        "cast",
+        "frost",
+        "freeze"
+      ],
+      "prompt": "Ice spell being conjured, crystalline chiming with a rising cold wind",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "magic.ice.hit": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Ice strikes and shatters on a target.",
+      "duration": 1.2,
+      "tags": [
+        "ice",
+        "impact",
+        "shatter",
+        "frost"
+      ],
+      "prompt": "Ice spell impacting a target, hard crystalline shatter with frozen shards scattering",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "magic.wind": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A wind or gust spell.",
+      "duration": 1.5,
+      "tags": [
+        "wind",
+        "gust",
+        "air",
+        "push"
+      ],
+      "prompt": "Wind spell being cast, powerful rushing gust of air sweeping past with a whistling swirl",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "magic.earth": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An earth or stone spell.",
+      "duration": 1.6,
+      "tags": [
+        "earth",
+        "stone",
+        "rock",
+        "quake"
+      ],
+      "prompt": "Earth spell erupting, heavy grinding stone rising with rubble and a deep ground rumble",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "magic.holy": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A holy or blessing spell.",
+      "duration": 2.0,
+      "tags": [
+        "holy",
+        "bless",
+        "light",
+        "divine"
+      ],
+      "prompt": "Holy blessing spell, radiant choir-like shimmer with ringing bells and a warm rising glow",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "magic.dark": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A dark or shadow spell.",
+      "duration": 1.8,
+      "tags": [
+        "dark",
+        "shadow",
+        "evil",
+        "void"
+      ],
+      "prompt": "Dark shadow spell being cast, deep ominous swell with whispering void and a sinister rush",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "magic.shield.up": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A magic barrier comes up.",
+      "duration": 1.2,
+      "tags": [
+        "shield",
+        "barrier",
+        "protect",
+        "bubble"
+      ],
+      "prompt": "Magical shield forming, rising crystalline hum sealing into a steady protective tone",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "magic.shield.hit": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Something strikes a magic barrier.",
+      "duration": 0.8,
+      "tags": [
+        "shield",
+        "hit",
+        "deflect",
+        "barrier"
+      ],
+      "prompt": "Projectile striking a magical energy shield, ringing electric deflection with a ringing wobble",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "scifi.laser.charge": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An energy weapon charges before firing.",
+      "duration": 1.8,
+      "tags": [
+        "charge",
+        "laser",
+        "energy",
+        "windup"
+      ],
+      "prompt": "Science fiction energy weapon charging up, rising electronic whine building to a peak, synthetic recording",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "scifi.shield.hit": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A ship or suit shield takes a hit.",
+      "duration": 0.9,
+      "tags": [
+        "shield",
+        "hit",
+        "energy",
+        "deflect"
+      ],
+      "prompt": "Science fiction energy shield absorbing an impact, electric wobbling deflection with a metallic ring",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "scifi.alarm": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A ship or base alarm. Loops.",
+      "duration": 4.0,
+      "tags": [
+        "alarm",
+        "alert",
+        "siren",
+        "loop"
+      ],
+      "prompt": "Science fiction ship alarm klaxon sounding repeatedly, continuous urgent electronic alert",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.0
+      },
+      "loopable": true
+    },
+    "scifi.engine.hum": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Spaceship engine hum. Loops.",
+      "duration": 6.0,
+      "tags": [
+        "engine",
+        "hum",
+        "ship",
+        "loop"
+      ],
+      "prompt": "Science fiction spaceship engine humming steadily, continuous deep electronic drone, synthetic recording",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.5
+      },
+      "loopable": true
+    },
+    "scifi.warp": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A jump to lightspeed.",
+      "duration": 2.5,
+      "tags": [
+        "warp",
+        "jump",
+        "hyperspace",
+        "launch"
+      ],
+      "prompt": "Spaceship jumping to lightspeed, deep rising whoosh building into an explosive departure",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "scifi.door": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An automatic door slides open.",
+      "duration": 1.2,
+      "tags": [
+        "door",
+        "slide",
+        "automatic",
+        "hiss"
+      ],
+      "prompt": "Science fiction automatic door sliding open with a pneumatic hiss and mechanical servo, synthetic recording",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "scifi.computer.beep": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A console acknowledges input.",
+      "duration": 0.5,
+      "tags": [
+        "beep",
+        "console",
+        "input",
+        "confirm"
+      ],
+      "prompt": "Science fiction computer console beeping a short confirmation tone, clean synthetic recording",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "scifi.robot.talk": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A robot speaks in machine noise.",
+      "duration": 1.4,
+      "tags": [
+        "robot",
+        "talk",
+        "droid",
+        "beeps"
+      ],
+      "prompt": "Small robot chattering in electronic beeps and warbles, wordless machine speech, synthetic recording",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "step.carpet": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.25,
+      "gain": 0.7,
+      "vary": 0.08,
+      "variationsWanted": 5,
+      "minLevelDb": -24,
+      "whenToUse": "One footstep on on thick carpet. Play per step; the library varies pitch and picks a different take each time.",
+      "tags": [
+        "footstep",
+        "walk",
+        "step",
+        "on thick carpet"
+      ],
+      "prompt": "Single footstep on on thick carpet",
+      "sequence": {
+        "seconds": 3.0,
+        "prompt": "Person walking at a steady pace on thick carpet, five clear separate footsteps with soft muffled padding and fibre compression, recorded close and loud, no reverb, no music"
+      }
+    },
+    "step.mud": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.25,
+      "gain": 0.7,
+      "vary": 0.08,
+      "variationsWanted": 5,
+      "minLevelDb": -24,
+      "whenToUse": "One footstep on through wet mud. Play per step; the library varies pitch and picks a different take each time.",
+      "tags": [
+        "footstep",
+        "walk",
+        "step",
+        "through wet mud"
+      ],
+      "prompt": "Single footstep on through wet mud",
+      "sequence": {
+        "seconds": 3.0,
+        "prompt": "Person walking at a steady pace through wet mud, five clear separate footsteps with thick wet squelching suction, recorded close and loud, no reverb, no music"
+      }
+    },
+    "step.tile": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.25,
+      "gain": 0.7,
+      "vary": 0.08,
+      "variationsWanted": 5,
+      "minLevelDb": -24,
+      "whenToUse": "One footstep on on hard ceramic tiles. Play per step; the library varies pitch and picks a different take each time.",
+      "tags": [
+        "footstep",
+        "walk",
+        "step",
+        "on hard ceramic tiles"
+      ],
+      "prompt": "Single footstep on on hard ceramic tiles",
+      "sequence": {
+        "seconds": 3.0,
+        "prompt": "Person walking at a steady pace on hard ceramic tiles, five clear separate footsteps with hard hard clicking heel taps with a ringing room tap, recorded close and loud, no reverb, no music"
+      }
+    },
+    "step.ice": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.25,
+      "gain": 0.7,
+      "vary": 0.08,
+      "variationsWanted": 5,
+      "minLevelDb": -24,
+      "whenToUse": "One footstep on on solid ice. Play per step; the library varies pitch and picks a different take each time.",
+      "tags": [
+        "footstep",
+        "walk",
+        "step",
+        "on solid ice"
+      ],
+      "prompt": "Single footstep on on solid ice",
+      "sequence": {
+        "seconds": 3.0,
+        "prompt": "Person walking at a steady pace on solid ice, five clear separate footsteps with hard slippery scuffs with a brittle crackle, recorded close and loud, no reverb, no music"
+      }
+    },
+    "step.leaves": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.25,
+      "gain": 0.7,
+      "vary": 0.08,
+      "variationsWanted": 5,
+      "minLevelDb": -24,
+      "whenToUse": "One footstep on through dry fallen leaves. Play per step; the library varies pitch and picks a different take each time.",
+      "tags": [
+        "footstep",
+        "walk",
+        "step",
+        "through dry fallen leaves"
+      ],
+      "prompt": "Single footstep on through dry fallen leaves",
+      "sequence": {
+        "seconds": 3.0,
+        "prompt": "Person walking at a steady pace through dry fallen leaves, five clear separate footsteps with loud dry crunching and rustling, recorded close and loud, no reverb, no music"
+      }
+    },
+    "step.stairs": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.25,
+      "gain": 0.7,
+      "vary": 0.08,
+      "variationsWanted": 5,
+      "minLevelDb": -24,
+      "whenToUse": "One footstep on up a wooden staircase. Play per step; the library varies pitch and picks a different take each time.",
+      "tags": [
+        "footstep",
+        "walk",
+        "step",
+        "up a wooden staircase"
+      ],
+      "prompt": "Single footstep on up a wooden staircase",
+      "sequence": {
+        "seconds": 3.0,
+        "prompt": "Person walking at a steady pace up a wooden staircase, five clear separate footsteps with solid hollow wooden knocks on each tread, recorded close and loud, no reverb, no music"
+      }
+    },
+    "step.run.stone": {
+      "source": "ai",
+      "category": "game",
+      "duration": 0.2,
+      "gain": 0.75,
+      "vary": 0.08,
+      "variationsWanted": 5,
+      "whenToUse": "One footstep while running on stone. Faster and harder than walking.",
+      "tags": [
+        "run",
+        "sprint",
+        "footstep",
+        "stone"
+      ],
+      "prompt": "Single running footstep on stone",
+      "sequence": {
+        "seconds": 3.0,
+        "prompt": "Person running fast on stone pavement, six clear separate hard footfalls, recorded close and loud, no reverb, no music"
+      }
+    },
+    "water.drip": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A single drip \u2014 cave, leak, tension.",
+      "duration": 0.8,
+      "tags": [
+        "drip",
+        "drop",
+        "leak",
+        "cave"
+      ],
+      "prompt": "Single water drop falling into a shallow puddle, clear plink with a small echo, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "water.tap": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A running tap. Loops.",
+      "duration": 4.0,
+      "tags": [
+        "tap",
+        "faucet",
+        "running",
+        "loop"
+      ],
+      "prompt": "Water running steadily from a kitchen tap into a sink, continuous splashing stream, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.0
+      },
+      "loopable": true
+    },
+    "water.underwater": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Submerged ambience. Loops.",
+      "duration": 6.0,
+      "tags": [
+        "underwater",
+        "submerged",
+        "muffled",
+        "loop"
+      ],
+      "prompt": "Underwater ambience with muffled low rumble and bubbles, continuous submerged sound, recorded with a hydrophone",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.5
+      },
+      "loopable": true
+    },
+    "water.bubble": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Bubbles rise through water.",
+      "duration": 1.2,
+      "tags": [
+        "bubble",
+        "air",
+        "underwater",
+        "glug"
+      ],
+      "prompt": "Air bubbles rising through water, gurgling glugging burst, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "water.dive": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A body enters the water.",
+      "duration": 1.5,
+      "tags": [
+        "dive",
+        "plunge",
+        "jump in",
+        "splash"
+      ],
+      "prompt": "Person diving into a swimming pool, big plunging splash with water churning after, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "water.wave.crash": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A big wave breaks.",
+      "duration": 2.5,
+      "tags": [
+        "wave",
+        "crash",
+        "surf",
+        "sea"
+      ],
+      "prompt": "Large ocean wave crashing hard onto rocks, powerful churning break with foam hissing after, outdoor recording",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "water.fountain": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A fountain runs. Loops.",
+      "duration": 4.0,
+      "tags": [
+        "fountain",
+        "water",
+        "park",
+        "loop"
+      ],
+      "prompt": "Ornamental stone fountain running, continuous falling water splashing into a pool, outdoor recording",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.0
+      },
+      "loopable": true
+    },
+    "fire.ignite": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Something catches light.",
+      "duration": 1.5,
+      "tags": [
+        "ignite",
+        "light",
+        "catch",
+        "whoosh"
+      ],
+      "prompt": "Fire igniting suddenly, hard whooshing burst of flame catching and settling into a burn, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "fire.torch": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A handheld torch burns. Loops.",
+      "duration": 4.0,
+      "tags": [
+        "torch",
+        "flame",
+        "burn",
+        "loop"
+      ],
+      "prompt": "Handheld burning torch, continuous flapping flame with crackling, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.0
+      },
+      "loopable": true
+    },
+    "fire.extinguish": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A flame is put out.",
+      "duration": 1.5,
+      "tags": [
+        "extinguish",
+        "douse",
+        "out",
+        "steam"
+      ],
+      "prompt": "Fire being doused with water, violent hissing steam as the flames die out, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "fire.match": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A match is struck.",
+      "duration": 1.2,
+      "tags": [
+        "match",
+        "strike",
+        "light",
+        "spark"
+      ],
+      "prompt": "Match being struck on a box and catching light, gritty scrape with a flaring ignition, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "fire.lighter": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A lighter flicks on.",
+      "duration": 0.8,
+      "tags": [
+        "lighter",
+        "flick",
+        "flame",
+        "spark"
+      ],
+      "prompt": "Cigarette lighter being flicked, metal wheel sparking with a small flame catching, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "weather.rain.light": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Light rain. Loops.",
+      "duration": 6.0,
+      "tags": [
+        "rain",
+        "light",
+        "drizzle",
+        "loop"
+      ],
+      "prompt": "Light drizzling rain falling on pavement, continuous gentle patter, clean field recording, no music",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.5
+      },
+      "loopable": true
+    },
+    "weather.rain.heavy": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Heavy downpour. Loops.",
+      "duration": 6.0,
+      "tags": [
+        "rain",
+        "heavy",
+        "storm",
+        "loop"
+      ],
+      "prompt": "Heavy torrential rain pouring down hard, continuous roaring downpour, clean field recording, no music",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.5
+      },
+      "loopable": true
+    },
+    "weather.rain.window": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Rain on glass. Loops.",
+      "duration": 6.0,
+      "tags": [
+        "rain",
+        "window",
+        "indoor",
+        "loop"
+      ],
+      "prompt": "Rain drumming against a window pane from inside, continuous tapping on glass, clean recording, no music",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.5
+      },
+      "loopable": true
+    },
+    "weather.storm.wind": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Storm wind howling. Loops.",
+      "duration": 8.0,
+      "tags": [
+        "storm",
+        "wind",
+        "howl",
+        "loop"
+      ],
+      "prompt": "Powerful storm wind howling and gusting hard, continuous roaring blasts, clean field recording, no music",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 2.0
+      },
+      "loopable": true
+    },
+    "weather.thunder.distant": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Thunder rolls far away.",
+      "duration": 3.5,
+      "tags": [
+        "thunder",
+        "distant",
+        "rumble",
+        "storm"
+      ],
+      "prompt": "Distant thunder rolling across the sky, long low rumbling growl with no sharp crack",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "door.wood.open": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A wooden door opens.",
+      "duration": 1.3,
+      "tags": [
+        "door",
+        "wood",
+        "open",
+        "creak"
+      ],
+      "prompt": "Wooden door swinging open on dry hinges, loud creaking with a final knock, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "door.metal.open": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A heavy metal door opens.",
+      "duration": 1.6,
+      "tags": [
+        "door",
+        "metal",
+        "heavy",
+        "industrial"
+      ],
+      "prompt": "Heavy steel industrial door being pushed open, loud grinding metal with a booming echo, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "door.slide": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A sliding door runs on its track.",
+      "duration": 1.4,
+      "tags": [
+        "door",
+        "slide",
+        "track",
+        "glass"
+      ],
+      "prompt": "Sliding glass door running along its track and stopping, rolling wheels with a final bump, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "door.knock": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Someone knocks.",
+      "duration": 1.2,
+      "tags": [
+        "knock",
+        "door",
+        "visitor",
+        "rap"
+      ],
+      "prompt": "Firm knuckles knocking three times on a solid wooden door, loud and close, dry recording",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "door.bell": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A doorbell rings.",
+      "duration": 2.0,
+      "tags": [
+        "doorbell",
+        "chime",
+        "visitor",
+        "ring"
+      ],
+      "prompt": "Classic two tone doorbell chiming, ringing ding dong with a ringing decay, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "door.locked": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A locked door rattles.",
+      "duration": 1.2,
+      "tags": [
+        "locked",
+        "rattle",
+        "handle",
+        "denied"
+      ],
+      "prompt": "Locked door handle being rattled hard without opening, metallic clattering, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "door.slam": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A door slams shut.",
+      "duration": 1.2,
+      "tags": [
+        "slam",
+        "shut",
+        "bang",
+        "angry"
+      ],
+      "prompt": "Wooden door being slammed shut hard, explosive booming bang with the frame rattling, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "horror.scream": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A terrified scream.",
+      "duration": 2.0,
+      "tags": [
+        "scream",
+        "terror",
+        "fear",
+        "shriek"
+      ],
+      "prompt": "Terrified human scream of fear, loud shrieking wail, wordless, no speech, dry close recording",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "horror.growl.deep": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Something very large growls in the dark.",
+      "duration": 2.5,
+      "tags": [
+        "growl",
+        "deep",
+        "beast",
+        "lurk"
+      ],
+      "prompt": "Enormous creature growling deep in the dark, low rumbling menacing throat, wordless, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "horror.musicbox": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A music box plays \u2014 classic dread.",
+      "duration": 4.0,
+      "tags": [
+        "music box",
+        "creepy",
+        "lullaby",
+        "child"
+      ],
+      "prompt": "Old wind up music box playing a slow simple lullaby, delicate metallic chimes slightly out of tune, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "horror.knock.slow": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Slow deliberate knocking.",
+      "duration": 2.5,
+      "tags": [
+        "knock",
+        "slow",
+        "dread",
+        "door"
+      ],
+      "prompt": "Three slow heavy knocks on a distant wooden door, ominous and deliberate, hollow room",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "horror.laugh": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An unsettling laugh.",
+      "duration": 2.0,
+      "tags": [
+        "laugh",
+        "evil",
+        "creepy",
+        "villain"
+      ],
+      "prompt": "Sinister low laughter, slow menacing chuckle, wordless, no speech, dry close recording",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "horror.static": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Radio or TV static. Loops.",
+      "duration": 4.0,
+      "tags": [
+        "static",
+        "radio",
+        "interference",
+        "loop"
+      ],
+      "prompt": "Radio static hissing with occasional crackling interference, continuous, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.0
+      },
+      "loopable": true
+    },
+    "kitchen.kettle": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A kettle comes to the boil.",
+      "duration": 3.0,
+      "tags": [
+        "kettle",
+        "boil",
+        "steam",
+        "whistle"
+      ],
+      "prompt": "Metal kettle heating and whistling as it comes to the boil, rising steam whistle, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "kitchen.microwave": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A microwave finishes and beeps.",
+      "duration": 1.5,
+      "tags": [
+        "microwave",
+        "beep",
+        "ready",
+        "ding"
+      ],
+      "prompt": "Microwave oven beeping three times when finished, clear electronic tones, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "kitchen.blender": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A blender runs.",
+      "duration": 2.5,
+      "tags": [
+        "blender",
+        "mix",
+        "motor",
+        "kitchen"
+      ],
+      "prompt": "Kitchen blender running at high speed grinding ice, loud motor whine with rattling, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "kitchen.egg.crack": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An egg is cracked.",
+      "duration": 0.8,
+      "tags": [
+        "egg",
+        "crack",
+        "break",
+        "cook"
+      ],
+      "prompt": "Egg being cracked on the edge of a bowl and opened, brittle shell crack with a wet slop, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "kitchen.can.open": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A drink can is opened.",
+      "duration": 1.0,
+      "tags": [
+        "can",
+        "open",
+        "fizz",
+        "drink"
+      ],
+      "prompt": "Aluminium drink can being opened, ringing metallic crack with a hissing fizz, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "kitchen.bottle.open": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A bottle is uncorked or opened.",
+      "duration": 1.0,
+      "tags": [
+        "bottle",
+        "cork",
+        "pop",
+        "open"
+      ],
+      "prompt": "Cork being pulled from a glass bottle, deep hollow pop, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "kitchen.cutlery": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Cutlery clatters on a plate.",
+      "duration": 1.0,
+      "tags": [
+        "cutlery",
+        "plate",
+        "cafe",
+        "clink"
+      ],
+      "prompt": "Metal knife and fork clattering onto a ceramic plate, ringing clinking, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "kitchen.sip": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A drink is sipped.",
+      "duration": 1.0,
+      "tags": [
+        "sip",
+        "drink",
+        "gulp",
+        "swallow"
+      ],
+      "prompt": "Person taking a sip of a drink and swallowing, wet gulp, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "phone.ring": {
+      "source": "ai",
+      "category": "ui",
+      "whenToUse": "A phone rings.",
+      "duration": 3.0,
+      "tags": [
+        "phone",
+        "ring",
+        "call",
+        "incoming"
+      ],
+      "prompt": "Mobile phone ringing with a classic electronic ringtone, repeating trill, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "phone.vibrate": {
+      "source": "ai",
+      "category": "ui",
+      "whenToUse": "A phone buzzes on a surface.",
+      "duration": 2.0,
+      "tags": [
+        "vibrate",
+        "buzz",
+        "phone",
+        "silent"
+      ],
+      "prompt": "Mobile phone vibrating on a hard wooden table, buzzing rattle, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "office.printer": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A printer prints a page.",
+      "duration": 3.0,
+      "tags": [
+        "printer",
+        "print",
+        "office",
+        "paper"
+      ],
+      "prompt": "Office printer feeding and printing a sheet of paper, mechanical whirring with paper rollers, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "office.drawer": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A drawer opens or closes.",
+      "duration": 1.2,
+      "tags": [
+        "drawer",
+        "open",
+        "desk",
+        "slide"
+      ],
+      "prompt": "Wooden desk drawer being pulled open and pushed shut, sliding wood with a final knock, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "office.stapler": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A stapler clicks.",
+      "duration": 0.6,
+      "tags": [
+        "stapler",
+        "click",
+        "office",
+        "punch"
+      ],
+      "prompt": "Desk stapler being pressed down firmly, ringing metallic punch, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "animal.dog.growl": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A dog growls a warning.",
+      "duration": 1.5,
+      "tags": [
+        "dog",
+        "growl",
+        "threat",
+        "guard"
+      ],
+      "prompt": "Dog growling low in warning, rumbling threatening throat, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "animal.cat.purr": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A cat purrs. Loops.",
+      "duration": 4.0,
+      "tags": [
+        "cat",
+        "purr",
+        "content",
+        "loop"
+      ],
+      "prompt": "Cat purring contentedly, continuous soft rumbling vibration, microphone close to the cat",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.0
+      },
+      "loopable": true
+    },
+    "animal.cat.hiss": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A cat hisses.",
+      "duration": 1.0,
+      "tags": [
+        "cat",
+        "hiss",
+        "angry",
+        "threat"
+      ],
+      "prompt": "Angry cat hissing sharply, sudden air hiss with a spit, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "animal.bird.flap": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Wings beat as a bird takes off.",
+      "duration": 1.2,
+      "tags": [
+        "wings",
+        "flap",
+        "bird",
+        "takeoff"
+      ],
+      "prompt": "Large bird taking off with heavy wing beats, flapping feathers pushing air, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "animal.rooster": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A rooster crows \u2014 morning, farm.",
+      "duration": 1.8,
+      "tags": [
+        "rooster",
+        "crow",
+        "morning",
+        "farm"
+      ],
+      "prompt": "Rooster crowing loudly at dawn, full cock a doodle doo, outdoor farm recording",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "animal.lion.roar": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A lion roars.",
+      "duration": 2.5,
+      "tags": [
+        "lion",
+        "roar",
+        "big cat",
+        "predator"
+      ],
+      "prompt": "Lion roaring powerfully, deep full throated roar, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "animal.bear.growl": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A bear growls.",
+      "duration": 2.0,
+      "tags": [
+        "bear",
+        "growl",
+        "predator",
+        "threat"
+      ],
+      "prompt": "Large bear growling threateningly, deep guttural rumble, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "animal.owl": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An owl hoots at night.",
+      "duration": 1.8,
+      "tags": [
+        "owl",
+        "hoot",
+        "night",
+        "forest"
+      ],
+      "prompt": "Owl hooting twice in a quiet night forest, clear low hoots, outdoor recording",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "animal.seagull": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Seagulls call \u2014 coast, harbour.",
+      "duration": 1.8,
+      "tags": [
+        "seagull",
+        "gull",
+        "coast",
+        "beach"
+      ],
+      "prompt": "Seagulls calling loudly by the sea, hard squawking cries, outdoor coastal recording",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "animal.horse.gallop": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A horse gallops. Loops.",
+      "duration": 4.0,
+      "tags": [
+        "horse",
+        "gallop",
+        "hooves",
+        "loop"
+      ],
+      "prompt": "Horse galloping fast on packed dirt, continuous rhythmic hoofbeats, outdoor recording",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.0
+      },
+      "loopable": true
+    },
+    "sport.golf": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A golf club strikes the ball.",
+      "duration": 0.8,
+      "tags": [
+        "golf",
+        "drive",
+        "club",
+        "tee"
+      ],
+      "prompt": "Golf driver striking a ball off a tee, hard cracking impact, outdoor recording",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "sport.bowling": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A bowling ball hits the pins.",
+      "duration": 2.5,
+      "tags": [
+        "bowling",
+        "strike",
+        "pins",
+        "alley"
+      ],
+      "prompt": "Bowling ball rolling down a lane and smashing into the pins, rumbling roll with a clattering strike",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "sport.pool.break": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A pool break scatters the balls.",
+      "duration": 2.0,
+      "tags": [
+        "pool",
+        "billiards",
+        "break",
+        "balls"
+      ],
+      "prompt": "Pool cue breaking a rack of billiard balls, hard crack with balls scattering across the table",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "sport.boxing.bell": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The boxing bell rings a round.",
+      "duration": 2.0,
+      "tags": [
+        "boxing",
+        "bell",
+        "round",
+        "ring"
+      ],
+      "prompt": "Boxing ring bell struck three times, loud ringing metallic clangs with ringing decay",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "sport.skate": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A skateboard rolls and grinds.",
+      "duration": 2.0,
+      "tags": [
+        "skate",
+        "grind",
+        "roll",
+        "board"
+      ],
+      "prompt": "Skateboard rolling on concrete then grinding along a metal rail, rumbling wheels with harsh scraping",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "sport.ski": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Skis carve through snow. Loops.",
+      "duration": 4.0,
+      "tags": [
+        "ski",
+        "snow",
+        "carve",
+        "loop"
+      ],
+      "prompt": "Skis carving through packed snow at speed, continuous scraping hiss, outdoor recording",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.0
+      },
+      "loopable": true
+    },
+    "sport.crowd.goal": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The crowd erupts at a goal.",
+      "duration": 3.0,
+      "tags": [
+        "goal",
+        "crowd",
+        "roar",
+        "celebrate"
+      ],
+      "prompt": "Stadium crowd erupting into a huge roar and cheering after a goal, outdoor stadium recording",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "sport.stadium": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Stadium crowd ambience. Loops.",
+      "duration": 6.0,
+      "tags": [
+        "stadium",
+        "crowd",
+        "ambience",
+        "loop"
+      ],
+      "prompt": "Large stadium crowd murmuring and occasionally cheering, continuous background, outdoor recording",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.5
+      },
+      "loopable": true
     }
   }
 }

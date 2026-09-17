@@ -16,20 +16,20 @@ edit the registry and run the tool again._
 
 > Modern mobile casual game audio: clean, bright, punchy, lightly processed. Not retro/8-bit, not cinematic/orchestral. Mono, dry (no long reverb tails), normalized to -1 dBFS peak.
 
-**51 of the 220 sounds in this pack are made by code and need nothing from you.**
-This checklist is only the 169 that need real audio.
+**51 of the 373 sounds in this pack are made by code and need nothing from you.**
+This checklist is only the 322 that need real audio.
 
-**Progress: 169 of 169 generated.**
+**Progress: 169 of 322 generated.**
 
 ## game
 
 - [x] **`weapon.pistol`** — A realistic handgun shot.
   - Target length: ~0.4s · generate **3 takes** (`weapon.pistol.1.wav`, `weapon.pistol.2.wav`, …)
-  - Prompt: `Loud gunshot from a 9mm pistol fired once, sharp explosive bang with a hard crack and a short punchy decay, recorded close and dry`
+  - Prompt: `Loud gunshot from a 9mm pistol fired once, hard explosive bang with a hard crack and a short punchy decay, recorded close and dry`
 
 - [x] **`weapon.shotgun`** — A shotgun blast.
   - Target length: ~0.7s · generate **2 takes** (`weapon.shotgun.1.wav`, `weapon.shotgun.2.wav`, …)
-  - Prompt: `Single shotgun blast, deep powerful boom with a bright crack on top and a short pump action click after, dry close recording`
+  - Prompt: `Single shotgun blast, deep powerful boom with a ringing crack on top and a short pump action click after, dry close recording`
 
 - [x] **`weapon.rifle.auto`** — A short burst of automatic fire. Loop or retrigger for sustained fire.
   - Target length: ~1.2s
@@ -37,7 +37,7 @@ This checklist is only the 169 that need real audio.
 
 - [x] **`weapon.reload`** — Reloading a weapon.
   - Target length: ~0.9s
-  - Prompt: `Gun reload, magazine ejected and a fresh clip slapped in then the slide racked, crisp metallic mechanical clicks, dry close recording`
+  - Prompt: `Gun reload, magazine ejected and a fresh clip slapped in then the slide racked, clean metallic mechanical clicks, dry close recording`
 
 - [x] **`weapon.empty`** — Out of ammo — the trigger clicks on nothing.
   - Target length: ~0.25s
@@ -77,11 +77,11 @@ This checklist is only the 169 that need real audio.
 
 - [x] **`step.grass`** — One footstep on grass. Play per step; the library varies pitch and picks a different take each time.
   - Target length: ~0.25s · generate **5 takes** (`step.grass.1.wav`, `step.grass.2.wav`, …)
-  - Prompt: `Single loud close-up footstep on grass, crisp dry rustle of blades with an earthy scuff, recorded right next to the shoe, no reverb`
+  - Prompt: `Single loud close-up footstep on grass, clean dry rustle of blades with an earthy scuff, recorded right next to the shoe, no reverb`
 
 - [x] **`step.wood`** — One footstep on wood. Play per step; the library varies pitch and picks a different take each time.
   - Target length: ~0.25s · generate **5 takes** (`step.wood.1.wav`, `step.wood.2.wav`, …)
-  - Prompt: `Single footstep on a hard hollow wooden floorboard, sharp bright woody knock with a crisp attack and a short hollow resonance, close dry recording, no reverb`
+  - Prompt: `Single footstep on a hard hollow wooden floorboard, hard ringing woody knock with a clean attack and a short hollow resonance, close dry recording, no reverb`
 
 - [x] **`step.stone`** — One footstep on stone. Play per step; the library varies pitch and picks a different take each time.
   - Target length: ~0.25s · generate **5 takes** (`step.stone.1.wav`, `step.stone.2.wav`, …)
@@ -137,7 +137,7 @@ This checklist is only the 169 that need real audio.
 
 - [x] **`break.glass`** — Glass, ice or a crystal shatters.
   - Target length: ~1.0s · generate **2 takes** (`break.glass.1.wav`, `break.glass.2.wav`, …)
-  - Prompt: `Pane of glass shattering, bright sharp crack followed by many small shards tinkling to the ground, dry close recording`
+  - Prompt: `Pane of glass shattering, ringing hard crack followed by many small shards tinkling to the ground, dry close recording`
 
 - [x] **`break.wood`** — A crate, plank, barrel or door breaks apart.
   - Target length: ~0.8s · generate **2 takes** (`break.wood.1.wav`, `break.wood.2.wav`, …)
@@ -237,7 +237,7 @@ This checklist is only the 169 that need real audio.
 
 - [x] **`animal.snake.hiss`** — A snake hisses — enemy warning, trap.
   - Target length: ~1.0s
-  - Prompt: `Loud snake hissing close up, sustained sharp air hiss, dry recording`
+  - Prompt: `Loud snake hissing close up, sustained fast air hiss, dry recording`
 
 - [x] **`animal.bee.buzz`** — An insect buzzes past — bee, fly, wasp enemy.
   - Target length: ~1.2s · generate **2 takes** (`animal.bee.buzz.1.wav`, `animal.bee.buzz.2.wav`, …)
@@ -289,7 +289,7 @@ This checklist is only the 169 that need real audio.
 
 - [x] **`weather.thunder`** — A thunderclap — storm, dramatic moment.
   - Target length: ~2.5s
-  - Prompt: `Loud thunderclap recorded close, sharp cracking strike followed by a long deep rolling rumble`
+  - Prompt: `Loud thunderclap recorded close, hard cracking strike followed by a long deep rolling rumble`
 
 - [x] **`nature.leaves`** — Rustling foliage — walking through bushes, searching undergrowth.
   - Target length: ~0.9s · generate **3 takes** (`nature.leaves.1.wav`, `nature.leaves.2.wav`, …)
@@ -305,7 +305,7 @@ This checklist is only the 169 that need real audio.
 
 - [x] **`crowd.gasp`** — The crowd gasps — a surprise, a near miss.
   - Target length: ~1.2s
-  - Prompt: `Loud crowd of people gasping in surprise together, short sharp intake of breath, dry recording`
+  - Prompt: `Loud crowd of people gasping in surprise together, short hard intake of breath, dry recording`
 
 - [x] **`voice.aww`** — A disappointed reaction to a loss.
   - Target length: ~1.0s
@@ -341,7 +341,7 @@ This checklist is only the 169 that need real audio.
 
 - [x] **`sport.ball.bounce`** — A ball bounces on a hard surface.
   - Target length: ~0.4s · generate **4 takes** (`sport.ball.bounce.1.wav`, `sport.ball.bounce.2.wav`, …)
-  - Prompt: `Loud basketball bouncing once on a hard wooden court, sharp rubber impact, dry indoor recording`
+  - Prompt: `Loud basketball bouncing once on a hard wooden court, hard rubber impact, dry indoor recording`
 
 - [x] **`sport.net.swish`** — A ball passes cleanly through a net — basket scored.
   - Target length: ~0.6s · generate **2 takes** (`sport.net.swish.1.wav`, `sport.net.swish.2.wav`, …)
@@ -365,7 +365,7 @@ This checklist is only the 169 that need real audio.
 
 - [x] **`sport.start.gun`** — A starting pistol fires — race begins.
   - Target length: ~0.8s
-  - Prompt: `Loud starting pistol firing once at a race, sharp cracking report, dry outdoor recording`
+  - Prompt: `Loud starting pistol firing once at a race, hard cracking report, dry outdoor recording`
 
 - [x] **`tool.hammer`** — Hammering a nail — building, crafting, repair.
   - Target length: ~0.5s · generate **4 takes** (`tool.hammer.1.wav`, `tool.hammer.2.wav`, …)
@@ -397,7 +397,7 @@ This checklist is only the 169 that need real audio.
 
 - [x] **`craft.forge`** — Hammering hot metal on an anvil — smithing, upgrading.
   - Target length: ~0.9s · generate **3 takes** (`craft.forge.1.wav`, `craft.forge.2.wav`, …)
-  - Prompt: `Loud blacksmith hammer striking hot metal on a steel anvil, bright ringing clang, dry workshop recording`
+  - Prompt: `Loud blacksmith hammer striking hot metal on a steel anvil, ringing ringing clang, dry workshop recording`
 
 - [x] **`craft.sew`** — Stitching fabric — tailoring, crafting.
   - Target length: ~0.9s · generate **2 takes** (`craft.sew.1.wav`, `craft.sew.2.wav`, …)
@@ -421,7 +421,7 @@ This checklist is only the 169 that need real audio.
 
 - [x] **`cook.chop`** — Chopping food on a board.
   - Target length: ~0.5s · generate **4 takes** (`cook.chop.1.wav`, `cook.chop.2.wav`, …)
-  - Prompt: `Loud sharp kitchen knife chopping a vegetable on a wooden board, single clean cut, dry recording`
+  - Prompt: `Loud hard kitchen knife chopping a vegetable on a wooden board, single clean cut, dry recording`
 
 - [x] **`cook.pour`** — Liquid poured into a container.
   - Target length: ~1.3s
@@ -433,7 +433,7 @@ This checklist is only the 169 that need real audio.
 
 - [x] **`cook.oven.ding`** — An oven or microwave finishes.
   - Target length: ~1.2s
-  - Prompt: `Kitchen timer bell struck hard by its hammer, loud bright metallic ding with a long ringing decay, microphone right next to the bell`
+  - Prompt: `Kitchen timer bell struck hard by its hammer, loud ringing metallic ding with a long ringing decay, microphone right next to the bell`
 
 - [x] **`cook.fridge.open`** — A fridge or cabinet opens.
   - Target length: ~1.0s
@@ -445,7 +445,7 @@ This checklist is only the 169 that need real audio.
 
 - [x] **`object.paper.crumple`** — Paper is crushed — discard, delete, note.
   - Target length: ~0.9s · generate **2 takes** (`object.paper.crumple.1.wav`, `object.paper.crumple.2.wav`, …)
-  - Prompt: `Loud sheet of paper being crumpled into a ball in two hands, crisp crackling, dry close recording`
+  - Prompt: `Loud sheet of paper being crumpled into a ball in two hands, clean crackling, dry close recording`
 
 - [x] **`object.page.turn`** — A page turns — book, journal, tutorial.
   - Target length: ~0.6s · generate **3 takes** (`object.page.turn.1.wav`, `object.page.turn.2.wav`, …)
@@ -493,11 +493,11 @@ This checklist is only the 169 that need real audio.
 
 - [x] **`object.balloon.pop`** — A balloon bursts — party, target, bubble.
   - Target length: ~0.5s · generate **3 takes** (`object.balloon.pop.1.wav`, `object.balloon.pop.2.wav`, …)
-  - Prompt: `Loud balloon popping close to the microphone, sharp rubber burst, dry recording`
+  - Prompt: `Loud balloon popping close to the microphone, hard rubber burst, dry recording`
 
 - [x] **`object.firework`** — A firework launches and bursts — celebration.
   - Target length: ~2.5s
-  - Prompt: `Loud firework whistling upward then bursting with a bright crackling explosion, outdoor recording`
+  - Prompt: `Loud firework whistling upward then bursting with a ringing crackling explosion, outdoor recording`
 
 - [x] **`vehicle.horn`** — A car horn sounds.
   - Target length: ~0.9s · generate **2 takes** (`vehicle.horn.1.wav`, `vehicle.horn.2.wav`, …)
@@ -529,7 +529,7 @@ This checklist is only the 169 that need real audio.
 
 - [x] **`vehicle.bike`** — A bicycle bell rings.
   - Target length: ~0.9s
-  - Prompt: `Loud bicycle bell ringing twice, bright metallic ping, dry outdoor recording`
+  - Prompt: `Loud bicycle bell ringing twice, ringing metallic ping, dry outdoor recording`
 
 - [x] **`machine.robot.servo`** — A robot joint moves — mech, turret, droid.
   - Target length: ~0.7s · generate **3 takes** (`machine.robot.servo.1.wav`, `machine.robot.servo.2.wav`, …)
@@ -537,7 +537,7 @@ This checklist is only the 169 that need real audio.
 
 - [x] **`machine.steam`** — Steam vents — machinery, valve, pressure release.
   - Target length: ~1.4s · generate **2 takes** (`machine.steam.1.wav`, `machine.steam.2.wav`, …)
-  - Prompt: `Loud burst of pressurised steam venting from a metal valve, sharp hissing release, dry recording`
+  - Prompt: `Loud burst of pressurised steam venting from a metal valve, forceful hissing release, dry recording`
 
 - [x] **`machine.conveyor`** — A conveyor or factory line runs. Loops.
   - Target length: ~3.0s
@@ -589,7 +589,7 @@ This checklist is only the 169 that need real audio.
 
 - [x] **`rpg.spell.cast`** — A generic spell is cast.
   - Target length: ~1.3s
-  - Prompt: `Loud magic spell being cast, swirling energy rush with a bright magical shimmer and a deep whoosh`
+  - Prompt: `Loud magic spell being cast, swirling energy rush with a ringing magical shimmer and a deep whoosh`
 
 - [x] **`rpg.curse`** — A dark spell or debuff lands.
   - Target length: ~1.5s
@@ -613,7 +613,7 @@ This checklist is only the 169 that need real audio.
 
 - [x] **`game.spawn`** — An enemy or object appears in the world.
   - Target length: ~0.9s
-  - Prompt: `Loud magical spawn sound, quick rising whoosh with a bright energetic pop as something appears`
+  - Prompt: `Loud magical spawn sound, quick rising whoosh with a ringing energetic pop as something appears`
 
 - [x] **`game.wave.start`** — A new wave or round begins — tower defence, survival.
   - Target length: ~1.8s
@@ -625,19 +625,623 @@ This checklist is only the 169 that need real audio.
 
 - [x] **`game.shield.break`** — A shield or barrier shatters.
   - Target length: ~1.0s
-  - Prompt: `Loud energy shield shattering, bright crystalline crack with an electric fizzing collapse`
+  - Prompt: `Loud energy shield shattering, ringing crystalline crack with an electric fizzing collapse`
 
 - [x] **`game.bullet.whizby`** — A projectile flies close past the player.
   - Target length: ~0.6s · generate **3 takes** (`game.bullet.whizby.1.wav`, `game.bullet.whizby.2.wav`, …)
-  - Prompt: `Loud bullet whizzing fast past the microphone, sharp air zip with a doppler pitch drop, dry recording`
+  - Prompt: `Loud bullet whizzing fast past the microphone, fast air zip with a doppler pitch drop, dry recording`
 
 - [x] **`game.ricochet`** — A bullet or projectile bounces off metal or stone.
   - Target length: ~0.8s · generate **3 takes** (`game.ricochet.1.wav`, `game.ricochet.2.wav`, …)
-  - Prompt: `Loud bullet ricocheting off metal, sharp metallic ping with a whining departure, dry recording`
+  - Prompt: `Loud bullet ricocheting off metal, ringing metallic ping with a whining departure, dry recording`
 
 - [x] **`game.portal`** — A portal opens or is entered.
   - Target length: ~2.0s
   - Prompt: `Loud magical portal opening, deep swirling vortex with rising energy and an otherworldly hum`
+
+- [ ] **`car.idle`** — Engine idling while parked or waiting on the grid. Loops.
+  - Target length: ~8.0s
+  - Prompt: `Car engine idling steadily while parked, continuous low rumbling tickover, microphone close to the exhaust`
+
+- [ ] **`car.accelerate`** — The car pulls away and gains speed.
+  - Target length: ~3.0s
+  - Prompt: `Car engine accelerating hard from standstill, rising roar climbing through the rev range, recorded close`
+
+- [ ] **`car.decelerate`** — The driver lifts off and the car slows.
+  - Target length: ~2.5s
+  - Prompt: `Car engine decelerating as the driver lifts off the throttle, falling roar settling to a burble, recorded close`
+
+- [ ] **`car.cruise`** — Steady driving at speed. Loops under gameplay.
+  - Target length: ~8.0s
+  - Prompt: `Car engine running at a steady cruising speed on a motorway, continuous even roar, microphone close to the engine`
+
+- [ ] **`car.redline`** — Engine held at maximum revs. Loops.
+  - Target length: ~6.0s
+  - Prompt: `Car engine screaming at maximum revs held at the redline, continuous high pitched roar, recorded close`
+
+- [ ] **`car.rev.blip`** — A quick throttle blip — showing off, gear match.
+  - Target length: ~1.2s · generate **3 takes** (`car.rev.blip.1.wav`, `car.rev.blip.2.wav`, …)
+  - Prompt: `Car engine given a quick hard throttle blip, hard rise and fall of the revs, recorded close`
+
+- [ ] **`car.start`** — The ignition turns and the engine catches.
+  - Target length: ~2.5s
+  - Prompt: `Car ignition starting, starter motor cranking then the engine firing up into an idle, recorded close`
+
+- [ ] **`car.start.fail`** — The engine cranks but will not start.
+  - Target length: ~2.5s
+  - Prompt: `Car engine failing to start, starter motor cranking repeatedly without the engine catching, recorded close`
+
+- [ ] **`car.stall`** — The engine cuts out.
+  - Target length: ~1.5s
+  - Prompt: `Car engine stalling and dying, revs dropping away into silence with a mechanical shudder, recorded close`
+
+- [ ] **`car.off`** — The driver switches the engine off.
+  - Target length: ~1.8s
+  - Prompt: `Car engine being switched off, revs falling away with a final mechanical settle, recorded close`
+
+- [ ] **`car.drift`** — The car slides sideways through a corner.
+  - Target length: ~3.0s
+  - Prompt: `Car tyres sliding sideways across asphalt in a long drift, sustained rubber squeal with the engine roaring behind`
+
+- [ ] **`car.skid`** — A short tyre chirp — hard turn, quick stop.
+  - Target length: ~1.0s · generate **3 takes** (`car.skid.1.wav`, `car.skid.2.wav`, …)
+  - Prompt: `Car tyres chirping briefly on asphalt during a hard turn, short rubber scrub, recorded close outdoors`
+
+- [ ] **`car.handbrake`** — A handbrake turn.
+  - Target length: ~2.0s
+  - Prompt: `Car handbrake lever ratcheting up followed by tyres breaking traction and squealing across asphalt`
+
+- [ ] **`car.tyre.squeal`** — Sustained tyre scrub through a long corner. Loops.
+  - Target length: ~6.0s
+  - Prompt: `Car tyres squealing continuously while cornering hard on asphalt, sustained rubber scrub, recorded close`
+
+- [ ] **`car.gear.up`** — An upshift.
+  - Target length: ~0.6s · generate **2 takes** (`car.gear.up.1.wav`, `car.gear.up.2.wav`, …)
+  - Prompt: `Car gear lever being shifted up a gear, solid mechanical clunk of the gate, recorded close`
+
+- [ ] **`car.gear.down`** — A downshift, often with a throttle blip.
+  - Target length: ~0.9s · generate **2 takes** (`car.gear.down.1.wav`, `car.gear.down.2.wav`, …)
+  - Prompt: `Car downshifting a gear with a quick throttle blip, mechanical gate clunk with a rev flare, recorded close`
+
+- [ ] **`car.turbo.spool`** — The turbo spools up under load.
+  - Target length: ~2.0s
+  - Prompt: `Car turbocharger spooling up under load, rising mechanical whistle building over the engine, recorded close`
+
+- [ ] **`car.turbo.blowoff`** — The blow-off valve releases on a gear change.
+  - Target length: ~0.8s · generate **2 takes** (`car.turbo.blowoff.1.wav`, `car.turbo.blowoff.2.wav`, …)
+  - Prompt: `Car turbo blow off valve releasing pressure, forceful hissing whoosh of escaping air, recorded close`
+
+- [ ] **`car.nitro`** — Nitrous boost fires.
+  - Target length: ~2.5s
+  - Prompt: `Nitrous boost firing in a race car, forceful hissing surge with the engine roar leaping in pitch`
+
+- [ ] **`car.backfire`** — The exhaust backfires — pops and bangs.
+  - Target length: ~1.0s · generate **3 takes** (`car.backfire.1.wav`, `car.backfire.2.wav`, …)
+  - Prompt: `Car exhaust backfiring, loud hard popping bangs from the tailpipe, recorded close`
+
+- [ ] **`car.suspension`** — The car lands or crosses a bump.
+  - Target length: ~0.9s · generate **2 takes** (`car.suspension.1.wav`, `car.suspension.2.wav`, …)
+  - Prompt: `Car suspension compressing hard as the car lands over a bump, metallic thump with a spring rebound`
+
+- [ ] **`car.scrape`** — The car scrapes along a wall or barrier.
+  - Target length: ~1.8s
+  - Prompt: `Car body scraping hard along a metal barrier, sustained grinding metal with sparks, recorded close`
+
+- [ ] **`car.crash.light`** — A minor collision — bump, tap, fender bender.
+  - Target length: ~1.2s
+  - Prompt: `Light car collision, dull metallic bump with plastic trim rattling, recorded close`
+
+- [ ] **`car.horn.long`** — A long angry horn blast.
+  - Target length: ~2.0s
+  - Prompt: `Car horn held down in a long angry blast, recorded close outdoors`
+
+- [ ] **`car.door.open`** — A car door opens.
+  - Target length: ~1.2s · generate **2 takes** (`car.door.open.1.wav`, `car.door.open.2.wav`, …)
+  - Prompt: `Car door handle being pulled and the door swinging open, metallic latch and hinge, recorded close`
+
+- [ ] **`car.door.close`** — A car door shuts.
+  - Target length: ~1.0s · generate **2 takes** (`car.door.close.1.wav`, `car.door.close.2.wav`, …)
+  - Prompt: `Car door being shut firmly, solid heavy thunk of the latch, recorded close`
+
+- [ ] **`car.window`** — An electric window winds down.
+  - Target length: ~1.5s
+  - Prompt: `Electric car window winding down, small motor whirring with glass sliding in the seal, recorded close`
+
+- [ ] **`car.seatbelt`** — A seatbelt is pulled and clicked in.
+  - Target length: ~1.5s
+  - Prompt: `Car seatbelt being pulled out and clicked into the buckle, webbing zip with a plastic click, recorded close`
+
+- [ ] **`car.indicator`** — The indicator ticks. Loops.
+  - Target length: ~3.0s
+  - Prompt: `Car indicator relay ticking steadily, continuous even clicking, recorded close in the cabin`
+
+- [ ] **`car.wiper`** — Windscreen wipers sweep. Loops.
+  - Target length: ~4.0s
+  - Prompt: `Car windscreen wipers sweeping back and forth across wet glass, continuous rubber squeak, recorded in the cabin`
+
+- [ ] **`moto.idle`** — A motorbike idles. Loops.
+  - Target length: ~6.0s
+  - Prompt: `Motorcycle engine idling, continuous uneven thumping tickover, microphone close to the exhaust`
+
+- [ ] **`moto.rev`** — A motorbike revs hard.
+  - Target length: ~2.0s · generate **2 takes** (`moto.rev.1.wav`, `moto.rev.2.wav`, …)
+  - Prompt: `Motorcycle engine revved hard, fast rising snarl from the exhaust, recorded close`
+
+- [ ] **`moto.pass`** — A motorbike flies past.
+  - Target length: ~2.5s
+  - Prompt: `Motorcycle speeding past the microphone at high speed, rising then falling doppler roar, outdoor recording`
+
+- [ ] **`truck.horn`** — An air horn blasts.
+  - Target length: ~2.0s
+  - Prompt: `Large truck air horn blasting twice, deep powerful honk, recorded outdoors`
+
+- [ ] **`truck.airbrake`** — Air brakes release with a hiss.
+  - Target length: ~1.5s
+  - Prompt: `Truck air brakes releasing with a hard pressurised hiss, recorded close`
+
+- [ ] **`truck.idle`** — A diesel truck idles. Loops.
+  - Target length: ~8.0s
+  - Prompt: `Large diesel truck engine idling, continuous deep clattering rumble, microphone close to the engine`
+
+- [ ] **`race.light`** — A starting light changes on the grid.
+  - Target length: ~0.8s · generate **2 takes** (`race.light.1.wav`, `race.light.2.wav`, …)
+  - Prompt: `Motorsport starting light beeping once on the grid, single clear electronic tone, recorded close`
+
+- [ ] **`race.lap`** — A lap is completed.
+  - Target length: ~1.2s
+  - Prompt: `Racing game lap completed sound, clear electronic double chime with a satisfying confirmation tone`
+
+- [ ] **`race.finish`** — The chequered flag — race over.
+  - Target length: ~2.5s
+  - Prompt: `Race finish line moment, crowd cheering with an air horn blast as a car speeds past, outdoor recording`
+
+- [ ] **`race.flag.wave`** — A flag snaps in the wind.
+  - Target length: ~1.0s · generate **2 takes** (`race.flag.wave.1.wav`, `race.flag.wave.2.wav`, …)
+  - Prompt: `Large flag snapping and flapping hard in strong wind, heavy cloth cracking, outdoor recording`
+
+- [ ] **`gun.smg`** — A submachine gun burst.
+  - Target length: ~1.5s
+  - Prompt: `Submachine gun firing a rapid burst, fast dry cracking shots with mechanical action, recorded close`
+
+- [ ] **`gun.sniper`** — A sniper rifle fires.
+  - Target length: ~2.0s
+  - Prompt: `Sniper rifle firing a single shot, huge cracking report with a long decaying tail, recorded outdoors`
+
+- [ ] **`gun.revolver`** — A revolver fires.
+  - Target length: ~1.0s · generate **2 takes** (`gun.revolver.1.wav`, `gun.revolver.2.wav`, …)
+  - Prompt: `Revolver firing a single round, loud deep cracking report, recorded close and dry`
+
+- [ ] **`gun.silenced`** — A suppressed shot.
+  - Target length: ~0.7s · generate **2 takes** (`gun.silenced.1.wav`, `gun.silenced.2.wav`, …)
+  - Prompt: `Suppressed pistol firing a single round, muffled thumping report with the slide cycling, recorded close`
+
+- [ ] **`gun.minigun`** — A minigun spins up and fires. Loops.
+  - Target length: ~4.0s
+  - Prompt: `Minigun firing continuously at high rate, rapid overlapping shots with a spinning barrel whine`
+
+- [ ] **`gun.shell.drop`** — A spent shell hits the ground.
+  - Target length: ~1.0s · generate **3 takes** (`gun.shell.drop.1.wav`, `gun.shell.drop.2.wav`, …)
+  - Prompt: `Spent brass shell casing bouncing on a concrete floor, ringing metallic tinkling, recorded close`
+
+- [ ] **`gun.mag.out`** — A magazine is ejected.
+  - Target length: ~0.7s · generate **2 takes** (`gun.mag.out.1.wav`, `gun.mag.out.2.wav`, …)
+  - Prompt: `Gun magazine being released and dropping free, metallic click with a clatter, recorded close`
+
+- [ ] **`gun.mag.in`** — A fresh magazine is seated.
+  - Target length: ~0.7s · generate **2 takes** (`gun.mag.in.1.wav`, `gun.mag.in.2.wav`, …)
+  - Prompt: `Fresh gun magazine being slapped firmly into the receiver, solid metallic clack, recorded close`
+
+- [ ] **`gun.bolt`** — The bolt or slide is pulled.
+  - Target length: ~0.6s · generate **2 takes** (`gun.bolt.1.wav`, `gun.bolt.2.wav`, …)
+  - Prompt: `Rifle bolt being pulled back and released, heavy metallic rack, recorded close`
+
+- [ ] **`gun.grenade.pin`** — A grenade pin is pulled.
+  - Target length: ~0.7s
+  - Prompt: `Grenade safety pin being pulled out with the lever springing off, small metallic clicks, recorded close`
+
+- [ ] **`gun.grenade.throw`** — A grenade is thrown.
+  - Target length: ~0.8s
+  - Prompt: `Grenade being thrown through the air, cloth swish with a metallic tumble, recorded close`
+
+- [ ] **`gun.rocket.launch`** — A rocket launcher fires.
+  - Target length: ~2.0s
+  - Prompt: `Rocket launcher firing, huge whooshing ignition with a roaring rocket motor departing, recorded close`
+
+- [ ] **`gun.flamethrower`** — A flamethrower burns. Loops.
+  - Target length: ~4.0s
+  - Prompt: `Flamethrower burning continuously, roaring jet of flame with crackling fire, recorded close`
+
+- [ ] **`gun.crossbow`** — A crossbow looses a bolt.
+  - Target length: ~0.9s · generate **2 takes** (`gun.crossbow.1.wav`, `gun.crossbow.2.wav`, …)
+  - Prompt: `Crossbow firing a bolt, taut string snapping forward with a wooden thunk, recorded close`
+
+- [ ] **`gun.reload.shotgun`** — Shells are pumped into a shotgun.
+  - Target length: ~2.0s
+  - Prompt: `Shotgun being loaded with shells and pumped, mechanical metallic racking, recorded close`
+
+- [ ] **`melee.stab`** — A blade goes in.
+  - Target length: ~0.7s · generate **3 takes** (`melee.stab.1.wav`, `melee.stab.2.wav`, …)
+  - Prompt: `Knife stabbing into a melon, wet penetrating impact, recorded close, cartoon action style`
+
+- [ ] **`melee.block`** — A hit is blocked on a shield.
+  - Target length: ~0.8s · generate **2 takes** (`melee.block.1.wav`, `melee.block.2.wav`, …)
+  - Prompt: `Sword striking a wooden shield with a metal boss, loud blocking impact with a ringing clang, recorded close`
+
+- [ ] **`melee.parry`** — A blade is deflected at the last moment.
+  - Target length: ~0.7s · generate **2 takes** (`melee.parry.1.wav`, `melee.parry.2.wav`, …)
+  - Prompt: `Two sword blades scraping and deflecting off each other, quick metallic ring, recorded close`
+
+- [ ] **`melee.sheathe`** — A blade is put away.
+  - Target length: ~0.9s · generate **2 takes** (`melee.sheathe.1.wav`, `melee.sheathe.2.wav`, …)
+  - Prompt: `Steel sword being slid back into a leather scabbard, metallic scraping slide, recorded close`
+
+- [ ] **`melee.axe.swing`** — A heavy axe swings.
+  - Target length: ~0.7s · generate **2 takes** (`melee.axe.swing.1.wav`, `melee.axe.swing.2.wav`, …)
+  - Prompt: `Heavy battle axe swinging through the air, deep slow air whoosh, recorded close`
+
+- [ ] **`melee.hammer.swing`** — A war hammer swings.
+  - Target length: ~0.8s · generate **2 takes** (`melee.hammer.swing.1.wav`, `melee.hammer.swing.2.wav`, …)
+  - Prompt: `Heavy war hammer swinging through the air, deep booming air whoosh, recorded close`
+
+- [ ] **`melee.spear`** — A spear thrusts.
+  - Target length: ~0.6s · generate **2 takes** (`melee.spear.1.wav`, `melee.spear.2.wav`, …)
+  - Prompt: `Wooden spear thrusting fast through the air, fast air whoosh with a shaft rattle, recorded close`
+
+- [ ] **`melee.whip`** — A whip cracks.
+  - Target length: ~0.8s · generate **2 takes** (`melee.whip.1.wav`, `melee.whip.2.wav`, …)
+  - Prompt: `Leather whip cracking hard, hard explosive snap with a leather hiss, recorded close`
+
+- [ ] **`melee.kick`** — A heavy kick lands.
+  - Target length: ~0.5s · generate **3 takes** (`melee.kick.1.wav`, `melee.kick.2.wav`, …)
+  - Prompt: `Heavy boot kicking into a body, dull thudding impact with cloth, cartoon action style, recorded close`
+
+- [ ] **`melee.dodge`** — A dodge or evade — body moving fast.
+  - Target length: ~0.5s · generate **3 takes** (`melee.dodge.1.wav`, `melee.dodge.2.wav`, …)
+  - Prompt: `Fast body movement dodging, quick cloth and air whoosh, recorded close`
+
+- [ ] **`magic.lightning.cast`** — A lightning spell is cast.
+  - Target length: ~1.4s
+  - Prompt: `Lightning spell being cast, crackling electrical charge building into a hard thunderous discharge`
+
+- [ ] **`magic.lightning.hit`** — Lightning strikes a target.
+  - Target length: ~1.2s · generate **2 takes** (`magic.lightning.hit.1.wav`, `magic.lightning.hit.2.wav`, …)
+  - Prompt: `Lightning bolt striking a target, violent electrical crack with a sizzling aftermath`
+
+- [ ] **`magic.fire.cast`** — A fire spell winds up.
+  - Target length: ~1.3s
+  - Prompt: `Fire spell being conjured, swelling roar of flames gathering with a whooshing ignition`
+
+- [ ] **`magic.fire.hit`** — A fireball lands.
+  - Target length: ~1.2s · generate **2 takes** (`magic.fire.hit.1.wav`, `magic.fire.hit.2.wav`, …)
+  - Prompt: `Fireball impacting a target, explosive burst of flame with crackling burning aftermath`
+
+- [ ] **`magic.ice.cast`** — An ice spell winds up.
+  - Target length: ~1.3s
+  - Prompt: `Ice spell being conjured, crystalline chiming with a rising cold wind`
+
+- [ ] **`magic.ice.hit`** — Ice strikes and shatters on a target.
+  - Target length: ~1.2s · generate **2 takes** (`magic.ice.hit.1.wav`, `magic.ice.hit.2.wav`, …)
+  - Prompt: `Ice spell impacting a target, hard crystalline shatter with frozen shards scattering`
+
+- [ ] **`magic.wind`** — A wind or gust spell.
+  - Target length: ~1.5s
+  - Prompt: `Wind spell being cast, powerful rushing gust of air sweeping past with a whistling swirl`
+
+- [ ] **`magic.earth`** — An earth or stone spell.
+  - Target length: ~1.6s
+  - Prompt: `Earth spell erupting, heavy grinding stone rising with rubble and a deep ground rumble`
+
+- [ ] **`magic.holy`** — A holy or blessing spell.
+  - Target length: ~2.0s
+  - Prompt: `Holy blessing spell, radiant choir-like shimmer with ringing bells and a warm rising glow`
+
+- [ ] **`magic.dark`** — A dark or shadow spell.
+  - Target length: ~1.8s
+  - Prompt: `Dark shadow spell being cast, deep ominous swell with whispering void and a sinister rush`
+
+- [ ] **`magic.shield.up`** — A magic barrier comes up.
+  - Target length: ~1.2s
+  - Prompt: `Magical shield forming, rising crystalline hum sealing into a steady protective tone`
+
+- [ ] **`magic.shield.hit`** — Something strikes a magic barrier.
+  - Target length: ~0.8s · generate **2 takes** (`magic.shield.hit.1.wav`, `magic.shield.hit.2.wav`, …)
+  - Prompt: `Projectile striking a magical energy shield, ringing electric deflection with a ringing wobble`
+
+- [ ] **`scifi.laser.charge`** — An energy weapon charges before firing.
+  - Target length: ~1.8s
+  - Prompt: `Science fiction energy weapon charging up, rising electronic whine building to a peak, synthetic recording`
+
+- [ ] **`scifi.shield.hit`** — A ship or suit shield takes a hit.
+  - Target length: ~0.9s · generate **2 takes** (`scifi.shield.hit.1.wav`, `scifi.shield.hit.2.wav`, …)
+  - Prompt: `Science fiction energy shield absorbing an impact, electric wobbling deflection with a metallic ring`
+
+- [ ] **`scifi.alarm`** — A ship or base alarm. Loops.
+  - Target length: ~4.0s
+  - Prompt: `Science fiction ship alarm klaxon sounding repeatedly, continuous urgent electronic alert`
+
+- [ ] **`scifi.engine.hum`** — Spaceship engine hum. Loops.
+  - Target length: ~6.0s
+  - Prompt: `Science fiction spaceship engine humming steadily, continuous deep electronic drone, synthetic recording`
+
+- [ ] **`scifi.warp`** — A jump to lightspeed.
+  - Target length: ~2.5s
+  - Prompt: `Spaceship jumping to lightspeed, deep rising whoosh building into an explosive departure`
+
+- [ ] **`scifi.door`** — An automatic door slides open.
+  - Target length: ~1.2s · generate **2 takes** (`scifi.door.1.wav`, `scifi.door.2.wav`, …)
+  - Prompt: `Science fiction automatic door sliding open with a pneumatic hiss and mechanical servo, synthetic recording`
+
+- [ ] **`scifi.computer.beep`** — A console acknowledges input.
+  - Target length: ~0.5s · generate **3 takes** (`scifi.computer.beep.1.wav`, `scifi.computer.beep.2.wav`, …)
+  - Prompt: `Science fiction computer console beeping a short confirmation tone, clean synthetic recording`
+
+- [ ] **`scifi.robot.talk`** — A robot speaks in machine noise.
+  - Target length: ~1.4s · generate **2 takes** (`scifi.robot.talk.1.wav`, `scifi.robot.talk.2.wav`, …)
+  - Prompt: `Small robot chattering in electronic beeps and warbles, wordless machine speech, synthetic recording`
+
+- [ ] **`step.carpet`** — One footstep on on thick carpet. Play per step; the library varies pitch and picks a different take each time.
+  - Target length: ~0.25s · generate **5 takes** (`step.carpet.1.wav`, `step.carpet.2.wav`, …)
+  - Prompt: `Single footstep on on thick carpet`
+
+- [ ] **`step.mud`** — One footstep on through wet mud. Play per step; the library varies pitch and picks a different take each time.
+  - Target length: ~0.25s · generate **5 takes** (`step.mud.1.wav`, `step.mud.2.wav`, …)
+  - Prompt: `Single footstep on through wet mud`
+
+- [ ] **`step.tile`** — One footstep on on hard ceramic tiles. Play per step; the library varies pitch and picks a different take each time.
+  - Target length: ~0.25s · generate **5 takes** (`step.tile.1.wav`, `step.tile.2.wav`, …)
+  - Prompt: `Single footstep on on hard ceramic tiles`
+
+- [ ] **`step.ice`** — One footstep on on solid ice. Play per step; the library varies pitch and picks a different take each time.
+  - Target length: ~0.25s · generate **5 takes** (`step.ice.1.wav`, `step.ice.2.wav`, …)
+  - Prompt: `Single footstep on on solid ice`
+
+- [ ] **`step.leaves`** — One footstep on through dry fallen leaves. Play per step; the library varies pitch and picks a different take each time.
+  - Target length: ~0.25s · generate **5 takes** (`step.leaves.1.wav`, `step.leaves.2.wav`, …)
+  - Prompt: `Single footstep on through dry fallen leaves`
+
+- [ ] **`step.stairs`** — One footstep on up a wooden staircase. Play per step; the library varies pitch and picks a different take each time.
+  - Target length: ~0.25s · generate **5 takes** (`step.stairs.1.wav`, `step.stairs.2.wav`, …)
+  - Prompt: `Single footstep on up a wooden staircase`
+
+- [ ] **`step.run.stone`** — One footstep while running on stone. Faster and harder than walking.
+  - Target length: ~0.2s · generate **5 takes** (`step.run.stone.1.wav`, `step.run.stone.2.wav`, …)
+  - Prompt: `Single running footstep on stone`
+
+- [ ] **`water.drip`** — A single drip — cave, leak, tension.
+  - Target length: ~0.8s · generate **3 takes** (`water.drip.1.wav`, `water.drip.2.wav`, …)
+  - Prompt: `Single water drop falling into a shallow puddle, clear plink with a small echo, recorded close`
+
+- [ ] **`water.tap`** — A running tap. Loops.
+  - Target length: ~4.0s
+  - Prompt: `Water running steadily from a kitchen tap into a sink, continuous splashing stream, recorded close`
+
+- [ ] **`water.underwater`** — Submerged ambience. Loops.
+  - Target length: ~6.0s
+  - Prompt: `Underwater ambience with muffled low rumble and bubbles, continuous submerged sound, recorded with a hydrophone`
+
+- [ ] **`water.bubble`** — Bubbles rise through water.
+  - Target length: ~1.2s · generate **3 takes** (`water.bubble.1.wav`, `water.bubble.2.wav`, …)
+  - Prompt: `Air bubbles rising through water, gurgling glugging burst, recorded close`
+
+- [ ] **`water.dive`** — A body enters the water.
+  - Target length: ~1.5s
+  - Prompt: `Person diving into a swimming pool, big plunging splash with water churning after, recorded close`
+
+- [ ] **`water.wave.crash`** — A big wave breaks.
+  - Target length: ~2.5s
+  - Prompt: `Large ocean wave crashing hard onto rocks, powerful churning break with foam hissing after, outdoor recording`
+
+- [ ] **`water.fountain`** — A fountain runs. Loops.
+  - Target length: ~4.0s
+  - Prompt: `Ornamental stone fountain running, continuous falling water splashing into a pool, outdoor recording`
+
+- [ ] **`fire.ignite`** — Something catches light.
+  - Target length: ~1.5s
+  - Prompt: `Fire igniting suddenly, hard whooshing burst of flame catching and settling into a burn, recorded close`
+
+- [ ] **`fire.torch`** — A handheld torch burns. Loops.
+  - Target length: ~4.0s
+  - Prompt: `Handheld burning torch, continuous flapping flame with crackling, recorded close`
+
+- [ ] **`fire.extinguish`** — A flame is put out.
+  - Target length: ~1.5s
+  - Prompt: `Fire being doused with water, violent hissing steam as the flames die out, recorded close`
+
+- [ ] **`fire.match`** — A match is struck.
+  - Target length: ~1.2s · generate **3 takes** (`fire.match.1.wav`, `fire.match.2.wav`, …)
+  - Prompt: `Match being struck on a box and catching light, gritty scrape with a flaring ignition, recorded close`
+
+- [ ] **`fire.lighter`** — A lighter flicks on.
+  - Target length: ~0.8s · generate **2 takes** (`fire.lighter.1.wav`, `fire.lighter.2.wav`, …)
+  - Prompt: `Cigarette lighter being flicked, metal wheel sparking with a small flame catching, recorded close`
+
+- [ ] **`weather.rain.light`** — Light rain. Loops.
+  - Target length: ~6.0s
+  - Prompt: `Light drizzling rain falling on pavement, continuous gentle patter, clean field recording, no music`
+
+- [ ] **`weather.rain.heavy`** — Heavy downpour. Loops.
+  - Target length: ~6.0s
+  - Prompt: `Heavy torrential rain pouring down hard, continuous roaring downpour, clean field recording, no music`
+
+- [ ] **`weather.rain.window`** — Rain on glass. Loops.
+  - Target length: ~6.0s
+  - Prompt: `Rain drumming against a window pane from inside, continuous tapping on glass, clean recording, no music`
+
+- [ ] **`weather.storm.wind`** — Storm wind howling. Loops.
+  - Target length: ~8.0s
+  - Prompt: `Powerful storm wind howling and gusting hard, continuous roaring blasts, clean field recording, no music`
+
+- [ ] **`weather.thunder.distant`** — Thunder rolls far away.
+  - Target length: ~3.5s
+  - Prompt: `Distant thunder rolling across the sky, long low rumbling growl with no sharp crack`
+
+- [ ] **`door.wood.open`** — A wooden door opens.
+  - Target length: ~1.3s · generate **2 takes** (`door.wood.open.1.wav`, `door.wood.open.2.wav`, …)
+  - Prompt: `Wooden door swinging open on dry hinges, loud creaking with a final knock, recorded close`
+
+- [ ] **`door.metal.open`** — A heavy metal door opens.
+  - Target length: ~1.6s
+  - Prompt: `Heavy steel industrial door being pushed open, loud grinding metal with a booming echo, recorded close`
+
+- [ ] **`door.slide`** — A sliding door runs on its track.
+  - Target length: ~1.4s
+  - Prompt: `Sliding glass door running along its track and stopping, rolling wheels with a final bump, recorded close`
+
+- [ ] **`door.knock`** — Someone knocks.
+  - Target length: ~1.2s · generate **2 takes** (`door.knock.1.wav`, `door.knock.2.wav`, …)
+  - Prompt: `Firm knuckles knocking three times on a solid wooden door, loud and close, dry recording`
+
+- [ ] **`door.bell`** — A doorbell rings.
+  - Target length: ~2.0s
+  - Prompt: `Classic two tone doorbell chiming, ringing ding dong with a ringing decay, recorded close`
+
+- [ ] **`door.locked`** — A locked door rattles.
+  - Target length: ~1.2s · generate **2 takes** (`door.locked.1.wav`, `door.locked.2.wav`, …)
+  - Prompt: `Locked door handle being rattled hard without opening, metallic clattering, recorded close`
+
+- [ ] **`door.slam`** — A door slams shut.
+  - Target length: ~1.2s · generate **2 takes** (`door.slam.1.wav`, `door.slam.2.wav`, …)
+  - Prompt: `Wooden door being slammed shut hard, explosive booming bang with the frame rattling, recorded close`
+
+- [ ] **`horror.scream`** — A terrified scream.
+  - Target length: ~2.0s
+  - Prompt: `Terrified human scream of fear, loud shrieking wail, wordless, no speech, dry close recording`
+
+- [ ] **`horror.growl.deep`** — Something very large growls in the dark.
+  - Target length: ~2.5s
+  - Prompt: `Enormous creature growling deep in the dark, low rumbling menacing throat, wordless, recorded close`
+
+- [ ] **`horror.musicbox`** — A music box plays — classic dread.
+  - Target length: ~4.0s
+  - Prompt: `Old wind up music box playing a slow simple lullaby, delicate metallic chimes slightly out of tune, recorded close`
+
+- [ ] **`horror.knock.slow`** — Slow deliberate knocking.
+  - Target length: ~2.5s
+  - Prompt: `Three slow heavy knocks on a distant wooden door, ominous and deliberate, hollow room`
+
+- [ ] **`horror.laugh`** — An unsettling laugh.
+  - Target length: ~2.0s
+  - Prompt: `Sinister low laughter, slow menacing chuckle, wordless, no speech, dry close recording`
+
+- [ ] **`horror.static`** — Radio or TV static. Loops.
+  - Target length: ~4.0s
+  - Prompt: `Radio static hissing with occasional crackling interference, continuous, recorded close`
+
+- [ ] **`kitchen.kettle`** — A kettle comes to the boil.
+  - Target length: ~3.0s
+  - Prompt: `Metal kettle heating and whistling as it comes to the boil, rising steam whistle, recorded close`
+
+- [ ] **`kitchen.microwave`** — A microwave finishes and beeps.
+  - Target length: ~1.5s
+  - Prompt: `Microwave oven beeping three times when finished, clear electronic tones, recorded close`
+
+- [ ] **`kitchen.blender`** — A blender runs.
+  - Target length: ~2.5s
+  - Prompt: `Kitchen blender running at high speed grinding ice, loud motor whine with rattling, recorded close`
+
+- [ ] **`kitchen.egg.crack`** — An egg is cracked.
+  - Target length: ~0.8s · generate **2 takes** (`kitchen.egg.crack.1.wav`, `kitchen.egg.crack.2.wav`, …)
+  - Prompt: `Egg being cracked on the edge of a bowl and opened, brittle shell crack with a wet slop, recorded close`
+
+- [ ] **`kitchen.can.open`** — A drink can is opened.
+  - Target length: ~1.0s · generate **2 takes** (`kitchen.can.open.1.wav`, `kitchen.can.open.2.wav`, …)
+  - Prompt: `Aluminium drink can being opened, ringing metallic crack with a hissing fizz, recorded close`
+
+- [ ] **`kitchen.bottle.open`** — A bottle is uncorked or opened.
+  - Target length: ~1.0s · generate **2 takes** (`kitchen.bottle.open.1.wav`, `kitchen.bottle.open.2.wav`, …)
+  - Prompt: `Cork being pulled from a glass bottle, deep hollow pop, recorded close`
+
+- [ ] **`kitchen.cutlery`** — Cutlery clatters on a plate.
+  - Target length: ~1.0s · generate **2 takes** (`kitchen.cutlery.1.wav`, `kitchen.cutlery.2.wav`, …)
+  - Prompt: `Metal knife and fork clattering onto a ceramic plate, ringing clinking, recorded close`
+
+- [ ] **`kitchen.sip`** — A drink is sipped.
+  - Target length: ~1.0s · generate **2 takes** (`kitchen.sip.1.wav`, `kitchen.sip.2.wav`, …)
+  - Prompt: `Person taking a sip of a drink and swallowing, wet gulp, recorded close`
+
+- [ ] **`office.printer`** — A printer prints a page.
+  - Target length: ~3.0s
+  - Prompt: `Office printer feeding and printing a sheet of paper, mechanical whirring with paper rollers, recorded close`
+
+- [ ] **`office.drawer`** — A drawer opens or closes.
+  - Target length: ~1.2s · generate **2 takes** (`office.drawer.1.wav`, `office.drawer.2.wav`, …)
+  - Prompt: `Wooden desk drawer being pulled open and pushed shut, sliding wood with a final knock, recorded close`
+
+- [ ] **`office.stapler`** — A stapler clicks.
+  - Target length: ~0.6s · generate **2 takes** (`office.stapler.1.wav`, `office.stapler.2.wav`, …)
+  - Prompt: `Desk stapler being pressed down firmly, ringing metallic punch, recorded close`
+
+- [ ] **`animal.dog.growl`** — A dog growls a warning.
+  - Target length: ~1.5s · generate **2 takes** (`animal.dog.growl.1.wav`, `animal.dog.growl.2.wav`, …)
+  - Prompt: `Dog growling low in warning, rumbling threatening throat, recorded close`
+
+- [ ] **`animal.cat.purr`** — A cat purrs. Loops.
+  - Target length: ~4.0s
+  - Prompt: `Cat purring contentedly, continuous soft rumbling vibration, microphone close to the cat`
+
+- [ ] **`animal.cat.hiss`** — A cat hisses.
+  - Target length: ~1.0s · generate **2 takes** (`animal.cat.hiss.1.wav`, `animal.cat.hiss.2.wav`, …)
+  - Prompt: `Angry cat hissing sharply, sudden air hiss with a spit, recorded close`
+
+- [ ] **`animal.bird.flap`** — Wings beat as a bird takes off.
+  - Target length: ~1.2s · generate **2 takes** (`animal.bird.flap.1.wav`, `animal.bird.flap.2.wav`, …)
+  - Prompt: `Large bird taking off with heavy wing beats, flapping feathers pushing air, recorded close`
+
+- [ ] **`animal.rooster`** — A rooster crows — morning, farm.
+  - Target length: ~1.8s
+  - Prompt: `Rooster crowing loudly at dawn, full cock a doodle doo, outdoor farm recording`
+
+- [ ] **`animal.lion.roar`** — A lion roars.
+  - Target length: ~2.5s
+  - Prompt: `Lion roaring powerfully, deep full throated roar, recorded close`
+
+- [ ] **`animal.bear.growl`** — A bear growls.
+  - Target length: ~2.0s
+  - Prompt: `Large bear growling threateningly, deep guttural rumble, recorded close`
+
+- [ ] **`animal.owl`** — An owl hoots at night.
+  - Target length: ~1.8s
+  - Prompt: `Owl hooting twice in a quiet night forest, clear low hoots, outdoor recording`
+
+- [ ] **`animal.seagull`** — Seagulls call — coast, harbour.
+  - Target length: ~1.8s
+  - Prompt: `Seagulls calling loudly by the sea, hard squawking cries, outdoor coastal recording`
+
+- [ ] **`animal.horse.gallop`** — A horse gallops. Loops.
+  - Target length: ~4.0s
+  - Prompt: `Horse galloping fast on packed dirt, continuous rhythmic hoofbeats, outdoor recording`
+
+- [ ] **`sport.golf`** — A golf club strikes the ball.
+  - Target length: ~0.8s · generate **2 takes** (`sport.golf.1.wav`, `sport.golf.2.wav`, …)
+  - Prompt: `Golf driver striking a ball off a tee, hard cracking impact, outdoor recording`
+
+- [ ] **`sport.bowling`** — A bowling ball hits the pins.
+  - Target length: ~2.5s
+  - Prompt: `Bowling ball rolling down a lane and smashing into the pins, rumbling roll with a clattering strike`
+
+- [ ] **`sport.pool.break`** — A pool break scatters the balls.
+  - Target length: ~2.0s
+  - Prompt: `Pool cue breaking a rack of billiard balls, hard crack with balls scattering across the table`
+
+- [ ] **`sport.boxing.bell`** — The boxing bell rings a round.
+  - Target length: ~2.0s
+  - Prompt: `Boxing ring bell struck three times, loud ringing metallic clangs with ringing decay`
+
+- [ ] **`sport.skate`** — A skateboard rolls and grinds.
+  - Target length: ~2.0s
+  - Prompt: `Skateboard rolling on concrete then grinding along a metal rail, rumbling wheels with harsh scraping`
+
+- [ ] **`sport.ski`** — Skis carve through snow. Loops.
+  - Target length: ~4.0s
+  - Prompt: `Skis carving through packed snow at speed, continuous scraping hiss, outdoor recording`
+
+- [ ] **`sport.crowd.goal`** — The crowd erupts at a goal.
+  - Target length: ~3.0s
+  - Prompt: `Stadium crowd erupting into a huge roar and cheering after a goal, outdoor stadium recording`
+
+- [ ] **`sport.stadium`** — Stadium crowd ambience. Loops.
+  - Target length: ~6.0s
+  - Prompt: `Large stadium crowd murmuring and occasionally cheering, continuous background, outdoor recording`
 
 ## reward
 
@@ -667,7 +1271,7 @@ This checklist is only the 169 that need real audio.
 
 - [x] **`state.win`** — The level is completed. Plays once on the Success screen.
   - Target length: ~1.8s
-  - Prompt: `Short happy level complete fanfare for a casual mobile game, bright playful ascending melody on marimba and glockenspiel with a cheerful sparkle ending, no orchestra, no drums`
+  - Prompt: `Short happy level complete fanfare for a casual mobile game, ringing playful ascending melody on marimba and glockenspiel with a cheerful sparkle ending, no orchestra, no drums`
 
 - [x] **`state.lose`** — The level is failed. Plays once on the Fail screen.
   - Target length: ~1.5s
@@ -702,3 +1306,11 @@ This checklist is only the 169 that need real audio.
 - [x] **`voice.countdown.go`** — A voice shouts GO at the start of a race or round.
   - Target length: ~0.8s
   - Prompt: `Loud energetic male voice shouting the single word GO, sports announcer style, dry close recording`
+
+- [ ] **`phone.ring`** — A phone rings.
+  - Target length: ~3.0s
+  - Prompt: `Mobile phone ringing with a classic electronic ringtone, repeating trill, recorded close`
+
+- [ ] **`phone.vibrate`** — A phone buzzes on a surface.
+  - Target length: ~2.0s · generate **2 takes** (`phone.vibrate.1.wav`, `phone.vibrate.2.wav`, …)
+  - Prompt: `Mobile phone vibrating on a hard wooden table, buzzing rattle, recorded close`

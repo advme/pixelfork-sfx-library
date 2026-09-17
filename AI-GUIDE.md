@@ -47,15 +47,25 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 
 | Sound | Play it when | Made by |
 |---|---|---|
+| `animal.bear.growl` | A bear growls. | ai |
 | `animal.bee.buzz` | An insect buzzes past — bee, fly, wasp enemy. | ai |
 | `animal.bird.chirp` | A small bird chirps — collectible, ambience accent, cute character. | ai |
+| `animal.bird.flap` | Wings beat as a bird takes off. | ai |
+| `animal.cat.hiss` | A cat hisses. | ai |
 | `animal.cat.meow` | A cat meows — pet or character. | ai |
+| `animal.cat.purr` | A cat purrs. Loops. | ai |
 | `animal.chicken.cluck` | A chicken clucks — farm game, egg collection. | ai |
 | `animal.cow.moo` | A cow lows — farm game, idle animal. | ai |
 | `animal.dog.bark` | A dog barks — pet, guard, companion or enemy. | ai |
+| `animal.dog.growl` | A dog growls a warning. | ai |
 | `animal.frog.croak` | A frog croaks — pond, swamp, collectible creature. | ai |
+| `animal.horse.gallop` | A horse gallops. Loops. | ai |
 | `animal.horse.neigh` | A horse whinnies — mount, race, farm. | ai |
+| `animal.lion.roar` | A lion roars. | ai |
+| `animal.owl` | An owl hoots at night. | ai |
 | `animal.pig.oink` | A pig oinks — farm game, idle animal. | ai |
+| `animal.rooster` | A rooster crows — morning, farm. | ai |
+| `animal.seagull` | Seagulls call — coast, harbour. | ai |
 | `animal.sheep.bleat` | A sheep bleats — farm game, idle animal. | ai |
 | `animal.snake.hiss` | A snake hisses — enemy warning, trap. | ai |
 | `animal.wolf.howl` | A wolf howls — night, danger, boss approach. | ai |
@@ -68,6 +78,41 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `break.pot` | A pot, vase or ceramic container smashes. | ai |
 | `break.stone` | Rock, brick or concrete breaks. | ai |
 | `break.wood` | A crate, plank, barrel or door breaks apart. | ai |
+
+**`car.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `car.accelerate` | The car pulls away and gains speed. | ai |
+| `car.backfire` | The exhaust backfires — pops and bangs. | ai |
+| `car.crash.light` | A minor collision — bump, tap, fender bender. | ai |
+| `car.cruise` | Steady driving at speed. Loops under gameplay. | ai |
+| `car.decelerate` | The driver lifts off and the car slows. | ai |
+| `car.door.close` | A car door shuts. | ai |
+| `car.door.open` | A car door opens. | ai |
+| `car.drift` | The car slides sideways through a corner. | ai |
+| `car.gear.down` | A downshift, often with a throttle blip. | ai |
+| `car.gear.up` | An upshift. | ai |
+| `car.handbrake` | A handbrake turn. | ai |
+| `car.horn.long` | A long angry horn blast. | ai |
+| `car.idle` | Engine idling while parked or waiting on the grid. Loops. | ai |
+| `car.indicator` | The indicator ticks. Loops. | ai |
+| `car.nitro` | Nitrous boost fires. | ai |
+| `car.off` | The driver switches the engine off. | ai |
+| `car.redline` | Engine held at maximum revs. Loops. | ai |
+| `car.rev.blip` | A quick throttle blip — showing off, gear match. | ai |
+| `car.scrape` | The car scrapes along a wall or barrier. | ai |
+| `car.seatbelt` | A seatbelt is pulled and clicked in. | ai |
+| `car.skid` | A short tyre chirp — hard turn, quick stop. | ai |
+| `car.stall` | The engine cuts out. | ai |
+| `car.start` | The ignition turns and the engine catches. | ai |
+| `car.start.fail` | The engine cranks but will not start. | ai |
+| `car.suspension` | The car lands or crosses a bump. | ai |
+| `car.turbo.blowoff` | The blow-off valve releases on a gear change. | ai |
+| `car.turbo.spool` | The turbo spools up under load. | ai |
+| `car.tyre.squeal` | Sustained tyre scrub through a long corner. Loops. | ai |
+| `car.window` | An electric window winds down. | ai |
+| `car.wiper` | Windscreen wipers sweep. Loops. | ai |
 
 **`coin.*`**
 
@@ -115,8 +160,15 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 
 | Sound | Play it when | Made by |
 |---|---|---|
+| `door.bell` | A doorbell rings. | ai |
 | `door.close` | A door, gate or hatch closes. | ai |
+| `door.knock` | Someone knocks. | ai |
+| `door.locked` | A locked door rattles. | ai |
+| `door.metal.open` | A heavy metal door opens. | ai |
 | `door.open` | A door, gate or hatch opens. | ai |
+| `door.slam` | A door slams shut. | ai |
+| `door.slide` | A sliding door runs on its track. | ai |
+| `door.wood.open` | A wooden door opens. | ai |
 
 **`engine.*`**
 
@@ -145,6 +197,11 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | Sound | Play it when | Made by |
 |---|---|---|
 | `fire.crackle` | A campfire, torch or burning object nearby. Loops. | ai |
+| `fire.extinguish` | A flame is put out. | ai |
+| `fire.ignite` | Something catches light. | ai |
+| `fire.lighter` | A lighter flicks on. | ai |
+| `fire.match` | A match is struck. | ai |
+| `fire.torch` | A handheld torch burns. Loops. | ai |
 
 **`game.*`**
 
@@ -159,6 +216,26 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `game.tower.place` | A tower, building or block is placed. | ai |
 | `game.wave.start` | A new wave or round begins — tower defence, survival. | ai |
 
+**`gun.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `gun.bolt` | The bolt or slide is pulled. | ai |
+| `gun.crossbow` | A crossbow looses a bolt. | ai |
+| `gun.flamethrower` | A flamethrower burns. Loops. | ai |
+| `gun.grenade.pin` | A grenade pin is pulled. | ai |
+| `gun.grenade.throw` | A grenade is thrown. | ai |
+| `gun.mag.in` | A fresh magazine is seated. | ai |
+| `gun.mag.out` | A magazine is ejected. | ai |
+| `gun.minigun` | A minigun spins up and fires. Loops. | ai |
+| `gun.reload.shotgun` | Shells are pumped into a shotgun. | ai |
+| `gun.revolver` | A revolver fires. | ai |
+| `gun.rocket.launch` | A rocket launcher fires. | ai |
+| `gun.shell.drop` | A spent shell hits the ground. | ai |
+| `gun.silenced` | A suppressed shot. | ai |
+| `gun.smg` | A submachine gun burst. | ai |
+| `gun.sniper` | A sniper rifle fires. | ai |
+
 **`horror.*`**
 
 | Sound | Play it when | Made by |
@@ -166,8 +243,14 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `horror.bell` | A distant church bell tolls — dread, time passing. | ai |
 | `horror.breathing` | Nervous breathing — low health, hiding, stamina. | ai |
 | `horror.creak` | A door or floorboard creaks slowly — suspense. | ai |
+| `horror.growl.deep` | Something very large growls in the dark. | ai |
 | `horror.heartbeat` | A heartbeat under tension — low health, chase, hiding. Loops. | ai |
 | `horror.jumpscare` | A sudden scare hit. | ai |
+| `horror.knock.slow` | Slow deliberate knocking. | ai |
+| `horror.laugh` | An unsettling laugh. | ai |
+| `horror.musicbox` | A music box plays — classic dread. | ai |
+| `horror.scream` | A terrified scream. | ai |
+| `horror.static` | Radio or TV static. Loops. | ai |
 | `horror.whisper` | An unsettling whisper — ghost, haunting, secret. | ai |
 
 **`impact.*`**
@@ -181,6 +264,19 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `impact.punch` | A fist or body hit connects. | ai |
 | `impact.thud` | A soft generic landing or bump. The cheapest impact — good for stylized games. | code |
 | `impact.wood` | Something hits wood: a crate, a door, a bat, a tree. | ai |
+
+**`kitchen.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `kitchen.blender` | A blender runs. | ai |
+| `kitchen.bottle.open` | A bottle is uncorked or opened. | ai |
+| `kitchen.can.open` | A drink can is opened. | ai |
+| `kitchen.cutlery` | Cutlery clatters on a plate. | ai |
+| `kitchen.egg.crack` | An egg is cracked. | ai |
+| `kitchen.kettle` | A kettle comes to the boil. | ai |
+| `kitchen.microwave` | A microwave finishes and beeps. | ai |
+| `kitchen.sip` | A drink is sipped. | ai |
 
 **`machine.*`**
 
@@ -196,12 +292,24 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | Sound | Play it when | Made by |
 |---|---|---|
 | `magic.buff` | A booster, power-up or upgrade activates. | code |
+| `magic.dark` | A dark or shadow spell. | ai |
+| `magic.earth` | An earth or stone spell. | ai |
 | `magic.fire` | A fireball, flamethrower or burning attack. Fire texture is impossible in code. | ai |
+| `magic.fire.cast` | A fire spell winds up. | ai |
+| `magic.fire.hit` | A fireball lands. | ai |
 | `magic.heal` | Healing, restoring energy or refilling lives. | code |
+| `magic.holy` | A holy or blessing spell. | ai |
 | `magic.ice` | Freezing, an ice attack, or something turning to crystal. | hybrid |
+| `magic.ice.cast` | An ice spell winds up. | ai |
+| `magic.ice.hit` | Ice strikes and shatters on a target. | ai |
+| `magic.lightning.cast` | A lightning spell is cast. | ai |
+| `magic.lightning.hit` | Lightning strikes a target. | ai |
 | `magic.shield` | A shield, barrier or invincibility turns on. | code |
+| `magic.shield.hit` | Something strikes a magic barrier. | ai |
+| `magic.shield.up` | A magic barrier comes up. | ai |
 | `magic.sparkle` | A small magical shimmer: a glow, a wand touch, an item twinkling. | code |
 | `magic.summon` | Summoning, a portal opening, a boss appearing. | code |
+| `magic.wind` | A wind or gust spell. | ai |
 
 **`match.*`**
 
@@ -212,6 +320,29 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `match.pop` | A tile, bubble or block is cleared. The core match-3 sound. | code |
 | `match.shuffle` | The board reshuffles, or cards are dealt. | ai |
 | `match.swap` | Two tiles swap places. | code |
+
+**`melee.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `melee.axe.swing` | A heavy axe swings. | ai |
+| `melee.block` | A hit is blocked on a shield. | ai |
+| `melee.dodge` | A dodge or evade — body moving fast. | ai |
+| `melee.hammer.swing` | A war hammer swings. | ai |
+| `melee.kick` | A heavy kick lands. | ai |
+| `melee.parry` | A blade is deflected at the last moment. | ai |
+| `melee.sheathe` | A blade is put away. | ai |
+| `melee.spear` | A spear thrusts. | ai |
+| `melee.stab` | A blade goes in. | ai |
+| `melee.whip` | A whip cracks. | ai |
+
+**`moto.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `moto.idle` | A motorbike idles. Loops. | ai |
+| `moto.pass` | A motorbike flies past. | ai |
+| `moto.rev` | A motorbike revs hard. | ai |
 
 **`move.*`**
 
@@ -255,6 +386,21 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `object.switch` | A physical switch or lever is thrown. | ai |
 | `object.zip` | A zip fastens — bag, jacket, inventory. | ai |
 
+**`office.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `office.drawer` | A drawer opens or closes. | ai |
+| `office.printer` | A printer prints a page. | ai |
+| `office.stapler` | A stapler clicks. | ai |
+
+**`phone.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `phone.ring` | A phone rings. | ai |
+| `phone.vibrate` | A phone buzzes on a surface. | ai |
+
 **`pickup.*`**
 
 | Sound | Play it when | Made by |
@@ -266,6 +412,15 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `pickup.heart` | A life, heart or health pickup. | code |
 | `pickup.key` | A key, card or quest item is picked up. | code |
 | `pickup.star` | A star or collectible token is picked up during gameplay. | code |
+
+**`race.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `race.finish` | The chequered flag — race over. | ai |
+| `race.flag.wave` | A flag snaps in the wind. | ai |
+| `race.lap` | A lap is completed. | ai |
+| `race.light` | A starting light changes on the grid. | ai |
 
 **`reward.*`**
 
@@ -296,11 +451,19 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | Sound | Play it when | Made by |
 |---|---|---|
 | `scifi.airlock` | A pressurised door opens — spaceship, vault, lab. | ai |
+| `scifi.alarm` | A ship or base alarm. Loops. | ai |
+| `scifi.computer.beep` | A console acknowledges input. | ai |
+| `scifi.door` | An automatic door slides open. | ai |
+| `scifi.engine.hum` | Spaceship engine hum. Loops. | ai |
 | `scifi.glitch` | A digital error or corruption — hacking, damage, static. | ai |
 | `scifi.hologram` | A hologram appears or flickers. | ai |
+| `scifi.laser.charge` | An energy weapon charges before firing. | ai |
 | `scifi.powerdown` | A machine or system powers down. | ai |
 | `scifi.powerup` | A machine or system powers up. | ai |
+| `scifi.robot.talk` | A robot speaks in machine noise. | ai |
 | `scifi.scanner` | A scanner sweeps — detection, radar, search. | ai |
+| `scifi.shield.hit` | A ship or suit shield takes a hit. | ai |
+| `scifi.warp` | A jump to lightspeed. | ai |
 
 **`sport.*`**
 
@@ -309,9 +472,17 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `sport.ball.bounce` | A ball bounces on a hard surface. | ai |
 | `sport.ball.kick` | A ball is kicked or struck hard. | ai |
 | `sport.bat.hit` | A bat or club strikes a ball. | ai |
+| `sport.bowling` | A bowling ball hits the pins. | ai |
+| `sport.boxing.bell` | The boxing bell rings a round. | ai |
 | `sport.buzzer` | An end-of-round buzzer. | ai |
+| `sport.crowd.goal` | The crowd erupts at a goal. | ai |
+| `sport.golf` | A golf club strikes the ball. | ai |
 | `sport.net.swish` | A ball passes cleanly through a net — basket scored. | ai |
+| `sport.pool.break` | A pool break scatters the balls. | ai |
 | `sport.racket.hit` | A racket strikes a ball — tennis, padel, squash. | ai |
+| `sport.skate` | A skateboard rolls and grinds. | ai |
+| `sport.ski` | Skis carve through snow. Loops. | ai |
+| `sport.stadium` | Stadium crowd ambience. Loops. | ai |
 | `sport.start.gun` | A starting pistol fires — race begins. | ai |
 | `sport.whistle` | A referee whistle — round start, foul, time up. | ai |
 
@@ -330,12 +501,19 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 
 | Sound | Play it when | Made by |
 |---|---|---|
+| `step.carpet` | One footstep on on thick carpet. Play per step; the library varies pitch and picks a different take each time. | ai |
 | `step.grass` | One footstep on grass. Play per step; the library varies pitch and picks a different take each time. | ai |
 | `step.gravel` | One footstep on gravel. Play per step; the library varies pitch and picks a different take each time. | ai |
+| `step.ice` | One footstep on on solid ice. Play per step; the library varies pitch and picks a different take each time. | ai |
+| `step.leaves` | One footstep on through dry fallen leaves. Play per step; the library varies pitch and picks a different take each time. | ai |
 | `step.metal` | One footstep on metal. Play per step; the library varies pitch and picks a different take each time. | ai |
+| `step.mud` | One footstep on through wet mud. Play per step; the library varies pitch and picks a different take each time. | ai |
+| `step.run.stone` | One footstep while running on stone. Faster and harder than walking. | ai |
 | `step.sand` | One footstep on sand. Play per step; the library varies pitch and picks a different take each time. | ai |
 | `step.snow` | One footstep on snow. Play per step; the library varies pitch and picks a different take each time. | ai |
+| `step.stairs` | One footstep on up a wooden staircase. Play per step; the library varies pitch and picks a different take each time. | ai |
 | `step.stone` | One footstep on stone. Play per step; the library varies pitch and picks a different take each time. | ai |
+| `step.tile` | One footstep on on hard ceramic tiles. Play per step; the library varies pitch and picks a different take each time. | ai |
 | `step.water` | One footstep on water. Play per step; the library varies pitch and picks a different take each time. | ai |
 | `step.wood` | One footstep on wood. Play per step; the library varies pitch and picks a different take each time. | ai |
 
@@ -350,6 +528,14 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `tool.pickaxe` | Mining stone with a pickaxe. | ai |
 | `tool.saw` | Sawing wood — building, crafting. | ai |
 | `tool.wrench` | A spanner or ratchet turns — repair, machinery. | ai |
+
+**`truck.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `truck.airbrake` | Air brakes release with a hiss. | ai |
+| `truck.horn` | An air horn blasts. | ai |
+| `truck.idle` | A diesel truck idles. Loops. | ai |
 
 **`ui.*`**
 
@@ -403,7 +589,14 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 
 | Sound | Play it when | Made by |
 |---|---|---|
+| `water.bubble` | Bubbles rise through water. | ai |
+| `water.dive` | A body enters the water. | ai |
+| `water.drip` | A single drip — cave, leak, tension. | ai |
+| `water.fountain` | A fountain runs. Loops. | ai |
 | `water.splash` | Something falls into water, or a big splash on impact. | ai |
+| `water.tap` | A running tap. Loops. | ai |
+| `water.underwater` | Submerged ambience. Loops. | ai |
+| `water.wave.crash` | A big wave breaks. | ai |
 
 **`weapon.*`**
 
@@ -429,7 +622,12 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 
 | Sound | Play it when | Made by |
 |---|---|---|
+| `weather.rain.heavy` | Heavy downpour. Loops. | ai |
+| `weather.rain.light` | Light rain. Loops. | ai |
+| `weather.rain.window` | Rain on glass. Loops. | ai |
+| `weather.storm.wind` | Storm wind howling. Loops. | ai |
 | `weather.thunder` | A thunderclap — storm, dramatic moment. | ai |
+| `weather.thunder.distant` | Thunder rolls far away. | ai |
 <!-- SOUNDS:END -->
 
 Machine-readable, with durations and offsets: `dist/casual.json`.
