@@ -1,6 +1,6 @@
 # STATUS
 
-**Last updated:** 2026-09-19 · by **A (Claude)** · version **v0.6.0-A** · **published**: https://github.com/advme/pixelfork-sfx-library
+**Last updated:** 2026-09-19 · by **A (Claude)** · version **v0.6.1-A** · **published**: https://github.com/advme/pixelfork-sfx-library · served from GitHub Pages
 
 ## Next task
 **Listen through the board and flag what is wrong.** Nothing in the pack has been judged by
@@ -8,12 +8,19 @@ ear across the board. Every check so far only proves no sound is silent, clippin
 dull or seamed — not that it sounds right. Use the loop buttons on the 42 loops in
 particular, since seams in noisy material cannot be measured, only heard.
 
-**Published** on 2026-09-19 at the owner's request, before the listening pass (games pin a
-version, so sounds can be fixed in later versions without breaking anything):
-`advme/pixelfork-sfx-library`, public, tag `v0.6.0-A`, served by jsDelivr. GitHub Pages is NOT
-turned on; nothing in the docs needs it (links go through the CDN). After every release: commit,
-tag, push with tags, update the pinned tag in `AI-GUIDE.md`, `llms.txt` and `README.md`, and check
-the jsDelivr URLs load.
+**Published** on 2026-09-19 at the owner's request, before the listening pass:
+`advme/pixelfork-sfx-library`, public. **Games load it from GitHub Pages**, not jsDelivr:
+`https://advme.github.io/pixelfork-sfx-library/dist/sfx.js`
+
+Why not jsDelivr like the UI Kit and the VFX library: jsDelivr refuses GitHub repos over **50 MB**
+("Package size exceeded the configured limit of 50 MB") and this repo is 77 MB (dist 44 MB, of which
+music 28 MB; source sounds 17 MB). Pages has no such limit (1 GB per site) and sends the CORS header
+games need. The price: **Pages URLs are not versioned.** Every game gets the latest `sfx.js` and
+pack the moment `main` is pushed. So: never rename or remove a sound (add an alias), and test
+before pushing. If versioned URLs are wanted later, the way is a separate slim "dist-only" repo per
+pack kept under 50 MB (music would need its own), or another CDN.
+
+After every release: commit, tag, push with tags, wait for the Pages build, check the Pages URLs load.
 
 ## In progress
 _Nothing._

@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## v0.6.1-A — served from GitHub Pages (jsDelivr refuses repos over 50 MB)
+- Agent: A (Claude) · Date: 2026-09-19
+- Found right after publishing v0.6.0-A: jsDelivr answered 404 for most files. Its data API gives the reason: `403 Package size exceeded the configured limit of 50 MB`; this repo is 77 MB. (A few files loaded before jsDelivr had measured the repo, which made it look random.) My pre-publish size check was wrong: I assumed a higher limit.
+- Done: links in `AI-GUIDE.md`, `README.md` and `llms.txt` moved from the jsDelivr tag URL to `https://advme.github.io/pixelfork-sfx-library/`; `.nojekyll` added so Pages serves `AI-GUIDE.md` as Markdown and does not run Jekyll over 700 files; GitHub Pages turned on for `main` / root (it was step 3 of the owner's own publish plan in STATUS). No code or audio changed; the runtime already finds its pack next to its own script URL.
+- Trade-off recorded in STATUS: Pages URLs are not versioned, every game gets the latest files on push.
+- Tested: see the v0.6.1-A release check in STATUS / the session log: Pages URLs for the runtime, manifest, both sprite formats, a music track and the guide; CORS header; pack loaded in a browser from another origin.
+
 ## v0.6.0-A — first public release
 - Agent: A (Claude) · Date: 2026-09-19
 - Done: published at the owner's request: `advme/pixelfork-sfx-library` (public), tag `v0.6.0-A`, jsDelivr. No code or audio changed. Docs brought in line with the pack before tagging: the four CDN links pinned `v0.5.0-A` (a tag that never existed) → `v0.6.0-A`; AI guide said "105 sounds, about half made by code" and the README said 373 → 403 sounds (51 code, 349 audio, 3 hybrid; 30 are music), from the registry; `llms.txt` pointed at two `advme.github.io` pages (this repo has no Pages, and the UI Kit moved to the `pixelfork-v1` account so its old Pages address is 404) → both now go through the CDN. `make_guide.py` re-run: the sound table already matched the registry.
