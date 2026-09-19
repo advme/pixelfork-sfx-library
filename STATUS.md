@@ -1,6 +1,6 @@
 # STATUS
 
-**Last updated:** 2026-09-17 · by **A (Claude)** · version **v0.6.0-A**
+**Last updated:** 2026-09-19 · by **A (Claude)** · version **v0.6.0-A** · **published**: https://github.com/advme/pixelfork-sfx-library
 
 ## Next task
 **Listen through the board and flag what is wrong.** Nothing in the pack has been judged by
@@ -8,8 +8,12 @@ ear across the board. Every check so far only proves no sound is silent, clippin
 dull or seamed — not that it sounds right. Use the loop buttons on the 42 loops in
 particular, since seams in noisy material cannot be measured, only heard.
 
-After that: **publish**. Create `advme/pixelfork-sfx-library`, push, tag, turn on Pages, and
-check the jsDelivr URLs in `AI-GUIDE.md`, `llms.txt` and `README.md` load.
+**Published** on 2026-09-19 at the owner's request, before the listening pass (games pin a
+version, so sounds can be fixed in later versions without breaking anything):
+`advme/pixelfork-sfx-library`, public, tag `v0.6.0-A`, served by jsDelivr. GitHub Pages is NOT
+turned on; nothing in the docs needs it (links go through the CDN). After every release: commit,
+tag, push with tags, update the pinned tag in `AI-GUIDE.md`, `llms.txt` and `README.md`, and check
+the jsDelivr URLs load.
 
 ## In progress
 _Nothing._

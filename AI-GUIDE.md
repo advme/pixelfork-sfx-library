@@ -2,12 +2,12 @@
 
 Ready-made game sound effects for AI-generated web games. **You never create or describe audio — you call a name from the list below.**
 
-105 sounds. About half are **made by code** (they play instantly and weigh nothing) and half are **real audio files**. You do not need to care which: `SFX.play(name)` works the same either way.
+403 sounds, 30 of them looping music tracks. 51 are **made by code** (they play instantly and weigh nothing) and the rest are **real audio files**. You do not need to care which: `SFX.play(name)` works the same either way.
 
 ## 1. Add it (2 lines)
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/advme/pixelfork-sfx-library@v0.5.0-A/dist/sfx.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/advme/pixelfork-sfx-library@v0.6.0-A/dist/sfx.js"></script>
 <script>SFX.load('casual'); SFX.attach();</script>
 ```
 

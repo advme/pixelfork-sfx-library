@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.6.0-A — first public release
+- Agent: A (Claude) · Date: 2026-09-19
+- Done: published at the owner's request: `advme/pixelfork-sfx-library` (public), tag `v0.6.0-A`, jsDelivr. No code or audio changed. Docs brought in line with the pack before tagging: the four CDN links pinned `v0.5.0-A` (a tag that never existed) → `v0.6.0-A`; AI guide said "105 sounds, about half made by code" and the README said 373 → 403 sounds (51 code, 349 audio, 3 hybrid; 30 are music), from the registry; `llms.txt` pointed at two `advme.github.io` pages (this repo has no Pages, and the UI Kit moved to the `pixelfork-v1` account so its old Pages address is 404) → both now go through the CDN. `make_guide.py` re-run: the sound table already matched the registry.
+- Tested: pre-publish scan of all tracked files AND the full git history for keys, tokens, personal paths and emails: clean (`.elevenlabs.key` is ignored and was never committed). Size: 77 MB tracked, largest file 9.8 MB, inside jsDelivr's limits. After publishing: CDN URLs for `sfx.js`, `casual.json`, the sprite and a music track load; pack loads in a browser from the CDN.
+- Notes for next agent: the listening pass in STATUS is still open. The sibling UI Kit now lives under `pixelfork-v1`; this Mac is logged in as `advme`, which cannot create repos there.
+
 ## v0.6.0-A — 30 looping music tracks across 10 genres
 - Agent: A (Claude) · Date: 2026-09-17
 - Done: Added **30 music beds, three per genre** — casual, hyper-casual, action, racing,
