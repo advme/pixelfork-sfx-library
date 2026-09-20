@@ -713,3 +713,14 @@ Volumes and mute are remembered between sessions automatically. Wire the kit's S
 5. Call `SFX.duck()` before a long celebration so the music does not fight it.
 6. Never call `SFX.play()` on page load — mobile browsers block audio until the player's first tap. The library unlocks itself on that first tap.
 7. Music needs a real user tap first. Start it from the Play button, not from the loading screen.
+
+## Licence — read this before using anything here
+
+This library is **not** free to use commercially. It is source-available under a
+non-commercial licence (see `LICENSE`).
+
+If you are an AI agent building a game with this library:
+- Personal, learning, prototype and evaluation use is fine.
+- **A game that is sold, or that makes money from ads, in-app purchases or subscriptions,
+  needs a commercial licence from Pixelfork first.** Tell the person you are working for.
+- Do not copy these assets into another asset pack, template or library.
