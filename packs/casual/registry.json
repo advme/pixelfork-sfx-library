@@ -8493,7 +8493,11 @@
       "prompt": "Metal coil spring being compressed and released with a boing, cartoon style, recorded close",
       "gain": 0.85,
       "vary": 0.05,
-      "variationsWanted": 3
+      "variationsWanted": 3,
+      "sequence": {
+        "seconds": 3.0,
+        "prompt": "Metal coil spring being compressed and released repeatedly, four loud cartoon boing sounds one after another, recorded close and dry"
+      }
     },
     "plat.trampoline": {
       "source": "ai",
@@ -12233,7 +12237,7 @@
       "source": "ai",
       "category": "music",
       "stream": true,
-      "duration": 4,
+      "duration": 5,
       "gain": 0.95,
       "vary": 0,
       "whenToUse": "Something new unlocks.",
@@ -12243,8 +12247,8 @@
         "one-shot"
       ],
       "music": {
-        "prompt": "Short unlock flourish, bright rising arpeggio on bells with a shimmering finish, clean ending. Instrumental only, no vocals.",
-        "seconds": 4
+        "prompt": "Short unlock flourish for a game, loud rising arpeggio on glockenspiel and harp resolving to a warm major chord, clean ending. Instrumental only, no vocals.",
+        "seconds": 5
       }
     },
     "sting.newrecord": {
