@@ -2,7 +2,7 @@
   "name": "casual",
   "title": "Casual SFX Pack",
   "description": "Sound effects for hyper-casual and casual mobile web games. Designed to pair with the Super Casual UI Kit.",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "style": "Modern mobile casual game audio: clean, bright, punchy, lightly processed. Not retro/8-bit, not cinematic/orchestral. Mono, dry (no long reverb tails), normalized to -1 dBFS peak.",
   "sourceMeaning": {
     "code": "Synthesized by the runtime, permanently. No audio file, no download, infinite variation. These sounds are synthetic by nature so code beats a recording.",
@@ -6599,9 +6599,12 @@
         "rumble",
         "storm"
       ],
-      "prompt": "Distant thunder rolling across the sky, long low rumbling growl with no sharp crack",
+      "prompt": "Distant thunder rolling across the sky, long low rumbling growl with no hard crack",
       "gain": 0.85,
-      "vary": 0.05
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
     },
     "door.wood.open": {
       "source": "ai",
@@ -7984,6 +7987,4480 @@
       },
       "postFx": {
         "loop": 4.0
+      }
+    },
+    "casino.reel.spin": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A slot reel starts spinning. Loops while it runs.",
+      "duration": 3.0,
+      "tags": [
+        "slot",
+        "reel",
+        "spin",
+        "loop"
+      ],
+      "prompt": "Casino slot machine reels spinning continuously, mechanical whirring clatter, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 0.8
+      },
+      "loopable": true
+    },
+    "casino.reel.stop": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "One slot reel lands.",
+      "duration": 0.6,
+      "tags": [
+        "slot",
+        "reel",
+        "stop",
+        "land"
+      ],
+      "prompt": "Casino slot machine reel stopping with a solid mechanical clunk, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "casino.lever": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The slot lever is pulled.",
+      "duration": 0.9,
+      "tags": [
+        "lever",
+        "pull",
+        "slot",
+        "arm"
+      ],
+      "prompt": "Casino slot machine lever being pulled down and released, heavy spring loaded mechanism, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "casino.roulette.spin": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The roulette wheel spins. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "roulette",
+        "wheel",
+        "spin",
+        "loop"
+      ],
+      "prompt": "Roulette wheel spinning steadily with the ball rattling around the rim, continuous, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 0.8
+      },
+      "loopable": true
+    },
+    "casino.roulette.drop": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The roulette ball settles into a pocket.",
+      "duration": 1.2,
+      "tags": [
+        "roulette",
+        "ball",
+        "drop",
+        "land"
+      ],
+      "prompt": "Roulette ball dropping and bouncing into a numbered pocket, wooden clattering settle, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "casino.chips.stack": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Chips are stacked or counted.",
+      "duration": 1.0,
+      "tags": [
+        "chips",
+        "stack",
+        "count",
+        "clay"
+      ],
+      "prompt": "Stack of clay casino chips being riffled and stacked in one hand, clicking clatter, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "casino.chips.toss": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Chips are pushed into the pot.",
+      "duration": 0.9,
+      "tags": [
+        "chips",
+        "bet",
+        "toss",
+        "pot"
+      ],
+      "prompt": "Handful of clay casino chips being tossed onto a felt table, scattering clatter, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "casino.card.deal": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "One card is dealt.",
+      "duration": 0.5,
+      "tags": [
+        "card",
+        "deal",
+        "flick",
+        "table"
+      ],
+      "prompt": "Single playing card being dealt across a felt table, paper slide with a soft landing, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 4,
+      "sequence": {
+        "prompt": "Dealing playing cards one at a time across a felt table, five clear separate cards, loud and close, dry recording",
+        "seconds": 3.0
+      }
+    },
+    "casino.card.flip": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A card is turned face up.",
+      "duration": 0.4,
+      "tags": [
+        "card",
+        "flip",
+        "reveal",
+        "turn"
+      ],
+      "prompt": "Single playing card being flipped face up on a table, quick paper snap, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "casino.dice.roll": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Dice are thrown.",
+      "duration": 1.4,
+      "tags": [
+        "dice",
+        "roll",
+        "throw",
+        "craps"
+      ],
+      "prompt": "Two dice being thrown and tumbling across a felt table before settling, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "casino.dice.shake": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Dice rattle in a cup.",
+      "duration": 1.2,
+      "tags": [
+        "dice",
+        "shake",
+        "cup",
+        "rattle"
+      ],
+      "prompt": "Dice being shaken hard inside a leather cup, rattling clatter, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "casino.payout": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Coins pour out of a machine.",
+      "duration": 2.5,
+      "tags": [
+        "payout",
+        "coins",
+        "win",
+        "jackpot"
+      ],
+      "prompt": "Casino machine paying out a flood of metal coins into a tray, cascading clattering, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "casino.bell": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The win bell rings.",
+      "duration": 2.0,
+      "tags": [
+        "bell",
+        "win",
+        "ring",
+        "jackpot"
+      ],
+      "prompt": "Casino jackpot bell ringing rapidly and repeatedly, metallic clanging, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "casino.ambience": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Casino floor ambience. Loops.",
+      "duration": 6.0,
+      "tags": [
+        "casino",
+        "floor",
+        "ambience",
+        "loop"
+      ],
+      "prompt": "Busy casino floor with distant machines chiming and people talking, continuous background, no music",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.5
+      },
+      "loopable": true
+    },
+    "puzzle.tile.place": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A tile is set down on the board.",
+      "duration": 0.4,
+      "tags": [
+        "tile",
+        "place",
+        "board",
+        "set"
+      ],
+      "prompt": "Wooden game tile being placed firmly onto a wooden board, solid knock, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "puzzle.tile.slide": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A tile slides to a new position.",
+      "duration": 0.5,
+      "tags": [
+        "tile",
+        "slide",
+        "move",
+        "shift"
+      ],
+      "prompt": "Wooden tile sliding across a smooth wooden board, short scraping glide, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "puzzle.snap": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A piece snaps into place.",
+      "duration": 0.4,
+      "tags": [
+        "snap",
+        "fit",
+        "lock",
+        "correct"
+      ],
+      "prompt": "Two interlocking plastic puzzle pieces snapping together, clean click, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "puzzle.jigsaw": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A jigsaw piece seats correctly.",
+      "duration": 0.5,
+      "tags": [
+        "jigsaw",
+        "piece",
+        "fit",
+        "cardboard"
+      ],
+      "prompt": "Cardboard jigsaw piece being pressed into place among others, soft fibrous click, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "puzzle.domino": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Dominoes topple.",
+      "duration": 2.0,
+      "tags": [
+        "domino",
+        "fall",
+        "chain",
+        "topple"
+      ],
+      "prompt": "Line of dominoes toppling over one after another, rapid clattering cascade, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "puzzle.chess": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A chess piece is moved.",
+      "duration": 0.5,
+      "tags": [
+        "chess",
+        "piece",
+        "move",
+        "wood"
+      ],
+      "prompt": "Weighted wooden chess piece being set down on a board, solid felted knock, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "puzzle.rotate": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A block or piece rotates.",
+      "duration": 0.3,
+      "tags": [
+        "rotate",
+        "turn",
+        "spin",
+        "block"
+      ],
+      "prompt": "Small mechanical ratchet turning one notch, single clean click, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "puzzle.lock": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A piece locks into the grid permanently.",
+      "duration": 0.5,
+      "tags": [
+        "lock",
+        "fix",
+        "set",
+        "commit"
+      ],
+      "prompt": "Metal bolt sliding home into a latch, firm mechanical seat, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "puzzle.line.clear": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A full row or line clears.",
+      "duration": 0.9,
+      "tags": [
+        "clear",
+        "line",
+        "row",
+        "score"
+      ],
+      "prompt": "Row of glass blocks shattering and sweeping away, ringing crystalline collapse, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "puzzle.hint": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A hint is revealed.",
+      "duration": 0.8,
+      "tags": [
+        "hint",
+        "help",
+        "clue",
+        "reveal"
+      ],
+      "prompt": "Gentle magical chime revealing a clue, soft glassy shimmer rising, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "puzzle.undo": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A move is taken back.",
+      "duration": 0.5,
+      "tags": [
+        "undo",
+        "back",
+        "revert",
+        "rewind"
+      ],
+      "prompt": "Short reversed tape rewind whoosh, quick backwards sweep, clean recording",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "puzzle.reset": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The board is cleared and reset.",
+      "duration": 1.2,
+      "tags": [
+        "reset",
+        "clear",
+        "restart",
+        "sweep"
+      ],
+      "prompt": "Handful of wooden game tiles being swept off a board into a box, rattling scatter, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "puzzle.correct": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A correct answer or valid move.",
+      "duration": 0.8,
+      "tags": [
+        "correct",
+        "right",
+        "valid",
+        "yes"
+      ],
+      "prompt": "Warm rising two note chime confirming a correct answer, clean bell tone, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "puzzle.wrong": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A wrong answer or invalid move.",
+      "duration": 0.8,
+      "tags": [
+        "wrong",
+        "incorrect",
+        "invalid",
+        "no"
+      ],
+      "prompt": "Gentle descending two note buzz for a wrong answer, soft and not harsh, clean recording",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "puzzle.timer": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Timer pressure ticking. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "timer",
+        "tick",
+        "pressure",
+        "loop"
+      ],
+      "prompt": "Fast mechanical timer ticking under pressure, continuous urgent ticks, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 0.6
+      },
+      "loopable": true
+    },
+    "puzzle.bomb.tick": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A bomb tile counts down.",
+      "duration": 0.5,
+      "tags": [
+        "bomb",
+        "countdown",
+        "fuse",
+        "warning"
+      ],
+      "prompt": "Burning fuse hissing and sparking on a bomb, short crackling burn, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "plat.spring": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A spring or bounce pad launches the player.",
+      "duration": 0.8,
+      "tags": [
+        "spring",
+        "bounce",
+        "pad",
+        "launch"
+      ],
+      "prompt": "Metal coil spring being compressed and released with a boing, cartoon style, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "plat.trampoline": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A trampoline bounce.",
+      "duration": 0.9,
+      "tags": [
+        "trampoline",
+        "bounce",
+        "jump",
+        "fabric"
+      ],
+      "prompt": "Trampoline fabric stretching and snapping back as someone bounces, deep elastic thump, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "plat.platform.move": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A moving platform travels. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "platform",
+        "move",
+        "machinery",
+        "loop"
+      ],
+      "prompt": "Heavy mechanical platform grinding along a track, continuous low rumbling motor, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 0.8
+      },
+      "loopable": true
+    },
+    "plat.crumble": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A block crumbles under the player.",
+      "duration": 1.0,
+      "tags": [
+        "crumble",
+        "break",
+        "collapse",
+        "stone"
+      ],
+      "prompt": "Stone block cracking and crumbling apart into rubble, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "plat.conveyor": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A conveyor belt carries the player. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "conveyor",
+        "belt",
+        "move",
+        "loop"
+      ],
+      "prompt": "Rubber conveyor belt running over rollers, continuous mechanical whirring, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 0.8
+      },
+      "loopable": true
+    },
+    "plat.spikes": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Spikes shoot up from the floor.",
+      "duration": 0.7,
+      "tags": [
+        "spikes",
+        "trap",
+        "danger",
+        "metal"
+      ],
+      "prompt": "Metal spikes shooting up fast through a stone floor, scraping steel with a hard clank, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "plat.sawblade": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A spinning saw blade. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "saw",
+        "blade",
+        "danger",
+        "loop"
+      ],
+      "prompt": "Large circular saw blade spinning fast in the air, continuous metallic whirring whine, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 0.8
+      },
+      "loopable": true
+    },
+    "plat.checkpoint": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A checkpoint flag raises.",
+      "duration": 1.4,
+      "tags": [
+        "checkpoint",
+        "flag",
+        "save",
+        "progress"
+      ],
+      "prompt": "Cloth flag being hoisted quickly up a metal pole, fabric snap with a mechanical ratchet, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "plat.key": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A key is collected.",
+      "duration": 0.8,
+      "tags": [
+        "key",
+        "collect",
+        "unlock",
+        "metal"
+      ],
+      "prompt": "Small metal key being picked up with a loud ringing jingle, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "plat.lock.open": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A lock opens and a door swings free.",
+      "duration": 1.4,
+      "tags": [
+        "lock",
+        "open",
+        "unlock",
+        "gate"
+      ],
+      "prompt": "Heavy iron padlock unlocking and falling open, mechanical clunk with chain rattle, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "plat.ledge": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The player grabs a ledge.",
+      "duration": 0.6,
+      "tags": [
+        "ledge",
+        "grab",
+        "hang",
+        "climb"
+      ],
+      "prompt": "Hands slapping and gripping a stone ledge, gritty scrape with cloth, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "plat.wallslide": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Sliding down a wall.",
+      "duration": 1.4,
+      "tags": [
+        "wall",
+        "slide",
+        "friction",
+        "descend"
+      ],
+      "prompt": "Cloth and boots sliding down a rough concrete wall, sustained scraping friction, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "plat.ladder": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Climbing a ladder rung.",
+      "duration": 0.5,
+      "tags": [
+        "ladder",
+        "climb",
+        "rung",
+        "metal"
+      ],
+      "prompt": "Boot stepping onto a metal ladder rung, hollow metallic clank, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 4,
+      "sequence": {
+        "prompt": "Person climbing a metal ladder, five clear separate rung steps with boots and hand grips, loud and close, dry recording",
+        "seconds": 3.0
+      }
+    },
+    "plat.rope.swing": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Swinging on a rope.",
+      "duration": 1.5,
+      "tags": [
+        "rope",
+        "swing",
+        "vine",
+        "arc"
+      ],
+      "prompt": "Thick rope creaking under load as it swings through the air, fibrous strain with wind, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "plat.portal.enter": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The player enters a pipe or portal.",
+      "duration": 1.0,
+      "tags": [
+        "portal",
+        "pipe",
+        "enter",
+        "warp"
+      ],
+      "prompt": "Body being sucked quickly down a hollow pipe, descending whooshing slide, cartoon style, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "plat.coin.block": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Hitting a block that gives a reward.",
+      "duration": 0.7,
+      "tags": [
+        "block",
+        "hit",
+        "reward",
+        "bump"
+      ],
+      "prompt": "Fist punching up into a hollow wooden crate, solid knock with a small rattle inside, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "plat.life.lost": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The player loses a life.",
+      "duration": 1.4,
+      "tags": [
+        "death",
+        "life lost",
+        "fail",
+        "fall"
+      ],
+      "prompt": "Cartoon character falling with a descending comic slide whistle ending in a soft thud, playful",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "plat.powerup.grow": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The character grows or powers up.",
+      "duration": 1.2,
+      "tags": [
+        "grow",
+        "powerup",
+        "transform",
+        "boost"
+      ],
+      "prompt": "Cartoon magical growth sound, rising bubbling swell with a ringing pop at the peak, playful",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "tower.build": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A tower or building is placed.",
+      "duration": 1.0,
+      "tags": [
+        "build",
+        "place",
+        "construct",
+        "tower"
+      ],
+      "prompt": "Stone and timber structure being dropped into place and settling, heavy thud with debris, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "tower.sell": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A tower is sold or demolished.",
+      "duration": 1.2,
+      "tags": [
+        "sell",
+        "demolish",
+        "remove",
+        "refund"
+      ],
+      "prompt": "Small wooden structure collapsing into a pile with coins jingling, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "tower.upgrade": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A tower levels up.",
+      "duration": 1.2,
+      "tags": [
+        "upgrade",
+        "level",
+        "improve",
+        "power"
+      ],
+      "prompt": "Magical upgrade surge, rising metallic ring with a ringing energetic swell, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "tower.unit.spawn": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An enemy unit enters the field.",
+      "duration": 0.8,
+      "tags": [
+        "spawn",
+        "enemy",
+        "unit",
+        "appear"
+      ],
+      "prompt": "Creature stepping out of a portal with a wet organic squelch and a low growl, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "tower.unit.march": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A column of units marches. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "march",
+        "army",
+        "units",
+        "loop"
+      ],
+      "prompt": "Column of armoured soldiers marching in step on dirt, continuous rhythmic boots and armour, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 0.8
+      },
+      "loopable": true
+    },
+    "tower.unit.die": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A unit is destroyed.",
+      "duration": 0.9,
+      "tags": [
+        "die",
+        "destroy",
+        "kill",
+        "enemy"
+      ],
+      "prompt": "Creature being defeated with a short guttural cry and a wet collapse, cartoon style not gory",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "tower.wave": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A new wave is incoming.",
+      "duration": 2.2,
+      "tags": [
+        "wave",
+        "horn",
+        "incoming",
+        "alert"
+      ],
+      "prompt": "Deep war horn sounding a long warning call across a battlefield, ominous and loud",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "tower.base.damage": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The player's base takes damage.",
+      "duration": 1.4,
+      "tags": [
+        "damage",
+        "base",
+        "hit",
+        "alarm"
+      ],
+      "prompt": "Heavy stone wall being struck and cracking with an alarm bell behind it, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "tower.repair": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A structure is repaired.",
+      "duration": 1.4,
+      "tags": [
+        "repair",
+        "fix",
+        "rebuild",
+        "hammer"
+      ],
+      "prompt": "Quick hammering and sawing repairing a wooden structure, busy workshop burst, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "tower.target": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A tower locks onto a target.",
+      "duration": 0.5,
+      "tags": [
+        "target",
+        "lock",
+        "aim",
+        "acquire"
+      ],
+      "prompt": "Mechanical turret swivelling and locking into position, servo whir with a clunk, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "idle.tap": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The main tap in a clicker. Fires constantly.",
+      "duration": 0.25,
+      "tags": [
+        "tap",
+        "click",
+        "clicker",
+        "main"
+      ],
+      "prompt": "Finger tapping firmly on a taut drum skin, short punchy thump, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 5,
+      "sequence": {
+        "prompt": "Finger tapping repeatedly and firmly on a taut drum skin, six clear separate taps, loud and close, dry recording",
+        "seconds": 3.0
+      }
+    },
+    "idle.prestige": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A prestige or rebirth reset.",
+      "duration": 2.8,
+      "tags": [
+        "prestige",
+        "rebirth",
+        "reset",
+        "ascend"
+      ],
+      "prompt": "Grand magical ascension, deep swelling rush rising into a radiant shimmering bloom, triumphant",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "idle.offline": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Offline earnings are collected on return.",
+      "duration": 2.0,
+      "tags": [
+        "offline",
+        "earnings",
+        "collect",
+        "return"
+      ],
+      "prompt": "Large pile of coins cascading into a chest with a warm confirming chime, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "idle.autocollect": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An automated collector picks something up.",
+      "duration": 0.6,
+      "tags": [
+        "auto",
+        "collect",
+        "robot",
+        "gather"
+      ],
+      "prompt": "Small mechanical claw grabbing an object with a servo whir and a click, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "idle.multiplier": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A multiplier increases.",
+      "duration": 0.9,
+      "tags": [
+        "multiplier",
+        "boost",
+        "x2",
+        "increase"
+      ],
+      "prompt": "Rising electronic power surge with a clear confirming ping at the top, clean recording",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "idle.milestone": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A milestone number is reached.",
+      "duration": 1.8,
+      "tags": [
+        "milestone",
+        "goal",
+        "threshold",
+        "reached"
+      ],
+      "prompt": "Celebratory burst of bells and a small cheer with sparkling shimmer, warm and rewarding",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "idle.upgrade.chain": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Several upgrades buy at once.",
+      "duration": 1.6,
+      "tags": [
+        "chain",
+        "bulk",
+        "buy",
+        "rapid"
+      ],
+      "prompt": "Rapid series of mechanical switches and confirming pings in quick succession, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "idle.generator": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A generator or factory runs. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "generator",
+        "factory",
+        "idle",
+        "loop"
+      ],
+      "prompt": "Small mechanical generator chugging steadily, continuous rhythmic machinery, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 0.8
+      },
+      "loopable": true
+    },
+    "idle.coin.rain": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Coins rain down after a big gain.",
+      "duration": 2.2,
+      "tags": [
+        "coins",
+        "rain",
+        "shower",
+        "reward"
+      ],
+      "prompt": "Hundreds of metal coins raining down onto a hard surface, dense cascading clatter, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "idle.levelup": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A generator or hero levels up.",
+      "duration": 1.2,
+      "tags": [
+        "level",
+        "up",
+        "promote",
+        "grow"
+      ],
+      "prompt": "Warm rising four note bell flourish with a soft magical sparkle, rewarding and short",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "shop.ad.reward": {
+      "source": "ai",
+      "category": "reward",
+      "whenToUse": "A rewarded video finishes and pays out.",
+      "duration": 2.0,
+      "tags": [
+        "ad",
+        "reward",
+        "video",
+        "bonus"
+      ],
+      "prompt": "Generous reward payout, clear cascading chimes with coins landing and a warm confirming swell",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "shop.purchase.ok": {
+      "source": "ai",
+      "category": "reward",
+      "whenToUse": "A purchase completes successfully.",
+      "duration": 1.6,
+      "tags": [
+        "purchase",
+        "buy",
+        "success",
+        "paid"
+      ],
+      "prompt": "Cash register drawer opening with a clear confirming bell and a receipt printing, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "shop.purchase.fail": {
+      "source": "ai",
+      "category": "ui",
+      "whenToUse": "A purchase is declined or cancelled.",
+      "duration": 1.2,
+      "tags": [
+        "fail",
+        "declined",
+        "cancel",
+        "error"
+      ],
+      "prompt": "Card terminal rejecting a payment with two low descending error tones, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "shop.restore": {
+      "source": "ai",
+      "category": "ui",
+      "whenToUse": "Purchases are restored.",
+      "duration": 1.4,
+      "tags": [
+        "restore",
+        "sync",
+        "recover",
+        "account"
+      ],
+      "prompt": "Soft electronic sync completing with a rising confirming chime, clean recording",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "shop.subscribe": {
+      "source": "ai",
+      "category": "reward",
+      "whenToUse": "A subscription starts.",
+      "duration": 2.2,
+      "tags": [
+        "subscribe",
+        "vip",
+        "premium",
+        "join"
+      ],
+      "prompt": "Luxurious premium unlock, warm golden shimmer rising into a rich confirming chord",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "shop.streak": {
+      "source": "ai",
+      "category": "reward",
+      "whenToUse": "A daily streak advances.",
+      "duration": 1.6,
+      "tags": [
+        "streak",
+        "daily",
+        "calendar",
+        "consecutive"
+      ],
+      "prompt": "Series of rising stamp impacts with a ringing bell at the end, satisfying and rhythmic, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "shop.piggy": {
+      "source": "ai",
+      "category": "reward",
+      "whenToUse": "A piggy bank is smashed open.",
+      "duration": 2.0,
+      "tags": [
+        "piggy",
+        "smash",
+        "savings",
+        "break"
+      ],
+      "prompt": "Ceramic piggy bank smashing on a hard floor and coins scattering everywhere, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "shop.wheel.spin": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A prize wheel spins. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "wheel",
+        "spin",
+        "prize",
+        "loop"
+      ],
+      "prompt": "Large prize wheel spinning with a flapper ticking rapidly over the pegs, continuous, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 0.8
+      },
+      "loopable": true
+    },
+    "shop.wheel.stop": {
+      "source": "ai",
+      "category": "reward",
+      "whenToUse": "The prize wheel lands on a segment.",
+      "duration": 1.6,
+      "tags": [
+        "wheel",
+        "stop",
+        "land",
+        "prize"
+      ],
+      "prompt": "Prize wheel slowing to a stop with the flapper ticking down and settling, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "shop.gift": {
+      "source": "ai",
+      "category": "reward",
+      "whenToUse": "A gift box opens.",
+      "duration": 1.8,
+      "tags": [
+        "gift",
+        "box",
+        "present",
+        "open"
+      ],
+      "prompt": "Wrapped gift box being torn open with paper tearing and a ribbon pull, then a clear reveal chime",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "shop.mail": {
+      "source": "ai",
+      "category": "ui",
+      "whenToUse": "New mail arrives.",
+      "duration": 1.2,
+      "tags": [
+        "mail",
+        "message",
+        "inbox",
+        "letter"
+      ],
+      "prompt": "Paper envelope sliding through a letterbox and landing on a wooden floor, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "shop.coin.spend": {
+      "source": "ai",
+      "category": "ui",
+      "whenToUse": "Currency is spent.",
+      "duration": 0.9,
+      "tags": [
+        "spend",
+        "pay",
+        "coins",
+        "deduct"
+      ],
+      "prompt": "Handful of metal coins being handed over and clinking into a bowl, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "rest.order.bell": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The order-up bell rings.",
+      "duration": 1.2,
+      "tags": [
+        "bell",
+        "order",
+        "ready",
+        "service"
+      ],
+      "prompt": "Counter service bell being struck once, ringing metallic ding with a ringing decay, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "rest.register": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The till opens and rings.",
+      "duration": 1.6,
+      "tags": [
+        "register",
+        "till",
+        "cash",
+        "sale"
+      ],
+      "prompt": "Old mechanical cash register ringing and the drawer sliding open with a clunk, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "rest.receipt": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A receipt prints.",
+      "duration": 1.4,
+      "tags": [
+        "receipt",
+        "print",
+        "paper",
+        "thermal"
+      ],
+      "prompt": "Thermal receipt printer buzzing out a paper slip and tearing it off, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "rest.coffee": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An espresso machine runs.",
+      "duration": 2.5,
+      "tags": [
+        "coffee",
+        "espresso",
+        "machine",
+        "steam"
+      ],
+      "prompt": "Espresso machine grinding then extracting coffee with a steam hiss, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "rest.grill": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Food hits a hot grill. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "grill",
+        "sizzle",
+        "cook",
+        "loop"
+      ],
+      "prompt": "Meat sizzling continuously on a hot griddle, steady fat crackling, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 0.8
+      },
+      "loopable": true
+    },
+    "rest.fryer": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A basket goes into the deep fryer.",
+      "duration": 2.0,
+      "tags": [
+        "fryer",
+        "fry",
+        "oil",
+        "basket"
+      ],
+      "prompt": "Basket of food being lowered into hot oil with a violent bubbling roar, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "rest.plate": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A plate is set down on a counter.",
+      "duration": 0.7,
+      "tags": [
+        "plate",
+        "serve",
+        "ceramic",
+        "counter"
+      ],
+      "prompt": "Ceramic plate being set down firmly on a hard counter, solid clink, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "rest.icecream": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Soft ice cream is dispensed.",
+      "duration": 1.8,
+      "tags": [
+        "icecream",
+        "dispense",
+        "swirl",
+        "machine"
+      ],
+      "prompt": "Soft serve ice cream machine dispensing with a motor whir and a wet squelch, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "rest.customer.happy": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A customer is satisfied.",
+      "duration": 1.4,
+      "tags": [
+        "happy",
+        "customer",
+        "satisfied",
+        "tip"
+      ],
+      "prompt": "Cheerful short hum of approval from a person with a small coin tip landing, wordless, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "rest.customer.angry": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A customer gives up and leaves.",
+      "duration": 1.4,
+      "tags": [
+        "angry",
+        "customer",
+        "leave",
+        "fail"
+      ],
+      "prompt": "Annoyed huff from a person and a chair scraping as they stand and walk off, wordless, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "rest.chop.fast": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Rapid prep chopping.",
+      "duration": 1.6,
+      "tags": [
+        "chop",
+        "prep",
+        "fast",
+        "knife"
+      ],
+      "prompt": "Chef chopping vegetables rapidly on a wooden board, fast rhythmic knife work, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "rest.pour.drink": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A drink is poured into a glass.",
+      "duration": 1.6,
+      "tags": [
+        "pour",
+        "drink",
+        "glass",
+        "fizzy"
+      ],
+      "prompt": "Fizzy drink being poured into a glass over ice, glugging with crackling bubbles, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "build.crane": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A crane lifts a load. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "crane",
+        "lift",
+        "cable",
+        "loop"
+      ],
+      "prompt": "Construction crane winch motor running with cables under load, continuous mechanical grind",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 0.8
+      },
+      "loopable": true
+    },
+    "build.bulldozer": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A bulldozer pushes earth. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "bulldozer",
+        "earth",
+        "tracks",
+        "loop"
+      ],
+      "prompt": "Bulldozer engine working hard with steel tracks grinding over rubble, continuous",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 0.8
+      },
+      "loopable": true
+    },
+    "build.jackhammer": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A jackhammer breaks concrete. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "jackhammer",
+        "drill",
+        "concrete",
+        "loop"
+      ],
+      "prompt": "Pneumatic jackhammer hammering into concrete, continuous rapid pounding, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 0.6
+      },
+      "loopable": true
+    },
+    "build.cement": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A cement mixer turns. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "cement",
+        "mixer",
+        "concrete",
+        "loop"
+      ],
+      "prompt": "Cement mixer drum turning with gravel tumbling inside, continuous rumbling, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 0.8
+      },
+      "loopable": true
+    },
+    "build.weld": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Welding sparks.",
+      "duration": 1.8,
+      "tags": [
+        "weld",
+        "spark",
+        "metal",
+        "arc"
+      ],
+      "prompt": "Arc welder striking and running a bead on steel, electrical crackling buzz, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "build.brick": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A brick is laid in mortar.",
+      "duration": 0.7,
+      "tags": [
+        "brick",
+        "lay",
+        "mortar",
+        "wall"
+      ],
+      "prompt": "Clay brick being set into wet mortar and tapped level with a trowel, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "build.glass.fit": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A pane of glass is fitted.",
+      "duration": 1.2,
+      "tags": [
+        "glass",
+        "fit",
+        "window",
+        "pane"
+      ],
+      "prompt": "Large glass pane being lifted and seated into a frame with a squeak and a settle, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "build.scaffold": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Scaffolding poles clang together.",
+      "duration": 1.2,
+      "tags": [
+        "scaffold",
+        "poles",
+        "metal",
+        "assemble"
+      ],
+      "prompt": "Steel scaffolding poles being slotted together and clamped, ringing metallic clangs, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "build.measure": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A tape measure snaps back.",
+      "duration": 0.9,
+      "tags": [
+        "tape",
+        "measure",
+        "retract",
+        "snap"
+      ],
+      "prompt": "Steel tape measure being pulled out and snapping back into its case, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "build.complete": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A building finishes construction.",
+      "duration": 2.0,
+      "tags": [
+        "complete",
+        "finish",
+        "built",
+        "done"
+      ],
+      "prompt": "Construction completing, final hammer strikes with a satisfying settling thud and a warm confirming chime",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "build.saw.power": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A circular saw cuts timber.",
+      "duration": 1.8,
+      "tags": [
+        "saw",
+        "power",
+        "cut",
+        "timber"
+      ],
+      "prompt": "Electric circular saw ripping through a timber plank, rising motor whine with wood, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "build.nail.gun": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A nail gun fires.",
+      "duration": 0.5,
+      "tags": [
+        "nail",
+        "gun",
+        "pneumatic",
+        "fasten"
+      ],
+      "prompt": "Pneumatic nail gun firing a nail into timber, hard air-driven crack, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "med.gate": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A castle gate opens.",
+      "duration": 3.0,
+      "tags": [
+        "gate",
+        "castle",
+        "heavy",
+        "wood"
+      ],
+      "prompt": "Enormous wooden castle gate grinding open on iron hinges, deep groaning creak, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "med.drawbridge": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A drawbridge lowers.",
+      "duration": 3.0,
+      "tags": [
+        "drawbridge",
+        "chain",
+        "lower",
+        "castle"
+      ],
+      "prompt": "Heavy drawbridge chains clanking as the bridge lowers and crashes down, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "med.portcullis": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A portcullis drops.",
+      "duration": 2.0,
+      "tags": [
+        "portcullis",
+        "iron",
+        "drop",
+        "gate"
+      ],
+      "prompt": "Iron portcullis dropping fast down its runners and slamming into stone, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "med.catapult": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A catapult launches.",
+      "duration": 1.8,
+      "tags": [
+        "catapult",
+        "siege",
+        "launch",
+        "trebuchet"
+      ],
+      "prompt": "Wooden catapult arm releasing under tension with a groaning snap and rope whip, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "med.siege.impact": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A boulder smashes a wall.",
+      "duration": 2.2,
+      "tags": [
+        "siege",
+        "impact",
+        "boulder",
+        "wall"
+      ],
+      "prompt": "Huge boulder smashing into a stone castle wall, massive crunching impact with falling rubble",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "med.arrow.volley": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A volley of arrows flies.",
+      "duration": 1.8,
+      "tags": [
+        "arrows",
+        "volley",
+        "archers",
+        "flight"
+      ],
+      "prompt": "Volley of many arrows being loosed together and whistling through the air, recorded outdoors",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "med.arrow.hit": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An arrow strikes wood.",
+      "duration": 0.6,
+      "tags": [
+        "arrow",
+        "hit",
+        "thunk",
+        "wood"
+      ],
+      "prompt": "Arrow striking a wooden target with a solid thunk and a quivering shaft, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "med.torch.mount": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A torch is taken from a wall.",
+      "duration": 1.0,
+      "tags": [
+        "torch",
+        "mount",
+        "wall",
+        "fire"
+      ],
+      "prompt": "Burning torch being pulled from an iron wall bracket, metal scrape with flame flare, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "med.dungeon.door": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A heavy dungeon door opens.",
+      "duration": 2.5,
+      "tags": [
+        "dungeon",
+        "door",
+        "iron",
+        "prison"
+      ],
+      "prompt": "Rusted iron dungeon door dragging open across stone, grinding metal with a deep echo",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "med.chest.lock": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A treasure chest is unlocked.",
+      "duration": 1.4,
+      "tags": [
+        "chest",
+        "lock",
+        "key",
+        "treasure"
+      ],
+      "prompt": "Iron key turning in an old chest lock and the hasp springing open, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "med.coin.purse": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A purse of coins is handled.",
+      "duration": 1.0,
+      "tags": [
+        "purse",
+        "coins",
+        "gold",
+        "pouch"
+      ],
+      "prompt": "Leather pouch of gold coins being shaken and set down, muffled metallic jingle, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "med.tavern": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Tavern ambience. Loops.",
+      "duration": 6.0,
+      "tags": [
+        "tavern",
+        "inn",
+        "crowd",
+        "loop"
+      ],
+      "prompt": "Busy medieval tavern with people talking and tankards clinking, continuous background, no music",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.5
+      },
+      "loopable": true
+    },
+    "med.anvil": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A smith strikes the anvil.",
+      "duration": 0.8,
+      "tags": [
+        "anvil",
+        "smith",
+        "forge",
+        "hammer"
+      ],
+      "prompt": "Blacksmith hammer striking steel on an anvil, ringing metallic clang, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 4,
+      "sequence": {
+        "prompt": "Blacksmith hammering steel on an anvil, five clear separate ringing strikes, loud and close, dry recording",
+        "seconds": 3.0
+      }
+    },
+    "med.scroll.open": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A scroll is unrolled.",
+      "duration": 1.2,
+      "tags": [
+        "scroll",
+        "parchment",
+        "open",
+        "map"
+      ],
+      "prompt": "Old parchment scroll being unrolled across a table, dry crackling paper, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "fish.cast": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A fishing rod casts.",
+      "duration": 1.4,
+      "tags": [
+        "cast",
+        "rod",
+        "line",
+        "throw"
+      ],
+      "prompt": "Fishing rod casting with the line whistling out and the reel spinning free, recorded outdoors",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "fish.reel.in": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Reeling in. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "reel",
+        "wind",
+        "retrieve",
+        "loop"
+      ],
+      "prompt": "Fishing reel being wound in steadily, continuous mechanical ratcheting, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 0.6
+      },
+      "loopable": true
+    },
+    "fish.reel.fast": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A fish runs and the drag screams.",
+      "duration": 2.0,
+      "tags": [
+        "drag",
+        "run",
+        "fast",
+        "fight"
+      ],
+      "prompt": "Fishing reel drag screaming as a fish runs with the line, fast ratcheting whir, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "fish.line.snap": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The line breaks.",
+      "duration": 0.8,
+      "tags": [
+        "line",
+        "snap",
+        "break",
+        "lose"
+      ],
+      "prompt": "Taut fishing line snapping under tension with a hard whipping recoil, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "fish.bob": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A float bobs and dips.",
+      "duration": 0.9,
+      "tags": [
+        "float",
+        "bob",
+        "bite",
+        "water"
+      ],
+      "prompt": "Fishing float dipping and bobbing in still water, small wet plops, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "fish.catch": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A fish is landed.",
+      "duration": 1.6,
+      "tags": [
+        "catch",
+        "land",
+        "fish",
+        "splash"
+      ],
+      "prompt": "Fish breaking the surface and being lifted out of the water, big splash with flapping, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "fish.flop": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A caught fish flaps about.",
+      "duration": 1.4,
+      "tags": [
+        "flop",
+        "flap",
+        "fish",
+        "deck"
+      ],
+      "prompt": "Fish flapping wetly on a wooden boat deck, rapid slapping, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "fish.net": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A landing net scoops.",
+      "duration": 1.0,
+      "tags": [
+        "net",
+        "scoop",
+        "land",
+        "mesh"
+      ],
+      "prompt": "Landing net being swept through water and lifted out dripping, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "fish.tacklebox": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A tackle box opens.",
+      "duration": 1.2,
+      "tags": [
+        "tackle",
+        "box",
+        "open",
+        "gear"
+      ],
+      "prompt": "Plastic tackle box being unclipped and opened with lures rattling inside, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "fish.water.calm": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Calm lake water. Loops.",
+      "duration": 6.0,
+      "tags": [
+        "lake",
+        "calm",
+        "water",
+        "loop"
+      ],
+      "prompt": "Calm lake water lapping gently against a wooden boat, continuous, clean field recording, no music",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.5
+      },
+      "loopable": true
+    },
+    "stealth.alert": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A guard notices something.",
+      "duration": 1.2,
+      "tags": [
+        "alert",
+        "suspicious",
+        "notice",
+        "warning"
+      ],
+      "prompt": "Tense alert sting, two rising dissonant string notes with a metallic edge, short and urgent",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "stealth.detected": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The player is spotted.",
+      "duration": 2.0,
+      "tags": [
+        "detected",
+        "spotted",
+        "caught",
+        "alarm"
+      ],
+      "prompt": "Alarm being triggered on detection, harsh rising klaxon blast with a tense orchestral stab",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "stealth.lost": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The guard loses track and calms down.",
+      "duration": 1.8,
+      "tags": [
+        "lost",
+        "calm",
+        "safe",
+        "clear"
+      ],
+      "prompt": "Tension releasing, falling string line settling into a calm sustained note, relieved",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "stealth.radio": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Radio chatter between guards.",
+      "duration": 2.0,
+      "tags": [
+        "radio",
+        "chatter",
+        "comms",
+        "static"
+      ],
+      "prompt": "Two way radio crackling with muffled unintelligible chatter and static bursts, wordless, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "stealth.sneak": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A slow careful footstep.",
+      "duration": 0.4,
+      "tags": [
+        "sneak",
+        "quiet",
+        "creep",
+        "step"
+      ],
+      "prompt": "Single very quiet careful footstep on a wooden floor, soft controlled weight shift, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 4,
+      "sequence": {
+        "prompt": "Person sneaking slowly across a wooden floor, five very quiet careful footsteps, recorded close and loud, no reverb",
+        "seconds": 3.0
+      }
+    },
+    "stealth.lockpick": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A lock is picked.",
+      "duration": 2.0,
+      "tags": [
+        "lockpick",
+        "pick",
+        "tumbler",
+        "break in"
+      ],
+      "prompt": "Lock being picked with metal tools, small scraping and tumbler clicks ending in a turn, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "stealth.vent": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A vent grate is removed.",
+      "duration": 1.6,
+      "tags": [
+        "vent",
+        "grate",
+        "metal",
+        "crawl"
+      ],
+      "prompt": "Metal vent grate being unscrewed and lifted away, hollow metallic rattle, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "stealth.camera": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A security camera pans.",
+      "duration": 1.4,
+      "tags": [
+        "camera",
+        "pan",
+        "servo",
+        "watch"
+      ],
+      "prompt": "Security camera servo panning across a room and stopping, electric whir with a click, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "stealth.takedown": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A silent takedown.",
+      "duration": 1.0,
+      "tags": [
+        "takedown",
+        "silent",
+        "grab",
+        "subdue"
+      ],
+      "prompt": "Quick grappling struggle with cloth and a muffled body slump to the floor, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "stealth.hide": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The player enters a hiding spot.",
+      "duration": 1.0,
+      "tags": [
+        "hide",
+        "locker",
+        "cover",
+        "conceal"
+      ],
+      "prompt": "Metal locker door being pulled shut from inside with a soft hollow clank, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "emote.clap": {
+      "source": "ai",
+      "category": "reward",
+      "whenToUse": "A single person claps.",
+      "duration": 1.4,
+      "tags": [
+        "clap",
+        "applaud",
+        "well done",
+        "react"
+      ],
+      "prompt": "One person clapping their hands together several times, loud and close, dry recording",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "emote.snap": {
+      "source": "ai",
+      "category": "ui",
+      "whenToUse": "A finger snap.",
+      "duration": 0.4,
+      "tags": [
+        "snap",
+        "fingers",
+        "click",
+        "react"
+      ],
+      "prompt": "Single loud finger snap, recorded very close, dry",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "emote.whistle": {
+      "source": "ai",
+      "category": "ui",
+      "whenToUse": "An admiring whistle.",
+      "duration": 1.2,
+      "tags": [
+        "whistle",
+        "impressed",
+        "react",
+        "wolf"
+      ],
+      "prompt": "Person whistling two rising notes in admiration, wordless, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "emote.cheer.one": {
+      "source": "ai",
+      "category": "reward",
+      "whenToUse": "One person cheers.",
+      "duration": 1.4,
+      "tags": [
+        "cheer",
+        "yay",
+        "react",
+        "happy"
+      ],
+      "prompt": "One person cheering happily with a short wordless whoop, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "emote.taunt": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A mocking taunt.",
+      "duration": 1.2,
+      "tags": [
+        "taunt",
+        "mock",
+        "tease",
+        "react"
+      ],
+      "prompt": "Person making a short wordless mocking raspberry and hum, playful, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "emote.kiss": {
+      "source": "ai",
+      "category": "ui",
+      "whenToUse": "A blown kiss.",
+      "duration": 0.6,
+      "tags": [
+        "kiss",
+        "love",
+        "react",
+        "heart"
+      ],
+      "prompt": "Person blowing a kiss, single soft lip smack, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "emote.sigh": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A weary sigh.",
+      "duration": 1.2,
+      "tags": [
+        "sigh",
+        "tired",
+        "bored",
+        "react"
+      ],
+      "prompt": "Person letting out a long weary sigh, wordless, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "emote.huh": {
+      "source": "ai",
+      "category": "ui",
+      "whenToUse": "A confused reaction.",
+      "duration": 0.9,
+      "tags": [
+        "confused",
+        "huh",
+        "question",
+        "react"
+      ],
+      "prompt": "Person making a short questioning hum of confusion, wordless, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "emote.oops": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A small mistake reaction.",
+      "duration": 0.9,
+      "tags": [
+        "oops",
+        "mistake",
+        "slip",
+        "react"
+      ],
+      "prompt": "Person making a short wordless oops sound of mild embarrassment, playful, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "emote.drumroll": {
+      "source": "ai",
+      "category": "ui",
+      "whenToUse": "A drumroll before a reveal.",
+      "duration": 2.2,
+      "tags": [
+        "drumroll",
+        "suspense",
+        "reveal",
+        "build"
+      ],
+      "prompt": "Snare drum roll building to a cymbal crash, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "body.sneeze": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A sneeze.",
+      "duration": 1.0,
+      "tags": [
+        "sneeze",
+        "achoo",
+        "sick",
+        "react"
+      ],
+      "prompt": "Person sneezing once loudly, wordless, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "body.cough": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A cough.",
+      "duration": 1.0,
+      "tags": [
+        "cough",
+        "sick",
+        "throat",
+        "react"
+      ],
+      "prompt": "Person coughing twice, wordless, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "body.yawn": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A yawn.",
+      "duration": 1.6,
+      "tags": [
+        "yawn",
+        "tired",
+        "sleep",
+        "bored"
+      ],
+      "prompt": "Person yawning widely, wordless, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "body.sniff": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A sniff.",
+      "duration": 0.7,
+      "tags": [
+        "sniff",
+        "smell",
+        "nose",
+        "react"
+      ],
+      "prompt": "Person sniffing sharply through the nose twice, wordless, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "body.swallow": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A nervous swallow.",
+      "duration": 0.7,
+      "tags": [
+        "swallow",
+        "gulp",
+        "nervous",
+        "throat"
+      ],
+      "prompt": "Person swallowing nervously, single wet gulp, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "body.stomach": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A hungry stomach rumbles.",
+      "duration": 1.6,
+      "tags": [
+        "stomach",
+        "hungry",
+        "rumble",
+        "gurgle"
+      ],
+      "prompt": "Empty stomach rumbling and gurgling loudly, recorded very close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "body.shiver": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Teeth chatter with cold.",
+      "duration": 1.4,
+      "tags": [
+        "shiver",
+        "cold",
+        "teeth",
+        "freeze"
+      ],
+      "prompt": "Person shivering with teeth chattering rapidly from cold, wordless, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "body.heartbeat.fast": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A racing heartbeat. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "heartbeat",
+        "panic",
+        "fast",
+        "loop"
+      ],
+      "prompt": "Human heart pounding very fast in panic, continuous rapid chest thuds, recorded very close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 0.8
+      },
+      "loopable": true
+    },
+    "body.knuckle": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Knuckles crack before a fight.",
+      "duration": 0.8,
+      "tags": [
+        "knuckle",
+        "crack",
+        "ready",
+        "fight"
+      ],
+      "prompt": "Person cracking their knuckles, series of small hard pops, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "body.footstep.bare": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A barefoot step on a hard floor.",
+      "duration": 0.3,
+      "tags": [
+        "barefoot",
+        "step",
+        "skin",
+        "slap"
+      ],
+      "prompt": "Single bare foot slapping down on a hard tiled floor, wet skin contact, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "weather.hail": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Hail hammers down. Loops.",
+      "duration": 6.0,
+      "tags": [
+        "hail",
+        "storm",
+        "ice",
+        "loop"
+      ],
+      "prompt": "Hailstones hammering down hard on a roof, continuous rattling impacts, clean field recording, no music",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 1.5
+      },
+      "loopable": true
+    },
+    "weather.blizzard": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A blizzard howls. Loops.",
+      "duration": 8.0,
+      "tags": [
+        "blizzard",
+        "snow",
+        "wind",
+        "loop"
+      ],
+      "prompt": "Blizzard howling with driving snow and hard wind gusts, continuous, clean field recording, no music",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 2.0
+      },
+      "loopable": true
+    },
+    "weather.sandstorm": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A sandstorm blows. Loops.",
+      "duration": 8.0,
+      "tags": [
+        "sandstorm",
+        "desert",
+        "grit",
+        "loop"
+      ],
+      "prompt": "Desert sandstorm with grit driving hard through the air, continuous hissing wind, clean field recording",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 2.0
+      },
+      "loopable": true
+    },
+    "weather.foghorn": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A fog horn sounds.",
+      "duration": 3.0,
+      "tags": [
+        "foghorn",
+        "harbour",
+        "sea",
+        "warning"
+      ],
+      "prompt": "Ship fog horn sounding one long deep blast across water, outdoor recording",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "weather.earthquake": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The ground shakes.",
+      "duration": 3.5,
+      "tags": [
+        "earthquake",
+        "rumble",
+        "shake",
+        "ground"
+      ],
+      "prompt": "Earthquake rumbling deeply with the ground shaking and objects rattling, powerful low roar",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "weather.avalanche": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An avalanche comes down.",
+      "duration": 3.5,
+      "tags": [
+        "avalanche",
+        "snow",
+        "slide",
+        "danger"
+      ],
+      "prompt": "Avalanche of snow thundering down a mountainside, building roaring rush, outdoor recording",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "weather.volcano": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A volcano erupts.",
+      "duration": 4.0,
+      "tags": [
+        "volcano",
+        "eruption",
+        "lava",
+        "danger"
+      ],
+      "prompt": "Volcano erupting with a huge explosive blast and a deep sustained magma roar",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "weather.tornado": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A tornado passes. Loops.",
+      "duration": 8.0,
+      "tags": [
+        "tornado",
+        "twister",
+        "wind",
+        "loop"
+      ],
+      "prompt": "Tornado roaring with violent swirling wind and debris, continuous, powerful",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 2.0
+      },
+      "loopable": true
+    },
+    "weather.ice.crack": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Ice cracks underfoot.",
+      "duration": 1.4,
+      "tags": [
+        "ice",
+        "crack",
+        "frozen",
+        "danger"
+      ],
+      "prompt": "Frozen lake ice cracking and splitting underfoot, brittle splintering, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "space.rocket.launch": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A rocket lifts off.",
+      "duration": 4.0,
+      "tags": [
+        "rocket",
+        "launch",
+        "liftoff",
+        "thrust"
+      ],
+      "prompt": "Rocket engines igniting and building to full thrust at liftoff, enormous roaring rumble",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "space.stage.sep": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Stage separation.",
+      "duration": 1.6,
+      "tags": [
+        "stage",
+        "separate",
+        "bolt",
+        "rocket"
+      ],
+      "prompt": "Explosive bolts firing and a rocket stage separating, hard metallic bang with a rush",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "space.docking": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A docking clamp seals.",
+      "duration": 2.0,
+      "tags": [
+        "docking",
+        "clamp",
+        "seal",
+        "station"
+      ],
+      "prompt": "Spacecraft docking clamps engaging and sealing with heavy metallic clunks and a pressure hiss",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "space.airlock.cycle": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "An airlock cycles.",
+      "duration": 3.0,
+      "tags": [
+        "airlock",
+        "pressure",
+        "cycle",
+        "vacuum"
+      ],
+      "prompt": "Airlock cycling with air being pumped out and pressure equalising, long hissing drain",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "space.oxygen.alarm": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Low oxygen warning. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "oxygen",
+        "alarm",
+        "warning",
+        "loop"
+      ],
+      "prompt": "Life support warning alarm beeping urgently and repeatedly, continuous electronic alert",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 0.8
+      },
+      "loopable": true
+    },
+    "space.zero.g": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Movement in zero gravity.",
+      "duration": 1.8,
+      "tags": [
+        "zero g",
+        "float",
+        "suit",
+        "drift"
+      ],
+      "prompt": "Spacesuit fabric and hardware moving slowly in silence with muffled breathing, recorded very close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "space.cryo": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A cryo pod opens.",
+      "duration": 2.5,
+      "tags": [
+        "cryo",
+        "pod",
+        "freeze",
+        "wake"
+      ],
+      "prompt": "Cryogenic pod unsealing with a freezing pressure hiss and mechanical lid lift",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "space.radar": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A radar sweep pings.",
+      "duration": 1.6,
+      "tags": [
+        "radar",
+        "sweep",
+        "ping",
+        "scan"
+      ],
+      "prompt": "Submarine style radar sweeping with a single clear sonar ping and a long decay, clean recording",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "space.hull.stress": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "The hull groans under stress.",
+      "duration": 3.0,
+      "tags": [
+        "hull",
+        "stress",
+        "metal",
+        "groan"
+      ],
+      "prompt": "Large metal hull groaning and creaking under structural stress, deep ominous metallic bending",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "space.thruster": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A manoeuvring thruster fires.",
+      "duration": 1.0,
+      "tags": [
+        "thruster",
+        "burst",
+        "manoeuvre",
+        "gas"
+      ],
+      "prompt": "Short burst of compressed gas from a manoeuvring thruster, hard hissing puff",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "space.beacon": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A distress beacon pulses. Loops.",
+      "duration": 3.0,
+      "tags": [
+        "beacon",
+        "distress",
+        "signal",
+        "loop"
+      ],
+      "prompt": "Distress beacon pulsing a single repeating electronic tone, continuous, clean synthetic recording",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "loop": 0.8
+      },
+      "loopable": true
+    },
+    "space.warp.charge": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A jump drive spins up.",
+      "duration": 3.0,
+      "tags": [
+        "warp",
+        "charge",
+        "drive",
+        "spool"
+      ],
+      "prompt": "Faster than light drive spooling up, rising electronic whine building with deep power, synthetic",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "holiday.sleighbells": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Sleigh bells jingle.",
+      "duration": 2.0,
+      "tags": [
+        "sleigh",
+        "bells",
+        "christmas",
+        "winter"
+      ],
+      "prompt": "Sleigh bells jingling rhythmically as a sled moves, ringing metallic shake, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "postFx": {
+        "presence": 3
+      }
+    },
+    "holiday.church.bells": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Church bells peal.",
+      "duration": 4.0,
+      "tags": [
+        "church",
+        "bells",
+        "peal",
+        "festive"
+      ],
+      "prompt": "Church bells pealing together in celebration, layered ringing bronze, outdoor recording",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "holiday.party.horn": {
+      "source": "ai",
+      "category": "ui",
+      "whenToUse": "A party blower.",
+      "duration": 0.8,
+      "tags": [
+        "party",
+        "horn",
+        "blower",
+        "celebrate"
+      ],
+      "prompt": "Party paper blower being blown with a squeaky unrolling toot, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 3
+    },
+    "holiday.confetti": {
+      "source": "ai",
+      "category": "reward",
+      "whenToUse": "A confetti cannon fires.",
+      "duration": 1.6,
+      "tags": [
+        "confetti",
+        "cannon",
+        "celebrate",
+        "burst"
+      ],
+      "prompt": "Confetti cannon firing with a compressed air pop and paper fluttering down, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "holiday.birthday": {
+      "source": "ai",
+      "category": "reward",
+      "whenToUse": "A birthday moment.",
+      "duration": 2.5,
+      "tags": [
+        "birthday",
+        "celebrate",
+        "party",
+        "cake"
+      ],
+      "prompt": "Small group cheering happily with party blowers and clapping at a birthday, wordless, recorded close",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "holiday.cork.pop": {
+      "source": "ai",
+      "category": "reward",
+      "whenToUse": "A champagne cork pops.",
+      "duration": 1.4,
+      "tags": [
+        "champagne",
+        "cork",
+        "pop",
+        "celebrate"
+      ],
+      "prompt": "Champagne cork popping from a bottle with a deep hollow burst and fizzing, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "holiday.halloween.creak": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A spooky creak.",
+      "duration": 2.5,
+      "tags": [
+        "halloween",
+        "creak",
+        "spooky",
+        "door"
+      ],
+      "prompt": "Old coffin lid creaking slowly open in a stone crypt, long groaning wood with a hollow echo",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "holiday.organ": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "A pipe organ stab.",
+      "duration": 3.0,
+      "tags": [
+        "organ",
+        "gothic",
+        "dramatic",
+        "church"
+      ],
+      "prompt": "Dramatic gothic pipe organ playing a dark sustained chord, grand and ominous",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "holiday.newyear": {
+      "source": "ai",
+      "category": "reward",
+      "whenToUse": "New year countdown moment.",
+      "duration": 3.0,
+      "tags": [
+        "newyear",
+        "countdown",
+        "celebrate",
+        "crowd"
+      ],
+      "prompt": "Crowd cheering and fireworks bursting at midnight celebration, outdoor recording",
+      "gain": 0.85,
+      "vary": 0.05
+    },
+    "holiday.cracker": {
+      "source": "ai",
+      "category": "ui",
+      "whenToUse": "A christmas cracker snaps.",
+      "duration": 0.6,
+      "tags": [
+        "cracker",
+        "snap",
+        "christmas",
+        "pull"
+      ],
+      "prompt": "Christmas cracker being pulled apart with a small gunpowder snap, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "holiday.wrapping": {
+      "source": "ai",
+      "category": "game",
+      "whenToUse": "Wrapping paper is torn.",
+      "duration": 1.2,
+      "tags": [
+        "wrapping",
+        "paper",
+        "tear",
+        "present"
+      ],
+      "prompt": "Gift wrapping paper being torn open quickly, crackling paper tearing, recorded close",
+      "gain": 0.85,
+      "vary": 0.05,
+      "variationsWanted": 2
+    },
+    "music.puzzle.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Thinking music for puzzle games. Calmer than casual, no melody that pulls focus.",
+      "tags": [
+        "music",
+        "loop",
+        "puzzle"
+      ],
+      "music": {
+        "prompt": "Calm puzzle game thinking music, soft repeating marimba pattern with a gentle pad underneath, unobtrusive, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.puzzle.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Thinking music for puzzle games. Calmer than casual, no melody that pulls focus.",
+      "tags": [
+        "music",
+        "loop",
+        "puzzle"
+      ],
+      "music": {
+        "prompt": "Gentle brain teaser background music, quiet plucked strings with a simple looping motif, patient and neutral, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.puzzle.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Thinking music for puzzle games. Calmer than casual, no melody that pulls focus.",
+      "tags": [
+        "music",
+        "loop",
+        "puzzle"
+      ],
+      "music": {
+        "prompt": "Relaxed puzzle game music, soft vibraphone and muted keys with light brushed percussion, focused and calm, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.tavern.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Medieval inn, fantasy village, RPG rest stop.",
+      "tags": [
+        "music",
+        "loop",
+        "tavern"
+      ],
+      "music": {
+        "prompt": "Medieval tavern music, lively lute and fiddle jig with a hand drum and tambourine, merry and rustic, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.tavern.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Medieval inn, fantasy village, RPG rest stop.",
+      "tags": [
+        "music",
+        "loop",
+        "tavern"
+      ],
+      "music": {
+        "prompt": "Fantasy inn background music, warm acoustic lute with a wooden flute melody, cosy and welcoming, relaxed tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.tavern.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Medieval inn, fantasy village, RPG rest stop.",
+      "tags": [
+        "music",
+        "loop",
+        "tavern"
+      ],
+      "music": {
+        "prompt": "Medieval village music, bouncy mandolin and recorder dance tune with light percussion, cheerful and folky, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.western.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Deserts, duels, cowboy and frontier settings.",
+      "tags": [
+        "music",
+        "loop",
+        "western"
+      ],
+      "music": {
+        "prompt": "Spaghetti western background music, twangy reverb guitar with whistling melody and sparse percussion, dusty and tense, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.western.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Deserts, duels, cowboy and frontier settings.",
+      "tags": [
+        "music",
+        "loop",
+        "western"
+      ],
+      "music": {
+        "prompt": "Wild west saloon music, honky tonk piano with a walking bass and brushes, rowdy and fun, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.western.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Deserts, duels, cowboy and frontier settings.",
+      "tags": [
+        "music",
+        "loop",
+        "western"
+      ],
+      "music": {
+        "prompt": "Western frontier music, lonesome harmonica and acoustic guitar over a slow hoofbeat rhythm, wide and wistful, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.tropical.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Beach, island, summer and holiday settings.",
+      "tags": [
+        "music",
+        "loop",
+        "tropical"
+      ],
+      "music": {
+        "prompt": "Tropical island background music, steel drums and ukulele with light shaker percussion, sunny and carefree, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.tropical.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Beach, island, summer and holiday settings.",
+      "tags": [
+        "music",
+        "loop",
+        "tropical"
+      ],
+      "music": {
+        "prompt": "Beach holiday music, mellow bossa nova guitar with soft flute and brushed drums, breezy and warm, relaxed tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.tropical.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Beach, island, summer and holiday settings.",
+      "tags": [
+        "music",
+        "loop",
+        "tropical"
+      ],
+      "music": {
+        "prompt": "Summer island music, bright marimba and kalimba with a gentle reggae groove, playful and easy, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.desert.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Middle-Eastern and Arabian settings, markets, dunes.",
+      "tags": [
+        "music",
+        "loop",
+        "desert"
+      ],
+      "music": {
+        "prompt": "Middle eastern background music, oud and ney flute over a hypnotic frame drum groove, exotic and flowing, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.desert.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Middle-Eastern and Arabian settings, markets, dunes.",
+      "tags": [
+        "music",
+        "loop",
+        "desert"
+      ],
+      "music": {
+        "prompt": "Arabian market music, lively qanun and darbuka rhythm with hand claps, bustling and colourful, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.desert.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Middle-Eastern and Arabian settings, markets, dunes.",
+      "tags": [
+        "music",
+        "loop",
+        "desert"
+      ],
+      "music": {
+        "prompt": "Desert journey music, sparse duduk melody over a slow camel walk rhythm, vast and lonely, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.oriental.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "East-Asian settings, temples, gardens, martial arts.",
+      "tags": [
+        "music",
+        "loop",
+        "oriental"
+      ],
+      "music": {
+        "prompt": "East asian background music, koto and shakuhachi flute over soft taiko heartbeat, serene and traditional, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.oriental.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "East-Asian settings, temples, gardens, martial arts.",
+      "tags": [
+        "music",
+        "loop",
+        "oriental"
+      ],
+      "music": {
+        "prompt": "Chinese garden music, erhu melody with guzheng plucks and light bells, graceful and flowing, relaxed tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.oriental.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "East-Asian settings, temples, gardens, martial arts.",
+      "tags": [
+        "music",
+        "loop",
+        "oriental"
+      ],
+      "music": {
+        "prompt": "Japanese village music, shamisen plucks with a light taiko groove and bamboo flute, lively and traditional, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.chiptune.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Retro arcade and 8-bit styled games.",
+      "tags": [
+        "music",
+        "loop",
+        "chiptune"
+      ],
+      "music": {
+        "prompt": "Retro chiptune game music, classic 8 bit square wave melody with a driving bass arpeggio and noise drums, nostalgic and upbeat, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.chiptune.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Retro arcade and 8-bit styled games.",
+      "tags": [
+        "music",
+        "loop",
+        "chiptune"
+      ],
+      "music": {
+        "prompt": "Old school arcade chiptune, bouncy pulse wave lead with a catchy hook and simple chip percussion, energetic and playful, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.chiptune.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Retro arcade and 8-bit styled games.",
+      "tags": [
+        "music",
+        "loop",
+        "chiptune"
+      ],
+      "music": {
+        "prompt": "Retro platformer chiptune, cheerful 8 bit melody with a walking chip bass and bright arpeggios, adventurous, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.lofi.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Study, chill, idle and slow-burn games.",
+      "tags": [
+        "music",
+        "loop",
+        "lofi"
+      ],
+      "music": {
+        "prompt": "Lo fi hip hop background music, warm dusty keys over a laid back boom bap drum loop with vinyl crackle, mellow, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.lofi.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Study, chill, idle and slow-burn games.",
+      "tags": [
+        "music",
+        "loop",
+        "lofi"
+      ],
+      "music": {
+        "prompt": "Chill lo fi study music, soft jazzy guitar chords with a lazy swung beat and tape hiss, relaxed and hazy, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.lofi.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Study, chill, idle and slow-burn games.",
+      "tags": [
+        "music",
+        "loop",
+        "lofi"
+      ],
+      "music": {
+        "prompt": "Lo fi bedroom beat, muted piano loop with a soft kick and snare and warm bass, sleepy and comforting, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.epic.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Trailers, cinematic reveals, big story moments.",
+      "tags": [
+        "music",
+        "loop",
+        "epic"
+      ],
+      "music": {
+        "prompt": "Epic cinematic trailer music, huge orchestral strings and brass with thunderous percussion, heroic and overwhelming, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.epic.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Trailers, cinematic reveals, big story moments.",
+      "tags": [
+        "music",
+        "loop",
+        "epic"
+      ],
+      "music": {
+        "prompt": "Epic fantasy battle music, soaring horns over driving strings and war drums, grand and urgent, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.epic.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Trailers, cinematic reveals, big story moments.",
+      "tags": [
+        "music",
+        "loop",
+        "epic"
+      ],
+      "music": {
+        "prompt": "Cinematic reveal music, slow building strings with deep brass swells and a rising tension, awe inspiring, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.comedy.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Cartoon slapstick, silly failures, funny moments.",
+      "tags": [
+        "music",
+        "loop",
+        "comedy"
+      ],
+      "music": {
+        "prompt": "Cartoon comedy background music, bouncy pizzicato strings with a playful bassoon and woodblock, silly and mischievous, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.comedy.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Cartoon slapstick, silly failures, funny moments.",
+      "tags": [
+        "music",
+        "loop",
+        "comedy"
+      ],
+      "music": {
+        "prompt": "Slapstick cartoon music, frantic xylophone runs with muted trumpet and slide whistle accents, chaotic and funny, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.comedy.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Cartoon slapstick, silly failures, funny moments.",
+      "tags": [
+        "music",
+        "loop",
+        "comedy"
+      ],
+      "music": {
+        "prompt": "Goofy cartoon caper music, tuba bass with clarinet melody and comic percussion, sneaky and playful, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.casino.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Casino floors, card tables, lounge scenes.",
+      "tags": [
+        "music",
+        "loop",
+        "casino"
+      ],
+      "music": {
+        "prompt": "Casino lounge music, smooth jazz piano with brushed drums and upright bass, classy and relaxed, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.casino.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Casino floors, card tables, lounge scenes.",
+      "tags": [
+        "music",
+        "loop",
+        "casino"
+      ],
+      "music": {
+        "prompt": "Vegas casino music, swinging big band brass with a walking bass, glamorous and lively, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.casino.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Casino floors, card tables, lounge scenes.",
+      "tags": [
+        "music",
+        "loop",
+        "casino"
+      ],
+      "music": {
+        "prompt": "Late night card room music, sultry saxophone over soft rhodes keys and light percussion, smoky and cool, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.underwater.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Submerged levels, dream sequences, floaty worlds.",
+      "tags": [
+        "music",
+        "loop",
+        "underwater"
+      ],
+      "music": {
+        "prompt": "Underwater level music, dreamy washed synth pads with bubbling textures and soft bells, weightless and calm, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.underwater.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Submerged levels, dream sequences, floaty worlds.",
+      "tags": [
+        "music",
+        "loop",
+        "underwater"
+      ],
+      "music": {
+        "prompt": "Submerged dream music, slow shimmering arpeggios with a deep muffled bass and gentle swells, floating, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.underwater.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Submerged levels, dream sequences, floaty worlds.",
+      "tags": [
+        "music",
+        "loop",
+        "underwater"
+      ],
+      "music": {
+        "prompt": "Deep ocean music, mysterious low pads with sparse harp and distant whale-like tones, vast and eerie, very slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.winter.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Snow levels, festive seasons, ice worlds.",
+      "tags": [
+        "music",
+        "loop",
+        "winter"
+      ],
+      "music": {
+        "prompt": "Winter wonderland music, twinkling bells and glockenspiel over soft strings, magical and snowy, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.winter.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Snow levels, festive seasons, ice worlds.",
+      "tags": [
+        "music",
+        "loop",
+        "winter"
+      ],
+      "music": {
+        "prompt": "Festive holiday music, warm sleigh bells with cheerful strings and a cosy piano melody, joyful, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.winter.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Snow levels, festive seasons, ice worlds.",
+      "tags": [
+        "music",
+        "loop",
+        "winter"
+      ],
+      "music": {
+        "prompt": "Ice world music, crystalline bell tones with cold airy pads and a slow pulse, frozen and beautiful, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.zen.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Meditation, calm puzzle, wellness, relaxation modes.",
+      "tags": [
+        "music",
+        "loop",
+        "zen"
+      ],
+      "music": {
+        "prompt": "Zen meditation music, sparse singing bowl tones with soft drone and occasional bamboo chimes, deeply calm, very slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.zen.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Meditation, calm puzzle, wellness, relaxation modes.",
+      "tags": [
+        "music",
+        "loop",
+        "zen"
+      ],
+      "music": {
+        "prompt": "Peaceful relaxation music, slow ambient pad with gentle water textures and soft piano notes, tranquil, very slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.zen.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Meditation, calm puzzle, wellness, relaxation modes.",
+      "tags": [
+        "music",
+        "loop",
+        "zen"
+      ],
+      "music": {
+        "prompt": "Mindfulness background music, warm sustained strings with distant bells and a slow breathing pulse, serene, very slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.chase.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Pursuit, escape, timer running out.",
+      "tags": [
+        "music",
+        "loop",
+        "chase"
+      ],
+      "music": {
+        "prompt": "Chase sequence music, frantic driving strings with relentless percussion and a ticking pulse, urgent and breathless, very fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.chase.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Pursuit, escape, timer running out.",
+      "tags": [
+        "music",
+        "loop",
+        "chase"
+      ],
+      "music": {
+        "prompt": "Escape music, pounding electronic drums with a racing arpeggio and rising tension, panicked and fast, very fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.chase.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Pursuit, escape, timer running out.",
+      "tags": [
+        "music",
+        "loop",
+        "chase"
+      ],
+      "music": {
+        "prompt": "Pursuit music, aggressive orchestral ostinato with brass stabs and snare rolls, dangerous and relentless, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.tension.1": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Stealth, dread, the moment before something happens.",
+      "tags": [
+        "music",
+        "loop",
+        "tension"
+      ],
+      "music": {
+        "prompt": "Tension background music, low sustained drone with sparse dissonant piano notes and a quiet pulse, uneasy, very slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.tension.2": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Stealth, dread, the moment before something happens.",
+      "tags": [
+        "music",
+        "loop",
+        "tension"
+      ],
+      "music": {
+        "prompt": "Stealth tension music, muted heartbeat pulse under cold synth pads and occasional metallic tones, nervous, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "music.tension.3": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "loopable": true,
+      "duration": 32,
+      "gain": 0.9,
+      "vary": 0,
+      "whenToUse": "Stealth, dread, the moment before something happens.",
+      "tags": [
+        "music",
+        "loop",
+        "tension"
+      ],
+      "music": {
+        "prompt": "Suspense music, slowly rising string cluster with ticking percussion and a growing low rumble, dread building, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
+        "seconds": 32
+      },
+      "postFx": {
+        "loop": 4.0
+      }
+    },
+    "sting.level.start": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "duration": 4,
+      "gain": 0.95,
+      "vary": 0,
+      "whenToUse": "A level or round begins.",
+      "tags": [
+        "music",
+        "sting",
+        "one-shot"
+      ],
+      "music": {
+        "prompt": "Short energetic game level start fanfare, bright rising brass and percussion hit, ending cleanly. Instrumental only, no vocals.",
+        "seconds": 4
+      }
+    },
+    "sting.victory": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "duration": 5,
+      "gain": 0.95,
+      "vary": 0,
+      "whenToUse": "The player wins. Short, not a loop.",
+      "tags": [
+        "music",
+        "sting",
+        "one-shot"
+      ],
+      "music": {
+        "prompt": "Short triumphant victory fanfare, ascending brass and strings with a cymbal finish, clean ending. Instrumental only, no vocals.",
+        "seconds": 5
+      }
+    },
+    "sting.defeat": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "duration": 5,
+      "gain": 0.95,
+      "vary": 0,
+      "whenToUse": "The player loses.",
+      "tags": [
+        "music",
+        "sting",
+        "one-shot"
+      ],
+      "music": {
+        "prompt": "Short defeat sting, descending brass and strings settling to a low sad chord, clean ending. Instrumental only, no vocals.",
+        "seconds": 5
+      }
+    },
+    "sting.gameover": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "duration": 6,
+      "gain": 0.95,
+      "vary": 0,
+      "whenToUse": "The run is over for good.",
+      "tags": [
+        "music",
+        "sting",
+        "one-shot"
+      ],
+      "music": {
+        "prompt": "Game over sting, slow descending piano and strings resolving to a final low chord, clean ending. Instrumental only, no vocals.",
+        "seconds": 6
+      }
+    },
+    "sting.levelup": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "duration": 4,
+      "gain": 0.95,
+      "vary": 0,
+      "whenToUse": "The player levels up.",
+      "tags": [
+        "music",
+        "sting",
+        "one-shot"
+      ],
+      "music": {
+        "prompt": "Short level up flourish, rising bells and harp with a warm triumphant chord, clean ending. Instrumental only, no vocals.",
+        "seconds": 4
+      }
+    },
+    "sting.unlock": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "duration": 4,
+      "gain": 0.95,
+      "vary": 0,
+      "whenToUse": "Something new unlocks.",
+      "tags": [
+        "music",
+        "sting",
+        "one-shot"
+      ],
+      "music": {
+        "prompt": "Short unlock flourish, bright rising arpeggio on bells with a shimmering finish, clean ending. Instrumental only, no vocals.",
+        "seconds": 4
+      }
+    },
+    "sting.newrecord": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "duration": 5,
+      "gain": 0.95,
+      "vary": 0,
+      "whenToUse": "A new high score.",
+      "tags": [
+        "music",
+        "sting",
+        "one-shot"
+      ],
+      "music": {
+        "prompt": "Short new record fanfare, excited rising brass with sparkling bells and a big finish, clean ending. Instrumental only, no vocals.",
+        "seconds": 5
+      }
+    },
+    "sting.quest": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "duration": 5,
+      "gain": 0.95,
+      "vary": 0,
+      "whenToUse": "A quest or objective completes.",
+      "tags": [
+        "music",
+        "sting",
+        "one-shot"
+      ],
+      "music": {
+        "prompt": "Short quest complete flourish, noble horn phrase with harp and a warm resolve, clean ending. Instrumental only, no vocals.",
+        "seconds": 5
+      }
+    },
+    "sting.rankup": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "duration": 5,
+      "gain": 0.95,
+      "vary": 0,
+      "whenToUse": "The player ranks up or promotes.",
+      "tags": [
+        "music",
+        "sting",
+        "one-shot"
+      ],
+      "music": {
+        "prompt": "Short rank up fanfare, bold brass flourish with a timpani roll and a confident finish, clean ending. Instrumental only, no vocals.",
+        "seconds": 5
+      }
+    },
+    "sting.boss.appear": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "duration": 5,
+      "gain": 0.95,
+      "vary": 0,
+      "whenToUse": "A boss enters.",
+      "tags": [
+        "music",
+        "sting",
+        "one-shot"
+      ],
+      "music": {
+        "prompt": "Short boss reveal sting, huge menacing brass stab with low drums and a dark sustain, clean ending. Instrumental only, no vocals.",
+        "seconds": 5
+      }
+    },
+    "sting.danger": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "duration": 3,
+      "gain": 0.95,
+      "vary": 0,
+      "whenToUse": "A sudden threat appears.",
+      "tags": [
+        "music",
+        "sting",
+        "one-shot"
+      ],
+      "music": {
+        "prompt": "Short danger sting, sharp dissonant string stab with a low boom, tense, clean ending. Instrumental only, no vocals.",
+        "seconds": 3
+      }
+    },
+    "sting.reveal": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "duration": 4,
+      "gain": 0.95,
+      "vary": 0,
+      "whenToUse": "A prize or secret is revealed.",
+      "tags": [
+        "music",
+        "sting",
+        "one-shot"
+      ],
+      "music": {
+        "prompt": "Short magical reveal flourish, shimmering harp glissando with bright bells, clean ending. Instrumental only, no vocals.",
+        "seconds": 4
+      }
+    },
+    "sting.transition": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "duration": 3,
+      "gain": 0.95,
+      "vary": 0,
+      "whenToUse": "Between screens or chapters.",
+      "tags": [
+        "music",
+        "sting",
+        "one-shot"
+      ],
+      "music": {
+        "prompt": "Short musical transition whoosh, rising orchestral swell with a cymbal wash, clean ending. Instrumental only, no vocals.",
+        "seconds": 3
+      }
+    },
+    "sting.logo": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "duration": 4,
+      "gain": 0.95,
+      "vary": 0,
+      "whenToUse": "Studio logo or splash screen.",
+      "tags": [
+        "music",
+        "sting",
+        "one-shot"
+      ],
+      "music": {
+        "prompt": "Short studio logo sting, warm synth swell rising into a bright confident chord, clean ending. Instrumental only, no vocals.",
+        "seconds": 4
+      }
+    },
+    "sting.chapter": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "duration": 5,
+      "gain": 0.95,
+      "vary": 0,
+      "whenToUse": "A chapter or world title card.",
+      "tags": [
+        "music",
+        "sting",
+        "one-shot"
+      ],
+      "music": {
+        "prompt": "Short chapter title sting, gentle strings rising to a hopeful sustained chord, clean ending. Instrumental only, no vocals.",
+        "seconds": 5
+      }
+    },
+    "sting.sadtrombone": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "duration": 4,
+      "gain": 0.95,
+      "vary": 0,
+      "whenToUse": "A comedic failure.",
+      "tags": [
+        "music",
+        "sting",
+        "one-shot"
+      ],
+      "music": {
+        "prompt": "Comedic failure sting, classic descending sad trombone wah wah, playful, clean ending. Instrumental only, no vocals.",
+        "seconds": 4
+      }
+    },
+    "sting.tada": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "duration": 3,
+      "gain": 0.95,
+      "vary": 0,
+      "whenToUse": "A small comedic success.",
+      "tags": [
+        "music",
+        "sting",
+        "one-shot"
+      ],
+      "music": {
+        "prompt": "Comedic success sting, cheerful ta da flourish on brass and cymbal, playful, clean ending. Instrumental only, no vocals.",
+        "seconds": 3
+      }
+    },
+    "sting.suspense": {
+      "source": "ai",
+      "category": "music",
+      "stream": true,
+      "duration": 5,
+      "gain": 0.95,
+      "vary": 0,
+      "whenToUse": "A dramatic pause before a result.",
+      "tags": [
+        "music",
+        "sting",
+        "one-shot"
+      ],
+      "music": {
+        "prompt": "Short suspense sting, slow rising string tremolo with a ticking pulse stopping abruptly, clean ending. Instrumental only, no vocals.",
+        "seconds": 5
       }
     }
   }

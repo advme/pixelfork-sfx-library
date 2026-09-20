@@ -70,6 +70,21 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `animal.snake.hiss` | A snake hisses — enemy warning, trap. | ai |
 | `animal.wolf.howl` | A wolf howls — night, danger, boss approach. | ai |
 
+**`body.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `body.cough` | A cough. | ai |
+| `body.footstep.bare` | A barefoot step on a hard floor. | ai |
+| `body.heartbeat.fast` | A racing heartbeat. Loops. | ai |
+| `body.knuckle` | Knuckles crack before a fight. | ai |
+| `body.shiver` | Teeth chatter with cold. | ai |
+| `body.sneeze` | A sneeze. | ai |
+| `body.sniff` | A sniff. | ai |
+| `body.stomach` | A hungry stomach rumbles. | ai |
+| `body.swallow` | A nervous swallow. | ai |
+| `body.yawn` | A yawn. | ai |
+
 **`break.*`**
 
 | Sound | Play it when | Made by |
@@ -78,6 +93,23 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `break.pot` | A pot, vase or ceramic container smashes. | ai |
 | `break.stone` | Rock, brick or concrete breaks. | ai |
 | `break.wood` | A crate, plank, barrel or door breaks apart. | ai |
+
+**`build.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `build.brick` | A brick is laid in mortar. | ai |
+| `build.bulldozer` | A bulldozer pushes earth. Loops. | ai |
+| `build.cement` | A cement mixer turns. Loops. | ai |
+| `build.complete` | A building finishes construction. | ai |
+| `build.crane` | A crane lifts a load. Loops. | ai |
+| `build.glass.fit` | A pane of glass is fitted. | ai |
+| `build.jackhammer` | A jackhammer breaks concrete. Loops. | ai |
+| `build.measure` | A tape measure snaps back. | ai |
+| `build.nail.gun` | A nail gun fires. | ai |
+| `build.saw.power` | A circular saw cuts timber. | ai |
+| `build.scaffold` | Scaffolding poles clang together. | ai |
+| `build.weld` | Welding sparks. | ai |
 
 **`car.*`**
 
@@ -113,6 +145,25 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `car.tyre.squeal` | Sustained tyre scrub through a long corner. Loops. | ai |
 | `car.window` | An electric window winds down. | ai |
 | `car.wiper` | Windscreen wipers sweep. Loops. | ai |
+
+**`casino.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `casino.ambience` | Casino floor ambience. Loops. | ai |
+| `casino.bell` | The win bell rings. | ai |
+| `casino.card.deal` | One card is dealt. | ai |
+| `casino.card.flip` | A card is turned face up. | ai |
+| `casino.chips.stack` | Chips are stacked or counted. | ai |
+| `casino.chips.toss` | Chips are pushed into the pot. | ai |
+| `casino.dice.roll` | Dice are thrown. | ai |
+| `casino.dice.shake` | Dice rattle in a cup. | ai |
+| `casino.lever` | The slot lever is pulled. | ai |
+| `casino.payout` | Coins pour out of a machine. | ai |
+| `casino.reel.spin` | A slot reel starts spinning. Loops while it runs. | ai |
+| `casino.reel.stop` | One slot reel lands. | ai |
+| `casino.roulette.drop` | The roulette ball settles into a pocket. | ai |
+| `casino.roulette.spin` | The roulette wheel spins. Loops. | ai |
 
 **`coin.*`**
 
@@ -170,6 +221,21 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `door.slide` | A sliding door runs on its track. | ai |
 | `door.wood.open` | A wooden door opens. | ai |
 
+**`emote.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `emote.cheer.one` | One person cheers. | ai |
+| `emote.clap` | A single person claps. | ai |
+| `emote.drumroll` | A drumroll before a reveal. | ai |
+| `emote.huh` | A confused reaction. | ai |
+| `emote.kiss` | A blown kiss. | ai |
+| `emote.oops` | A small mistake reaction. | ai |
+| `emote.sigh` | A weary sigh. | ai |
+| `emote.snap` | A finger snap. | ai |
+| `emote.taunt` | A mocking taunt. | ai |
+| `emote.whistle` | An admiring whistle. | ai |
+
 **`engine.*`**
 
 | Sound | Play it when | Made by |
@@ -202,6 +268,21 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `fire.lighter` | A lighter flicks on. | ai |
 | `fire.match` | A match is struck. | ai |
 | `fire.torch` | A handheld torch burns. Loops. | ai |
+
+**`fish.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `fish.bob` | A float bobs and dips. | ai |
+| `fish.cast` | A fishing rod casts. | ai |
+| `fish.catch` | A fish is landed. | ai |
+| `fish.flop` | A caught fish flaps about. | ai |
+| `fish.line.snap` | The line breaks. | ai |
+| `fish.net` | A landing net scoops. | ai |
+| `fish.reel.fast` | A fish runs and the drag screams. | ai |
+| `fish.reel.in` | Reeling in. Loops. | ai |
+| `fish.tacklebox` | A tackle box opens. | ai |
+| `fish.water.calm` | Calm lake water. Loops. | ai |
 
 **`game.*`**
 
@@ -236,6 +317,22 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `gun.smg` | A submachine gun burst. | ai |
 | `gun.sniper` | A sniper rifle fires. | ai |
 
+**`holiday.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `holiday.birthday` | A birthday moment. | ai |
+| `holiday.church.bells` | Church bells peal. | ai |
+| `holiday.confetti` | A confetti cannon fires. | ai |
+| `holiday.cork.pop` | A champagne cork pops. | ai |
+| `holiday.cracker` | A christmas cracker snaps. | ai |
+| `holiday.halloween.creak` | A spooky creak. | ai |
+| `holiday.newyear` | New year countdown moment. | ai |
+| `holiday.organ` | A pipe organ stab. | ai |
+| `holiday.party.horn` | A party blower. | ai |
+| `holiday.sleighbells` | Sleigh bells jingle. | ai |
+| `holiday.wrapping` | Wrapping paper is torn. | ai |
+
 **`horror.*`**
 
 | Sound | Play it when | Made by |
@@ -252,6 +349,21 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `horror.scream` | A terrified scream. | ai |
 | `horror.static` | Radio or TV static. Loops. | ai |
 | `horror.whisper` | An unsettling whisper — ghost, haunting, secret. | ai |
+
+**`idle.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `idle.autocollect` | An automated collector picks something up. | ai |
+| `idle.coin.rain` | Coins rain down after a big gain. | ai |
+| `idle.generator` | A generator or factory runs. Loops. | ai |
+| `idle.levelup` | A generator or hero levels up. | ai |
+| `idle.milestone` | A milestone number is reached. | ai |
+| `idle.multiplier` | A multiplier increases. | ai |
+| `idle.offline` | Offline earnings are collected on return. | ai |
+| `idle.prestige` | A prestige or rebirth reset. | ai |
+| `idle.tap` | The main tap in a clicker. Fires constantly. | ai |
+| `idle.upgrade.chain` | Several upgrades buy at once. | ai |
 
 **`impact.*`**
 
@@ -321,6 +433,25 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `match.shuffle` | The board reshuffles, or cards are dealt. | ai |
 | `match.swap` | Two tiles swap places. | code |
 
+**`med.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `med.anvil` | A smith strikes the anvil. | ai |
+| `med.arrow.hit` | An arrow strikes wood. | ai |
+| `med.arrow.volley` | A volley of arrows flies. | ai |
+| `med.catapult` | A catapult launches. | ai |
+| `med.chest.lock` | A treasure chest is unlocked. | ai |
+| `med.coin.purse` | A purse of coins is handled. | ai |
+| `med.drawbridge` | A drawbridge lowers. | ai |
+| `med.dungeon.door` | A heavy dungeon door opens. | ai |
+| `med.gate` | A castle gate opens. | ai |
+| `med.portcullis` | A portcullis drops. | ai |
+| `med.scroll.open` | A scroll is unrolled. | ai |
+| `med.siege.impact` | A boulder smashes a wall. | ai |
+| `med.tavern` | Tavern ambience. Loops. | ai |
+| `med.torch.mount` | A torch is taken from a wall. | ai |
+
 **`melee.*`**
 
 | Sound | Play it when | Made by |
@@ -372,27 +503,75 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `music.boss.1` | Boss fights and final showdowns. The most intense music in the game. | ai |
 | `music.boss.2` | Boss fights and final showdowns. The most intense music in the game. | ai |
 | `music.boss.3` | Boss fights and final showdowns. The most intense music in the game. | ai |
+| `music.casino.1` | Casino floors, card tables, lounge scenes. | ai |
+| `music.casino.2` | Casino floors, card tables, lounge scenes. | ai |
+| `music.casino.3` | Casino floors, card tables, lounge scenes. | ai |
 | `music.casual.1` | Match-3, puzzle and casual games. Light and friendly, never distracting. | ai |
 | `music.casual.2` | Match-3, puzzle and casual games. Light and friendly, never distracting. | ai |
 | `music.casual.3` | Match-3, puzzle and casual games. Light and friendly, never distracting. | ai |
+| `music.chase.1` | Pursuit, escape, timer running out. | ai |
+| `music.chase.2` | Pursuit, escape, timer running out. | ai |
+| `music.chase.3` | Pursuit, escape, timer running out. | ai |
+| `music.chiptune.1` | Retro arcade and 8-bit styled games. | ai |
+| `music.chiptune.2` | Retro arcade and 8-bit styled games. | ai |
+| `music.chiptune.3` | Retro arcade and 8-bit styled games. | ai |
+| `music.comedy.1` | Cartoon slapstick, silly failures, funny moments. | ai |
+| `music.comedy.2` | Cartoon slapstick, silly failures, funny moments. | ai |
+| `music.comedy.3` | Cartoon slapstick, silly failures, funny moments. | ai |
 | `music.cozy.1` | Farming, idle, life sim and crafting. Warm and unhurried. | ai |
 | `music.cozy.2` | Farming, idle, life sim and crafting. Warm and unhurried. | ai |
 | `music.cozy.3` | Farming, idle, life sim and crafting. Warm and unhurried. | ai |
+| `music.desert.1` | Middle-Eastern and Arabian settings, markets, dunes. | ai |
+| `music.desert.2` | Middle-Eastern and Arabian settings, markets, dunes. | ai |
+| `music.desert.3` | Middle-Eastern and Arabian settings, markets, dunes. | ai |
+| `music.epic.1` | Trailers, cinematic reveals, big story moments. | ai |
+| `music.epic.2` | Trailers, cinematic reveals, big story moments. | ai |
+| `music.epic.3` | Trailers, cinematic reveals, big story moments. | ai |
 | `music.horror.1` | Horror, survival and tension. Sparse and unsettling. | ai |
 | `music.horror.2` | Horror, survival and tension. Sparse and unsettling. | ai |
 | `music.horror.3` | Horror, survival and tension. Sparse and unsettling. | ai |
 | `music.hypercasual.1` | Hyper-casual games: one-tap, endless runner, arcade. Simple and driving. | ai |
 | `music.hypercasual.2` | Hyper-casual games: one-tap, endless runner, arcade. Simple and driving. | ai |
 | `music.hypercasual.3` | Hyper-casual games: one-tap, endless runner, arcade. Simple and driving. | ai |
+| `music.lofi.1` | Study, chill, idle and slow-burn games. | ai |
+| `music.lofi.2` | Study, chill, idle and slow-burn games. | ai |
+| `music.lofi.3` | Study, chill, idle and slow-burn games. | ai |
 | `music.menu.1` | Main menu, lobby, shop and between-level screens. | ai |
 | `music.menu.2` | Main menu, lobby, shop and between-level screens. | ai |
 | `music.menu.3` | Main menu, lobby, shop and between-level screens. | ai |
+| `music.oriental.1` | East-Asian settings, temples, gardens, martial arts. | ai |
+| `music.oriental.2` | East-Asian settings, temples, gardens, martial arts. | ai |
+| `music.oriental.3` | East-Asian settings, temples, gardens, martial arts. | ai |
+| `music.puzzle.1` | Thinking music for puzzle games. Calmer than casual, no melody that pulls focus. | ai |
+| `music.puzzle.2` | Thinking music for puzzle games. Calmer than casual, no melody that pulls focus. | ai |
+| `music.puzzle.3` | Thinking music for puzzle games. Calmer than casual, no melody that pulls focus. | ai |
 | `music.racing.1` | Racing and driving games. High energy electronic. | ai |
 | `music.racing.2` | Racing and driving games. High energy electronic. | ai |
 | `music.racing.3` | Racing and driving games. High energy electronic. | ai |
 | `music.scifi.1` | Sci-fi, space and cyberpunk. | ai |
 | `music.scifi.2` | Sci-fi, space and cyberpunk. | ai |
 | `music.scifi.3` | Sci-fi, space and cyberpunk. | ai |
+| `music.tavern.1` | Medieval inn, fantasy village, RPG rest stop. | ai |
+| `music.tavern.2` | Medieval inn, fantasy village, RPG rest stop. | ai |
+| `music.tavern.3` | Medieval inn, fantasy village, RPG rest stop. | ai |
+| `music.tension.1` | Stealth, dread, the moment before something happens. | ai |
+| `music.tension.2` | Stealth, dread, the moment before something happens. | ai |
+| `music.tension.3` | Stealth, dread, the moment before something happens. | ai |
+| `music.tropical.1` | Beach, island, summer and holiday settings. | ai |
+| `music.tropical.2` | Beach, island, summer and holiday settings. | ai |
+| `music.tropical.3` | Beach, island, summer and holiday settings. | ai |
+| `music.underwater.1` | Submerged levels, dream sequences, floaty worlds. | ai |
+| `music.underwater.2` | Submerged levels, dream sequences, floaty worlds. | ai |
+| `music.underwater.3` | Submerged levels, dream sequences, floaty worlds. | ai |
+| `music.western.1` | Deserts, duels, cowboy and frontier settings. | ai |
+| `music.western.2` | Deserts, duels, cowboy and frontier settings. | ai |
+| `music.western.3` | Deserts, duels, cowboy and frontier settings. | ai |
+| `music.winter.1` | Snow levels, festive seasons, ice worlds. | ai |
+| `music.winter.2` | Snow levels, festive seasons, ice worlds. | ai |
+| `music.winter.3` | Snow levels, festive seasons, ice worlds. | ai |
+| `music.zen.1` | Meditation, calm puzzle, wellness, relaxation modes. | ai |
+| `music.zen.2` | Meditation, calm puzzle, wellness, relaxation modes. | ai |
+| `music.zen.3` | Meditation, calm puzzle, wellness, relaxation modes. | ai |
 
 **`nature.*`**
 
@@ -448,6 +627,50 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `pickup.key` | A key, card or quest item is picked up. | code |
 | `pickup.star` | A star or collectible token is picked up during gameplay. | code |
 
+**`plat.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `plat.checkpoint` | A checkpoint flag raises. | ai |
+| `plat.coin.block` | Hitting a block that gives a reward. | ai |
+| `plat.conveyor` | A conveyor belt carries the player. Loops. | ai |
+| `plat.crumble` | A block crumbles under the player. | ai |
+| `plat.key` | A key is collected. | ai |
+| `plat.ladder` | Climbing a ladder rung. | ai |
+| `plat.ledge` | The player grabs a ledge. | ai |
+| `plat.life.lost` | The player loses a life. | ai |
+| `plat.lock.open` | A lock opens and a door swings free. | ai |
+| `plat.platform.move` | A moving platform travels. Loops. | ai |
+| `plat.portal.enter` | The player enters a pipe or portal. | ai |
+| `plat.powerup.grow` | The character grows or powers up. | ai |
+| `plat.rope.swing` | Swinging on a rope. | ai |
+| `plat.sawblade` | A spinning saw blade. Loops. | ai |
+| `plat.spikes` | Spikes shoot up from the floor. | ai |
+| `plat.spring` | A spring or bounce pad launches the player. | ai |
+| `plat.trampoline` | A trampoline bounce. | ai |
+| `plat.wallslide` | Sliding down a wall. | ai |
+
+**`puzzle.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `puzzle.bomb.tick` | A bomb tile counts down. | ai |
+| `puzzle.chess` | A chess piece is moved. | ai |
+| `puzzle.correct` | A correct answer or valid move. | ai |
+| `puzzle.domino` | Dominoes topple. | ai |
+| `puzzle.hint` | A hint is revealed. | ai |
+| `puzzle.jigsaw` | A jigsaw piece seats correctly. | ai |
+| `puzzle.line.clear` | A full row or line clears. | ai |
+| `puzzle.lock` | A piece locks into the grid permanently. | ai |
+| `puzzle.reset` | The board is cleared and reset. | ai |
+| `puzzle.rotate` | A block or piece rotates. | ai |
+| `puzzle.snap` | A piece snaps into place. | ai |
+| `puzzle.tile.place` | A tile is set down on the board. | ai |
+| `puzzle.tile.slide` | A tile slides to a new position. | ai |
+| `puzzle.timer` | Timer pressure ticking. Loops. | ai |
+| `puzzle.undo` | A move is taken back. | ai |
+| `puzzle.wrong` | A wrong answer or invalid move. | ai |
+
 **`race.*`**
 
 | Sound | Play it when | Made by |
@@ -456,6 +679,23 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `race.flag.wave` | A flag snaps in the wind. | ai |
 | `race.lap` | A lap is completed. | ai |
 | `race.light` | A starting light changes on the grid. | ai |
+
+**`rest.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `rest.chop.fast` | Rapid prep chopping. | ai |
+| `rest.coffee` | An espresso machine runs. | ai |
+| `rest.customer.angry` | A customer gives up and leaves. | ai |
+| `rest.customer.happy` | A customer is satisfied. | ai |
+| `rest.fryer` | A basket goes into the deep fryer. | ai |
+| `rest.grill` | Food hits a hot grill. Loops. | ai |
+| `rest.icecream` | Soft ice cream is dispensed. | ai |
+| `rest.order.bell` | The order-up bell rings. | ai |
+| `rest.plate` | A plate is set down on a counter. | ai |
+| `rest.pour.drink` | A drink is poured into a glass. | ai |
+| `rest.receipt` | A receipt prints. | ai |
+| `rest.register` | The till opens and rings. | ai |
 
 **`reward.*`**
 
@@ -500,6 +740,40 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `scifi.shield.hit` | A ship or suit shield takes a hit. | ai |
 | `scifi.warp` | A jump to lightspeed. | ai |
 
+**`shop.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `shop.ad.reward` | A rewarded video finishes and pays out. | ai |
+| `shop.coin.spend` | Currency is spent. | ai |
+| `shop.gift` | A gift box opens. | ai |
+| `shop.mail` | New mail arrives. | ai |
+| `shop.piggy` | A piggy bank is smashed open. | ai |
+| `shop.purchase.fail` | A purchase is declined or cancelled. | ai |
+| `shop.purchase.ok` | A purchase completes successfully. | ai |
+| `shop.restore` | Purchases are restored. | ai |
+| `shop.streak` | A daily streak advances. | ai |
+| `shop.subscribe` | A subscription starts. | ai |
+| `shop.wheel.spin` | A prize wheel spins. Loops. | ai |
+| `shop.wheel.stop` | The prize wheel lands on a segment. | ai |
+
+**`space.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `space.airlock.cycle` | An airlock cycles. | ai |
+| `space.beacon` | A distress beacon pulses. Loops. | ai |
+| `space.cryo` | A cryo pod opens. | ai |
+| `space.docking` | A docking clamp seals. | ai |
+| `space.hull.stress` | The hull groans under stress. | ai |
+| `space.oxygen.alarm` | Low oxygen warning. Loops. | ai |
+| `space.radar` | A radar sweep pings. | ai |
+| `space.rocket.launch` | A rocket lifts off. | ai |
+| `space.stage.sep` | Stage separation. | ai |
+| `space.thruster` | A manoeuvring thruster fires. | ai |
+| `space.warp.charge` | A jump drive spins up. | ai |
+| `space.zero.g` | Movement in zero gravity. | ai |
+
 **`sport.*`**
 
 | Sound | Play it when | Made by |
@@ -532,6 +806,21 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `state.win` | The level is completed. Plays once on the Success screen. | ai |
 | `state.win.small` | A small win inside gameplay: a wave cleared, a goal met, a quest step done. | code |
 
+**`stealth.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `stealth.alert` | A guard notices something. | ai |
+| `stealth.camera` | A security camera pans. | ai |
+| `stealth.detected` | The player is spotted. | ai |
+| `stealth.hide` | The player enters a hiding spot. | ai |
+| `stealth.lockpick` | A lock is picked. | ai |
+| `stealth.lost` | The guard loses track and calms down. | ai |
+| `stealth.radio` | Radio chatter between guards. | ai |
+| `stealth.sneak` | A slow careful footstep. | ai |
+| `stealth.takedown` | A silent takedown. | ai |
+| `stealth.vent` | A vent grate is removed. | ai |
+
 **`step.*`**
 
 | Sound | Play it when | Made by |
@@ -552,6 +841,29 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `step.water` | One footstep on water. Play per step; the library varies pitch and picks a different take each time. | ai |
 | `step.wood` | One footstep on wood. Play per step; the library varies pitch and picks a different take each time. | ai |
 
+**`sting.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `sting.boss.appear` | A boss enters. | ai |
+| `sting.chapter` | A chapter or world title card. | ai |
+| `sting.danger` | A sudden threat appears. | ai |
+| `sting.defeat` | The player loses. | ai |
+| `sting.gameover` | The run is over for good. | ai |
+| `sting.level.start` | A level or round begins. | ai |
+| `sting.levelup` | The player levels up. | ai |
+| `sting.logo` | Studio logo or splash screen. | ai |
+| `sting.newrecord` | A new high score. | ai |
+| `sting.quest` | A quest or objective completes. | ai |
+| `sting.rankup` | The player ranks up or promotes. | ai |
+| `sting.reveal` | A prize or secret is revealed. | ai |
+| `sting.sadtrombone` | A comedic failure. | ai |
+| `sting.suspense` | A dramatic pause before a result. | ai |
+| `sting.tada` | A small comedic success. | ai |
+| `sting.transition` | Between screens or chapters. | ai |
+| `sting.unlock` | Something new unlocks. | ai |
+| `sting.victory` | The player wins. Short, not a loop. | ai |
+
 **`tool.*`**
 
 | Sound | Play it when | Made by |
@@ -563,6 +875,21 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 | `tool.pickaxe` | Mining stone with a pickaxe. | ai |
 | `tool.saw` | Sawing wood — building, crafting. | ai |
 | `tool.wrench` | A spanner or ratchet turns — repair, machinery. | ai |
+
+**`tower.*`**
+
+| Sound | Play it when | Made by |
+|---|---|---|
+| `tower.base.damage` | The player's base takes damage. | ai |
+| `tower.build` | A tower or building is placed. | ai |
+| `tower.repair` | A structure is repaired. | ai |
+| `tower.sell` | A tower is sold or demolished. | ai |
+| `tower.target` | A tower locks onto a target. | ai |
+| `tower.unit.die` | A unit is destroyed. | ai |
+| `tower.unit.march` | A column of units marches. Loops. | ai |
+| `tower.unit.spawn` | An enemy unit enters the field. | ai |
+| `tower.upgrade` | A tower levels up. | ai |
+| `tower.wave` | A new wave is incoming. | ai |
 
 **`truck.*`**
 
@@ -657,12 +984,21 @@ The **Made by** column is informational only — `code` sounds are final, not pl
 
 | Sound | Play it when | Made by |
 |---|---|---|
+| `weather.avalanche` | An avalanche comes down. | ai |
+| `weather.blizzard` | A blizzard howls. Loops. | ai |
+| `weather.earthquake` | The ground shakes. | ai |
+| `weather.foghorn` | A fog horn sounds. | ai |
+| `weather.hail` | Hail hammers down. Loops. | ai |
+| `weather.ice.crack` | Ice cracks underfoot. | ai |
 | `weather.rain.heavy` | Heavy downpour. Loops. | ai |
 | `weather.rain.light` | Light rain. Loops. | ai |
 | `weather.rain.window` | Rain on glass. Loops. | ai |
+| `weather.sandstorm` | A sandstorm blows. Loops. | ai |
 | `weather.storm.wind` | Storm wind howling. Loops. | ai |
 | `weather.thunder` | A thunderclap — storm, dramatic moment. | ai |
 | `weather.thunder.distant` | Thunder rolls far away. | ai |
+| `weather.tornado` | A tornado passes. Loops. | ai |
+| `weather.volcano` | A volcano erupts. | ai |
 <!-- SOUNDS:END -->
 
 Machine-readable, with durations and offsets: `dist/casual.json`.
