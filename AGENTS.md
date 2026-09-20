@@ -74,6 +74,8 @@ AI-GUIDE.md                      what an AI building a game reads. Keep it hones
 - **Never let a missing sound throw.** Unknown names warn once and fall back to a stand-in.
 - **No size limit.** Collect as many sounds as the library usefully needs. If a pack ever gets
   big enough to hurt load time, split it into a second pack — never drop sounds for size.
+- **The preview server must be threaded.** A single-threaded `http.server` deadlocks the whole board: browsers open speculative connections and send nothing on them, and one idle socket blocks every other request until it times out. `tools/serve.py` uses `ThreadingTCPServer` and answers Range requests with a 206 — Safari will not start media playback against a server that answers a Range request with a 200.
+- **A streamed sound is not automatically a music track.** `category: music` plus `files` only means the sound lives in its own file. `SFX.play()` plays it as a one-shot through `nodes.sting`, which skips the duck — you dip the music *so* the sting cuts through. `SFX.music()` is only for `loopable` tracks; using it on a sting stops whatever is playing and fades the sting in over 0.8s.
 - **A sound that must loop needs `postFx.loop`.** A generator never returns a seamless loop — its first and last samples are unrelated, so playing it round clicks every cycle. `loop` wraps the tail over the head by the given number of seconds. Tonal material (an engine) needs a much longer overlap than noisy material (fire): 1.2s against 0.6s here. Verify by comparing the sample-to-sample jump at the wrap against a normal moment mid-clip; they should be about equal.
 
 ## 6. Git workflow

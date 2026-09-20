@@ -95,6 +95,12 @@
     nodes.duck = ctx.createGain();          // music passes through this
     nodes.duck.connect(nodes.master);
 
+    // Stingers are music-category one-shots. They must skip the duck: you
+    // dip the music SO the sting cuts through, so ducking the sting itself
+    // defeats the point. Its gain is set from the music volume per play.
+    nodes.sting = ctx.createGain();
+    nodes.sting.connect(nodes.master);
+
     CATEGORIES.forEach(function (c) {
       nodes[c] = ctx.createGain();
       nodes[c].connect(c === 'music' ? nodes.duck : nodes.master);
@@ -440,11 +446,60 @@
       return src;
     }
 
+    // Sounds that live in their own file (stingers, anything streamed) are not
+    // in the sprite. Without this they fell through to synth() and played a
+    // generic blip about 26 dB below the real recording.
+    if (def.files || def.file) return playFile(name, def, cat, when, rate, volume, opts);
+
     // Synthesized sounds go through the tone chain; recordings go in clean.
     synth(def, nodes['tone:' + cat] || dest, when, rate, volume);
     return null;
   }
   play._warned = {};
+
+  // One-shot playback of a sound stored as its own file. Shares the decode
+  // cache with the music player, so a track auditioned either way decodes once.
+  function playFile(name, def, cat, when, rate, volume, opts) {
+    var c = ctx;
+    var url = musicUrl(def, opts);
+    if (!url) return null;
+
+    // Music-category one-shots bypass the duck (see nodes.sting). Reading the
+    // volume here means a slider moved mid-sting is not heard until the next
+    // play, which is fine for something a few seconds long.
+    var dest = nodes[cat] || nodes.ui;
+    if (cat === 'music') {
+      nodes.sting.gain.value = nodes.music.gain.value;
+      dest = nodes.sting;
+    }
+
+    function start(buffer) {
+      var src = c.createBufferSource();
+      src.buffer = buffer;
+      src.playbackRate.value = rate;
+      src.loop = !!opts.loop;
+      var g = c.createGain();
+      g.gain.value = volume;
+      src.connect(g); g.connect(dest);
+      src.start(Math.max(when, c.currentTime));
+      track(src);
+      return src;
+    }
+
+    if (musicCache[name]) return start(musicCache[name]);
+
+    fetch(url)
+      .then(function (r) {
+        if (!r.ok) throw new Error(url + ' -> ' + r.status);
+        return r.arrayBuffer();
+      })
+      .then(function (data) { return c.decodeAudioData(data); })
+      .then(function (buf) { musicCache[name] = buf; start(buf); })
+      .catch(function (err) {
+        if (global.console) console.warn('[SFX] "' + name + '" could not load.', err.message);
+      });
+    return null;                            // first play resolves asynchronously
+  }
 
   // Pick one of a sound's recorded variations, never the same one twice.
   function pickSlice(name, def) {
