@@ -25,7 +25,7 @@ After every release: commit, tag, push with tags, wait for the Pages build, chec
 ## In progress
 _Nothing._
 
-## The pack — 403 sounds, all playable (30 of them music)
+## The pack — 659 sounds (78 music, 18 stingers)
 | Group | Sounds |
 |---|---|
 | `ambience.*` | 7 |

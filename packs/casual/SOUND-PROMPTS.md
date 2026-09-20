@@ -19,7 +19,7 @@ edit the registry and run the tool again._
 **51 of the 659 sounds in this pack are made by code and need nothing from you.**
 This checklist is only the 608 that need real audio.
 
-**Progress: 322 of 608 generated.**
+**Progress: 512 of 608 generated.**
 
 ## game
 
@@ -1243,667 +1243,667 @@ This checklist is only the 608 that need real audio.
   - Target length: ~6.0s
   - Prompt: `Large stadium crowd murmuring and occasionally cheering, continuous background, outdoor recording`
 
-- [ ] **`casino.reel.spin`** — A slot reel starts spinning. Loops while it runs.
-  - Target length: ~3.0s
+- [x] **`casino.reel.spin`** — A slot reel starts spinning. Loops while it runs.
+  - Target length: ~10.0s
   - Prompt: `Casino slot machine reels spinning continuously, mechanical whirring clatter, recorded close`
 
-- [ ] **`casino.reel.stop`** — One slot reel lands.
+- [x] **`casino.reel.stop`** — One slot reel lands.
   - Target length: ~0.6s · generate **3 takes** (`casino.reel.stop.1.wav`, `casino.reel.stop.2.wav`, …)
   - Prompt: `Casino slot machine reel stopping with a solid mechanical clunk, recorded close`
 
-- [ ] **`casino.lever`** — The slot lever is pulled.
+- [x] **`casino.lever`** — The slot lever is pulled.
   - Target length: ~0.9s
   - Prompt: `Casino slot machine lever being pulled down and released, heavy spring loaded mechanism, recorded close`
 
-- [ ] **`casino.roulette.spin`** — The roulette wheel spins. Loops.
+- [x] **`casino.roulette.spin`** — The roulette wheel spins. Loops.
   - Target length: ~3.0s
   - Prompt: `Roulette wheel spinning steadily with the ball rattling around the rim, continuous, recorded close`
 
-- [ ] **`casino.roulette.drop`** — The roulette ball settles into a pocket.
+- [x] **`casino.roulette.drop`** — The roulette ball settles into a pocket.
   - Target length: ~1.2s · generate **2 takes** (`casino.roulette.drop.1.wav`, `casino.roulette.drop.2.wav`, …)
   - Prompt: `Roulette ball dropping and bouncing into a numbered pocket, wooden clattering settle, recorded close`
 
-- [ ] **`casino.chips.stack`** — Chips are stacked or counted.
+- [x] **`casino.chips.stack`** — Chips are stacked or counted.
   - Target length: ~1.0s · generate **3 takes** (`casino.chips.stack.1.wav`, `casino.chips.stack.2.wav`, …)
   - Prompt: `Stack of clay casino chips being riffled and stacked in one hand, clicking clatter, recorded close`
 
-- [ ] **`casino.chips.toss`** — Chips are pushed into the pot.
+- [x] **`casino.chips.toss`** — Chips are pushed into the pot.
   - Target length: ~0.9s · generate **3 takes** (`casino.chips.toss.1.wav`, `casino.chips.toss.2.wav`, …)
   - Prompt: `Handful of clay casino chips being tossed onto a felt table, scattering clatter, recorded close`
 
-- [ ] **`casino.card.deal`** — One card is dealt.
+- [x] **`casino.card.deal`** — One card is dealt.
   - Target length: ~0.5s · generate **4 takes** (`casino.card.deal.1.wav`, `casino.card.deal.2.wav`, …)
   - Prompt: `Single playing card being dealt across a felt table, paper slide with a soft landing, recorded close`
 
-- [ ] **`casino.card.flip`** — A card is turned face up.
+- [x] **`casino.card.flip`** — A card is turned face up.
   - Target length: ~0.4s · generate **3 takes** (`casino.card.flip.1.wav`, `casino.card.flip.2.wav`, …)
   - Prompt: `Single playing card being flipped face up on a table, quick paper snap, recorded close`
 
-- [ ] **`casino.dice.roll`** — Dice are thrown.
+- [x] **`casino.dice.roll`** — Dice are thrown.
   - Target length: ~1.4s · generate **3 takes** (`casino.dice.roll.1.wav`, `casino.dice.roll.2.wav`, …)
   - Prompt: `Two dice being thrown and tumbling across a felt table before settling, recorded close`
 
-- [ ] **`casino.dice.shake`** — Dice rattle in a cup.
+- [x] **`casino.dice.shake`** — Dice rattle in a cup.
   - Target length: ~1.2s · generate **2 takes** (`casino.dice.shake.1.wav`, `casino.dice.shake.2.wav`, …)
   - Prompt: `Dice being shaken hard inside a leather cup, rattling clatter, recorded close`
 
-- [ ] **`casino.payout`** — Coins pour out of a machine.
+- [x] **`casino.payout`** — Coins pour out of a machine.
   - Target length: ~2.5s
   - Prompt: `Casino machine paying out a flood of metal coins into a tray, cascading clattering, recorded close`
 
-- [ ] **`casino.bell`** — The win bell rings.
+- [x] **`casino.bell`** — The win bell rings.
   - Target length: ~2.0s
   - Prompt: `Casino jackpot bell ringing rapidly and repeatedly, metallic clanging, recorded close`
 
-- [ ] **`casino.ambience`** — Casino floor ambience. Loops.
+- [x] **`casino.ambience`** — Casino floor ambience. Loops.
   - Target length: ~6.0s
   - Prompt: `Busy casino floor with distant machines chiming and people talking, continuous background, no music`
 
-- [ ] **`puzzle.tile.place`** — A tile is set down on the board.
+- [x] **`puzzle.tile.place`** — A tile is set down on the board.
   - Target length: ~0.4s · generate **3 takes** (`puzzle.tile.place.1.wav`, `puzzle.tile.place.2.wav`, …)
   - Prompt: `Wooden game tile being placed firmly onto a wooden board, solid knock, recorded close`
 
-- [ ] **`puzzle.tile.slide`** — A tile slides to a new position.
+- [x] **`puzzle.tile.slide`** — A tile slides to a new position.
   - Target length: ~0.5s · generate **3 takes** (`puzzle.tile.slide.1.wav`, `puzzle.tile.slide.2.wav`, …)
   - Prompt: `Wooden tile sliding across a smooth wooden board, short scraping glide, recorded close`
 
-- [ ] **`puzzle.snap`** — A piece snaps into place.
+- [x] **`puzzle.snap`** — A piece snaps into place.
   - Target length: ~0.4s · generate **3 takes** (`puzzle.snap.1.wav`, `puzzle.snap.2.wav`, …)
   - Prompt: `Two interlocking plastic puzzle pieces snapping together, clean click, recorded close`
 
-- [ ] **`puzzle.jigsaw`** — A jigsaw piece seats correctly.
+- [x] **`puzzle.jigsaw`** — A jigsaw piece seats correctly.
   - Target length: ~0.5s · generate **3 takes** (`puzzle.jigsaw.1.wav`, `puzzle.jigsaw.2.wav`, …)
   - Prompt: `Cardboard jigsaw piece being pressed into place among others, soft fibrous click, recorded close`
 
-- [ ] **`puzzle.domino`** — Dominoes topple.
+- [x] **`puzzle.domino`** — Dominoes topple.
   - Target length: ~2.0s
   - Prompt: `Line of dominoes toppling over one after another, rapid clattering cascade, recorded close`
 
-- [ ] **`puzzle.chess`** — A chess piece is moved.
+- [x] **`puzzle.chess`** — A chess piece is moved.
   - Target length: ~0.5s · generate **3 takes** (`puzzle.chess.1.wav`, `puzzle.chess.2.wav`, …)
   - Prompt: `Weighted wooden chess piece being set down on a board, solid felted knock, recorded close`
 
-- [ ] **`puzzle.rotate`** — A block or piece rotates.
+- [x] **`puzzle.rotate`** — A block or piece rotates.
   - Target length: ~0.3s · generate **3 takes** (`puzzle.rotate.1.wav`, `puzzle.rotate.2.wav`, …)
   - Prompt: `Small mechanical ratchet turning one notch, single clean click, recorded close`
 
-- [ ] **`puzzle.lock`** — A piece locks into the grid permanently.
+- [x] **`puzzle.lock`** — A piece locks into the grid permanently.
   - Target length: ~0.5s · generate **2 takes** (`puzzle.lock.1.wav`, `puzzle.lock.2.wav`, …)
   - Prompt: `Metal bolt sliding home into a latch, firm mechanical seat, recorded close`
 
-- [ ] **`puzzle.line.clear`** — A full row or line clears.
+- [x] **`puzzle.line.clear`** — A full row or line clears.
   - Target length: ~0.9s · generate **2 takes** (`puzzle.line.clear.1.wav`, `puzzle.line.clear.2.wav`, …)
   - Prompt: `Row of glass blocks shattering and sweeping away, ringing crystalline collapse, recorded close`
 
-- [ ] **`puzzle.hint`** — A hint is revealed.
+- [x] **`puzzle.hint`** — A hint is revealed.
   - Target length: ~0.8s
   - Prompt: `Gentle magical chime revealing a clue, soft glassy shimmer rising, recorded close`
 
-- [ ] **`puzzle.undo`** — A move is taken back.
+- [x] **`puzzle.undo`** — A move is taken back.
   - Target length: ~0.5s
   - Prompt: `Short reversed tape rewind whoosh, quick backwards sweep, clean recording`
 
-- [ ] **`puzzle.reset`** — The board is cleared and reset.
+- [x] **`puzzle.reset`** — The board is cleared and reset.
   - Target length: ~1.2s
   - Prompt: `Handful of wooden game tiles being swept off a board into a box, rattling scatter, recorded close`
 
-- [ ] **`puzzle.correct`** — A correct answer or valid move.
+- [x] **`puzzle.correct`** — A correct answer or valid move.
   - Target length: ~0.8s
   - Prompt: `Warm rising two note chime confirming a correct answer, clean bell tone, recorded close`
 
-- [ ] **`puzzle.wrong`** — A wrong answer or invalid move.
+- [x] **`puzzle.wrong`** — A wrong answer or invalid move.
   - Target length: ~0.8s
   - Prompt: `Gentle descending two note buzz for a wrong answer, soft and not harsh, clean recording`
 
-- [ ] **`puzzle.timer`** — Timer pressure ticking. Loops.
+- [x] **`puzzle.timer`** — Timer pressure ticking. Loops.
   - Target length: ~3.0s
   - Prompt: `Fast mechanical timer ticking under pressure, continuous urgent ticks, recorded close`
 
-- [ ] **`puzzle.bomb.tick`** — A bomb tile counts down.
+- [x] **`puzzle.bomb.tick`** — A bomb tile counts down.
   - Target length: ~0.5s · generate **2 takes** (`puzzle.bomb.tick.1.wav`, `puzzle.bomb.tick.2.wav`, …)
   - Prompt: `Burning fuse hissing and sparking on a bomb, short crackling burn, recorded close`
 
-- [ ] **`plat.spring`** — A spring or bounce pad launches the player.
+- [x] **`plat.spring`** — A spring or bounce pad launches the player.
   - Target length: ~0.8s · generate **3 takes** (`plat.spring.1.wav`, `plat.spring.2.wav`, …)
   - Prompt: `Metal coil spring being compressed and released with a boing, cartoon style, recorded close`
 
-- [ ] **`plat.trampoline`** — A trampoline bounce.
+- [x] **`plat.trampoline`** — A trampoline bounce.
   - Target length: ~0.9s · generate **2 takes** (`plat.trampoline.1.wav`, `plat.trampoline.2.wav`, …)
   - Prompt: `Trampoline fabric stretching and snapping back as someone bounces, deep elastic thump, recorded close`
 
-- [ ] **`plat.platform.move`** — A moving platform travels. Loops.
+- [x] **`plat.platform.move`** — A moving platform travels. Loops.
   - Target length: ~3.0s
   - Prompt: `Heavy mechanical platform grinding along a track, continuous low rumbling motor, recorded close`
 
-- [ ] **`plat.crumble`** — A block crumbles under the player.
+- [x] **`plat.crumble`** — A block crumbles under the player.
   - Target length: ~1.0s · generate **2 takes** (`plat.crumble.1.wav`, `plat.crumble.2.wav`, …)
   - Prompt: `Stone block cracking and crumbling apart into rubble, recorded close`
 
-- [ ] **`plat.conveyor`** — A conveyor belt carries the player. Loops.
+- [x] **`plat.conveyor`** — A conveyor belt carries the player. Loops.
   - Target length: ~3.0s
   - Prompt: `Rubber conveyor belt running over rollers, continuous mechanical whirring, recorded close`
 
-- [ ] **`plat.spikes`** — Spikes shoot up from the floor.
+- [x] **`plat.spikes`** — Spikes shoot up from the floor.
   - Target length: ~0.7s · generate **2 takes** (`plat.spikes.1.wav`, `plat.spikes.2.wav`, …)
   - Prompt: `Metal spikes shooting up fast through a stone floor, scraping steel with a hard clank, recorded close`
 
-- [ ] **`plat.sawblade`** — A spinning saw blade. Loops.
-  - Target length: ~3.0s
+- [x] **`plat.sawblade`** — A spinning saw blade. Loops.
+  - Target length: ~10.0s
   - Prompt: `Large circular saw blade spinning fast in the air, continuous metallic whirring whine, recorded close`
 
-- [ ] **`plat.checkpoint`** — A checkpoint flag raises.
+- [x] **`plat.checkpoint`** — A checkpoint flag raises.
   - Target length: ~1.4s
   - Prompt: `Cloth flag being hoisted quickly up a metal pole, fabric snap with a mechanical ratchet, recorded close`
 
-- [ ] **`plat.key`** — A key is collected.
+- [x] **`plat.key`** — A key is collected.
   - Target length: ~0.8s · generate **2 takes** (`plat.key.1.wav`, `plat.key.2.wav`, …)
   - Prompt: `Small metal key being picked up with a loud ringing jingle, recorded close`
 
-- [ ] **`plat.lock.open`** — A lock opens and a door swings free.
+- [x] **`plat.lock.open`** — A lock opens and a door swings free.
   - Target length: ~1.4s
   - Prompt: `Heavy iron padlock unlocking and falling open, mechanical clunk with chain rattle, recorded close`
 
-- [ ] **`plat.ledge`** — The player grabs a ledge.
+- [x] **`plat.ledge`** — The player grabs a ledge.
   - Target length: ~0.6s · generate **3 takes** (`plat.ledge.1.wav`, `plat.ledge.2.wav`, …)
   - Prompt: `Hands slapping and gripping a stone ledge, gritty scrape with cloth, recorded close`
 
-- [ ] **`plat.wallslide`** — Sliding down a wall.
+- [x] **`plat.wallslide`** — Sliding down a wall.
   - Target length: ~1.4s
   - Prompt: `Cloth and boots sliding down a rough concrete wall, sustained scraping friction, recorded close`
 
-- [ ] **`plat.ladder`** — Climbing a ladder rung.
+- [x] **`plat.ladder`** — Climbing a ladder rung.
   - Target length: ~0.5s · generate **4 takes** (`plat.ladder.1.wav`, `plat.ladder.2.wav`, …)
   - Prompt: `Boot stepping onto a metal ladder rung, hollow metallic clank, recorded close`
 
-- [ ] **`plat.rope.swing`** — Swinging on a rope.
+- [x] **`plat.rope.swing`** — Swinging on a rope.
   - Target length: ~1.5s
   - Prompt: `Thick rope creaking under load as it swings through the air, fibrous strain with wind, recorded close`
 
-- [ ] **`plat.portal.enter`** — The player enters a pipe or portal.
+- [x] **`plat.portal.enter`** — The player enters a pipe or portal.
   - Target length: ~1.0s
   - Prompt: `Body being sucked quickly down a hollow pipe, descending whooshing slide, cartoon style, recorded close`
 
-- [ ] **`plat.coin.block`** — Hitting a block that gives a reward.
+- [x] **`plat.coin.block`** — Hitting a block that gives a reward.
   - Target length: ~0.7s · generate **2 takes** (`plat.coin.block.1.wav`, `plat.coin.block.2.wav`, …)
   - Prompt: `Fist punching up into a hollow wooden crate, solid knock with a small rattle inside, recorded close`
 
-- [ ] **`plat.life.lost`** — The player loses a life.
+- [x] **`plat.life.lost`** — The player loses a life.
   - Target length: ~1.4s
   - Prompt: `Cartoon character falling with a descending comic slide whistle ending in a soft thud, playful`
 
-- [ ] **`plat.powerup.grow`** — The character grows or powers up.
+- [x] **`plat.powerup.grow`** — The character grows or powers up.
   - Target length: ~1.2s
   - Prompt: `Cartoon magical growth sound, rising bubbling swell with a ringing pop at the peak, playful`
 
-- [ ] **`tower.build`** — A tower or building is placed.
+- [x] **`tower.build`** — A tower or building is placed.
   - Target length: ~1.0s · generate **2 takes** (`tower.build.1.wav`, `tower.build.2.wav`, …)
   - Prompt: `Stone and timber structure being dropped into place and settling, heavy thud with debris, recorded close`
 
-- [ ] **`tower.sell`** — A tower is sold or demolished.
+- [x] **`tower.sell`** — A tower is sold or demolished.
   - Target length: ~1.2s
   - Prompt: `Small wooden structure collapsing into a pile with coins jingling, recorded close`
 
-- [ ] **`tower.upgrade`** — A tower levels up.
+- [x] **`tower.upgrade`** — A tower levels up.
   - Target length: ~1.2s
   - Prompt: `Magical upgrade surge, rising metallic ring with a ringing energetic swell, recorded close`
 
-- [ ] **`tower.unit.spawn`** — An enemy unit enters the field.
+- [x] **`tower.unit.spawn`** — An enemy unit enters the field.
   - Target length: ~0.8s · generate **2 takes** (`tower.unit.spawn.1.wav`, `tower.unit.spawn.2.wav`, …)
   - Prompt: `Creature stepping out of a portal with a wet organic squelch and a low growl, recorded close`
 
-- [ ] **`tower.unit.march`** — A column of units marches. Loops.
+- [x] **`tower.unit.march`** — A column of units marches. Loops.
   - Target length: ~3.0s
   - Prompt: `Column of armoured soldiers marching in step on dirt, continuous rhythmic boots and armour, recorded close`
 
-- [ ] **`tower.unit.die`** — A unit is destroyed.
+- [x] **`tower.unit.die`** — A unit is destroyed.
   - Target length: ~0.9s · generate **3 takes** (`tower.unit.die.1.wav`, `tower.unit.die.2.wav`, …)
   - Prompt: `Creature being defeated with a short guttural cry and a wet collapse, cartoon style not gory`
 
-- [ ] **`tower.wave`** — A new wave is incoming.
+- [x] **`tower.wave`** — A new wave is incoming.
   - Target length: ~2.2s
   - Prompt: `Deep war horn sounding a long warning call across a battlefield, ominous and loud`
 
-- [ ] **`tower.base.damage`** — The player's base takes damage.
+- [x] **`tower.base.damage`** — The player's base takes damage.
   - Target length: ~1.4s · generate **2 takes** (`tower.base.damage.1.wav`, `tower.base.damage.2.wav`, …)
   - Prompt: `Heavy stone wall being struck and cracking with an alarm bell behind it, recorded close`
 
-- [ ] **`tower.repair`** — A structure is repaired.
+- [x] **`tower.repair`** — A structure is repaired.
   - Target length: ~1.4s
   - Prompt: `Quick hammering and sawing repairing a wooden structure, busy workshop burst, recorded close`
 
-- [ ] **`tower.target`** — A tower locks onto a target.
+- [x] **`tower.target`** — A tower locks onto a target.
   - Target length: ~0.5s · generate **2 takes** (`tower.target.1.wav`, `tower.target.2.wav`, …)
   - Prompt: `Mechanical turret swivelling and locking into position, servo whir with a clunk, recorded close`
 
-- [ ] **`idle.tap`** — The main tap in a clicker. Fires constantly.
+- [x] **`idle.tap`** — The main tap in a clicker. Fires constantly.
   - Target length: ~0.25s · generate **5 takes** (`idle.tap.1.wav`, `idle.tap.2.wav`, …)
   - Prompt: `Finger tapping firmly on a taut drum skin, short punchy thump, recorded close`
 
-- [ ] **`idle.prestige`** — A prestige or rebirth reset.
+- [x] **`idle.prestige`** — A prestige or rebirth reset.
   - Target length: ~2.8s
   - Prompt: `Grand magical ascension, deep swelling rush rising into a radiant shimmering bloom, triumphant`
 
-- [ ] **`idle.offline`** — Offline earnings are collected on return.
+- [x] **`idle.offline`** — Offline earnings are collected on return.
   - Target length: ~2.0s
   - Prompt: `Large pile of coins cascading into a chest with a warm confirming chime, recorded close`
 
-- [ ] **`idle.autocollect`** — An automated collector picks something up.
+- [x] **`idle.autocollect`** — An automated collector picks something up.
   - Target length: ~0.6s · generate **3 takes** (`idle.autocollect.1.wav`, `idle.autocollect.2.wav`, …)
   - Prompt: `Small mechanical claw grabbing an object with a servo whir and a click, recorded close`
 
-- [ ] **`idle.multiplier`** — A multiplier increases.
+- [x] **`idle.multiplier`** — A multiplier increases.
   - Target length: ~0.9s · generate **2 takes** (`idle.multiplier.1.wav`, `idle.multiplier.2.wav`, …)
   - Prompt: `Rising electronic power surge with a clear confirming ping at the top, clean recording`
 
-- [ ] **`idle.milestone`** — A milestone number is reached.
+- [x] **`idle.milestone`** — A milestone number is reached.
   - Target length: ~1.8s
   - Prompt: `Celebratory burst of bells and a small cheer with sparkling shimmer, warm and rewarding`
 
-- [ ] **`idle.upgrade.chain`** — Several upgrades buy at once.
+- [x] **`idle.upgrade.chain`** — Several upgrades buy at once.
   - Target length: ~1.6s
   - Prompt: `Rapid series of mechanical switches and confirming pings in quick succession, recorded close`
 
-- [ ] **`idle.generator`** — A generator or factory runs. Loops.
-  - Target length: ~3.0s
+- [x] **`idle.generator`** — A generator or factory runs. Loops.
+  - Target length: ~10.0s
   - Prompt: `Small mechanical generator chugging steadily, continuous rhythmic machinery, recorded close`
 
-- [ ] **`idle.coin.rain`** — Coins rain down after a big gain.
+- [x] **`idle.coin.rain`** — Coins rain down after a big gain.
   - Target length: ~2.2s
   - Prompt: `Hundreds of metal coins raining down onto a hard surface, dense cascading clatter, recorded close`
 
-- [ ] **`idle.levelup`** — A generator or hero levels up.
+- [x] **`idle.levelup`** — A generator or hero levels up.
   - Target length: ~1.2s
   - Prompt: `Warm rising four note bell flourish with a soft magical sparkle, rewarding and short`
 
-- [ ] **`shop.wheel.spin`** — A prize wheel spins. Loops.
-  - Target length: ~3.0s
+- [x] **`shop.wheel.spin`** — A prize wheel spins. Loops.
+  - Target length: ~10.0s
   - Prompt: `Large prize wheel spinning with a flapper ticking rapidly over the pegs, continuous, recorded close`
 
-- [ ] **`rest.order.bell`** — The order-up bell rings.
+- [x] **`rest.order.bell`** — The order-up bell rings.
   - Target length: ~1.2s · generate **2 takes** (`rest.order.bell.1.wav`, `rest.order.bell.2.wav`, …)
   - Prompt: `Counter service bell being struck once, ringing metallic ding with a ringing decay, recorded close`
 
-- [ ] **`rest.register`** — The till opens and rings.
+- [x] **`rest.register`** — The till opens and rings.
   - Target length: ~1.6s
   - Prompt: `Old mechanical cash register ringing and the drawer sliding open with a clunk, recorded close`
 
-- [ ] **`rest.receipt`** — A receipt prints.
+- [x] **`rest.receipt`** — A receipt prints.
   - Target length: ~1.4s
   - Prompt: `Thermal receipt printer buzzing out a paper slip and tearing it off, recorded close`
 
-- [ ] **`rest.coffee`** — An espresso machine runs.
+- [x] **`rest.coffee`** — An espresso machine runs.
   - Target length: ~2.5s
   - Prompt: `Espresso machine grinding then extracting coffee with a steam hiss, recorded close`
 
-- [ ] **`rest.grill`** — Food hits a hot grill. Loops.
+- [x] **`rest.grill`** — Food hits a hot grill. Loops.
   - Target length: ~3.0s
   - Prompt: `Meat sizzling continuously on a hot griddle, steady fat crackling, recorded close`
 
-- [ ] **`rest.fryer`** — A basket goes into the deep fryer.
+- [x] **`rest.fryer`** — A basket goes into the deep fryer.
   - Target length: ~2.0s
   - Prompt: `Basket of food being lowered into hot oil with a violent bubbling roar, recorded close`
 
-- [ ] **`rest.plate`** — A plate is set down on a counter.
+- [x] **`rest.plate`** — A plate is set down on a counter.
   - Target length: ~0.7s · generate **3 takes** (`rest.plate.1.wav`, `rest.plate.2.wav`, …)
   - Prompt: `Ceramic plate being set down firmly on a hard counter, solid clink, recorded close`
 
-- [ ] **`rest.icecream`** — Soft ice cream is dispensed.
+- [x] **`rest.icecream`** — Soft ice cream is dispensed.
   - Target length: ~1.8s
   - Prompt: `Soft serve ice cream machine dispensing with a motor whir and a wet squelch, recorded close`
 
-- [ ] **`rest.customer.happy`** — A customer is satisfied.
+- [x] **`rest.customer.happy`** — A customer is satisfied.
   - Target length: ~1.4s · generate **2 takes** (`rest.customer.happy.1.wav`, `rest.customer.happy.2.wav`, …)
   - Prompt: `Cheerful short hum of approval from a person with a small coin tip landing, wordless, recorded close`
 
-- [ ] **`rest.customer.angry`** — A customer gives up and leaves.
+- [x] **`rest.customer.angry`** — A customer gives up and leaves.
   - Target length: ~1.4s · generate **2 takes** (`rest.customer.angry.1.wav`, `rest.customer.angry.2.wav`, …)
   - Prompt: `Annoyed huff from a person and a chair scraping as they stand and walk off, wordless, recorded close`
 
-- [ ] **`rest.chop.fast`** — Rapid prep chopping.
+- [x] **`rest.chop.fast`** — Rapid prep chopping.
   - Target length: ~1.6s
   - Prompt: `Chef chopping vegetables rapidly on a wooden board, fast rhythmic knife work, recorded close`
 
-- [ ] **`rest.pour.drink`** — A drink is poured into a glass.
+- [x] **`rest.pour.drink`** — A drink is poured into a glass.
   - Target length: ~1.6s
   - Prompt: `Fizzy drink being poured into a glass over ice, glugging with crackling bubbles, recorded close`
 
-- [ ] **`build.crane`** — A crane lifts a load. Loops.
+- [x] **`build.crane`** — A crane lifts a load. Loops.
   - Target length: ~3.0s
   - Prompt: `Construction crane winch motor running with cables under load, continuous mechanical grind`
 
-- [ ] **`build.bulldozer`** — A bulldozer pushes earth. Loops.
+- [x] **`build.bulldozer`** — A bulldozer pushes earth. Loops.
   - Target length: ~3.0s
   - Prompt: `Bulldozer engine working hard with steel tracks grinding over rubble, continuous`
 
-- [ ] **`build.jackhammer`** — A jackhammer breaks concrete. Loops.
-  - Target length: ~3.0s
+- [x] **`build.jackhammer`** — A jackhammer breaks concrete. Loops.
+  - Target length: ~10.0s
   - Prompt: `Pneumatic jackhammer hammering into concrete, continuous rapid pounding, recorded close`
 
-- [ ] **`build.cement`** — A cement mixer turns. Loops.
-  - Target length: ~3.0s
+- [x] **`build.cement`** — A cement mixer turns. Loops.
+  - Target length: ~10.0s
   - Prompt: `Cement mixer drum turning with gravel tumbling inside, continuous rumbling, recorded close`
 
-- [ ] **`build.weld`** — Welding sparks.
+- [x] **`build.weld`** — Welding sparks.
   - Target length: ~1.8s · generate **2 takes** (`build.weld.1.wav`, `build.weld.2.wav`, …)
   - Prompt: `Arc welder striking and running a bead on steel, electrical crackling buzz, recorded close`
 
-- [ ] **`build.brick`** — A brick is laid in mortar.
+- [x] **`build.brick`** — A brick is laid in mortar.
   - Target length: ~0.7s · generate **3 takes** (`build.brick.1.wav`, `build.brick.2.wav`, …)
   - Prompt: `Clay brick being set into wet mortar and tapped level with a trowel, recorded close`
 
-- [ ] **`build.glass.fit`** — A pane of glass is fitted.
+- [x] **`build.glass.fit`** — A pane of glass is fitted.
   - Target length: ~1.2s
   - Prompt: `Large glass pane being lifted and seated into a frame with a squeak and a settle, recorded close`
 
-- [ ] **`build.scaffold`** — Scaffolding poles clang together.
+- [x] **`build.scaffold`** — Scaffolding poles clang together.
   - Target length: ~1.2s · generate **2 takes** (`build.scaffold.1.wav`, `build.scaffold.2.wav`, …)
   - Prompt: `Steel scaffolding poles being slotted together and clamped, ringing metallic clangs, recorded close`
 
-- [ ] **`build.measure`** — A tape measure snaps back.
+- [x] **`build.measure`** — A tape measure snaps back.
   - Target length: ~0.9s · generate **2 takes** (`build.measure.1.wav`, `build.measure.2.wav`, …)
   - Prompt: `Steel tape measure being pulled out and snapping back into its case, recorded close`
 
-- [ ] **`build.complete`** — A building finishes construction.
+- [x] **`build.complete`** — A building finishes construction.
   - Target length: ~2.0s
   - Prompt: `Construction completing, final hammer strikes with a satisfying settling thud and a warm confirming chime`
 
-- [ ] **`build.saw.power`** — A circular saw cuts timber.
+- [x] **`build.saw.power`** — A circular saw cuts timber.
   - Target length: ~1.8s
   - Prompt: `Electric circular saw ripping through a timber plank, rising motor whine with wood, recorded close`
 
-- [ ] **`build.nail.gun`** — A nail gun fires.
+- [x] **`build.nail.gun`** — A nail gun fires.
   - Target length: ~0.5s · generate **3 takes** (`build.nail.gun.1.wav`, `build.nail.gun.2.wav`, …)
   - Prompt: `Pneumatic nail gun firing a nail into timber, hard air-driven crack, recorded close`
 
-- [ ] **`med.gate`** — A castle gate opens.
+- [x] **`med.gate`** — A castle gate opens.
   - Target length: ~3.0s
   - Prompt: `Enormous wooden castle gate grinding open on iron hinges, deep groaning creak, recorded close`
 
-- [ ] **`med.drawbridge`** — A drawbridge lowers.
+- [x] **`med.drawbridge`** — A drawbridge lowers.
   - Target length: ~3.0s
   - Prompt: `Heavy drawbridge chains clanking as the bridge lowers and crashes down, recorded close`
 
-- [ ] **`med.portcullis`** — A portcullis drops.
+- [x] **`med.portcullis`** — A portcullis drops.
   - Target length: ~2.0s
   - Prompt: `Iron portcullis dropping fast down its runners and slamming into stone, recorded close`
 
-- [ ] **`med.catapult`** — A catapult launches.
+- [x] **`med.catapult`** — A catapult launches.
   - Target length: ~1.8s
   - Prompt: `Wooden catapult arm releasing under tension with a groaning snap and rope whip, recorded close`
 
-- [ ] **`med.siege.impact`** — A boulder smashes a wall.
+- [x] **`med.siege.impact`** — A boulder smashes a wall.
   - Target length: ~2.2s
   - Prompt: `Huge boulder smashing into a stone castle wall, massive crunching impact with falling rubble`
 
-- [ ] **`med.arrow.volley`** — A volley of arrows flies.
+- [x] **`med.arrow.volley`** — A volley of arrows flies.
   - Target length: ~1.8s
   - Prompt: `Volley of many arrows being loosed together and whistling through the air, recorded outdoors`
 
-- [ ] **`med.arrow.hit`** — An arrow strikes wood.
+- [x] **`med.arrow.hit`** — An arrow strikes wood.
   - Target length: ~0.6s · generate **3 takes** (`med.arrow.hit.1.wav`, `med.arrow.hit.2.wav`, …)
   - Prompt: `Arrow striking a wooden target with a solid thunk and a quivering shaft, recorded close`
 
-- [ ] **`med.torch.mount`** — A torch is taken from a wall.
+- [x] **`med.torch.mount`** — A torch is taken from a wall.
   - Target length: ~1.0s · generate **2 takes** (`med.torch.mount.1.wav`, `med.torch.mount.2.wav`, …)
   - Prompt: `Burning torch being pulled from an iron wall bracket, metal scrape with flame flare, recorded close`
 
-- [ ] **`med.dungeon.door`** — A heavy dungeon door opens.
+- [x] **`med.dungeon.door`** — A heavy dungeon door opens.
   - Target length: ~2.5s
   - Prompt: `Rusted iron dungeon door dragging open across stone, grinding metal with a deep echo`
 
-- [ ] **`med.chest.lock`** — A treasure chest is unlocked.
+- [x] **`med.chest.lock`** — A treasure chest is unlocked.
   - Target length: ~1.4s · generate **2 takes** (`med.chest.lock.1.wav`, `med.chest.lock.2.wav`, …)
   - Prompt: `Iron key turning in an old chest lock and the hasp springing open, recorded close`
 
-- [ ] **`med.coin.purse`** — A purse of coins is handled.
+- [x] **`med.coin.purse`** — A purse of coins is handled.
   - Target length: ~1.0s · generate **2 takes** (`med.coin.purse.1.wav`, `med.coin.purse.2.wav`, …)
   - Prompt: `Leather pouch of gold coins being shaken and set down, muffled metallic jingle, recorded close`
 
-- [ ] **`med.tavern`** — Tavern ambience. Loops.
+- [x] **`med.tavern`** — Tavern ambience. Loops.
   - Target length: ~6.0s
   - Prompt: `Busy medieval tavern with people talking and tankards clinking, continuous background, no music`
 
-- [ ] **`med.anvil`** — A smith strikes the anvil.
+- [x] **`med.anvil`** — A smith strikes the anvil.
   - Target length: ~0.8s · generate **4 takes** (`med.anvil.1.wav`, `med.anvil.2.wav`, …)
   - Prompt: `Blacksmith hammer striking steel on an anvil, ringing metallic clang, recorded close`
 
-- [ ] **`med.scroll.open`** — A scroll is unrolled.
+- [x] **`med.scroll.open`** — A scroll is unrolled.
   - Target length: ~1.2s · generate **2 takes** (`med.scroll.open.1.wav`, `med.scroll.open.2.wav`, …)
   - Prompt: `Old parchment scroll being unrolled across a table, dry crackling paper, recorded close`
 
-- [ ] **`fish.cast`** — A fishing rod casts.
+- [x] **`fish.cast`** — A fishing rod casts.
   - Target length: ~1.4s · generate **2 takes** (`fish.cast.1.wav`, `fish.cast.2.wav`, …)
   - Prompt: `Fishing rod casting with the line whistling out and the reel spinning free, recorded outdoors`
 
-- [ ] **`fish.reel.in`** — Reeling in. Loops.
-  - Target length: ~3.0s
+- [x] **`fish.reel.in`** — Reeling in. Loops.
+  - Target length: ~10.0s
   - Prompt: `Fishing reel being wound in steadily, continuous mechanical ratcheting, recorded close`
 
-- [ ] **`fish.reel.fast`** — A fish runs and the drag screams.
+- [x] **`fish.reel.fast`** — A fish runs and the drag screams.
   - Target length: ~2.0s
   - Prompt: `Fishing reel drag screaming as a fish runs with the line, fast ratcheting whir, recorded close`
 
-- [ ] **`fish.line.snap`** — The line breaks.
+- [x] **`fish.line.snap`** — The line breaks.
   - Target length: ~0.8s
   - Prompt: `Taut fishing line snapping under tension with a hard whipping recoil, recorded close`
 
-- [ ] **`fish.bob`** — A float bobs and dips.
+- [x] **`fish.bob`** — A float bobs and dips.
   - Target length: ~0.9s · generate **3 takes** (`fish.bob.1.wav`, `fish.bob.2.wav`, …)
   - Prompt: `Fishing float dipping and bobbing in still water, small wet plops, recorded close`
 
-- [ ] **`fish.catch`** — A fish is landed.
+- [x] **`fish.catch`** — A fish is landed.
   - Target length: ~1.6s · generate **2 takes** (`fish.catch.1.wav`, `fish.catch.2.wav`, …)
   - Prompt: `Fish breaking the surface and being lifted out of the water, big splash with flapping, recorded close`
 
-- [ ] **`fish.flop`** — A caught fish flaps about.
+- [x] **`fish.flop`** — A caught fish flaps about.
   - Target length: ~1.4s · generate **2 takes** (`fish.flop.1.wav`, `fish.flop.2.wav`, …)
   - Prompt: `Fish flapping wetly on a wooden boat deck, rapid slapping, recorded close`
 
-- [ ] **`fish.net`** — A landing net scoops.
+- [x] **`fish.net`** — A landing net scoops.
   - Target length: ~1.0s · generate **2 takes** (`fish.net.1.wav`, `fish.net.2.wav`, …)
   - Prompt: `Landing net being swept through water and lifted out dripping, recorded close`
 
-- [ ] **`fish.tacklebox`** — A tackle box opens.
+- [x] **`fish.tacklebox`** — A tackle box opens.
   - Target length: ~1.2s
   - Prompt: `Plastic tackle box being unclipped and opened with lures rattling inside, recorded close`
 
-- [ ] **`fish.water.calm`** — Calm lake water. Loops.
+- [x] **`fish.water.calm`** — Calm lake water. Loops.
   - Target length: ~6.0s
   - Prompt: `Calm lake water lapping gently against a wooden boat, continuous, clean field recording, no music`
 
-- [ ] **`stealth.alert`** — A guard notices something.
+- [x] **`stealth.alert`** — A guard notices something.
   - Target length: ~1.2s
   - Prompt: `Tense alert sting, two rising dissonant string notes with a metallic edge, short and urgent`
 
-- [ ] **`stealth.detected`** — The player is spotted.
+- [x] **`stealth.detected`** — The player is spotted.
   - Target length: ~2.0s
   - Prompt: `Alarm being triggered on detection, harsh rising klaxon blast with a tense orchestral stab`
 
-- [ ] **`stealth.lost`** — The guard loses track and calms down.
+- [x] **`stealth.lost`** — The guard loses track and calms down.
   - Target length: ~1.8s
   - Prompt: `Tension releasing, falling string line settling into a calm sustained note, relieved`
 
-- [ ] **`stealth.radio`** — Radio chatter between guards.
+- [x] **`stealth.radio`** — Radio chatter between guards.
   - Target length: ~2.0s · generate **2 takes** (`stealth.radio.1.wav`, `stealth.radio.2.wav`, …)
   - Prompt: `Two way radio crackling with muffled unintelligible chatter and static bursts, wordless, recorded close`
 
-- [ ] **`stealth.sneak`** — A slow careful footstep.
+- [x] **`stealth.sneak`** — A slow careful footstep.
   - Target length: ~0.4s · generate **4 takes** (`stealth.sneak.1.wav`, `stealth.sneak.2.wav`, …)
   - Prompt: `Single very quiet careful footstep on a wooden floor, soft controlled weight shift, recorded close`
 
-- [ ] **`stealth.lockpick`** — A lock is picked.
+- [x] **`stealth.lockpick`** — A lock is picked.
   - Target length: ~2.0s
   - Prompt: `Lock being picked with metal tools, small scraping and tumbler clicks ending in a turn, recorded close`
 
-- [ ] **`stealth.vent`** — A vent grate is removed.
+- [x] **`stealth.vent`** — A vent grate is removed.
   - Target length: ~1.6s
   - Prompt: `Metal vent grate being unscrewed and lifted away, hollow metallic rattle, recorded close`
 
-- [ ] **`stealth.camera`** — A security camera pans.
+- [x] **`stealth.camera`** — A security camera pans.
   - Target length: ~1.4s · generate **2 takes** (`stealth.camera.1.wav`, `stealth.camera.2.wav`, …)
   - Prompt: `Security camera servo panning across a room and stopping, electric whir with a click, recorded close`
 
-- [ ] **`stealth.takedown`** — A silent takedown.
+- [x] **`stealth.takedown`** — A silent takedown.
   - Target length: ~1.0s · generate **2 takes** (`stealth.takedown.1.wav`, `stealth.takedown.2.wav`, …)
   - Prompt: `Quick grappling struggle with cloth and a muffled body slump to the floor, recorded close`
 
-- [ ] **`stealth.hide`** — The player enters a hiding spot.
+- [x] **`stealth.hide`** — The player enters a hiding spot.
   - Target length: ~1.0s · generate **2 takes** (`stealth.hide.1.wav`, `stealth.hide.2.wav`, …)
   - Prompt: `Metal locker door being pulled shut from inside with a soft hollow clank, recorded close`
 
-- [ ] **`emote.taunt`** — A mocking taunt.
+- [x] **`emote.taunt`** — A mocking taunt.
   - Target length: ~1.2s · generate **2 takes** (`emote.taunt.1.wav`, `emote.taunt.2.wav`, …)
   - Prompt: `Person making a short wordless mocking raspberry and hum, playful, recorded close`
 
-- [ ] **`emote.sigh`** — A weary sigh.
+- [x] **`emote.sigh`** — A weary sigh.
   - Target length: ~1.2s · generate **2 takes** (`emote.sigh.1.wav`, `emote.sigh.2.wav`, …)
   - Prompt: `Person letting out a long weary sigh, wordless, recorded close`
 
-- [ ] **`emote.oops`** — A small mistake reaction.
+- [x] **`emote.oops`** — A small mistake reaction.
   - Target length: ~0.9s · generate **2 takes** (`emote.oops.1.wav`, `emote.oops.2.wav`, …)
   - Prompt: `Person making a short wordless oops sound of mild embarrassment, playful, recorded close`
 
-- [ ] **`body.sneeze`** — A sneeze.
+- [x] **`body.sneeze`** — A sneeze.
   - Target length: ~1.0s · generate **2 takes** (`body.sneeze.1.wav`, `body.sneeze.2.wav`, …)
   - Prompt: `Person sneezing once loudly, wordless, recorded close`
 
-- [ ] **`body.cough`** — A cough.
+- [x] **`body.cough`** — A cough.
   - Target length: ~1.0s · generate **2 takes** (`body.cough.1.wav`, `body.cough.2.wav`, …)
   - Prompt: `Person coughing twice, wordless, recorded close`
 
-- [ ] **`body.yawn`** — A yawn.
+- [x] **`body.yawn`** — A yawn.
   - Target length: ~1.6s · generate **2 takes** (`body.yawn.1.wav`, `body.yawn.2.wav`, …)
   - Prompt: `Person yawning widely, wordless, recorded close`
 
-- [ ] **`body.sniff`** — A sniff.
+- [x] **`body.sniff`** — A sniff.
   - Target length: ~0.7s · generate **2 takes** (`body.sniff.1.wav`, `body.sniff.2.wav`, …)
   - Prompt: `Person sniffing sharply through the nose twice, wordless, recorded close`
 
-- [ ] **`body.swallow`** — A nervous swallow.
+- [x] **`body.swallow`** — A nervous swallow.
   - Target length: ~0.7s · generate **2 takes** (`body.swallow.1.wav`, `body.swallow.2.wav`, …)
   - Prompt: `Person swallowing nervously, single wet gulp, recorded close`
 
-- [ ] **`body.stomach`** — A hungry stomach rumbles.
+- [x] **`body.stomach`** — A hungry stomach rumbles.
   - Target length: ~1.6s · generate **2 takes** (`body.stomach.1.wav`, `body.stomach.2.wav`, …)
   - Prompt: `Empty stomach rumbling and gurgling loudly, recorded very close`
 
-- [ ] **`body.shiver`** — Teeth chatter with cold.
+- [x] **`body.shiver`** — Teeth chatter with cold.
   - Target length: ~1.4s · generate **2 takes** (`body.shiver.1.wav`, `body.shiver.2.wav`, …)
   - Prompt: `Person shivering with teeth chattering rapidly from cold, wordless, recorded close`
 
-- [ ] **`body.heartbeat.fast`** — A racing heartbeat. Loops.
+- [x] **`body.heartbeat.fast`** — A racing heartbeat. Loops.
   - Target length: ~3.0s
   - Prompt: `Human heart pounding very fast in panic, continuous rapid chest thuds, recorded very close`
 
-- [ ] **`body.knuckle`** — Knuckles crack before a fight.
+- [x] **`body.knuckle`** — Knuckles crack before a fight.
   - Target length: ~0.8s · generate **2 takes** (`body.knuckle.1.wav`, `body.knuckle.2.wav`, …)
   - Prompt: `Person cracking their knuckles, series of small hard pops, recorded close`
 
-- [ ] **`body.footstep.bare`** — A barefoot step on a hard floor.
-  - Target length: ~0.3s · generate **3 takes** (`body.footstep.bare.1.wav`, `body.footstep.bare.2.wav`, …)
+- [x] **`body.footstep.bare`** — A barefoot step on a hard floor.
+  - Target length: ~0.3s · generate **4 takes** (`body.footstep.bare.1.wav`, `body.footstep.bare.2.wav`, …)
   - Prompt: `Single bare foot slapping down on a hard tiled floor, wet skin contact, recorded close`
 
-- [ ] **`weather.hail`** — Hail hammers down. Loops.
+- [x] **`weather.hail`** — Hail hammers down. Loops.
   - Target length: ~6.0s
   - Prompt: `Hailstones hammering down hard on a roof, continuous rattling impacts, clean field recording, no music`
 
-- [ ] **`weather.blizzard`** — A blizzard howls. Loops.
+- [x] **`weather.blizzard`** — A blizzard howls. Loops.
   - Target length: ~8.0s
   - Prompt: `Blizzard howling with driving snow and hard wind gusts, continuous, clean field recording, no music`
 
-- [ ] **`weather.sandstorm`** — A sandstorm blows. Loops.
+- [x] **`weather.sandstorm`** — A sandstorm blows. Loops.
   - Target length: ~8.0s
   - Prompt: `Desert sandstorm with grit driving hard through the air, continuous hissing wind, clean field recording`
 
-- [ ] **`weather.foghorn`** — A fog horn sounds.
+- [x] **`weather.foghorn`** — A fog horn sounds.
   - Target length: ~3.0s
   - Prompt: `Ship fog horn sounding one long deep blast across water, outdoor recording`
 
-- [ ] **`weather.earthquake`** — The ground shakes.
+- [x] **`weather.earthquake`** — The ground shakes.
   - Target length: ~3.5s
   - Prompt: `Earthquake rumbling deeply with the ground shaking and objects rattling, powerful low roar`
 
-- [ ] **`weather.avalanche`** — An avalanche comes down.
+- [x] **`weather.avalanche`** — An avalanche comes down.
   - Target length: ~3.5s
   - Prompt: `Avalanche of snow thundering down a mountainside, building roaring rush, outdoor recording`
 
-- [ ] **`weather.volcano`** — A volcano erupts.
+- [x] **`weather.volcano`** — A volcano erupts.
   - Target length: ~4.0s
   - Prompt: `Volcano erupting with a huge explosive blast and a deep sustained magma roar`
 
-- [ ] **`weather.tornado`** — A tornado passes. Loops.
+- [x] **`weather.tornado`** — A tornado passes. Loops.
   - Target length: ~8.0s
   - Prompt: `Tornado roaring with violent swirling wind and debris, continuous, powerful`
 
-- [ ] **`weather.ice.crack`** — Ice cracks underfoot.
+- [x] **`weather.ice.crack`** — Ice cracks underfoot.
   - Target length: ~1.4s · generate **2 takes** (`weather.ice.crack.1.wav`, `weather.ice.crack.2.wav`, …)
   - Prompt: `Frozen lake ice cracking and splitting underfoot, brittle splintering, recorded close`
 
-- [ ] **`space.rocket.launch`** — A rocket lifts off.
+- [x] **`space.rocket.launch`** — A rocket lifts off.
   - Target length: ~4.0s
   - Prompt: `Rocket engines igniting and building to full thrust at liftoff, enormous roaring rumble`
 
-- [ ] **`space.stage.sep`** — Stage separation.
+- [x] **`space.stage.sep`** — Stage separation.
   - Target length: ~1.6s
   - Prompt: `Explosive bolts firing and a rocket stage separating, hard metallic bang with a rush`
 
-- [ ] **`space.docking`** — A docking clamp seals.
+- [x] **`space.docking`** — A docking clamp seals.
   - Target length: ~2.0s
   - Prompt: `Spacecraft docking clamps engaging and sealing with heavy metallic clunks and a pressure hiss`
 
-- [ ] **`space.airlock.cycle`** — An airlock cycles.
+- [x] **`space.airlock.cycle`** — An airlock cycles.
   - Target length: ~3.0s
   - Prompt: `Airlock cycling with air being pumped out and pressure equalising, long hissing drain`
 
-- [ ] **`space.oxygen.alarm`** — Low oxygen warning. Loops.
+- [x] **`space.oxygen.alarm`** — Low oxygen warning. Loops.
   - Target length: ~3.0s
   - Prompt: `Life support warning alarm beeping urgently and repeatedly, continuous electronic alert`
 
-- [ ] **`space.zero.g`** — Movement in zero gravity.
+- [x] **`space.zero.g`** — Movement in zero gravity.
   - Target length: ~1.8s
-  - Prompt: `Spacesuit fabric and hardware moving slowly in silence with muffled breathing, recorded very close`
+  - Prompt: `Spacesuit fabric and hardware moving slowly with muffled breathing inside the helmet, microphone right against the suit, close and intimate`
 
-- [ ] **`space.cryo`** — A cryo pod opens.
+- [x] **`space.cryo`** — A cryo pod opens.
   - Target length: ~2.5s
   - Prompt: `Cryogenic pod unsealing with a freezing pressure hiss and mechanical lid lift`
 
-- [ ] **`space.radar`** — A radar sweep pings.
+- [x] **`space.radar`** — A radar sweep pings.
   - Target length: ~1.6s · generate **2 takes** (`space.radar.1.wav`, `space.radar.2.wav`, …)
   - Prompt: `Submarine style radar sweeping with a single clear sonar ping and a long decay, clean recording`
 
-- [ ] **`space.hull.stress`** — The hull groans under stress.
+- [x] **`space.hull.stress`** — The hull groans under stress.
   - Target length: ~3.0s
   - Prompt: `Large metal hull groaning and creaking under structural stress, deep ominous metallic bending`
 
-- [ ] **`space.thruster`** — A manoeuvring thruster fires.
+- [x] **`space.thruster`** — A manoeuvring thruster fires.
   - Target length: ~1.0s · generate **3 takes** (`space.thruster.1.wav`, `space.thruster.2.wav`, …)
   - Prompt: `Short burst of compressed gas from a manoeuvring thruster, hard hissing puff`
 
-- [ ] **`space.beacon`** — A distress beacon pulses. Loops.
+- [x] **`space.beacon`** — A distress beacon pulses. Loops.
   - Target length: ~3.0s
   - Prompt: `Distress beacon pulsing a single repeating electronic tone, continuous, clean synthetic recording`
 
-- [ ] **`space.warp.charge`** — A jump drive spins up.
+- [x] **`space.warp.charge`** — A jump drive spins up.
   - Target length: ~3.0s
   - Prompt: `Faster than light drive spooling up, rising electronic whine building with deep power, synthetic`
 
-- [ ] **`holiday.sleighbells`** — Sleigh bells jingle.
+- [x] **`holiday.sleighbells`** — Sleigh bells jingle.
   - Target length: ~2.0s
   - Prompt: `Sleigh bells jingling rhythmically as a sled moves, ringing metallic shake, recorded close`
 
-- [ ] **`holiday.church.bells`** — Church bells peal.
+- [x] **`holiday.church.bells`** — Church bells peal.
   - Target length: ~4.0s
   - Prompt: `Church bells pealing together in celebration, layered ringing bronze, outdoor recording`
 
-- [ ] **`holiday.halloween.creak`** — A spooky creak.
+- [x] **`holiday.halloween.creak`** — A spooky creak.
   - Target length: ~2.5s
   - Prompt: `Old coffin lid creaking slowly open in a stone crypt, long groaning wood with a hollow echo`
 
-- [ ] **`holiday.organ`** — A pipe organ stab.
+- [x] **`holiday.organ`** — A pipe organ stab.
   - Target length: ~3.0s
   - Prompt: `Dramatic gothic pipe organ playing a dark sustained chord, grand and ominous`
 
-- [ ] **`holiday.wrapping`** — Wrapping paper is torn.
+- [x] **`holiday.wrapping`** — Wrapping paper is torn.
   - Target length: ~1.2s · generate **2 takes** (`holiday.wrapping.1.wav`, `holiday.wrapping.2.wav`, …)
   - Prompt: `Gift wrapping paper being torn open quickly, crackling paper tearing, recorded close`
 
@@ -2242,7 +2242,7 @@ This checklist is only the 608 that need real audio.
   - Prompt: `—`
 
 - [ ] **`sting.unlock`** — Something new unlocks.
-  - Target length: ~4s
+  - Target length: ~5s
   - Prompt: `—`
 
 - [ ] **`sting.newrecord`** — A new high score.
@@ -2351,55 +2351,55 @@ This checklist is only the 608 that need real audio.
   - Target length: ~1.4s
   - Prompt: `Loud game checkpoint reached sound, warm rising three note chime with a soft magical sparkle`
 
-- [ ] **`shop.ad.reward`** — A rewarded video finishes and pays out.
+- [x] **`shop.ad.reward`** — A rewarded video finishes and pays out.
   - Target length: ~2.0s
   - Prompt: `Generous reward payout, clear cascading chimes with coins landing and a warm confirming swell`
 
-- [ ] **`shop.purchase.ok`** — A purchase completes successfully.
+- [x] **`shop.purchase.ok`** — A purchase completes successfully.
   - Target length: ~1.6s
   - Prompt: `Cash register drawer opening with a clear confirming bell and a receipt printing, recorded close`
 
-- [ ] **`shop.subscribe`** — A subscription starts.
+- [x] **`shop.subscribe`** — A subscription starts.
   - Target length: ~2.2s
   - Prompt: `Luxurious premium unlock, warm golden shimmer rising into a rich confirming chord`
 
-- [ ] **`shop.streak`** — A daily streak advances.
+- [x] **`shop.streak`** — A daily streak advances.
   - Target length: ~1.6s
   - Prompt: `Series of rising stamp impacts with a ringing bell at the end, satisfying and rhythmic, recorded close`
 
-- [ ] **`shop.piggy`** — A piggy bank is smashed open.
+- [x] **`shop.piggy`** — A piggy bank is smashed open.
   - Target length: ~2.0s
   - Prompt: `Ceramic piggy bank smashing on a hard floor and coins scattering everywhere, recorded close`
 
-- [ ] **`shop.wheel.stop`** — The prize wheel lands on a segment.
+- [x] **`shop.wheel.stop`** — The prize wheel lands on a segment.
   - Target length: ~1.6s
   - Prompt: `Prize wheel slowing to a stop with the flapper ticking down and settling, recorded close`
 
-- [ ] **`shop.gift`** — A gift box opens.
+- [x] **`shop.gift`** — A gift box opens.
   - Target length: ~1.8s
   - Prompt: `Wrapped gift box being torn open with paper tearing and a ribbon pull, then a clear reveal chime`
 
-- [ ] **`emote.clap`** — A single person claps.
+- [x] **`emote.clap`** — A single person claps.
   - Target length: ~1.4s · generate **2 takes** (`emote.clap.1.wav`, `emote.clap.2.wav`, …)
   - Prompt: `One person clapping their hands together several times, loud and close, dry recording`
 
-- [ ] **`emote.cheer.one`** — One person cheers.
+- [x] **`emote.cheer.one`** — One person cheers.
   - Target length: ~1.4s · generate **2 takes** (`emote.cheer.one.1.wav`, `emote.cheer.one.2.wav`, …)
   - Prompt: `One person cheering happily with a short wordless whoop, recorded close`
 
-- [ ] **`holiday.confetti`** — A confetti cannon fires.
+- [x] **`holiday.confetti`** — A confetti cannon fires.
   - Target length: ~1.6s
   - Prompt: `Confetti cannon firing with a compressed air pop and paper fluttering down, recorded close`
 
-- [ ] **`holiday.birthday`** — A birthday moment.
+- [x] **`holiday.birthday`** — A birthday moment.
   - Target length: ~2.5s
   - Prompt: `Small group cheering happily with party blowers and clapping at a birthday, wordless, recorded close`
 
-- [ ] **`holiday.cork.pop`** — A champagne cork pops.
+- [x] **`holiday.cork.pop`** — A champagne cork pops.
   - Target length: ~1.4s · generate **2 takes** (`holiday.cork.pop.1.wav`, `holiday.cork.pop.2.wav`, …)
   - Prompt: `Champagne cork popping from a bottle with a deep hollow burst and fizzing, recorded close`
 
-- [ ] **`holiday.newyear`** — New year countdown moment.
+- [x] **`holiday.newyear`** — New year countdown moment.
   - Target length: ~3.0s
   - Prompt: `Crowd cheering and fireworks bursting at midnight celebration, outdoor recording`
 
@@ -2417,46 +2417,46 @@ This checklist is only the 608 that need real audio.
   - Target length: ~2.0s · generate **2 takes** (`phone.vibrate.1.wav`, `phone.vibrate.2.wav`, …)
   - Prompt: `Mobile phone vibrating on a hard wooden table, buzzing rattle, recorded close`
 
-- [ ] **`shop.purchase.fail`** — A purchase is declined or cancelled.
+- [x] **`shop.purchase.fail`** — A purchase is declined or cancelled.
   - Target length: ~1.2s
   - Prompt: `Card terminal rejecting a payment with two low descending error tones, recorded close`
 
-- [ ] **`shop.restore`** — Purchases are restored.
+- [x] **`shop.restore`** — Purchases are restored.
   - Target length: ~1.4s
   - Prompt: `Soft electronic sync completing with a rising confirming chime, clean recording`
 
-- [ ] **`shop.mail`** — New mail arrives.
+- [x] **`shop.mail`** — New mail arrives.
   - Target length: ~1.2s · generate **2 takes** (`shop.mail.1.wav`, `shop.mail.2.wav`, …)
   - Prompt: `Paper envelope sliding through a letterbox and landing on a wooden floor, recorded close`
 
-- [ ] **`shop.coin.spend`** — Currency is spent.
+- [x] **`shop.coin.spend`** — Currency is spent.
   - Target length: ~0.9s · generate **2 takes** (`shop.coin.spend.1.wav`, `shop.coin.spend.2.wav`, …)
   - Prompt: `Handful of metal coins being handed over and clinking into a bowl, recorded close`
 
-- [ ] **`emote.snap`** — A finger snap.
-  - Target length: ~0.4s · generate **3 takes** (`emote.snap.1.wav`, `emote.snap.2.wav`, …)
+- [x] **`emote.snap`** — A finger snap.
+  - Target length: ~0.4s · generate **4 takes** (`emote.snap.1.wav`, `emote.snap.2.wav`, …)
   - Prompt: `Single loud finger snap, recorded very close, dry`
 
-- [ ] **`emote.whistle`** — An admiring whistle.
+- [x] **`emote.whistle`** — An admiring whistle.
   - Target length: ~1.2s · generate **2 takes** (`emote.whistle.1.wav`, `emote.whistle.2.wav`, …)
   - Prompt: `Person whistling two rising notes in admiration, wordless, recorded close`
 
-- [ ] **`emote.kiss`** — A blown kiss.
+- [x] **`emote.kiss`** — A blown kiss.
   - Target length: ~0.6s · generate **2 takes** (`emote.kiss.1.wav`, `emote.kiss.2.wav`, …)
   - Prompt: `Person blowing a kiss, single soft lip smack, recorded close`
 
-- [ ] **`emote.huh`** — A confused reaction.
+- [x] **`emote.huh`** — A confused reaction.
   - Target length: ~0.9s · generate **2 takes** (`emote.huh.1.wav`, `emote.huh.2.wav`, …)
   - Prompt: `Person making a short questioning hum of confusion, wordless, recorded close`
 
-- [ ] **`emote.drumroll`** — A drumroll before a reveal.
+- [x] **`emote.drumroll`** — A drumroll before a reveal.
   - Target length: ~2.2s
   - Prompt: `Snare drum roll building to a cymbal crash, recorded close`
 
-- [ ] **`holiday.party.horn`** — A party blower.
+- [x] **`holiday.party.horn`** — A party blower.
   - Target length: ~0.8s · generate **3 takes** (`holiday.party.horn.1.wav`, `holiday.party.horn.2.wav`, …)
   - Prompt: `Party paper blower being blown with a squeaky unrolling toot, recorded close`
 
-- [ ] **`holiday.cracker`** — A christmas cracker snaps.
+- [x] **`holiday.cracker`** — A christmas cracker snaps.
   - Target length: ~0.6s · generate **2 takes** (`holiday.cracker.1.wav`, `holiday.cracker.2.wav`, …)
   - Prompt: `Christmas cracker being pulled apart with a small gunpowder snap, recorded close`

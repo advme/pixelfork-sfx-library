@@ -1,5 +1,41 @@
 # CHANGELOG
 
+## v0.7.0-A — 659 sounds: 16 new SFX groups, 16 new music genres, first stingers
+- Agent: A (Claude) · Date: 2026-09-20
+- Done: Added **256 sounds**, taking the library from 403 to **659**.
+  190 SFX across sixteen new groups — casino, puzzle, platformer, tower defence, idle,
+  shop and monetisation, restaurant, construction, medieval, fishing, stealth, emotes, body
+  foley, extreme weather, space and holiday.
+  48 music beds across sixteen new genres, and the first **18 stingers** — level start,
+  victory, defeat, game over, level up, unlock, new record, quest, rank up, boss appear,
+  danger, reveal, transition, logo, chapter, sad trombone, ta-da and suspense. The library
+  had no one-shot music at all before; those are marked `stream` but deliberately NOT
+  loopable.
+  Added **`tools/fix_loop.py`**, which sweeps crossfade lengths against the source file
+  without calling the API or rebuilding the pack. It fixed **125 loops in one run** — work
+  that had been costing minutes per sound.
+- Tested: All 659 render and play, 145 loops, 96 music tracks.
+  **The loop metric was wrong twice and I corrected it both times.** Measuring the
+  single-sample jump at the wrap works for sustained tonal material but is meaningless for
+  noise (which has large jumps by nature) and for impulsive rhythm (a jackhammer's jump
+  between any two samples is large). Measuring **beat spacing across the wrap** instead
+  cleared `idle.generator` and `build.jackhammer` as false positives, and caught a real one
+  the seam test had understated: `shop.wheel.spin` skipped **+507%** of a beat every cycle,
+  now +2%. `casino.reel.spin` went from +38% to +22%.
+  Seven rhythmic machinery loops were regenerated at 10s because a 3s source cannot hold a
+  crossfade long enough to land on the period.
+- Notes for next agent: `generate_ai.py` crashed on every music entry when music joined the
+  registry — they carry a `music` block instead of a `prompt`. It now skips them and refuses
+  by name. Two SFX batches did nothing before I noticed, because I had piped the background
+  command through `tail`, which threw away the error. **Do not pipe a background
+  command's output through `tail`** — capture the whole log.
+  The short-percussive-one-shot failure recurred five more times this pass
+  (`sport.racket.hit`, `object.balloon.pop`, `plat.spring`, `emote.snap`,
+  `body.footstep.bare`). Sequence mode fixed every one. Reach for it first.
+  `space.zero.g` is deliberately quiet at −25 dBFS with `minLevelDb: -30`; it is a muffled
+  suit in vacuum and forcing it loud would contradict the brief.
+
+
 ## v0.6.1-A — served from GitHub Pages (jsDelivr refuses repos over 50 MB)
 - Agent: A (Claude) · Date: 2026-09-19
 - Found right after publishing v0.6.0-A: jsDelivr answered 404 for most files. Its data API gives the reason: `403 Package size exceeded the configured limit of 50 MB`; this repo is 77 MB. (A few files loaded before jsDelivr had measured the repo, which made it look random.) My pre-publish size check was wrong: I assumed a higher limit.

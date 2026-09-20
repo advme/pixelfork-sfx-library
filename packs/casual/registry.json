@@ -3122,7 +3122,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.0
+        "loop": 1.2
       },
       "loopable": true
     },
@@ -3141,7 +3141,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.0
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -3160,7 +3160,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.0
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -3179,7 +3179,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 2.0
+        "loop": 1.2
       },
       "loopable": true
     },
@@ -3198,7 +3198,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.0
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -3270,7 +3270,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.0
+        "loop": 0.8
       },
       "loopable": true
     },
@@ -3383,7 +3383,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.4
+        "loop": 1.2
       },
       "loopable": true
     },
@@ -3818,7 +3818,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.8
+        "loop": 1.2
       },
       "loopable": true
     },
@@ -3875,7 +3875,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.8
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -4028,7 +4028,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.6
+        "loop": 1.2
       },
       "loopable": true
     },
@@ -4230,7 +4230,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 2.0
+        "loop": 2.5
       },
       "loopable": true
     },
@@ -4279,7 +4279,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 2.0
+        "loop": 4.0
       },
       "loopable": true
     },
@@ -4351,7 +4351,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.8
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -4769,7 +4769,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 2.0
+        "loop": 0.8
       },
       "loopable": true
     },
@@ -4818,7 +4818,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 2.0
+        "loop": 1.6
       },
       "loopable": true
     },
@@ -4837,7 +4837,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 2.5
+        "loop": 0.8
       },
       "loopable": true
     },
@@ -4981,7 +4981,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.5
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -5226,7 +5226,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 2.5
+        "loop": 1.2
       },
       "loopable": true
     },
@@ -5245,7 +5245,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.0
+        "loop": 1.2
       },
       "loopable": true
     },
@@ -5264,7 +5264,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.5
+        "loop": 1.2
       },
       "loopable": true
     },
@@ -5350,7 +5350,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 2.0
+        "loop": 0.8
       },
       "loopable": true
     },
@@ -5500,7 +5500,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.0
+        "loop": 1.2
       },
       "loopable": true
     },
@@ -5631,7 +5631,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.0
+        "loop": 1.6
       },
       "loopable": true
     },
@@ -6096,7 +6096,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.5
+        "loop": 2.5
       },
       "loopable": true
     },
@@ -6340,7 +6340,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.0
+        "loop": 1.6
       },
       "loopable": true
     },
@@ -6359,7 +6359,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.5
+        "loop": 0.8
       },
       "loopable": true
     },
@@ -6424,7 +6424,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.0
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -6461,7 +6461,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.0
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -6527,7 +6527,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.5
+        "loop": 1.6
       },
       "loopable": true
     },
@@ -6546,7 +6546,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.5
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -6565,7 +6565,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.5
+        "loop": 2.5
       },
       "loopable": true
     },
@@ -6584,7 +6584,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 2.0
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -6811,7 +6811,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.0
+        "loop": 0.8
       },
       "loopable": true
     },
@@ -7291,7 +7291,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.0
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -7325,7 +7325,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.5
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -7370,7 +7370,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 0.8
       }
     },
     "music.casual.3": {
@@ -7392,7 +7392,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 5.0
       }
     },
     "music.hypercasual.1": {
@@ -7414,7 +7414,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 0.8
       }
     },
     "music.hypercasual.2": {
@@ -7436,7 +7436,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 1.6
       }
     },
     "music.hypercasual.3": {
@@ -7458,7 +7458,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 2.0
       }
     },
     "music.action.1": {
@@ -7480,7 +7480,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 2.5
       }
     },
     "music.action.2": {
@@ -7502,7 +7502,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 1.6
       }
     },
     "music.action.3": {
@@ -7524,7 +7524,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 2.5
       }
     },
     "music.racing.1": {
@@ -7546,7 +7546,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 5.0
       }
     },
     "music.racing.2": {
@@ -7568,7 +7568,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 2.0
+        "loop": 1.2
       }
     },
     "music.racing.3": {
@@ -7590,7 +7590,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 0.8
       }
     },
     "music.adventure.1": {
@@ -7612,7 +7612,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 2.0
       }
     },
     "music.adventure.2": {
@@ -7634,7 +7634,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 2.0
       }
     },
     "music.adventure.3": {
@@ -7656,7 +7656,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 1.2
       }
     },
     "music.boss.1": {
@@ -7678,7 +7678,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 3.0
       }
     },
     "music.boss.2": {
@@ -7722,7 +7722,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 3.0
       }
     },
     "music.horror.1": {
@@ -7744,7 +7744,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 0.5
       }
     },
     "music.horror.2": {
@@ -7766,7 +7766,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 0.5
       }
     },
     "music.horror.3": {
@@ -7788,7 +7788,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 5.0
       }
     },
     "music.cozy.1": {
@@ -7810,7 +7810,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 1.2
       }
     },
     "music.cozy.2": {
@@ -7832,7 +7832,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 1.2
       }
     },
     "music.cozy.3": {
@@ -7854,7 +7854,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 0.5
       }
     },
     "music.scifi.1": {
@@ -7876,7 +7876,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 1.2
       }
     },
     "music.scifi.2": {
@@ -7898,7 +7898,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 0.5
       }
     },
     "music.scifi.3": {
@@ -7920,7 +7920,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 5.0
       }
     },
     "music.menu.1": {
@@ -7942,7 +7942,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 0.5
       }
     },
     "music.menu.2": {
@@ -7964,7 +7964,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 5.0
       }
     },
     "music.menu.3": {
@@ -7986,14 +7986,14 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 5.0
       }
     },
     "casino.reel.spin": {
       "source": "ai",
       "category": "game",
       "whenToUse": "A slot reel starts spinning. Loops while it runs.",
-      "duration": 3.0,
+      "duration": 10.0,
       "tags": [
         "slot",
         "reel",
@@ -8004,7 +8004,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.8
+        "loop": 1.5
       },
       "loopable": true
     },
@@ -8054,7 +8054,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.8
+        "loop": 1.2
       },
       "loopable": true
     },
@@ -8219,7 +8219,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.5
+        "loop": 1.2
       },
       "loopable": true
     },
@@ -8459,7 +8459,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.6
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -8495,8 +8495,8 @@
       "vary": 0.05,
       "variationsWanted": 3,
       "sequence": {
-        "seconds": 3.0,
-        "prompt": "Metal coil spring being compressed and released repeatedly, four loud cartoon boing sounds one after another, recorded close and dry"
+        "seconds": 4.0,
+        "prompt": "Cartoon metal coil spring boing sound repeated five times with a clear pause between each one, loud and springy, recorded close and dry"
       }
     },
     "plat.trampoline": {
@@ -8565,7 +8565,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.8
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -8589,7 +8589,7 @@
       "source": "ai",
       "category": "game",
       "whenToUse": "A spinning saw blade. Loops.",
-      "duration": 3.0,
+      "duration": 10.0,
       "tags": [
         "saw",
         "blade",
@@ -8600,7 +8600,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.8
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -8863,7 +8863,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.8
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -9064,7 +9064,7 @@
       "source": "ai",
       "category": "game",
       "whenToUse": "A generator or factory runs. Loops.",
-      "duration": 3.0,
+      "duration": 10.0,
       "tags": [
         "generator",
         "factory",
@@ -9075,7 +9075,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.8
+        "loop": 2.5
       },
       "loopable": true
     },
@@ -9227,7 +9227,7 @@
       "source": "ai",
       "category": "game",
       "whenToUse": "A prize wheel spins. Loops.",
-      "duration": 3.0,
+      "duration": 10.0,
       "tags": [
         "wheel",
         "spin",
@@ -9238,7 +9238,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.8
+        "loop": 1.5
       },
       "loopable": true
     },
@@ -9386,7 +9386,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.8
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -9513,7 +9513,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.8
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -9532,7 +9532,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.8
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -9540,7 +9540,7 @@
       "source": "ai",
       "category": "game",
       "whenToUse": "A jackhammer breaks concrete. Loops.",
-      "duration": 3.0,
+      "duration": 10.0,
       "tags": [
         "jackhammer",
         "drill",
@@ -9551,7 +9551,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.6
+        "loop": 0.8
       },
       "loopable": true
     },
@@ -9559,7 +9559,7 @@
       "source": "ai",
       "category": "game",
       "whenToUse": "A cement mixer turns. Loops.",
-      "duration": 3.0,
+      "duration": 10.0,
       "tags": [
         "cement",
         "mixer",
@@ -9570,7 +9570,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.8
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -9883,7 +9883,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.5
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -9943,7 +9943,7 @@
       "source": "ai",
       "category": "game",
       "whenToUse": "Reeling in. Loops.",
-      "duration": 3.0,
+      "duration": 10.0,
       "tags": [
         "reel",
         "wind",
@@ -9954,7 +9954,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.6
+        "loop": 0.8
       },
       "loopable": true
     },
@@ -10085,7 +10085,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.5
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -10278,7 +10278,11 @@
       "prompt": "Single loud finger snap, recorded very close, dry",
       "gain": 0.85,
       "vary": 0.05,
-      "variationsWanted": 3
+      "variationsWanted": 4,
+      "sequence": {
+        "seconds": 3.0,
+        "prompt": "Person snapping their fingers repeatedly, five loud clear separate snaps with a gap between each, recorded very close and dry"
+      }
     },
     "emote.whistle": {
       "source": "ai",
@@ -10534,7 +10538,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.8
+        "loop": 1.2
       },
       "loopable": true
     },
@@ -10571,7 +10575,11 @@
       "prompt": "Single bare foot slapping down on a hard tiled floor, wet skin contact, recorded close",
       "gain": 0.85,
       "vary": 0.05,
-      "variationsWanted": 3
+      "variationsWanted": 4,
+      "sequence": {
+        "seconds": 3.0,
+        "prompt": "Person walking barefoot on a hard tiled floor, five clear separate wet skin slaps, recorded close and loud, no reverb"
+      }
     },
     "weather.hail": {
       "source": "ai",
@@ -10588,7 +10596,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 1.5
+        "loop": 0.8
       },
       "loopable": true
     },
@@ -10607,7 +10615,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 2.0
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -10626,7 +10634,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 2.0
+        "loop": 2.5
       },
       "loopable": true
     },
@@ -10705,7 +10713,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 2.0
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -10800,7 +10808,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.8
+        "loop": 0.5
       },
       "loopable": true
     },
@@ -10815,9 +10823,10 @@
         "suit",
         "drift"
       ],
-      "prompt": "Spacesuit fabric and hardware moving slowly in silence with muffled breathing, recorded very close",
+      "prompt": "Spacesuit fabric and hardware moving slowly with muffled breathing inside the helmet, microphone right against the suit, close and intimate",
       "gain": 0.85,
-      "vary": 0.05
+      "vary": 0.05,
+      "minLevelDb": -30
     },
     "space.cryo": {
       "source": "ai",
@@ -10896,7 +10905,7 @@
       "gain": 0.85,
       "vary": 0.05,
       "postFx": {
-        "loop": 0.8
+        "loop": 1.2
       },
       "loopable": true
     },
@@ -11106,7 +11115,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 0.5
       }
     },
     "music.puzzle.2": {
@@ -11128,7 +11137,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 0.5
       }
     },
     "music.puzzle.3": {
@@ -11172,7 +11181,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 1.2
       }
     },
     "music.tavern.2": {
@@ -11194,7 +11203,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 0.5
       }
     },
     "music.tavern.3": {
@@ -11216,7 +11225,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 3.0
       }
     },
     "music.western.1": {
@@ -11238,7 +11247,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 2.5
       }
     },
     "music.western.2": {
@@ -11260,7 +11269,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 6.0
       }
     },
     "music.western.3": {
@@ -11282,7 +11291,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 3.0
       }
     },
     "music.tropical.1": {
@@ -11304,7 +11313,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 1.6
       }
     },
     "music.tropical.2": {
@@ -11348,7 +11357,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 1.2
       }
     },
     "music.desert.1": {
@@ -11370,7 +11379,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 6.0
       }
     },
     "music.desert.2": {
@@ -11392,7 +11401,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 1.2
       }
     },
     "music.desert.3": {
@@ -11414,7 +11423,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 6.0
       }
     },
     "music.oriental.1": {
@@ -11458,7 +11467,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 1.2
       }
     },
     "music.oriental.3": {
@@ -11480,7 +11489,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 0.5
       }
     },
     "music.chiptune.1": {
@@ -11502,7 +11511,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 5.0
       }
     },
     "music.chiptune.2": {
@@ -11546,7 +11555,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 0.5
       }
     },
     "music.lofi.1": {
@@ -11568,7 +11577,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 2.0
       }
     },
     "music.lofi.2": {
@@ -11590,7 +11599,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 6.0
       }
     },
     "music.lofi.3": {
@@ -11612,7 +11621,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 2.0
       }
     },
     "music.epic.1": {
@@ -11656,7 +11665,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 5.0
       }
     },
     "music.epic.3": {
@@ -11678,7 +11687,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 2.0
       }
     },
     "music.comedy.1": {
@@ -11700,7 +11709,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 2.0
       }
     },
     "music.comedy.2": {
@@ -11744,7 +11753,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 2.0
       }
     },
     "music.casino.1": {
@@ -11788,7 +11797,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 1.2
       }
     },
     "music.casino.3": {
@@ -11832,7 +11841,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 0.8
       }
     },
     "music.underwater.2": {
@@ -11854,7 +11863,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 0.5
       }
     },
     "music.underwater.3": {
@@ -11876,7 +11885,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 5.0
       }
     },
     "music.winter.1": {
@@ -11898,7 +11907,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 2.5
       }
     },
     "music.winter.2": {
@@ -11920,7 +11929,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 5.0
       }
     },
     "music.winter.3": {
@@ -11942,7 +11951,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 1.6
       }
     },
     "music.zen.1": {
@@ -11986,7 +11995,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 0.5
       }
     },
     "music.zen.3": {
@@ -12008,7 +12017,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 0.5
       }
     },
     "music.chase.1": {
@@ -12030,7 +12039,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 2.0
       }
     },
     "music.chase.2": {
@@ -12052,7 +12061,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 6.0
       }
     },
     "music.chase.3": {
@@ -12096,7 +12105,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 1.6
       }
     },
     "music.tension.2": {
@@ -12118,7 +12127,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 0.5
       }
     },
     "music.tension.3": {
@@ -12140,7 +12149,7 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loop": 0.5
       }
     },
     "sting.level.start": {
