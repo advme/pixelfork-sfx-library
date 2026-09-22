@@ -427,7 +427,7 @@
       "duration": 0.35,
       "gain": 0.95,
       "vary": 0,
-      "whenToUse": "3\u2026 2\u2026 1\u2026 before a level starts. Play once per number, then state.go.",
+      "whenToUse": "3… 2… 1… before a level starts. Play once per number, then state.go.",
       "tags": [
         "countdown",
         "start",
@@ -640,7 +640,7 @@
       "gain": 0.85,
       "vary": 0.06,
       "minGap": 40,
-      "whenToUse": "Softer, rounder energy shot \u2014 bubble guns, goo shooters, magic bolts.",
+      "whenToUse": "Softer, rounder energy shot — bubble guns, goo shooters, magic bolts.",
       "tags": [
         "plasma",
         "bolt",
@@ -847,7 +847,7 @@
       "duration": 0.25,
       "gain": 0.7,
       "vary": 0.04,
-      "whenToUse": "Out of ammo \u2014 the trigger clicks on nothing.",
+      "whenToUse": "Out of ammo — the trigger clicks on nothing.",
       "tags": [
         "empty",
         "no ammo",
@@ -998,7 +998,7 @@
       "duration": 0.22,
       "gain": 0.8,
       "vary": 0.07,
-      "whenToUse": "A soft generic landing or bump. The cheapest impact \u2014 good for stylized games.",
+      "whenToUse": "A soft generic landing or bump. The cheapest impact — good for stylized games.",
       "tags": [
         "thud",
         "bump",
@@ -1847,7 +1847,7 @@
       "gain": 0.75,
       "vary": 0.08,
       "variationsWanted": 3,
-      "whenToUse": "Eating: fruit, candy, a power snack. Organic and wet \u2014 code cannot fake this.",
+      "whenToUse": "Eating: fruit, candy, a power snack. Organic and wet — code cannot fake this.",
       "tags": [
         "eat",
         "food",
@@ -2109,7 +2109,7 @@
       "duration": 2.2,
       "gain": 0.9,
       "vary": 0,
-      "whenToUse": "The run is over for good \u2014 endless runner death, all lives lost.",
+      "whenToUse": "The run is over for good — endless runner death, all lives lost.",
       "tags": [
         "game over",
         "death",
@@ -2197,7 +2197,7 @@
       "duration": 0.25,
       "gain": 0.85,
       "vary": 0.03,
-      "whenToUse": "A combo step. Play it once per combo level with a rising pitch \u2014 SFX.play('match.combo', { rate: 1 + n * 0.12 }).",
+      "whenToUse": "A combo step. Play it once per combo level with a rising pitch — SFX.play('match.combo', { rate: 1 + n * 0.12 }).",
       "tags": [
         "combo",
         "chain",
@@ -2839,7 +2839,7 @@
     "animal.dog.bark": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A dog barks \u2014 pet, guard, companion or enemy.",
+      "whenToUse": "A dog barks — pet, guard, companion or enemy.",
       "duration": 0.8,
       "tags": [
         "dog",
@@ -2855,7 +2855,7 @@
     "animal.cat.meow": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A cat meows \u2014 pet or character.",
+      "whenToUse": "A cat meows — pet or character.",
       "duration": 0.9,
       "tags": [
         "cat",
@@ -2871,7 +2871,7 @@
     "animal.bird.chirp": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A small bird chirps \u2014 collectible, ambience accent, cute character.",
+      "whenToUse": "A small bird chirps — collectible, ambience accent, cute character.",
       "duration": 0.6,
       "tags": [
         "bird",
@@ -2887,7 +2887,7 @@
     "animal.horse.neigh": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A horse whinnies \u2014 mount, race, farm.",
+      "whenToUse": "A horse whinnies — mount, race, farm.",
       "duration": 1.2,
       "tags": [
         "horse",
@@ -2902,7 +2902,7 @@
     "animal.cow.moo": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A cow lows \u2014 farm game, idle animal.",
+      "whenToUse": "A cow lows — farm game, idle animal.",
       "duration": 1.4,
       "tags": [
         "cow",
@@ -2917,7 +2917,7 @@
     "animal.sheep.bleat": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A sheep bleats \u2014 farm game, idle animal.",
+      "whenToUse": "A sheep bleats — farm game, idle animal.",
       "duration": 1.0,
       "tags": [
         "sheep",
@@ -2932,7 +2932,7 @@
     "animal.chicken.cluck": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A chicken clucks \u2014 farm game, egg collection.",
+      "whenToUse": "A chicken clucks — farm game, egg collection.",
       "duration": 0.8,
       "tags": [
         "chicken",
@@ -2948,7 +2948,7 @@
     "animal.pig.oink": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A pig oinks \u2014 farm game, idle animal.",
+      "whenToUse": "A pig oinks — farm game, idle animal.",
       "duration": 0.8,
       "tags": [
         "pig",
@@ -2963,7 +2963,7 @@
     "animal.frog.croak": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A frog croaks \u2014 pond, swamp, collectible creature.",
+      "whenToUse": "A frog croaks — pond, swamp, collectible creature.",
       "duration": 0.7,
       "tags": [
         "frog",
@@ -2979,7 +2979,7 @@
     "animal.wolf.howl": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A wolf howls \u2014 night, danger, boss approach.",
+      "whenToUse": "A wolf howls — night, danger, boss approach.",
       "duration": 2.2,
       "tags": [
         "wolf",
@@ -2994,7 +2994,7 @@
     "animal.snake.hiss": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A snake hisses \u2014 enemy warning, trap.",
+      "whenToUse": "A snake hisses — enemy warning, trap.",
       "duration": 1.0,
       "tags": [
         "snake",
@@ -3012,7 +3012,7 @@
     "animal.bee.buzz": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "An insect buzzes past \u2014 bee, fly, wasp enemy.",
+      "whenToUse": "An insect buzzes past — bee, fly, wasp enemy.",
       "duration": 1.2,
       "tags": [
         "bee",
@@ -3059,7 +3059,7 @@
     "creature.squeak": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A small cute creature squeaks \u2014 slime, pet, critter.",
+      "whenToUse": "A small cute creature squeaks — slime, pet, critter.",
       "duration": 0.5,
       "tags": [
         "squeak",
@@ -3205,7 +3205,7 @@
     "ambience.crowd": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "Busy crowd murmur \u2014 market, stadium, town. Loops.",
+      "whenToUse": "Busy crowd murmur — market, stadium, town. Loops.",
       "duration": 4.0,
       "tags": [
         "crowd",
@@ -3224,7 +3224,7 @@
     "weather.thunder": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A thunderclap \u2014 storm, dramatic moment.",
+      "whenToUse": "A thunderclap — storm, dramatic moment.",
       "duration": 2.5,
       "tags": [
         "thunder",
@@ -3242,7 +3242,7 @@
     "nature.leaves": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "Rustling foliage \u2014 walking through bushes, searching undergrowth.",
+      "whenToUse": "Rustling foliage — walking through bushes, searching undergrowth.",
       "duration": 0.9,
       "tags": [
         "leaves",
@@ -3277,7 +3277,7 @@
     "crowd.applause": {
       "source": "ai",
       "category": "reward",
-      "whenToUse": "The crowd applauds \u2014 win screen, big achievement.",
+      "whenToUse": "The crowd applauds — win screen, big achievement.",
       "duration": 2.5,
       "tags": [
         "applause",
@@ -3292,7 +3292,7 @@
     "crowd.boo": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "The crowd boos \u2014 failure, bad move.",
+      "whenToUse": "The crowd boos — failure, bad move.",
       "duration": 1.8,
       "tags": [
         "boo",
@@ -3307,7 +3307,7 @@
     "crowd.gasp": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "The crowd gasps \u2014 a surprise, a near miss.",
+      "whenToUse": "The crowd gasps — a surprise, a near miss.",
       "duration": 1.2,
       "tags": [
         "gasp",
@@ -3371,7 +3371,7 @@
     "horror.heartbeat": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A heartbeat under tension \u2014 low health, chase, hiding. Loops.",
+      "whenToUse": "A heartbeat under tension — low health, chase, hiding. Loops.",
       "duration": 3.0,
       "tags": [
         "heartbeat",
@@ -3390,7 +3390,7 @@
     "horror.whisper": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "An unsettling whisper \u2014 ghost, haunting, secret.",
+      "whenToUse": "An unsettling whisper — ghost, haunting, secret.",
       "duration": 2.0,
       "tags": [
         "whisper",
@@ -3405,7 +3405,7 @@
     "horror.creak": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A door or floorboard creaks slowly \u2014 suspense.",
+      "whenToUse": "A door or floorboard creaks slowly — suspense.",
       "duration": 2.0,
       "tags": [
         "creak",
@@ -3436,7 +3436,7 @@
     "horror.breathing": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "Nervous breathing \u2014 low health, hiding, stamina.",
+      "whenToUse": "Nervous breathing — low health, hiding, stamina.",
       "duration": 2.5,
       "tags": [
         "breathing",
@@ -3451,7 +3451,7 @@
     "horror.bell": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A distant church bell tolls \u2014 dread, time passing.",
+      "whenToUse": "A distant church bell tolls — dread, time passing.",
       "duration": 3.0,
       "tags": [
         "bell",
@@ -3505,7 +3505,7 @@
     "sport.net.swish": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A ball passes cleanly through a net \u2014 basket scored.",
+      "whenToUse": "A ball passes cleanly through a net — basket scored.",
       "duration": 0.6,
       "tags": [
         "swish",
@@ -3521,7 +3521,7 @@
     "sport.whistle": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A referee whistle \u2014 round start, foul, time up.",
+      "whenToUse": "A referee whistle — round start, foul, time up.",
       "duration": 0.9,
       "tags": [
         "whistle",
@@ -3553,7 +3553,7 @@
     "sport.racket.hit": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A racket strikes a ball \u2014 tennis, padel, squash.",
+      "whenToUse": "A racket strikes a ball — tennis, padel, squash.",
       "duration": 0.4,
       "tags": [
         "racket",
@@ -3588,7 +3588,7 @@
     "sport.start.gun": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A starting pistol fires \u2014 race begins.",
+      "whenToUse": "A starting pistol fires — race begins.",
       "duration": 0.8,
       "tags": [
         "start",
@@ -3606,7 +3606,7 @@
     "tool.hammer": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "Hammering a nail \u2014 building, crafting, repair.",
+      "whenToUse": "Hammering a nail — building, crafting, repair.",
       "duration": 0.5,
       "tags": [
         "hammer",
@@ -3626,7 +3626,7 @@
     "tool.saw": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "Sawing wood \u2014 building, crafting.",
+      "whenToUse": "Sawing wood — building, crafting.",
       "duration": 1.6,
       "tags": [
         "saw",
@@ -3677,7 +3677,7 @@
     "tool.dig": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "Digging with a shovel \u2014 farming, treasure, burying.",
+      "whenToUse": "Digging with a shovel — farming, treasure, burying.",
       "duration": 0.9,
       "tags": [
         "dig",
@@ -3693,7 +3693,7 @@
     "tool.drill": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A power drill runs \u2014 repair, construction.",
+      "whenToUse": "A power drill runs — repair, construction.",
       "duration": 1.5,
       "tags": [
         "drill",
@@ -3708,7 +3708,7 @@
     "tool.wrench": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A spanner or ratchet turns \u2014 repair, machinery.",
+      "whenToUse": "A spanner or ratchet turns — repair, machinery.",
       "duration": 0.8,
       "tags": [
         "wrench",
@@ -3724,7 +3724,7 @@
     "craft.forge": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "Hammering hot metal on an anvil \u2014 smithing, upgrading.",
+      "whenToUse": "Hammering hot metal on an anvil — smithing, upgrading.",
       "duration": 0.9,
       "tags": [
         "forge",
@@ -3743,7 +3743,7 @@
     "craft.sew": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "Stitching fabric \u2014 tailoring, crafting.",
+      "whenToUse": "Stitching fabric — tailoring, crafting.",
       "duration": 0.9,
       "tags": [
         "sew",
@@ -3775,7 +3775,7 @@
     "farm.harvest": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A crop is pulled or cut \u2014 harvesting.",
+      "whenToUse": "A crop is pulled or cut — harvesting.",
       "duration": 0.8,
       "tags": [
         "harvest",
@@ -3915,7 +3915,7 @@
     "object.zip": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A zip fastens \u2014 bag, jacket, inventory.",
+      "whenToUse": "A zip fastens — bag, jacket, inventory.",
       "duration": 0.6,
       "tags": [
         "zip",
@@ -3931,7 +3931,7 @@
     "object.paper.crumple": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "Paper is crushed \u2014 discard, delete, note.",
+      "whenToUse": "Paper is crushed — discard, delete, note.",
       "duration": 0.9,
       "tags": [
         "paper",
@@ -3950,7 +3950,7 @@
     "object.page.turn": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A page turns \u2014 book, journal, tutorial.",
+      "whenToUse": "A page turns — book, journal, tutorial.",
       "duration": 0.6,
       "tags": [
         "page",
@@ -3966,7 +3966,7 @@
     "object.book.close": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A book shuts \u2014 menu closed, chapter done.",
+      "whenToUse": "A book shuts — menu closed, chapter done.",
       "duration": 0.8,
       "tags": [
         "book",
@@ -3981,7 +3981,7 @@
     "object.keyboard": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "Typing on a keyboard \u2014 hacking, terminal, chat.",
+      "whenToUse": "Typing on a keyboard — hacking, terminal, chat.",
       "duration": 0.4,
       "tags": [
         "keyboard",
@@ -4001,7 +4001,7 @@
     "object.camera": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A camera shutter \u2014 photo, capture, screenshot.",
+      "whenToUse": "A camera shutter — photo, capture, screenshot.",
       "duration": 0.5,
       "tags": [
         "camera",
@@ -4016,7 +4016,7 @@
     "object.clock.tick": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A clock ticking \u2014 timer pressure. Loops.",
+      "whenToUse": "A clock ticking — timer pressure. Loops.",
       "duration": 3.0,
       "tags": [
         "clock",
@@ -4051,7 +4051,7 @@
     "object.chain": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "Chains rattle \u2014 gate, prison, anchor.",
+      "whenToUse": "Chains rattle — gate, prison, anchor.",
       "duration": 1.0,
       "tags": [
         "chain",
@@ -4067,7 +4067,7 @@
     "object.rope": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "Rope creaks under tension \u2014 pulling, climbing, bridge.",
+      "whenToUse": "Rope creaks under tension — pulling, climbing, bridge.",
       "duration": 1.0,
       "tags": [
         "rope",
@@ -4082,7 +4082,7 @@
     "object.glass.clink": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "Glasses clink \u2014 toast, potion, bottle.",
+      "whenToUse": "Glasses clink — toast, potion, bottle.",
       "duration": 0.6,
       "tags": [
         "glass",
@@ -4130,7 +4130,7 @@
     "object.balloon.pop": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A balloon bursts \u2014 party, target, bubble.",
+      "whenToUse": "A balloon bursts — party, target, bubble.",
       "duration": 0.5,
       "tags": [
         "balloon",
@@ -4153,7 +4153,7 @@
     "object.firework": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A firework launches and bursts \u2014 celebration.",
+      "whenToUse": "A firework launches and bursts — celebration.",
       "duration": 2.5,
       "tags": [
         "firework",
@@ -4187,7 +4187,7 @@
     "vehicle.rev": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "An engine revs hard \u2014 boost, start line, showing off.",
+      "whenToUse": "An engine revs hard — boost, start line, showing off.",
       "duration": 1.6,
       "tags": [
         "rev",
@@ -4202,7 +4202,7 @@
     "vehicle.gear": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A gear change \u2014 racing, machinery.",
+      "whenToUse": "A gear change — racing, machinery.",
       "duration": 0.5,
       "tags": [
         "gear",
@@ -4304,7 +4304,7 @@
     "machine.robot.servo": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A robot joint moves \u2014 mech, turret, droid.",
+      "whenToUse": "A robot joint moves — mech, turret, droid.",
       "duration": 0.7,
       "tags": [
         "robot",
@@ -4320,7 +4320,7 @@
     "machine.steam": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "Steam vents \u2014 machinery, valve, pressure release.",
+      "whenToUse": "Steam vents — machinery, valve, pressure release.",
       "duration": 1.4,
       "tags": [
         "steam",
@@ -4373,7 +4373,7 @@
     "scifi.scanner": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A scanner sweeps \u2014 detection, radar, search.",
+      "whenToUse": "A scanner sweeps — detection, radar, search.",
       "duration": 1.4,
       "tags": [
         "scanner",
@@ -4388,7 +4388,7 @@
     "scifi.airlock": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A pressurised door opens \u2014 spaceship, vault, lab.",
+      "whenToUse": "A pressurised door opens — spaceship, vault, lab.",
       "duration": 2.0,
       "tags": [
         "airlock",
@@ -4433,7 +4433,7 @@
     "scifi.glitch": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A digital error or corruption \u2014 hacking, damage, static.",
+      "whenToUse": "A digital error or corruption — hacking, damage, static.",
       "duration": 0.8,
       "tags": [
         "glitch",
@@ -4464,7 +4464,7 @@
     "rpg.potion": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A potion is drunk \u2014 healing, buff.",
+      "whenToUse": "A potion is drunk — healing, buff.",
       "duration": 1.2,
       "tags": [
         "potion",
@@ -4606,7 +4606,7 @@
     "rpg.trap": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A trap springs \u2014 spikes, snare, alarm.",
+      "whenToUse": "A trap springs — spikes, snare, alarm.",
       "duration": 0.9,
       "tags": [
         "trap",
@@ -4640,7 +4640,7 @@
     "game.checkpoint": {
       "source": "ai",
       "category": "reward",
-      "whenToUse": "A checkpoint is reached \u2014 progress saved.",
+      "whenToUse": "A checkpoint is reached — progress saved.",
       "duration": 1.4,
       "tags": [
         "checkpoint",
@@ -4655,7 +4655,7 @@
     "game.wave.start": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A new wave or round begins \u2014 tower defence, survival.",
+      "whenToUse": "A new wave or round begins — tower defence, survival.",
       "duration": 1.8,
       "tags": [
         "wave",
@@ -4844,7 +4844,7 @@
     "car.rev.blip": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A quick throttle blip \u2014 showing off, gear match.",
+      "whenToUse": "A quick throttle blip — showing off, gear match.",
       "duration": 1.2,
       "tags": [
         "rev",
@@ -4938,7 +4938,7 @@
     "car.skid": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A short tyre chirp \u2014 hard turn, quick stop.",
+      "whenToUse": "A short tyre chirp — hard turn, quick stop.",
       "duration": 1.0,
       "tags": [
         "skid",
@@ -5072,7 +5072,7 @@
     "car.backfire": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "The exhaust backfires \u2014 pops and bangs.",
+      "whenToUse": "The exhaust backfires — pops and bangs.",
       "duration": 1.0,
       "tags": [
         "backfire",
@@ -5122,7 +5122,7 @@
     "car.crash.light": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A minor collision \u2014 bump, tap, fender bender.",
+      "whenToUse": "A minor collision — bump, tap, fender bender.",
       "duration": 1.2,
       "tags": [
         "crash",
@@ -5391,7 +5391,7 @@
     "race.finish": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "The chequered flag \u2014 race over.",
+      "whenToUse": "The chequered flag — race over.",
       "duration": 2.5,
       "tags": [
         "finish",
@@ -5822,7 +5822,7 @@
     "melee.dodge": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A dodge or evade \u2014 body moving fast.",
+      "whenToUse": "A dodge or evade — body moving fast.",
       "duration": 0.5,
       "tags": [
         "dodge",
@@ -6312,7 +6312,7 @@
     "water.drip": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A single drip \u2014 cave, leak, tension.",
+      "whenToUse": "A single drip — cave, leak, tension.",
       "duration": 0.8,
       "tags": [
         "drip",
@@ -6751,7 +6751,7 @@
     "horror.musicbox": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A music box plays \u2014 classic dread.",
+      "whenToUse": "A music box plays — classic dread.",
       "duration": 4.0,
       "tags": [
         "music box",
@@ -7097,7 +7097,7 @@
     "animal.rooster": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "A rooster crows \u2014 morning, farm.",
+      "whenToUse": "A rooster crows — morning, farm.",
       "duration": 1.8,
       "tags": [
         "rooster",
@@ -7157,7 +7157,7 @@
     "animal.seagull": {
       "source": "ai",
       "category": "game",
-      "whenToUse": "Seagulls call \u2014 coast, harbour.",
+      "whenToUse": "Seagulls call — coast, harbour.",
       "duration": 1.8,
       "tags": [
         "seagull",
@@ -7348,7 +7348,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loopRegion": [
+          5.3058,
+          24.0094
+        ]
       }
     },
     "music.casual.2": {
@@ -7370,7 +7373,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 0.8
+        "loopRegion": [
+          13.4211,
+          16.0102
+        ]
       }
     },
     "music.casual.3": {
@@ -7392,7 +7398,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 5.0
+        "loopRegion": [
+          4.6904,
+          15.9985
+        ]
       }
     },
     "music.hypercasual.1": {
@@ -7414,7 +7423,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 0.8
+        "loopRegion": [
+          4.5976,
+          23.9978
+        ]
       }
     },
     "music.hypercasual.2": {
@@ -7436,7 +7448,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 1.6
+        "loopRegion": [
+          2.7051,
+          22.6162
+        ]
       }
     },
     "music.hypercasual.3": {
@@ -7458,7 +7473,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 2.0
+        "loopRegion": [
+          4.3654,
+          15.9985
+        ]
       }
     },
     "music.action.1": {
@@ -7480,7 +7498,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 2.5
+        "loopRegion": [
+          11.1572,
+          15.9985
+        ]
       }
     },
     "music.action.2": {
@@ -7498,11 +7519,14 @@
         "action"
       ],
       "music": {
-        "prompt": "Action game battle music, aggressive electronic percussion with distorted bass and tense string stabs, relentless and dangerous, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
-        "seconds": 32
+        "prompt": "Action game battle music, aggressive electronic percussion with distorted bass and tense string stabs, relentless and dangerous, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay. Built from one short repeating pattern that cycles again and again with the same chords, the same melody and the same groove all the way through. No build-ups, no breakdowns, no new sections, no key changes.",
+        "seconds": 48
       },
       "postFx": {
-        "loop": 1.6
+        "loopRegion": [
+          2.4961,
+          34.2843
+        ]
       }
     },
     "music.action.3": {
@@ -7524,7 +7548,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 2.5
+        "loopRegion": [
+          5.4799,
+          23.9978
+        ]
       }
     },
     "music.racing.1": {
@@ -7546,7 +7573,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 5.0
+        "loopRegion": [
+          2.7051,
+          15.9985
+        ]
       }
     },
     "music.racing.2": {
@@ -7564,11 +7594,14 @@
         "racing"
       ],
       "music": {
-        "prompt": "Arcade racing game music, aggressive big beat breaks with a distorted electro bassline and sirens, reckless and fast, very fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
-        "seconds": 32
+        "prompt": "Arcade racing game music, aggressive big beat breaks with a distorted electro bassline and sirens, reckless and fast, very fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay. Built from one short repeating pattern that cycles again and again with the same chords, the same melody and the same groove all the way through. No build-ups, no breakdowns, no new sections, no key changes.",
+        "seconds": 48
       },
       "postFx": {
-        "loop": 1.2
+        "loopRegion": [
+          2.6239,
+          41.1458
+        ]
       }
     },
     "music.racing.3": {
@@ -7590,7 +7623,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 0.8
+        "loopRegion": [
+          5.3406,
+          22.9994
+        ]
       }
     },
     "music.adventure.1": {
@@ -7612,7 +7648,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 2.0
+        "loopRegion": [
+          10.8089,
+          16.0334
+        ]
       }
     },
     "music.adventure.2": {
@@ -7630,11 +7669,14 @@
         "adventure"
       ],
       "music": {
-        "prompt": "Fantasy RPG overworld music, noble french horn melody over light orchestral strings and soft percussion, heroic and inviting, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
-        "seconds": 32
+        "prompt": "Fantasy RPG overworld music, noble french horn melody over light orchestral strings and soft percussion, heroic and inviting, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay. Built from one short repeating pattern that cycles again and again with the same chords, the same melody and the same groove all the way through. No build-ups, no breakdowns, no new sections, no key changes.",
+        "seconds": 48
       },
       "postFx": {
-        "loop": 2.0
+        "loopRegion": [
+          7.0356,
+          36.0141
+        ]
       }
     },
     "music.adventure.3": {
@@ -7656,7 +7698,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 1.2
+        "loopRegion": [
+          5.3754,
+          16.0102
+        ]
       }
     },
     "music.boss.1": {
@@ -7678,7 +7723,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 3.0
+        "loopRegion": [
+          5.4799,
+          23.9978
+        ]
       }
     },
     "music.boss.2": {
@@ -7696,11 +7744,14 @@
         "boss"
       ],
       "music": {
-        "prompt": "Video game boss fight music, heavy electronic drums with a snarling distorted bass and dissonant synth brass, threatening and huge, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
-        "seconds": 32
+        "prompt": "Video game boss fight music, heavy electronic drums with a snarling distorted bass and dissonant synth brass, threatening and huge, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay. Built from one short repeating pattern that cycles again and again with the same chords, the same melody and the same groove all the way through. No build-ups, no breakdowns, no new sections, no key changes.",
+        "seconds": 48
       },
       "postFx": {
-        "loop": 4.0
+        "loopRegion": [
+          3.9822,
+          41.1458
+        ]
       }
     },
     "music.boss.3": {
@@ -7718,11 +7769,14 @@
         "boss"
       ],
       "music": {
-        "prompt": "Final boss battle music, pounding taiko drums with a dark choir-like synth pad and driving strings, apocalyptic and grand, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
-        "seconds": 32
+        "prompt": "Final boss battle music, pounding taiko drums with a dark choir-like synth pad and driving strings, apocalyptic and grand, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay. Built from one short repeating pattern that cycles again and again with the same chords, the same melody and the same groove all the way through. No build-ups, no breakdowns, no new sections, no key changes.",
+        "seconds": 48
       },
       "postFx": {
-        "loop": 3.0
+        "loopRegion": [
+          2.9141,
+          40.008
+        ]
       }
     },
     "music.horror.1": {
@@ -7740,11 +7794,14 @@
         "horror"
       ],
       "music": {
-        "prompt": "Horror game background music, sparse dissonant strings with a low droning bass and occasional metallic scrapes, unsettling and slow, very slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
-        "seconds": 32
+        "prompt": "Horror game background music, sparse dissonant strings with a low droning bass and occasional metallic scrapes, unsettling and slow, very slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay. Built from one short repeating pattern that cycles again and again with the same chords, the same melody and the same groove all the way through. No build-ups, no breakdowns, no new sections, no key changes.",
+        "seconds": 48
       },
       "postFx": {
-        "loop": 0.5
+        "loopRegion": [
+          2.5774,
+          40.008
+        ]
       }
     },
     "music.horror.2": {
@@ -7766,7 +7823,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 0.5
+        "loopRegion": [
+          4.2144,
+          25.0079
+        ]
       }
     },
     "music.horror.3": {
@@ -7784,11 +7844,14 @@
         "horror"
       ],
       "music": {
-        "prompt": "Psychological horror game music, creeping atonal drone with faint music box chimes and breathing textures, deeply uneasy, very slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
-        "seconds": 32
+        "prompt": "Psychological horror game music, creeping atonal drone with faint music box chimes and breathing textures, deeply uneasy, very slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay. Built from one short repeating pattern that cycles again and again with the same chords, the same melody and the same groove all the way through. No build-ups, no breakdowns, no new sections, no key changes.",
+        "seconds": 48
       },
       "postFx": {
-        "loop": 5.0
+        "loopRegion": [
+          4.0635,
+          38.9979
+        ]
       }
     },
     "music.cozy.1": {
@@ -7810,7 +7873,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 1.2
+        "loopRegion": [
+          2.7283,
+          24.0094
+        ]
       }
     },
     "music.cozy.2": {
@@ -7832,7 +7898,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 1.2
+        "loopRegion": [
+          10.3213,
+          16.0102
+        ]
       }
     },
     "music.cozy.3": {
@@ -7854,7 +7923,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 0.5
+        "loopRegion": [
+          8.0457,
+          15.9985
+        ]
       }
     },
     "music.scifi.1": {
@@ -7876,7 +7948,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 1.2
+        "loopRegion": [
+          2.6471,
+          16.0102
+        ]
       }
     },
     "music.scifi.2": {
@@ -7894,11 +7969,14 @@
         "scifi"
       ],
       "music": {
-        "prompt": "Space exploration game music, vast ambient synth pads with slow shimmering arpeggios, weightless and vast, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
-        "seconds": 32
+        "prompt": "Space exploration game music, vast ambient synth pads with slow shimmering arpeggios, weightless and vast, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay. Built from one short repeating pattern that cycles again and again with the same chords, the same melody and the same groove all the way through. No build-ups, no breakdowns, no new sections, no key changes.",
+        "seconds": 48
       },
       "postFx": {
-        "loop": 0.5
+        "loopRegion": [
+          11.7261,
+          25.9947
+        ]
       }
     },
     "music.scifi.3": {
@@ -7920,7 +7998,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 5.0
+        "loopRegion": [
+          9.3809,
+          20.004
+        ]
       }
     },
     "music.menu.1": {
@@ -7942,7 +8023,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 0.5
+        "loopRegion": [
+          10.9018,
+          16.0102
+        ]
       }
     },
     "music.menu.2": {
@@ -7964,7 +8048,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 5.0
+        "loopRegion": [
+          8.0922,
+          19.2261
+        ]
       }
     },
     "music.menu.3": {
@@ -7986,7 +8073,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 5.0
+        "loopRegion": [
+          5.329,
+          15.9985
+        ]
       }
     },
     "casino.reel.spin": {
@@ -11115,7 +11205,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 0.5
+        "loopRegion": [
+          3.8545,
+          20.2594
+        ]
       }
     },
     "music.puzzle.2": {
@@ -11137,7 +11230,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 0.5
+        "loopRegion": [
+          5.4102,
+          24.0094
+        ]
       }
     },
     "music.puzzle.3": {
@@ -11159,7 +11255,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loopRegion": [
+          11.0063,
+          16.0102
+        ]
       }
     },
     "music.tavern.1": {
@@ -11177,11 +11276,14 @@
         "tavern"
       ],
       "music": {
-        "prompt": "Medieval tavern music, lively lute and fiddle jig with a hand drum and tambourine, merry and rustic, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
-        "seconds": 32
+        "prompt": "Medieval tavern music, lively lute and fiddle jig with a hand drum and tambourine, merry and rustic, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay. Built from one short repeating pattern that cycles again and again with the same chords, the same melody and the same groove all the way through. No build-ups, no breakdowns, no new sections, no key changes.",
+        "seconds": 48
       },
       "postFx": {
-        "loop": 1.2
+        "loopRegion": [
+          2.7283,
+          35.9909
+        ]
       }
     },
     "music.tavern.2": {
@@ -11203,7 +11305,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 0.5
+        "loopRegion": [
+          3.0418,
+          15.9985
+        ]
       }
     },
     "music.tavern.3": {
@@ -11225,7 +11330,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 3.0
+        "loopRegion": [
+          8.5566,
+          15.9985
+        ]
       }
     },
     "music.western.1": {
@@ -11247,7 +11355,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 2.5
+        "loopRegion": [
+          12.1208,
+          15.9985
+        ]
       }
     },
     "music.western.2": {
@@ -11269,7 +11380,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 6.0
+        "loopRegion": [
+          2.7051,
+          15.9985
+        ]
       }
     },
     "music.western.3": {
@@ -11291,7 +11405,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 3.0
+        "loopRegion": [
+          10.5535,
+          16.0102
+        ]
       }
     },
     "music.tropical.1": {
@@ -11313,7 +11430,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 1.6
+        "loopRegion": [
+          3.0418,
+          21.3391
+        ]
       }
     },
     "music.tropical.2": {
@@ -11335,7 +11455,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loopRegion": [
+          12.4807,
+          16.0102
+        ]
       }
     },
     "music.tropical.3": {
@@ -11357,7 +11480,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 1.2
+        "loopRegion": [
+          3.1927,
+          23.9978
+        ]
       }
     },
     "music.desert.1": {
@@ -11379,7 +11505,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 6.0
+        "loopRegion": [
+          3.959,
+          23.9978
+        ]
       }
     },
     "music.desert.2": {
@@ -11401,7 +11530,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 1.2
+        "loopRegion": [
+          5.0387,
+          23.9978
+        ]
       }
     },
     "music.desert.3": {
@@ -11423,7 +11555,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 6.0
+        "loopRegion": [
+          3.0766,
+          24.021
+        ]
       }
     },
     "music.oriental.1": {
@@ -11445,7 +11580,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loopRegion": [
+          6.0952,
+          16.0102
+        ]
       }
     },
     "music.oriental.2": {
@@ -11467,7 +11605,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 1.2
+        "loopRegion": [
+          5.0503,
+          16.0102
+        ]
       }
     },
     "music.oriental.3": {
@@ -11489,7 +11630,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 0.5
+        "loopRegion": [
+          8.9165,
+          16.0334
+        ]
       }
     },
     "music.chiptune.1": {
@@ -11511,7 +11655,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 5.0
+        "loopRegion": [
+          5.1664,
+          23.9978
+        ]
       }
     },
     "music.chiptune.2": {
@@ -11533,7 +11680,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loopRegion": [
+          2.8561,
+          23.9978
+        ]
       }
     },
     "music.chiptune.3": {
@@ -11555,7 +11705,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 0.5
+        "loopRegion": [
+          4.6556,
+          23.9978
+        ]
       }
     },
     "music.lofi.1": {
@@ -11577,7 +11730,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 2.0
+        "loopRegion": [
+          2.589,
+          21.3507
+        ]
       }
     },
     "music.lofi.2": {
@@ -11599,7 +11755,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 6.0
+        "loopRegion": [
+          5.1897,
+          23.9978
+        ]
       }
     },
     "music.lofi.3": {
@@ -11621,7 +11780,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 2.0
+        "loopRegion": [
+          7.0356,
+          15.9985
+        ]
       }
     },
     "music.epic.1": {
@@ -11639,11 +11801,14 @@
         "epic"
       ],
       "music": {
-        "prompt": "Epic cinematic trailer music, huge orchestral strings and brass with thunderous percussion, heroic and overwhelming, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
-        "seconds": 32
+        "prompt": "Epic cinematic trailer music, huge orchestral strings and brass with thunderous percussion, heroic and overwhelming, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay. Built from one short repeating pattern that cycles again and again with the same chords, the same melody and the same groove all the way through. No build-ups, no breakdowns, no new sections, no key changes.",
+        "seconds": 48
       },
       "postFx": {
-        "loop": 4.0
+        "loopRegion": [
+          2.6355,
+          34.0056
+        ]
       }
     },
     "music.epic.2": {
@@ -11661,11 +11826,14 @@
         "epic"
       ],
       "music": {
-        "prompt": "Epic fantasy battle music, soaring horns over driving strings and war drums, grand and urgent, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
-        "seconds": 32
+        "prompt": "Epic fantasy battle music, soaring horns over driving strings and war drums, grand and urgent, fast tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay. Built from one short repeating pattern that cycles again and again with the same chords, the same melody and the same groove all the way through. No build-ups, no breakdowns, no new sections, no key changes.",
+        "seconds": 48
       },
       "postFx": {
-        "loop": 5.0
+        "loopRegion": [
+          2.7051,
+          40.008
+        ]
       }
     },
     "music.epic.3": {
@@ -11683,11 +11851,14 @@
         "epic"
       ],
       "music": {
-        "prompt": "Cinematic reveal music, slow building strings with deep brass swells and a rising tension, awe inspiring, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
-        "seconds": 32
+        "prompt": "Cinematic reveal music, slow building strings with deep brass swells and a rising tension, awe inspiring, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay. Built from one short repeating pattern that cycles again and again with the same chords, the same melody and the same groove all the way through. No build-ups, no breakdowns, no new sections, no key changes.",
+        "seconds": 48
       },
       "postFx": {
-        "loop": 2.0
+        "loopRegion": [
+          18.2973,
+          24.0094
+        ]
       }
     },
     "music.comedy.1": {
@@ -11709,7 +11880,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 2.0
+        "loopRegion": [
+          3.3785,
+          15.9985
+        ]
       }
     },
     "music.comedy.2": {
@@ -11731,7 +11905,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loopRegion": [
+          2.9605,
+          16.997
+        ]
       }
     },
     "music.comedy.3": {
@@ -11753,7 +11930,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 2.0
+        "loopRegion": [
+          5.7353,
+          15.9985
+        ]
       }
     },
     "music.casino.1": {
@@ -11771,11 +11951,14 @@
         "casino"
       ],
       "music": {
-        "prompt": "Casino lounge music, smooth jazz piano with brushed drums and upright bass, classy and relaxed, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
-        "seconds": 32
+        "prompt": "Casino lounge music, smooth jazz piano with brushed drums and upright bass, classy and relaxed, medium tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay. Built from one short repeating pattern that cycles again and again with the same chords, the same melody and the same groove all the way through. No build-ups, no breakdowns, no new sections, no key changes.",
+        "seconds": 48
       },
       "postFx": {
-        "loop": 4.0
+        "loopRegion": [
+          4.7485,
+          32.0087
+        ]
       }
     },
     "music.casino.2": {
@@ -11797,7 +11980,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 1.2
+        "loopRegion": [
+          4.0751,
+          21.0489
+        ]
       }
     },
     "music.casino.3": {
@@ -11819,7 +12005,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loopRegion": [
+          4.8298,
+          15.9985
+        ]
       }
     },
     "music.underwater.1": {
@@ -11837,11 +12026,14 @@
         "underwater"
       ],
       "music": {
-        "prompt": "Underwater level music, dreamy washed synth pads with bubbling textures and soft bells, weightless and calm, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
-        "seconds": 32
+        "prompt": "Underwater level music, dreamy washed synth pads with bubbling textures and soft bells, weightless and calm, slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay. Built from one short repeating pattern that cycles again and again with the same chords, the same melody and the same groove all the way through. No build-ups, no breakdowns, no new sections, no key changes.",
+        "seconds": 48
       },
       "postFx": {
-        "loop": 0.8
+        "loopRegion": [
+          2.5542,
+          36.0141
+        ]
       }
     },
     "music.underwater.2": {
@@ -11863,7 +12055,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 0.5
+        "loopRegion": [
+          11.668,
+          16.0218
+        ]
       }
     },
     "music.underwater.3": {
@@ -11881,11 +12076,14 @@
         "underwater"
       ],
       "music": {
-        "prompt": "Deep ocean music, mysterious low pads with sparse harp and distant whale-like tones, vast and eerie, very slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
-        "seconds": 32
+        "prompt": "Deep ocean music, mysterious low pads with sparse harp and distant whale-like tones, vast and eerie, very slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay. Built from one short repeating pattern that cycles again and again with the same chords, the same melody and the same groove all the way through. No build-ups, no breakdowns, no new sections, no key changes.",
+        "seconds": 48
       },
       "postFx": {
-        "loop": 5.0
+        "loopRegion": [
+          14.1874,
+          24.0675
+        ]
       }
     },
     "music.winter.1": {
@@ -11907,7 +12105,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 2.5
+        "loopRegion": [
+          5.6308,
+          16.0102
+        ]
       }
     },
     "music.winter.2": {
@@ -11929,7 +12130,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 5.0
+        "loopRegion": [
+          4.8994,
+          16.0102
+        ]
       }
     },
     "music.winter.3": {
@@ -11951,7 +12155,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 1.6
+        "loopRegion": [
+          2.8909,
+          26.0528
+        ]
       }
     },
     "music.zen.1": {
@@ -11969,11 +12176,14 @@
         "zen"
       ],
       "music": {
-        "prompt": "Zen meditation music, sparse singing bowl tones with soft drone and occasional bamboo chimes, deeply calm, very slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
-        "seconds": 32
+        "prompt": "Zen meditation music, sparse singing bowl tones with soft drone and occasional bamboo chimes, deeply calm, very slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay. Built from one short repeating pattern that cycles again and again with the same chords, the same melody and the same groove all the way through. No build-ups, no breakdowns, no new sections, no key changes.",
+        "seconds": 48
       },
       "postFx": {
-        "loop": 4.0
+        "loopRegion": [
+          3.483,
+          40.0428
+        ]
       }
     },
     "music.zen.2": {
@@ -11991,11 +12201,14 @@
         "zen"
       ],
       "music": {
-        "prompt": "Peaceful relaxation music, slow ambient pad with gentle water textures and soft piano notes, tranquil, very slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
-        "seconds": 32
+        "prompt": "Peaceful relaxation music, slow ambient pad with gentle water textures and soft piano notes, tranquil, very slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay. Built from one short repeating pattern that cycles again and again with the same chords, the same melody and the same groove all the way through. No build-ups, no breakdowns, no new sections, no key changes.",
+        "seconds": 48
       },
       "postFx": {
-        "loop": 0.5
+        "loopRegion": [
+          3.2508,
+          36.0258
+        ]
       }
     },
     "music.zen.3": {
@@ -12017,7 +12230,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 0.5
+        "loopRegion": [
+          11.4474,
+          16.0798
+        ]
       }
     },
     "music.chase.1": {
@@ -12039,7 +12255,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 2.0
+        "loopRegion": [
+          2.6006,
+          24.0094
+        ]
       }
     },
     "music.chase.2": {
@@ -12061,7 +12280,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 6.0
+        "loopRegion": [
+          2.4961,
+          24.0094
+        ]
       }
     },
     "music.chase.3": {
@@ -12083,7 +12305,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 4.0
+        "loopRegion": [
+          4.6324,
+          20.5729
+        ]
       }
     },
     "music.tension.1": {
@@ -12101,11 +12326,14 @@
         "tension"
       ],
       "music": {
-        "prompt": "Tension background music, low sustained drone with sparse dissonant piano notes and a quiet pulse, uneasy, very slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay.",
-        "seconds": 32
+        "prompt": "Tension background music, low sustained drone with sparse dissonant piano notes and a quiet pulse, uneasy, very slow tempo. Instrumental only, no vocals, no voices. Steady unchanging tempo with no intro and no ending, designed to repeat forever as a background loop under gameplay. Built from one short repeating pattern that cycles again and again with the same chords, the same melody and the same groove all the way through. No build-ups, no breakdowns, no new sections, no key changes.",
+        "seconds": 48
       },
       "postFx": {
-        "loop": 1.6
+        "loopRegion": [
+          11.2617,
+          16.1146
+        ]
       }
     },
     "music.tension.2": {
@@ -12127,7 +12355,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 0.5
+        "loopRegion": [
+          4.0635,
+          23.9978
+        ]
       }
     },
     "music.tension.3": {
@@ -12149,7 +12380,10 @@
         "seconds": 32
       },
       "postFx": {
-        "loop": 0.5
+        "loopRegion": [
+          8.7539,
+          16.254
+        ]
       }
     },
     "sting.level.start": {

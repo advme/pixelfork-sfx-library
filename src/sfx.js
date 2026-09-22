@@ -478,10 +478,11 @@
       src.buffer = buffer;
       src.playbackRate.value = rate;
       src.loop = !!opts.loop;
+      var at = src.loop ? loopBounds(src, buffer, def) : 0;
       var g = c.createGain();
       g.gain.value = volume;
       src.connect(g); g.connect(dest);
-      src.start(Math.max(when, c.currentTime));
+      src.start(Math.max(when, c.currentTime), at);
       track(src);
       return src;
     }
@@ -524,6 +525,23 @@
   // Music loops with an AudioBufferSourceNode, not <audio loop>. An audio
   // element inserts a small gap every time it wraps, which would undo the
   // crossfade the track was built with. A buffer source loops sample-exactly.
+  // Loop exactly the track's own length, not the decoded buffer's. AAC (the
+  // .m4a Safari and iPhone use) pads the file with encoder silence — about
+  // 19 ms here — and a browser that keeps it would gap on every wrap. The
+  // manifest's `dur` is the true loop length; leading zeros are encoder
+  // priming, since a cut loop never starts on digital silence.
+  function loopBounds(src, buffer, def) {
+    var dur = def && def.dur;
+    if (!dur || buffer.duration <= dur + 0.001) return 0;
+    var ch = buffer.getChannelData(0);
+    var spare = buffer.length - Math.round(dur * buffer.sampleRate);
+    var lead = 0;
+    while (lead < spare && Math.abs(ch[lead]) < 1e-4) lead++;
+    src.loopStart = lead / buffer.sampleRate;
+    src.loopEnd = src.loopStart + dur;
+    return src.loopStart;
+  }
+
   function playMusic(name, opts) {
     opts = opts || {};
     var c = ensureContext();
@@ -546,11 +564,12 @@
       var src = c.createBufferSource();
       src.buffer = buffer;
       src.loop = opts.loop !== false;
+      var at = src.loop ? loopBounds(src, buffer, def) : 0;
       var g = c.createGain();
       g.gain.setValueAtTime(0.0001, c.currentTime);
       g.gain.linearRampToValueAtTime(1, c.currentTime + fade);
       src.connect(g); g.connect(nodes.music);
-      src.start(0);
+      src.start(0, at);
       music.src = src;
       music.gain = g;
       emit('music', { name: name });

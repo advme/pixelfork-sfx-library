@@ -8969,7 +8969,7 @@
         "webm": "music/music.casual.1.webm",
         "m4a": "music/music.casual.1.m4a"
       },
-      "dur": 28.078
+      "dur": 24.001
     },
     "music.casual.2": {
       "source": "ai",
@@ -8989,7 +8989,7 @@
         "webm": "music/music.casual.2.webm",
         "m4a": "music/music.casual.2.m4a"
       },
-      "dur": 31.278
+      "dur": 16.005
     },
     "music.casual.3": {
       "source": "ai",
@@ -9009,7 +9009,7 @@
         "webm": "music/music.casual.3.webm",
         "m4a": "music/music.casual.3.m4a"
       },
-      "dur": 27.078
+      "dur": 15.996
     },
     "music.hypercasual.1": {
       "source": "ai",
@@ -9029,7 +9029,7 @@
         "webm": "music/music.hypercasual.1.webm",
         "m4a": "music/music.hypercasual.1.m4a"
       },
-      "dur": 31.278
+      "dur": 24.004
     },
     "music.hypercasual.2": {
       "source": "ai",
@@ -9049,7 +9049,7 @@
         "webm": "music/music.hypercasual.2.webm",
         "m4a": "music/music.hypercasual.2.m4a"
       },
-      "dur": 30.478
+      "dur": 22.62
     },
     "music.hypercasual.3": {
       "source": "ai",
@@ -9069,7 +9069,7 @@
         "webm": "music/music.hypercasual.3.webm",
         "m4a": "music/music.hypercasual.3.m4a"
       },
-      "dur": 30.078
+      "dur": 15.999
     },
     "music.action.1": {
       "source": "ai",
@@ -9089,7 +9089,7 @@
         "webm": "music/music.action.1.webm",
         "m4a": "music/music.action.1.m4a"
       },
-      "dur": 29.578
+      "dur": 15.999
     },
     "music.action.2": {
       "source": "ai",
@@ -9109,7 +9109,7 @@
         "webm": "music/music.action.2.webm",
         "m4a": "music/music.action.2.m4a"
       },
-      "dur": 30.4
+      "dur": 34.292
     },
     "music.action.3": {
       "source": "ai",
@@ -9129,7 +9129,7 @@
         "webm": "music/music.action.3.webm",
         "m4a": "music/music.action.3.m4a"
       },
-      "dur": 29.578
+      "dur": 24.009
     },
     "music.racing.1": {
       "source": "ai",
@@ -9149,7 +9149,7 @@
         "webm": "music/music.racing.1.webm",
         "m4a": "music/music.racing.1.m4a"
       },
-      "dur": 27.078
+      "dur": 16.005
     },
     "music.racing.2": {
       "source": "ai",
@@ -9169,7 +9169,7 @@
         "webm": "music/music.racing.2.webm",
         "m4a": "music/music.racing.2.m4a"
       },
-      "dur": 30.878
+      "dur": 41.154
     },
     "music.racing.3": {
       "source": "ai",
@@ -9189,7 +9189,7 @@
         "webm": "music/music.racing.3.webm",
         "m4a": "music/music.racing.3.m4a"
       },
-      "dur": 31.278
+      "dur": 22.988
     },
     "music.adventure.1": {
       "source": "ai",
@@ -9209,7 +9209,7 @@
         "webm": "music/music.adventure.1.webm",
         "m4a": "music/music.adventure.1.m4a"
       },
-      "dur": 30.078
+      "dur": 16.037
     },
     "music.adventure.2": {
       "source": "ai",
@@ -9229,7 +9229,7 @@
         "webm": "music/music.adventure.2.webm",
         "m4a": "music/music.adventure.2.m4a"
       },
-      "dur": 30.078
+      "dur": 36.01
     },
     "music.adventure.3": {
       "source": "ai",
@@ -9249,7 +9249,7 @@
         "webm": "music/music.adventure.3.webm",
         "m4a": "music/music.adventure.3.m4a"
       },
-      "dur": 30.878
+      "dur": 16.017
     },
     "music.boss.1": {
       "source": "ai",
@@ -9269,7 +9269,7 @@
         "webm": "music/music.boss.1.webm",
         "m4a": "music/music.boss.1.m4a"
       },
-      "dur": 29.078
+      "dur": 24.001
     },
     "music.boss.2": {
       "source": "ai",
@@ -9289,7 +9289,7 @@
         "webm": "music/music.boss.2.webm",
         "m4a": "music/music.boss.2.m4a"
       },
-      "dur": 28.078
+      "dur": 41.138
     },
     "music.boss.3": {
       "source": "ai",
@@ -9309,7 +9309,7 @@
         "webm": "music/music.boss.3.webm",
         "m4a": "music/music.boss.3.m4a"
       },
-      "dur": 29.078
+      "dur": 40.013
     },
     "music.horror.1": {
       "source": "ai",
@@ -9329,7 +9329,7 @@
         "webm": "music/music.horror.1.webm",
         "m4a": "music/music.horror.1.m4a"
       },
-      "dur": 31.578
+      "dur": 40.013
     },
     "music.horror.2": {
       "source": "ai",
@@ -9349,7 +9349,7 @@
         "webm": "music/music.horror.2.webm",
         "m4a": "music/music.horror.2.m4a"
       },
-      "dur": 31.526
+      "dur": 25.005
     },
     "music.horror.3": {
       "source": "ai",
@@ -9369,7 +9369,7 @@
         "webm": "music/music.horror.3.webm",
         "m4a": "music/music.horror.3.m4a"
       },
-      "dur": 27.078
+      "dur": 38.987
     },
     "music.cozy.1": {
       "source": "ai",
@@ -9389,7 +9389,7 @@
         "webm": "music/music.cozy.1.webm",
         "m4a": "music/music.cozy.1.m4a"
       },
-      "dur": 30.8
+      "dur": 24.011
     },
     "music.cozy.2": {
       "source": "ai",
@@ -9409,7 +9409,7 @@
         "webm": "music/music.cozy.2.webm",
         "m4a": "music/music.cozy.2.m4a"
       },
-      "dur": 30.878
+      "dur": 16.007
     },
     "music.cozy.3": {
       "source": "ai",
@@ -9429,7 +9429,7 @@
         "webm": "music/music.cozy.3.webm",
         "m4a": "music/music.cozy.3.m4a"
       },
-      "dur": 31.578
+      "dur": 15.995
     },
     "music.scifi.1": {
       "source": "ai",
@@ -9449,7 +9449,7 @@
         "webm": "music/music.scifi.1.webm",
         "m4a": "music/music.scifi.1.m4a"
       },
-      "dur": 30.878
+      "dur": 16.0
     },
     "music.scifi.2": {
       "source": "ai",
@@ -9469,7 +9469,7 @@
         "webm": "music/music.scifi.2.webm",
         "m4a": "music/music.scifi.2.m4a"
       },
-      "dur": 31.578
+      "dur": 25.996
     },
     "music.scifi.3": {
       "source": "ai",
@@ -9489,7 +9489,7 @@
         "webm": "music/music.scifi.3.webm",
         "m4a": "music/music.scifi.3.m4a"
       },
-      "dur": 27.078
+      "dur": 20.005
     },
     "music.menu.1": {
       "source": "ai",
@@ -9509,7 +9509,7 @@
         "webm": "music/music.menu.1.webm",
         "m4a": "music/music.menu.1.m4a"
       },
-      "dur": 31.578
+      "dur": 16.004
     },
     "music.menu.2": {
       "source": "ai",
@@ -9529,7 +9529,7 @@
         "webm": "music/music.menu.2.webm",
         "m4a": "music/music.menu.2.m4a"
       },
-      "dur": 27.078
+      "dur": 19.231
     },
     "music.menu.3": {
       "source": "ai",
@@ -9549,7 +9549,7 @@
         "webm": "music/music.menu.3.webm",
         "m4a": "music/music.menu.3.m4a"
       },
-      "dur": 27.078
+      "dur": 15.996
     },
     "casino.reel.spin": {
       "source": "ai",
@@ -13656,7 +13656,7 @@
         "webm": "music/music.puzzle.1.webm",
         "m4a": "music/music.puzzle.1.m4a"
       },
-      "dur": 31.578
+      "dur": 20.258
     },
     "music.puzzle.2": {
       "source": "ai",
@@ -13676,7 +13676,7 @@
         "webm": "music/music.puzzle.2.webm",
         "m4a": "music/music.puzzle.2.m4a"
       },
-      "dur": 31.526
+      "dur": 24.021
     },
     "music.puzzle.3": {
       "source": "ai",
@@ -13696,7 +13696,7 @@
         "webm": "music/music.puzzle.3.webm",
         "m4a": "music/music.puzzle.3.m4a"
       },
-      "dur": 28.078
+      "dur": 16.008
     },
     "music.tavern.1": {
       "source": "ai",
@@ -13716,7 +13716,7 @@
         "webm": "music/music.tavern.1.webm",
         "m4a": "music/music.tavern.1.m4a"
       },
-      "dur": 30.878
+      "dur": 35.984
     },
     "music.tavern.2": {
       "source": "ai",
@@ -13736,7 +13736,7 @@
         "webm": "music/music.tavern.2.webm",
         "m4a": "music/music.tavern.2.m4a"
       },
-      "dur": 31.578
+      "dur": 16.0
     },
     "music.tavern.3": {
       "source": "ai",
@@ -13756,7 +13756,7 @@
         "webm": "music/music.tavern.3.webm",
         "m4a": "music/music.tavern.3.m4a"
       },
-      "dur": 29.078
+      "dur": 15.995
     },
     "music.western.1": {
       "source": "ai",
@@ -13776,7 +13776,7 @@
         "webm": "music/music.western.1.webm",
         "m4a": "music/music.western.1.m4a"
       },
-      "dur": 29.578
+      "dur": 15.993
     },
     "music.western.2": {
       "source": "ai",
@@ -13796,7 +13796,7 @@
         "webm": "music/music.western.2.webm",
         "m4a": "music/music.western.2.m4a"
       },
-      "dur": 26.026
+      "dur": 16.001
     },
     "music.western.3": {
       "source": "ai",
@@ -13816,7 +13816,7 @@
         "webm": "music/music.western.3.webm",
         "m4a": "music/music.western.3.m4a"
       },
-      "dur": 29.078
+      "dur": 16.017
     },
     "music.tropical.1": {
       "source": "ai",
@@ -13836,7 +13836,7 @@
         "webm": "music/music.tropical.1.webm",
         "m4a": "music/music.tropical.1.m4a"
       },
-      "dur": 30.478
+      "dur": 21.348
     },
     "music.tropical.2": {
       "source": "ai",
@@ -13856,7 +13856,7 @@
         "webm": "music/music.tropical.2.webm",
         "m4a": "music/music.tropical.2.m4a"
       },
-      "dur": 28.078
+      "dur": 16.012
     },
     "music.tropical.3": {
       "source": "ai",
@@ -13876,7 +13876,7 @@
         "webm": "music/music.tropical.3.webm",
         "m4a": "music/music.tropical.3.m4a"
       },
-      "dur": 30.826
+      "dur": 24.0
     },
     "music.desert.1": {
       "source": "ai",
@@ -13896,7 +13896,7 @@
         "webm": "music/music.desert.1.webm",
         "m4a": "music/music.desert.1.m4a"
       },
-      "dur": 26.078
+      "dur": 24.006
     },
     "music.desert.2": {
       "source": "ai",
@@ -13916,7 +13916,7 @@
         "webm": "music/music.desert.2.webm",
         "m4a": "music/music.desert.2.m4a"
       },
-      "dur": 30.878
+      "dur": 24.001
     },
     "music.desert.3": {
       "source": "ai",
@@ -13936,7 +13936,7 @@
         "webm": "music/music.desert.3.webm",
         "m4a": "music/music.desert.3.m4a"
       },
-      "dur": 26.078
+      "dur": 24.018
     },
     "music.oriental.1": {
       "source": "ai",
@@ -13956,7 +13956,7 @@
         "webm": "music/music.oriental.1.webm",
         "m4a": "music/music.oriental.1.m4a"
       },
-      "dur": 28.078
+      "dur": 16.019
     },
     "music.oriental.2": {
       "source": "ai",
@@ -13976,7 +13976,7 @@
         "webm": "music/music.oriental.2.webm",
         "m4a": "music/music.oriental.2.m4a"
       },
-      "dur": 30.878
+      "dur": 16.021
     },
     "music.oriental.3": {
       "source": "ai",
@@ -13996,7 +13996,7 @@
         "webm": "music/music.oriental.3.webm",
         "m4a": "music/music.oriental.3.m4a"
       },
-      "dur": 31.578
+      "dur": 16.04
     },
     "music.chiptune.1": {
       "source": "ai",
@@ -14016,7 +14016,7 @@
         "webm": "music/music.chiptune.1.webm",
         "m4a": "music/music.chiptune.1.m4a"
       },
-      "dur": 27.078
+      "dur": 23.998
     },
     "music.chiptune.2": {
       "source": "ai",
@@ -14036,7 +14036,7 @@
         "webm": "music/music.chiptune.2.webm",
         "m4a": "music/music.chiptune.2.m4a"
       },
-      "dur": 28.078
+      "dur": 23.989
     },
     "music.chiptune.3": {
       "source": "ai",
@@ -14056,7 +14056,7 @@
         "webm": "music/music.chiptune.3.webm",
         "m4a": "music/music.chiptune.3.m4a"
       },
-      "dur": 31.578
+      "dur": 24.0
     },
     "music.lofi.1": {
       "source": "ai",
@@ -14076,7 +14076,7 @@
         "webm": "music/music.lofi.1.webm",
         "m4a": "music/music.lofi.1.m4a"
       },
-      "dur": 30.078
+      "dur": 21.34
     },
     "music.lofi.2": {
       "source": "ai",
@@ -14096,7 +14096,7 @@
         "webm": "music/music.lofi.2.webm",
         "m4a": "music/music.lofi.2.m4a"
       },
-      "dur": 26.078
+      "dur": 24.003
     },
     "music.lofi.3": {
       "source": "ai",
@@ -14116,7 +14116,7 @@
         "webm": "music/music.lofi.3.webm",
         "m4a": "music/music.lofi.3.m4a"
       },
-      "dur": 30.078
+      "dur": 16.003
     },
     "music.epic.1": {
       "source": "ai",
@@ -14136,7 +14136,7 @@
         "webm": "music/music.epic.1.webm",
         "m4a": "music/music.epic.1.m4a"
       },
-      "dur": 28.078
+      "dur": 34.008
     },
     "music.epic.2": {
       "source": "ai",
@@ -14156,7 +14156,7 @@
         "webm": "music/music.epic.2.webm",
         "m4a": "music/music.epic.2.m4a"
       },
-      "dur": 27.078
+      "dur": 40.008
     },
     "music.epic.3": {
       "source": "ai",
@@ -14176,7 +14176,7 @@
         "webm": "music/music.epic.3.webm",
         "m4a": "music/music.epic.3.m4a"
       },
-      "dur": 30.0
+      "dur": 24.013
     },
     "music.comedy.1": {
       "source": "ai",
@@ -14196,7 +14196,7 @@
         "webm": "music/music.comedy.1.webm",
         "m4a": "music/music.comedy.1.m4a"
       },
-      "dur": 30.078
+      "dur": 16.009
     },
     "music.comedy.2": {
       "source": "ai",
@@ -14216,7 +14216,7 @@
         "webm": "music/music.comedy.2.webm",
         "m4a": "music/music.comedy.2.m4a"
       },
-      "dur": 28.078
+      "dur": 16.989
     },
     "music.comedy.3": {
       "source": "ai",
@@ -14236,7 +14236,7 @@
         "webm": "music/music.comedy.3.webm",
         "m4a": "music/music.comedy.3.m4a"
       },
-      "dur": 30.078
+      "dur": 15.994
     },
     "music.casino.1": {
       "source": "ai",
@@ -14256,7 +14256,7 @@
         "webm": "music/music.casino.1.webm",
         "m4a": "music/music.casino.1.m4a"
       },
-      "dur": 28.078
+      "dur": 32.013
     },
     "music.casino.2": {
       "source": "ai",
@@ -14276,7 +14276,7 @@
         "webm": "music/music.casino.2.webm",
         "m4a": "music/music.casino.2.m4a"
       },
-      "dur": 30.878
+      "dur": 21.057
     },
     "music.casino.3": {
       "source": "ai",
@@ -14296,7 +14296,7 @@
         "webm": "music/music.casino.3.webm",
         "m4a": "music/music.casino.3.m4a"
       },
-      "dur": 28.078
+      "dur": 16.009
     },
     "music.underwater.1": {
       "source": "ai",
@@ -14316,7 +14316,7 @@
         "webm": "music/music.underwater.1.webm",
         "m4a": "music/music.underwater.1.m4a"
       },
-      "dur": 31.278
+      "dur": 36.005
     },
     "music.underwater.2": {
       "source": "ai",
@@ -14336,7 +14336,7 @@
         "webm": "music/music.underwater.2.webm",
         "m4a": "music/music.underwater.2.m4a"
       },
-      "dur": 31.578
+      "dur": 16.028
     },
     "music.underwater.3": {
       "source": "ai",
@@ -14356,7 +14356,7 @@
         "webm": "music/music.underwater.3.webm",
         "m4a": "music/music.underwater.3.m4a"
       },
-      "dur": 27.078
+      "dur": 24.069
     },
     "music.winter.1": {
       "source": "ai",
@@ -14376,7 +14376,7 @@
         "webm": "music/music.winter.1.webm",
         "m4a": "music/music.winter.1.m4a"
       },
-      "dur": 29.578
+      "dur": 16.0
     },
     "music.winter.2": {
       "source": "ai",
@@ -14396,7 +14396,7 @@
         "webm": "music/music.winter.2.webm",
         "m4a": "music/music.winter.2.m4a"
       },
-      "dur": 27.078
+      "dur": 16.0
     },
     "music.winter.3": {
       "source": "ai",
@@ -14416,7 +14416,7 @@
         "webm": "music/music.winter.3.webm",
         "m4a": "music/music.winter.3.m4a"
       },
-      "dur": 30.478
+      "dur": 26.057
     },
     "music.zen.1": {
       "source": "ai",
@@ -14436,7 +14436,7 @@
         "webm": "music/music.zen.1.webm",
         "m4a": "music/music.zen.1.m4a"
       },
-      "dur": 28.078
+      "dur": 40.053
     },
     "music.zen.2": {
       "source": "ai",
@@ -14456,7 +14456,7 @@
         "webm": "music/music.zen.2.webm",
         "m4a": "music/music.zen.2.m4a"
       },
-      "dur": 31.578
+      "dur": 36.031
     },
     "music.zen.3": {
       "source": "ai",
@@ -14476,7 +14476,7 @@
         "webm": "music/music.zen.3.webm",
         "m4a": "music/music.zen.3.m4a"
       },
-      "dur": 31.578
+      "dur": 16.082
     },
     "music.chase.1": {
       "source": "ai",
@@ -14496,7 +14496,7 @@
         "webm": "music/music.chase.1.webm",
         "m4a": "music/music.chase.1.m4a"
       },
-      "dur": 30.078
+      "dur": 24.013
     },
     "music.chase.2": {
       "source": "ai",
@@ -14516,7 +14516,7 @@
         "webm": "music/music.chase.2.webm",
         "m4a": "music/music.chase.2.m4a"
       },
-      "dur": 26.078
+      "dur": 24.003
     },
     "music.chase.3": {
       "source": "ai",
@@ -14536,7 +14536,7 @@
         "webm": "music/music.chase.3.webm",
         "m4a": "music/music.chase.3.m4a"
       },
-      "dur": 28.078
+      "dur": 20.565
     },
     "music.tension.1": {
       "source": "ai",
@@ -14556,7 +14556,7 @@
         "webm": "music/music.tension.1.webm",
         "m4a": "music/music.tension.1.m4a"
       },
-      "dur": 30.478
+      "dur": 16.121
     },
     "music.tension.2": {
       "source": "ai",
@@ -14576,7 +14576,7 @@
         "webm": "music/music.tension.2.webm",
         "m4a": "music/music.tension.2.m4a"
       },
-      "dur": 31.578
+      "dur": 23.999
     },
     "music.tension.3": {
       "source": "ai",
@@ -14596,7 +14596,7 @@
         "webm": "music/music.tension.3.webm",
         "m4a": "music/music.tension.3.m4a"
       },
-      "dur": 31.578
+      "dur": 16.249
     },
     "sting.level.start": {
       "source": "ai",

@@ -68,7 +68,7 @@ def peak_db(path):
     return float(m.group(1)) if m else 0.0
 
 
-def make_seamless(src, dst, cross):
+def make_seamless(src, dst, cross, channels=1):
     """Wrap a clip's tail over its head so it loops with no click or gap.
 
     A generator never returns a seamless loop: its first and last samples are
@@ -78,7 +78,7 @@ def make_seamless(src, dst, cross):
     """
     r = run(['ffmpeg', '-y', '-i', src, '-i', src, '-filter_complex',
              '[0:a]atrim=start={c}[a];[1:a]atrim=0:{c}[b];[a][b]acrossfade=d={c}[out]'.format(c=cross),
-             '-map', '[out]', '-ar', str(SAMPLE_RATE), '-ac', '1', '-c:a', 'pcm_s16le', dst])
+             '-map', '[out]', '-ar', str(SAMPLE_RATE), '-ac', str(channels), '-c:a', 'pcm_s16le', dst])
     return r.returncode == 0
 
 
@@ -126,10 +126,19 @@ def prepare_music(src, dst_base, warnings, fx=None):
     if r.returncode != 0:
         sys.exit('ffmpeg failed on ' + src + '\n' + r.stderr[-800:])
 
+    # Music loops are CUT at a point where the track repeats itself (see
+    # tools/loop_music.py), never blended tail-over-head: blending plays two
+    # unrelated passages at once and the groove stumbles every cycle.
+    region = (fx or {}).get('loopRegion')
     cross = float((fx or {}).get('loop') or 0)
-    if cross:
+    if region:
+        import loop_music
         looped = dst_base + '.loop.wav'
-        if make_seamless(tmp, looped, cross):
+        loop_music.render(src, looped, region[0], region[1], SAMPLE_RATE)
+        os.remove(tmp); tmp = looped
+    elif cross:
+        looped = dst_base + '.loop.wav'
+        if make_seamless(tmp, looped, cross, channels=2):
             os.remove(tmp); tmp = looped
         else:
             warnings.append(os.path.basename(src) + ' could not be made seamless')
