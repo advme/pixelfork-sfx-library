@@ -177,7 +177,7 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
             : '') +
           (takes > 1 ? '<button data-v>▶ All ' + takes + ' takes</button>' : '') +
           '<span class="takeno"></span>' +
-          '<span class="meta">~' + (d.duration ?? '?') + 's</span></div>';
+          '<span class="meta">' + lengthLabel(d) + '</span></div>';
         card.querySelector('.name').textContent = name;
         card.querySelector('.use').textContent = d.whenToUse || '';
         // Only a looping track is "music". The stingers are music-category
@@ -209,6 +209,20 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
   // means replaying it on a timer — and when it has several takes we step
   // through them in turn, which is what the game does over repeated plays.
   let active = null;                       // only one sound loops at a time
+
+  // Exact length of what actually plays: the built file, not the length that
+  // was requested from the generator. Several takes of different lengths show
+  // as a range.
+  function lengthLabel(d) {
+    const f = t => t.toFixed(2) + 's';
+    if (d.variations && d.variations.length > 1) {
+      const ls = d.variations.map(v => v[1]);
+      const lo = Math.min(...ls), hi = Math.max(...ls);
+      return lo.toFixed(2) === hi.toFixed(2) ? f(lo) : f(lo) + '–' + f(hi);
+    }
+    if (d.dur != null) return f(d.dur);
+    return d.duration != null ? f(d.duration) : '?';
+  }
 
   function resetPlay() {
     document.querySelectorAll('[data-play][data-on]').forEach(b => {
@@ -286,7 +300,8 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
 
       // One-shot: replay on a timer, stepping through the takes in turn.
       let i = 0;
-      const gap = Math.max(90, (d.duration || 0.3) * 1000 + 70);
+      const longest = d.variations ? Math.max(...d.variations.map(v => v[1])) : (d.dur ?? d.duration ?? 0.3);
+      const gap = Math.max(90, longest * 1000 + 70);
       const tick = () => {
         if (!active || active.btn !== btn) return;
         SFX.play(name);

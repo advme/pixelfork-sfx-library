@@ -292,6 +292,9 @@ def build(pack):
             definition['files'] = {'webm': 'music/' + name + '.webm',
                                    'm4a': 'music/' + name + '.m4a'}
             definition['dur'] = round(dur, 3)
+            # registry 'duration' is what we ASKED the generator for; the
+            # published one is what the file actually is.
+            definition['duration'] = round(dur, 2)
             definition.pop('start', None)
             music_built.append('{} ({:.0f}s)'.format(name, dur))
             continue
@@ -322,6 +325,9 @@ def build(pack):
         definition['dur'] = slices[0][1]
         if len(slices) > 1:
             definition['variations'] = slices
+        # Real length, not the requested one. With several takes, the longest,
+        # so a game timing around the sound never cuts it off.
+        definition['duration'] = round(max(sl[1] for sl in slices), 2)
         built.append('{} ({})'.format(name, len(slices)))
 
     manifest = dict(reg)
