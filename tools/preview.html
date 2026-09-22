@@ -180,9 +180,16 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
         // Only a looping track is "music". The stingers are music-category
         // one-shots and must be played, not started as the background track.
         const isTrack = d.category === 'music' && d.loopable;
-        card.querySelector('[data-play]').onclick = () => {
-          if (isTrack) { SFX.music(name); markMusic(card, name); }
-          else SFX.play(name);
+        // Play = once. Only the Loop button loops. A music track played with
+        // SFX.music() loops by default, which made Play run forever.
+        const playBtn = card.querySelector('[data-play]');
+        playBtn.onclick = () => {
+          if (!isTrack) { SFX.play(name); return; }
+          if (playBtn.dataset.on) { SFX.stopMusic(0.3); resetPlay(); return; }
+          stopLoop(); resetPlay();
+          SFX.music(name, { loop: false });
+          playBtn.dataset.on = '1'; playBtn.textContent = '■ Stop';
+          markMusic(card, name);
         };
         const v = card.querySelector('[data-v]');
         if (v) v.onclick = () => d.variations.forEach((_, i) => setTimeout(() => SFX.play(name), i * 260));
@@ -199,6 +206,14 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
   // means replaying it on a timer — and when it has several takes we step
   // through them in turn, which is what the game does over repeated plays.
   let active = null;                       // only one sound loops at a time
+
+  function resetPlay() {
+    document.querySelectorAll('[data-play][data-on]').forEach(b => {
+      delete b.dataset.on; b.textContent = '▶ Play';
+    });
+    document.querySelectorAll('.card.playing').forEach(c => c.classList.remove('playing'));
+  }
+  SFX.on('musicend', resetPlay);
 
   function markMusic(card, name) {
     document.querySelectorAll('.card.playing').forEach(c => c.classList.remove('playing'));
@@ -233,7 +248,8 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
         card.classList.add('looping');
         counter.textContent = 'streaming loop';
         active = { btn, card, counter, handle: null, timer: null, music: true };
-        SFX.music(name);
+        SFX.stopMusic(0.05); resetPlay();     // a one-shot Play of this track may be running
+        SFX.music(name, { loop: true });
         return;
       }
 

@@ -530,15 +530,24 @@
   // 19 ms here — and a browser that keeps it would gap on every wrap. The
   // manifest's `dur` is the true loop length; leading zeros are encoder
   // priming, since a cut loop never starts on digital silence.
+  //
+  // The loop end is ALWAYS set explicitly and never allowed to reach the last
+  // sample. Chrome's native whole-buffer loop (loopEnd left at 0) sticks on
+  // some buffer lengths: after the first wrap it replays one 128-sample block
+  // forever, a 375 Hz buzz. It hit 5 of the 78 music tracks; ending the loop
+  // one sample early cleared all 78.
   function loopBounds(src, buffer, def) {
+    var sr = buffer.sampleRate;
+    var last = (buffer.length - 1) / sr;
     var dur = def && def.dur;
-    if (!dur || buffer.duration <= dur + 0.001) return 0;
-    var ch = buffer.getChannelData(0);
-    var spare = buffer.length - Math.round(dur * buffer.sampleRate);
     var lead = 0;
-    while (lead < spare && Math.abs(ch[lead]) < 1e-4) lead++;
-    src.loopStart = lead / buffer.sampleRate;
-    src.loopEnd = src.loopStart + dur;
+    if (dur && buffer.duration > dur + 0.001) {
+      var ch = buffer.getChannelData(0);
+      var spare = buffer.length - Math.round(dur * sr);
+      while (lead < spare && Math.abs(ch[lead]) < 1e-4) lead++;
+    }
+    src.loopStart = lead / sr;
+    src.loopEnd = Math.min(last, dur ? src.loopStart + dur : last);
     return src.loopStart;
   }
 
@@ -570,6 +579,11 @@
       g.gain.linearRampToValueAtTime(1, c.currentTime + fade);
       src.connect(g); g.connect(nodes.music);
       src.start(0, at);
+      src.onended = function () {
+        if (music.src !== src) return;         // replaced or stopped already
+        music = { name: null, src: null, gain: null, token: music.token };
+        emit('musicend', { name: name });
+      };
       music.src = src;
       music.gain = g;
       emit('music', { name: name });
