@@ -1,5 +1,27 @@
 # CHANGELOG
 
+## v0.8.0-A — seamless music loops, Loop End, exact lengths, board fixes
+- Agent: A (Claude) · Date: 2026-09-22
+- Done:
+  - **Music loops are cut, not blended.** The old tail-over-head crossfade played two parts of
+    a track at once; across 78 loops it scored 0.99 (no better than a random jump). New
+    `tools/loop_music.py` finds where each track repeats itself and cuts there. Median now
+    0.13; 76 of 78 clean. 18 tracks that never repeated were regenerated at 48 s.
+  - **Stuck buzz after a wrap fixed.** Chrome's whole-buffer loop replays one 128-sample block
+    forever on some lengths (5 of 78 tracks). The loop end is now always one sample early.
+  - **Music is stereo again** — looping had collapsed it to mono. **AAC padding** (~19 ms per
+    .m4a) no longer gaps the loop on Safari/iPhone.
+  - **`SFX.play()` plays stingers.** File-backed sounds fell through to a synth blip 28 dB
+    too quiet. Stingers skip the music duck.
+  - **New API:** `SFX.music(name, {loop:false})` plays once and emits `musicend`;
+    `SFX.music(name, {offset:-5})` starts 5 s before the end.
+  - **`duration` in the published manifest is the real length** (longest take), not the
+    length requested from the generator.
+  - **Board:** Play plays once, Loop loops, new Loop End (music only); exact lengths on every
+    card; the preview server no longer deadlocks (threaded, Range support).
+- Not done: `music.boss.3` (0.37) and `music.tension.1` (0.38) are just over the clean line —
+  judge by ear. Nothing in the pack has had a full listening pass.
+
 ## v0.7.0-A — 659 sounds: 16 new SFX groups, 16 new music genres, first stingers
 - Agent: A (Claude) · Date: 2026-09-20
 - Done: Added **256 sounds**, taking the library from 403 to **659**.

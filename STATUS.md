@@ -1,9 +1,10 @@
 # STATUS
 
-**Last updated:** 2026-09-19 · by **A (Claude)** · version **v0.6.1-A** · **published**: https://github.com/advme/pixelfork-sfx-library · served from GitHub Pages
+**Last updated:** 2026-09-22 · by **A (Claude)** · version **v0.8.0-A** · **published**: https://github.com/advme/pixelfork-sfx-library · served from GitHub Pages
 
 ## Next task
-**Listen through the board and flag what is wrong.** Nothing in the pack has been judged by
+**Listen through the board and flag what is wrong.** Music loops: use **⤓ Loop End** to hear
+each seam in 5 s. `music.boss.3` and `music.tension.1` are borderline (0.37, 0.38). Nothing in the pack has been judged by
 ear across the board. Every check so far only proves no sound is silent, clipping, distant,
 dull or seamed — not that it sounds right. Use the loop buttons on the 42 loops in
 particular, since seams in noisy material cannot be measured, only heard.
