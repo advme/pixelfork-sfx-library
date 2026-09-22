@@ -172,6 +172,9 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
           '<p class="use"></p>' +
           '<div class="row"><button data-play>▶ Play</button>' +
           '<button data-loop title="Loop this sound">⟳ Loop</button>' +
+          (d.category === 'music' && d.loopable
+            ? '<button data-loopend title="Start 5 seconds before the loop point and keep looping, to hear the seam">⤓ Loop End</button>'
+            : '') +
           (takes > 1 ? '<button data-v>▶ All ' + takes + ' takes</button>' : '') +
           '<span class="takeno"></span>' +
           '<span class="meta">~' + (d.duration ?? '?') + 's</span></div>';
@@ -226,7 +229,7 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
     if (active.handle) SFX.stop(active.handle);
     if (active.timer) clearTimeout(active.timer);
     active.btn.classList.remove('looping');
-    active.btn.textContent = '⟳ Loop';
+    active.btn.textContent = active.label || '⟳ Loop';
     active.card.classList.remove('looping');
     active.counter.textContent = '';
     active = null;
@@ -235,6 +238,22 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
   function wireLoop(card, name, d, takes) {
     const btn = card.querySelector('[data-loop]');
     const counter = card.querySelector('.takeno');
+
+    // Loop End: jump to 5 s before the wrap so the seam is heard in seconds,
+    // then keep looping like the Loop button.
+    const endBtn = card.querySelector('[data-loopend]');
+    if (endBtn) endBtn.onclick = () => {
+      const wasMe = active && active.btn === endBtn;
+      stopLoop();
+      if (wasMe) return;
+      endBtn.classList.add('looping');
+      endBtn.textContent = '■ Stop';
+      card.classList.add('looping');
+      counter.textContent = 'from last 5s, looping';
+      active = { btn: endBtn, label: '⤓ Loop End', card, counter, handle: null, timer: null, music: true };
+      SFX.stopMusic(0.05); resetPlay();
+      SFX.music(name, { loop: true, offset: -5, fade: 0.05 });
+    };
 
     btn.onclick = () => {
       const wasMe = active && active.btn === btn;

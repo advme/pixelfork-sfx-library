@@ -574,6 +574,14 @@
       src.buffer = buffer;
       src.loop = opts.loop !== false;
       var at = src.loop ? loopBounds(src, buffer, def) : 0;
+      // opts.offset: start this many seconds into the track (a negative value
+      // counts back from the end). Used to audition a loop seam without
+      // sitting through the whole track.
+      if (opts.offset) {
+        var len = src.loop ? src.loopEnd - src.loopStart : buffer.duration;
+        var off = opts.offset < 0 ? len + opts.offset : opts.offset;
+        at += Math.max(0, Math.min(len - 0.01, off));
+      }
       var g = c.createGain();
       g.gain.setValueAtTime(0.0001, c.currentTime);
       g.gain.linearRampToValueAtTime(1, c.currentTime + fade);
