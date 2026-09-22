@@ -23,7 +23,7 @@ pack kept under 50 MB (music would need its own), or another CDN.
 
 After every release: commit, tag, push with tags, wait for the Pages build, check the Pages URLs load.
 **The push does not always start a Pages build.** On 2026-09-22 the v0.8.0-A push started none, and the
-site kept serving v0.6.0 — the two releases before it had never gone live either. Check
+site kept serving the old 403-sound pack (v0.7.0-A had never been pushed, so it went live in the same step). Check
 `gh api repos/advme/pixelfork-sfx-library/pages/builds/latest` shows your commit; if not, start one with
 `gh api -X POST repos/advme/pixelfork-sfx-library/pages/builds`, then confirm `dist/sfx.js` reports the new VERSION.
 
