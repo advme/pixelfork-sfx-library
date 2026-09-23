@@ -16,7 +16,14 @@
     Verified over 28 s of captured output: no dropout, accents repeating exactly 16.0 s apart.
   - Board shows each sound's theme, searching a theme name filters to it, and the audit
     preloads everything first.
-- Not done: not yet measured on real Safari/iOS — the WebKit numbers above are the V2 session's.
+- Confirmed by the V2 session on v0.9.0-A, loaded live from Pages (Playwright WebKit):
+  `SFX.load('casual')` ready in **1255 ms**, against ~55 s for the old sprite; the `music`
+  event fires **3 ms** after a click, against ~54.6 s; `packs/core.m4a` decodes in **389 ms**,
+  against 53-79 s for the old sprite. Chromium: 571 ms / 1 ms / 64 ms.
+- Not done: not measured in the real Safari app (Playwright's WebKit is not Safari, and the
+  owner's Safari was slower than it before). The V2 run timed the `music` event, not audible
+  samples, and did not cover the loop handover or a first play from an unloaded theme —
+  both verified in Chromium here only.
 
 ## v0.8.0-A — seamless music loops, Loop End, exact lengths, board fixes
 - Agent: A (Claude) · Date: 2026-09-22

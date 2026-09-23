@@ -28,6 +28,14 @@ site kept serving the old 403-sound pack (v0.7.0-A had never been pushed, so it 
 `gh api -X POST repos/advme/pixelfork-sfx-library/pages/builds`, then confirm `dist/sfx.js` reports the new VERSION.
 
 ## In progress
+**Judge v0.9.0-A by ear in the real Safari app.** The split is confirmed fast in Playwright's
+WebKit (1.3 s to ready, music 3 ms after the click, from the V2 session) but nobody has heard it
+in Safari itself, on a phone, or over a phone network. Two paths are verified in Chromium only:
+the music handover from the streaming element to the decoded buffer at the loop point, and the
+first play of a sound whose theme is not loaded yet (it plays when the bundle lands, and is
+dropped if that takes longer than 1.2 s).
+
+## In progress
 _Nothing._
 
 ## The pack — 659 sounds (78 music, 18 stingers)
