@@ -1,0 +1,488 @@
+{
+  "name": "action",
+  "sprite": {
+    "webm": "packs/action.webm",
+    "m4a": "packs/action.m4a"
+  },
+  "spriteDuration": 89.8079,
+  "sounds": {
+    "weapon.pistol": {
+      "start": 0.0,
+      "dur": 0.13,
+      "variations": [
+        [
+          0.0,
+          0.13
+        ],
+        [
+          0.38,
+          0.13
+        ],
+        [
+          0.76,
+          0.13
+        ]
+      ]
+    },
+    "weapon.shotgun": {
+      "start": 1.14,
+      "dur": 1.08,
+      "variations": [
+        [
+          1.14,
+          1.08
+        ],
+        [
+          2.47,
+          0.8681
+        ]
+      ]
+    },
+    "weapon.rifle.auto": {
+      "start": 3.5882,
+      "dur": 1.6
+    },
+    "weapon.reload": {
+      "start": 5.4382,
+      "dur": 1.2004
+    },
+    "weapon.empty": {
+      "start": 6.8886,
+      "dur": 0.3143
+    },
+    "weapon.bow": {
+      "start": 7.453,
+      "dur": 1.0,
+      "variations": [
+        [
+          7.453,
+          1.0
+        ],
+        [
+          8.703,
+          1.0
+        ]
+      ]
+    },
+    "weapon.sword.swing": {
+      "start": 9.953,
+      "dur": 0.52,
+      "variations": [
+        [
+          9.953,
+          0.52
+        ],
+        [
+          10.7231,
+          0.52
+        ],
+        [
+          11.4931,
+          0.52
+        ]
+      ]
+    },
+    "weapon.sword.clash": {
+      "start": 12.2632,
+      "dur": 0.84,
+      "variations": [
+        [
+          12.2632,
+          0.84
+        ],
+        [
+          13.3532,
+          0.84
+        ]
+      ]
+    },
+    "weapon.cannon": {
+      "start": 14.4433,
+      "dur": 1.52
+    },
+    "explosion.big": {
+      "start": 16.2133,
+      "dur": 2.32
+    },
+    "gun.smg": {
+      "start": 18.7833,
+      "dur": 1.64
+    },
+    "gun.sniper": {
+      "start": 20.6734,
+      "dur": 2.12
+    },
+    "gun.revolver": {
+      "start": 23.0434,
+      "dur": 0.1595,
+      "variations": [
+        [
+          23.0434,
+          0.1595
+        ],
+        [
+          23.453,
+          0.1551
+        ],
+        [
+          23.8581,
+          0.3799
+        ]
+      ]
+    },
+    "gun.silenced": {
+      "start": 24.488,
+      "dur": 0.84,
+      "variations": [
+        [
+          24.488,
+          0.84
+        ],
+        [
+          25.578,
+          0.84
+        ]
+      ]
+    },
+    "gun.minigun": {
+      "start": 26.6681,
+      "dur": 2.92
+    },
+    "gun.shell.drop": {
+      "start": 29.8381,
+      "dur": 0.8432,
+      "variations": [
+        [
+          29.8381,
+          0.8432
+        ],
+        [
+          30.9313,
+          0.8024
+        ],
+        [
+          31.9837,
+          0.9075
+        ]
+      ]
+    },
+    "gun.mag.out": {
+      "start": 33.1413,
+      "dur": 0.1693,
+      "variations": [
+        [
+          33.1413,
+          0.1693
+        ],
+        [
+          33.5606,
+          0.4479
+        ]
+      ]
+    },
+    "gun.mag.in": {
+      "start": 34.2585,
+      "dur": 0.305,
+      "variations": [
+        [
+          34.2585,
+          0.305
+        ],
+        [
+          34.8135,
+          0.357
+        ]
+      ]
+    },
+    "gun.bolt": {
+      "start": 35.4205,
+      "dur": 0.4099,
+      "variations": [
+        [
+          35.4205,
+          0.4099
+        ],
+        [
+          36.0804,
+          0.368
+        ]
+      ]
+    },
+    "gun.grenade.pin": {
+      "start": 36.6984,
+      "dur": 0.4933
+    },
+    "gun.grenade.throw": {
+      "start": 37.4417,
+      "dur": 0.5231
+    },
+    "gun.rocket.launch": {
+      "start": 38.2149,
+      "dur": 2.12
+    },
+    "gun.flamethrower": {
+      "start": 40.5849,
+      "dur": 2.472
+    },
+    "gun.crossbow": {
+      "start": 43.3069,
+      "dur": 0.1298,
+      "variations": [
+        [
+          43.3069,
+          0.1298
+        ],
+        [
+          43.6867,
+          1.04
+        ]
+      ]
+    },
+    "gun.reload.shotgun": {
+      "start": 44.9768,
+      "dur": 1.3257
+    },
+    "melee.stab": {
+      "start": 46.5525,
+      "dur": 0.4027,
+      "variations": [
+        [
+          46.5525,
+          0.4027
+        ],
+        [
+          47.2052,
+          0.84
+        ],
+        [
+          48.2953,
+          0.684
+        ]
+      ]
+    },
+    "melee.block": {
+      "start": 49.2293,
+      "dur": 0.92,
+      "variations": [
+        [
+          49.2293,
+          0.92
+        ],
+        [
+          50.3994,
+          0.92
+        ]
+      ]
+    },
+    "melee.parry": {
+      "start": 51.5694,
+      "dur": 0.84,
+      "variations": [
+        [
+          51.5694,
+          0.84
+        ],
+        [
+          52.6594,
+          0.84
+        ]
+      ]
+    },
+    "melee.sheathe": {
+      "start": 53.7495,
+      "dur": 0.7083,
+      "variations": [
+        [
+          53.7495,
+          0.7083
+        ],
+        [
+          54.7078,
+          0.6799
+        ]
+      ]
+    },
+    "melee.axe.swing": {
+      "start": 55.6376,
+      "dur": 0.6945,
+      "variations": [
+        [
+          55.6376,
+          0.6945
+        ],
+        [
+          56.5822,
+          0.5976
+        ]
+      ]
+    },
+    "melee.hammer.swing": {
+      "start": 57.4298,
+      "dur": 0.7475,
+      "variations": [
+        [
+          57.4298,
+          0.7475
+        ],
+        [
+          58.4273,
+          0.6599
+        ]
+      ]
+    },
+    "melee.spear": {
+      "start": 59.3372,
+      "dur": 0.4601,
+      "variations": [
+        [
+          59.3372,
+          0.4601
+        ],
+        [
+          60.0473,
+          0.4427
+        ]
+      ]
+    },
+    "melee.whip": {
+      "start": 60.74,
+      "dur": 0.92,
+      "variations": [
+        [
+          60.74,
+          0.92
+        ],
+        [
+          61.9101,
+          0.3503
+        ]
+      ]
+    },
+    "melee.kick": {
+      "start": 62.5104,
+      "dur": 0.64,
+      "variations": [
+        [
+          62.5104,
+          0.64
+        ],
+        [
+          63.4004,
+          0.3916
+        ],
+        [
+          64.0421,
+          0.3545
+        ]
+      ]
+    },
+    "melee.dodge": {
+      "start": 64.6466,
+      "dur": 0.64,
+      "variations": [
+        [
+          64.6466,
+          0.64
+        ],
+        [
+          65.5367,
+          0.3545
+        ],
+        [
+          66.1412,
+          0.4475
+        ]
+      ]
+    },
+    "stealth.alert": {
+      "start": 66.8387,
+      "dur": 1.32
+    },
+    "stealth.detected": {
+      "start": 68.4087,
+      "dur": 2.12
+    },
+    "stealth.lost": {
+      "start": 70.7788,
+      "dur": 1.92
+    },
+    "stealth.radio": {
+      "start": 72.9488,
+      "dur": 2.0449,
+      "variations": [
+        [
+          72.9488,
+          2.0449
+        ],
+        [
+          75.2437,
+          2.1138
+        ]
+      ]
+    },
+    "stealth.sneak": {
+      "start": 77.6074,
+      "dur": 0.3643,
+      "variations": [
+        [
+          77.6074,
+          0.3643
+        ],
+        [
+          78.2217,
+          0.3732
+        ]
+      ]
+    },
+    "stealth.lockpick": {
+      "start": 78.8449,
+      "dur": 1.7103
+    },
+    "stealth.vent": {
+      "start": 80.8052,
+      "dur": 1.5234
+    },
+    "stealth.camera": {
+      "start": 82.5786,
+      "dur": 0.2623,
+      "variations": [
+        [
+          82.5786,
+          0.2623
+        ],
+        [
+          83.0909,
+          1.52
+        ]
+      ]
+    },
+    "stealth.takedown": {
+      "start": 84.861,
+      "dur": 1.048,
+      "variations": [
+        [
+          84.861,
+          1.048
+        ],
+        [
+          86.159,
+          1.12
+        ]
+      ]
+    },
+    "stealth.hide": {
+      "start": 87.529,
+      "dur": 1.12,
+      "variations": [
+        [
+          87.529,
+          1.12
+        ],
+        [
+          88.8991,
+          0.6588
+        ]
+      ]
+    }
+  }
+}

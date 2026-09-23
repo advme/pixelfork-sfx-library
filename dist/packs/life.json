@@ -1,0 +1,556 @@
+{
+  "name": "life",
+  "sprite": {
+    "webm": "packs/life.webm",
+    "m4a": "packs/life.m4a"
+  },
+  "spriteDuration": 151.4921,
+  "sounds": {
+    "tool.hammer": {
+      "start": 0.0,
+      "dur": 0.2196,
+      "variations": [
+        [
+          0.0,
+          0.2196
+        ],
+        [
+          0.4696,
+          0.2331
+        ],
+        [
+          0.9527,
+          0.2375
+        ],
+        [
+          1.4401,
+          0.2459
+        ]
+      ]
+    },
+    "tool.saw": {
+      "start": 1.9361,
+      "dur": 1.5671
+    },
+    "tool.chop.wood": {
+      "start": 3.7531,
+      "dur": 0.92,
+      "variations": [
+        [
+          3.7531,
+          0.92
+        ],
+        [
+          4.9232,
+          0.616
+        ],
+        [
+          5.7892,
+          0.92
+        ]
+      ]
+    },
+    "tool.pickaxe": {
+      "start": 6.9592,
+      "dur": 0.1654,
+      "variations": [
+        [
+          6.9592,
+          0.1654
+        ],
+        [
+          7.3746,
+          0.208
+        ],
+        [
+          7.8327,
+          0.1602
+        ],
+        [
+          8.2428,
+          0.3736
+        ]
+      ]
+    },
+    "tool.dig": {
+      "start": 8.8665,
+      "dur": 1.04,
+      "variations": [
+        [
+          8.8665,
+          1.04
+        ],
+        [
+          10.1565,
+          1.04
+        ],
+        [
+          11.4466,
+          1.04
+        ]
+      ]
+    },
+    "tool.drill": {
+      "start": 12.7366,
+      "dur": 1.64
+    },
+    "tool.wrench": {
+      "start": 14.6266,
+      "dur": 0.92,
+      "variations": [
+        [
+          14.6266,
+          0.92
+        ],
+        [
+          15.7967,
+          0.7499
+        ]
+      ]
+    },
+    "craft.forge": {
+      "start": 16.7966,
+      "dur": 1.04,
+      "variations": [
+        [
+          16.7966,
+          1.04
+        ],
+        [
+          18.0866,
+          1.04
+        ],
+        [
+          19.3766,
+          1.04
+        ]
+      ]
+    },
+    "craft.sew": {
+      "start": 20.6667,
+      "dur": 0.7042,
+      "variations": [
+        [
+          20.6667,
+          0.7042
+        ],
+        [
+          21.6209,
+          0.7621
+        ]
+      ]
+    },
+    "cook.sizzle": {
+      "start": 22.633,
+      "dur": 1.92
+    },
+    "cook.chop": {
+      "start": 24.803,
+      "dur": 0.3795,
+      "variations": [
+        [
+          24.803,
+          0.3795
+        ],
+        [
+          25.4326,
+          0.3363
+        ],
+        [
+          26.0188,
+          0.1889
+        ],
+        [
+          26.4577,
+          0.1905
+        ]
+      ]
+    },
+    "cook.pour": {
+      "start": 26.8982,
+      "dur": 1.3159
+    },
+    "cook.boil": {
+      "start": 28.4641,
+      "dur": 2.62
+    },
+    "cook.oven.ding": {
+      "start": 31.3342,
+      "dur": 1.32
+    },
+    "cook.fridge.open": {
+      "start": 32.9042,
+      "dur": 0.8758
+    },
+    "machine.robot.servo": {
+      "start": 34.0299,
+      "dur": 0.7539,
+      "variations": [
+        [
+          34.0299,
+          0.7539
+        ],
+        [
+          35.0339,
+          0.84
+        ],
+        [
+          36.1239,
+          0.798
+        ]
+      ]
+    },
+    "machine.steam": {
+      "start": 37.1719,
+      "dur": 1.52,
+      "variations": [
+        [
+          37.1719,
+          1.52
+        ],
+        [
+          38.942,
+          1.52
+        ]
+      ]
+    },
+    "machine.conveyor": {
+      "start": 40.712,
+      "dur": 2.62
+    },
+    "machine.elevator": {
+      "start": 43.5821,
+      "dur": 2.12
+    },
+    "kitchen.kettle": {
+      "start": 45.9521,
+      "dur": 2.646
+    },
+    "kitchen.microwave": {
+      "start": 48.8481,
+      "dur": 1.64
+    },
+    "kitchen.blender": {
+      "start": 50.7381,
+      "dur": 2.64
+    },
+    "kitchen.egg.crack": {
+      "start": 53.6282,
+      "dur": 0.4655,
+      "variations": [
+        [
+          53.6282,
+          0.4655
+        ],
+        [
+          54.3436,
+          0.6186
+        ]
+      ]
+    },
+    "kitchen.can.open": {
+      "start": 55.2122,
+      "dur": 0.8154,
+      "variations": [
+        [
+          55.2122,
+          0.8154
+        ],
+        [
+          56.2776,
+          0.4796
+        ]
+      ]
+    },
+    "kitchen.bottle.open": {
+      "start": 57.0072,
+      "dur": 0.6106,
+      "variations": [
+        [
+          57.0072,
+          0.6106
+        ],
+        [
+          57.8678,
+          1.12
+        ]
+      ]
+    },
+    "kitchen.cutlery": {
+      "start": 59.2379,
+      "dur": 0.955,
+      "variations": [
+        [
+          59.2379,
+          0.955
+        ],
+        [
+          60.4429,
+          0.8676
+        ]
+      ]
+    },
+    "kitchen.sip": {
+      "start": 61.5605,
+      "dur": 1.0788,
+      "variations": [
+        [
+          61.5605,
+          1.0788
+        ],
+        [
+          62.8893,
+          1.1038
+        ]
+      ]
+    },
+    "phone.ring": {
+      "start": 64.2431,
+      "dur": 3.12
+    },
+    "phone.vibrate": {
+      "start": 67.6132,
+      "dur": 1.9574,
+      "variations": [
+        [
+          67.6132,
+          1.9574
+        ],
+        [
+          69.8206,
+          2.12
+        ]
+      ]
+    },
+    "office.printer": {
+      "start": 72.1906,
+      "dur": 2.9489
+    },
+    "office.drawer": {
+      "start": 75.3894,
+      "dur": 0.9811,
+      "variations": [
+        [
+          75.3894,
+          0.9811
+        ],
+        [
+          76.6205,
+          0.9944
+        ]
+      ]
+    },
+    "office.stapler": {
+      "start": 77.865,
+      "dur": 0.4663,
+      "variations": [
+        [
+          77.865,
+          0.4663
+        ],
+        [
+          78.5813,
+          0.5397
+        ]
+      ]
+    },
+    "rest.order.bell": {
+      "start": 79.3709,
+      "dur": 1.32,
+      "variations": [
+        [
+          79.3709,
+          1.32
+        ],
+        [
+          80.941,
+          1.32
+        ]
+      ]
+    },
+    "rest.register": {
+      "start": 82.511,
+      "dur": 1.72
+    },
+    "rest.receipt": {
+      "start": 84.4811,
+      "dur": 1.3094
+    },
+    "rest.coffee": {
+      "start": 86.0404,
+      "dur": 2.64
+    },
+    "rest.grill": {
+      "start": 88.9305,
+      "dur": 2.62
+    },
+    "rest.fryer": {
+      "start": 91.8005,
+      "dur": 2.12
+    },
+    "rest.plate": {
+      "start": 94.1706,
+      "dur": 0.3208,
+      "variations": [
+        [
+          94.1706,
+          0.3208
+        ],
+        [
+          94.7414,
+          0.3861
+        ],
+        [
+          95.3775,
+          0.4438
+        ]
+      ]
+    },
+    "rest.icecream": {
+      "start": 96.0713,
+      "dur": 1.5509
+    },
+    "rest.customer.happy": {
+      "start": 97.8722,
+      "dur": 1.0719,
+      "variations": [
+        [
+          97.8722,
+          1.0719
+        ],
+        [
+          99.1941,
+          1.52
+        ]
+      ]
+    },
+    "rest.customer.angry": {
+      "start": 100.9642,
+      "dur": 1.3123,
+      "variations": [
+        [
+          100.9642,
+          1.3123
+        ],
+        [
+          102.5265,
+          1.3672
+        ]
+      ]
+    },
+    "rest.chop.fast": {
+      "start": 104.1437,
+      "dur": 1.5653
+    },
+    "rest.pour.drink": {
+      "start": 105.959,
+      "dur": 1.5385
+    },
+    "build.crane": {
+      "start": 107.7474,
+      "dur": 2.5754
+    },
+    "build.bulldozer": {
+      "start": 110.5728,
+      "dur": 2.6176
+    },
+    "build.jackhammer": {
+      "start": 113.4405,
+      "dur": 9.1815
+    },
+    "build.cement": {
+      "start": 122.8719,
+      "dur": 9.1779
+    },
+    "build.weld": {
+      "start": 132.2998,
+      "dur": 1.92,
+      "variations": [
+        [
+          132.2998,
+          1.92
+        ],
+        [
+          134.4699,
+          1.92
+        ]
+      ]
+    },
+    "build.brick": {
+      "start": 136.6399,
+      "dur": 0.4513,
+      "variations": [
+        [
+          136.6399,
+          0.4513
+        ],
+        [
+          137.3412,
+          0.6213
+        ],
+        [
+          138.2125,
+          0.3297
+        ]
+      ]
+    },
+    "build.glass.fit": {
+      "start": 138.7922,
+      "dur": 0.3035
+    },
+    "build.scaffold": {
+      "start": 139.3456,
+      "dur": 1.32,
+      "variations": [
+        [
+          139.3456,
+          1.32
+        ],
+        [
+          140.9157,
+          1.32
+        ]
+      ]
+    },
+    "build.measure": {
+      "start": 142.4857,
+      "dur": 0.8121,
+      "variations": [
+        [
+          142.4857,
+          0.8121
+        ],
+        [
+          143.5478,
+          0.5692
+        ]
+      ]
+    },
+    "build.complete": {
+      "start": 144.3671,
+      "dur": 2.12
+    },
+    "build.saw.power": {
+      "start": 146.7371,
+      "dur": 1.92
+    },
+    "build.nail.gun": {
+      "start": 148.9072,
+      "dur": 0.5548,
+      "variations": [
+        [
+          148.9072,
+          0.5548
+        ],
+        [
+          149.712,
+          0.64
+        ],
+        [
+          150.602,
+          0.64
+        ]
+      ]
+    }
+  }
+}

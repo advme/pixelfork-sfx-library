@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## v0.9.0-A — split into 15 themed bundles; music starts instantly
+- Agent: A (Claude) · Date: 2026-09-24
+- Why: Pixelfork V2 games were silent for 1-2 minutes on Safari. Measured by the V2 session:
+  WebKit takes **78 s** to decode `casual.m4a` (Chromium 0.8 s), and WebKit decodes one file at
+  a time, so `SFX.music()` sat in the queue behind the sprite. Decoded, that sprite was **258 MB**.
+- Done:
+  - **15 themed bundles** (`core`, `vehicles`, `world`, `casual`, `action`, `fantasy`, `scifi`,
+    `animals`, `life`, `platformer`, `sports`, `casino`, `fishing`, `horror`, `holiday`), each
+    under 2.2 MB. `SFX.load('casual')` now fetches the index plus `core` (1.3 MB) instead of
+    16.8 MB. A theme is fetched the first time one of its sounds plays; `{themes:[...]}` and
+    `SFX.preload()` load them up front.
+  - **Music streams immediately** through an audio element (17 ms to first sound, measured),
+    then hands over to the decoded buffer at the loop point so the seam stays sample-accurate.
+    Verified over 28 s of captured output: no dropout, accents repeating exactly 16.0 s apart.
+  - Board shows each sound's theme, searching a theme name filters to it, and the audit
+    preloads everything first.
+- Not done: not yet measured on real Safari/iOS — the WebKit numbers above are the V2 session's.
+
 ## v0.8.0-A — seamless music loops, Loop End, exact lengths, board fixes
 - Agent: A (Claude) · Date: 2026-09-22
 - Done:

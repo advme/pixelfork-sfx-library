@@ -1,0 +1,370 @@
+{
+  "name": "vehicles",
+  "sprite": {
+    "webm": "packs/vehicles.webm",
+    "m4a": "packs/vehicles.m4a"
+  },
+  "spriteDuration": 169.4169,
+  "sounds": {
+    "engine.start": {
+      "start": 0.0,
+      "dur": 1.92
+    },
+    "engine.loop": {
+      "start": 2.17,
+      "dur": 1.92
+    },
+    "vehicle.brake": {
+      "start": 4.3401,
+      "dur": 1.32
+    },
+    "vehicle.crash": {
+      "start": 5.9101,
+      "dur": 1.64
+    },
+    "vehicle.horn": {
+      "start": 7.8002,
+      "dur": 0.6045,
+      "variations": [
+        [
+          7.8002,
+          0.6045
+        ],
+        [
+          8.6547,
+          1.04
+        ]
+      ]
+    },
+    "vehicle.rev": {
+      "start": 9.9447,
+      "dur": 1.6761
+    },
+    "vehicle.gear": {
+      "start": 11.8708,
+      "dur": 0.3976,
+      "variations": [
+        [
+          11.8708,
+          0.3976
+        ],
+        [
+          12.5184,
+          0.3754
+        ]
+      ]
+    },
+    "vehicle.helicopter": {
+      "start": 13.1439,
+      "dur": 7.62
+    },
+    "vehicle.plane": {
+      "start": 21.0139,
+      "dur": 2.8909
+    },
+    "vehicle.train": {
+      "start": 24.1548,
+      "dur": 3.64
+    },
+    "vehicle.boat": {
+      "start": 28.0449,
+      "dur": 6.12
+    },
+    "vehicle.bike": {
+      "start": 34.4149,
+      "dur": 1.04
+    },
+    "car.idle": {
+      "start": 35.705,
+      "dur": 7.32
+    },
+    "car.accelerate": {
+      "start": 43.275,
+      "dur": 3.0718
+    },
+    "car.decelerate": {
+      "start": 46.5968,
+      "dur": 2.64
+    },
+    "car.cruise": {
+      "start": 49.4868,
+      "dur": 6.4404
+    },
+    "car.redline": {
+      "start": 56.1772,
+      "dur": 9.32
+    },
+    "car.rev.blip": {
+      "start": 65.7473,
+      "dur": 1.1799,
+      "variations": [
+        [
+          65.7473,
+          1.1799
+        ],
+        [
+          67.1771,
+          1.32
+        ],
+        [
+          68.7472,
+          1.2094
+        ]
+      ]
+    },
+    "car.start": {
+      "start": 70.2066,
+      "dur": 2.5298
+    },
+    "car.start.fail": {
+      "start": 72.9864,
+      "dur": 2.5038
+    },
+    "car.stall": {
+      "start": 75.7402,
+      "dur": 1.64
+    },
+    "car.off": {
+      "start": 77.6303,
+      "dur": 1.7326
+    },
+    "car.drift": {
+      "start": 79.6129,
+      "dur": 3.0238
+    },
+    "car.skid": {
+      "start": 82.8867,
+      "dur": 1.0025,
+      "variations": [
+        [
+          82.8867,
+          1.0025
+        ],
+        [
+          84.1392,
+          1.0342
+        ],
+        [
+          85.4234,
+          0.9796
+        ]
+      ]
+    },
+    "car.handbrake": {
+      "start": 86.653,
+      "dur": 2.0805
+    },
+    "car.tyre.squeal": {
+      "start": 88.9835,
+      "dur": 5.3603
+    },
+    "car.gear.up": {
+      "start": 94.5938,
+      "dur": 0.6077,
+      "variations": [
+        [
+          94.5938,
+          0.6077
+        ],
+        [
+          95.4515,
+          0.587
+        ]
+      ]
+    },
+    "car.gear.down": {
+      "start": 96.2886,
+      "dur": 1.04,
+      "variations": [
+        [
+          96.2886,
+          1.04
+        ],
+        [
+          97.5786,
+          0.7045
+        ]
+      ]
+    },
+    "car.turbo.spool": {
+      "start": 98.5331,
+      "dur": 2.0105
+    },
+    "car.turbo.blowoff": {
+      "start": 100.7937,
+      "dur": 0.92,
+      "variations": [
+        [
+          100.7937,
+          0.92
+        ],
+        [
+          101.9637,
+          0.92
+        ]
+      ]
+    },
+    "car.nitro": {
+      "start": 103.1337,
+      "dur": 2.64
+    },
+    "car.backfire": {
+      "start": 106.0238,
+      "dur": 1.12,
+      "variations": [
+        [
+          106.0238,
+          1.12
+        ],
+        [
+          107.3938,
+          0.7476
+        ],
+        [
+          108.3914,
+          0.8973
+        ]
+      ]
+    },
+    "car.suspension": {
+      "start": 109.5387,
+      "dur": 0.5694,
+      "variations": [
+        [
+          109.5387,
+          0.5694
+        ],
+        [
+          110.3582,
+          1.04
+        ]
+      ]
+    },
+    "car.scrape": {
+      "start": 111.6482,
+      "dur": 1.6375
+    },
+    "car.crash.light": {
+      "start": 113.5357,
+      "dur": 0.5591
+    },
+    "car.horn.long": {
+      "start": 114.3449,
+      "dur": 2.12
+    },
+    "car.door.open": {
+      "start": 116.7149,
+      "dur": 0.828,
+      "variations": [
+        [
+          116.7149,
+          0.828
+        ],
+        [
+          117.7929,
+          0.9598
+        ]
+      ]
+    },
+    "car.door.close": {
+      "start": 119.0027,
+      "dur": 0.3995,
+      "variations": [
+        [
+          119.0027,
+          0.3995
+        ],
+        [
+          119.6523,
+          0.3972
+        ]
+      ]
+    },
+    "car.window": {
+      "start": 120.2995,
+      "dur": 1.64
+    },
+    "car.seatbelt": {
+      "start": 122.1895,
+      "dur": 1.5702
+    },
+    "car.indicator": {
+      "start": 124.0097,
+      "dur": 8.6595
+    },
+    "car.wiper": {
+      "start": 132.9192,
+      "dur": 2.8301
+    },
+    "moto.idle": {
+      "start": 135.9993,
+      "dur": 4.92
+    },
+    "moto.rev": {
+      "start": 141.1693,
+      "dur": 2.12,
+      "variations": [
+        [
+          141.1693,
+          2.12
+        ],
+        [
+          143.5394,
+          2.0734
+        ]
+      ]
+    },
+    "moto.pass": {
+      "start": 145.8628,
+      "dur": 2.6119
+    },
+    "truck.horn": {
+      "start": 148.7247,
+      "dur": 2.12
+    },
+    "truck.airbrake": {
+      "start": 151.0948,
+      "dur": 1.64
+    },
+    "truck.idle": {
+      "start": 152.9848,
+      "dur": 7.32
+    },
+    "race.light": {
+      "start": 160.5548,
+      "dur": 0.92,
+      "variations": [
+        [
+          160.5548,
+          0.92
+        ],
+        [
+          161.7249,
+          0.92
+        ]
+      ]
+    },
+    "race.lap": {
+      "start": 162.8949,
+      "dur": 1.32
+    },
+    "race.finish": {
+      "start": 164.465,
+      "dur": 2.64
+    },
+    "race.flag.wave": {
+      "start": 167.355,
+      "dur": 0.6965,
+      "variations": [
+        [
+          167.355,
+          0.6965
+        ],
+        [
+          168.3015,
+          0.8654
+        ]
+      ]
+    }
+  }
+}

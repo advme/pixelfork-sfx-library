@@ -1,0 +1,174 @@
+{
+  "name": "casino",
+  "sprite": {
+    "webm": "packs/casino.webm",
+    "m4a": "packs/casino.m4a"
+  },
+  "spriteDuration": 44.9523,
+  "sounds": {
+    "casino.reel.spin": {
+      "start": 0.0,
+      "dur": 8.0667
+    },
+    "casino.reel.stop": {
+      "start": 8.3167,
+      "dur": 0.4886,
+      "variations": [
+        [
+          8.3167,
+          0.4886
+        ],
+        [
+          9.0553,
+          0.72
+        ],
+        [
+          10.0254,
+          0.5244
+        ]
+      ]
+    },
+    "casino.lever": {
+      "start": 10.7997,
+      "dur": 0.6249
+    },
+    "casino.roulette.spin": {
+      "start": 11.6746,
+      "dur": 1.92
+    },
+    "casino.roulette.drop": {
+      "start": 13.8447,
+      "dur": 1.1113,
+      "variations": [
+        [
+          13.8447,
+          1.1113
+        ],
+        [
+          15.206,
+          1.32
+        ]
+      ]
+    },
+    "casino.chips.stack": {
+      "start": 16.7761,
+      "dur": 1.0264,
+      "variations": [
+        [
+          16.7761,
+          1.0264
+        ],
+        [
+          18.0525,
+          0.9308
+        ],
+        [
+          19.2333,
+          0.7526
+        ]
+      ]
+    },
+    "casino.chips.toss": {
+      "start": 20.2359,
+      "dur": 1.04,
+      "variations": [
+        [
+          20.2359,
+          1.04
+        ],
+        [
+          21.526,
+          0.8845
+        ],
+        [
+          22.6605,
+          0.7678
+        ]
+      ]
+    },
+    "casino.card.deal": {
+      "start": 23.6783,
+      "dur": 0.3736,
+      "variations": [
+        [
+          23.6783,
+          0.3736
+        ],
+        [
+          24.3019,
+          0.3794
+        ],
+        [
+          24.9313,
+          0.3797
+        ],
+        [
+          25.561,
+          0.1055
+        ]
+      ]
+    },
+    "casino.card.flip": {
+      "start": 25.9166,
+      "dur": 0.52,
+      "variations": [
+        [
+          25.9166,
+          0.52
+        ],
+        [
+          26.6866,
+          0.1086
+        ],
+        [
+          27.0452,
+          0.52
+        ]
+      ]
+    },
+    "casino.dice.roll": {
+      "start": 27.8152,
+      "dur": 0.9016,
+      "variations": [
+        [
+          27.8152,
+          0.9016
+        ],
+        [
+          28.9668,
+          1.1531
+        ],
+        [
+          30.37,
+          1.2982
+        ]
+      ]
+    },
+    "casino.dice.shake": {
+      "start": 31.9181,
+      "dur": 1.0412,
+      "variations": [
+        [
+          31.9181,
+          1.0412
+        ],
+        [
+          33.2093,
+          1.2274
+        ]
+      ]
+    },
+    "casino.payout": {
+      "start": 34.6867,
+      "dur": 2.5069
+    },
+    "casino.bell": {
+      "start": 37.4436,
+      "dur": 2.12
+    },
+    "casino.ambience": {
+      "start": 39.8136,
+      "dur": 4.8886
+    }
+  }
+}

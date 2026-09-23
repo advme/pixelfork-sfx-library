@@ -1,0 +1,104 @@
+{
+  "name": "fishing",
+  "sprite": {
+    "webm": "packs/fishing.webm",
+    "m4a": "packs/fishing.m4a"
+  },
+  "spriteDuration": 35.0423,
+  "sounds": {
+    "fish.cast": {
+      "start": 0.0,
+      "dur": 1.52,
+      "variations": [
+        [
+          0.0,
+          1.52
+        ],
+        [
+          1.77,
+          1.52
+        ]
+      ]
+    },
+    "fish.reel.in": {
+      "start": 3.5401,
+      "dur": 8.7991
+    },
+    "fish.reel.fast": {
+      "start": 12.5892,
+      "dur": 2.1126
+    },
+    "fish.line.snap": {
+      "start": 14.9518,
+      "dur": 0.771
+    },
+    "fish.bob": {
+      "start": 15.9728,
+      "dur": 0.6712,
+      "variations": [
+        [
+          15.9728,
+          0.6712
+        ],
+        [
+          16.894,
+          0.8457
+        ],
+        [
+          17.9897,
+          0.7094
+        ]
+      ]
+    },
+    "fish.catch": {
+      "start": 18.9491,
+      "dur": 1.6436,
+      "variations": [
+        [
+          18.9491,
+          1.6436
+        ],
+        [
+          20.8428,
+          1.6183
+        ]
+      ]
+    },
+    "fish.flop": {
+      "start": 22.7111,
+      "dur": 1.2141,
+      "variations": [
+        [
+          22.7111,
+          1.2141
+        ],
+        [
+          24.1752,
+          1.139
+        ]
+      ]
+    },
+    "fish.net": {
+      "start": 25.5643,
+      "dur": 0.9514,
+      "variations": [
+        [
+          25.5643,
+          0.9514
+        ],
+        [
+          26.7657,
+          0.9745
+        ]
+      ]
+    },
+    "fish.tacklebox": {
+      "start": 27.9902,
+      "dur": 0.9602
+    },
+    "fish.water.calm": {
+      "start": 29.2004,
+      "dur": 5.592
+    }
+  }
+}

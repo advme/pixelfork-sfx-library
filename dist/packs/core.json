@@ -1,0 +1,570 @@
+{
+  "name": "core",
+  "sprite": {
+    "webm": "packs/core.webm",
+    "m4a": "packs/core.m4a"
+  },
+  "spriteDuration": 106.9353,
+  "sounds": {
+    "impact.punch": {
+      "start": 0.0,
+      "dur": 0.3,
+      "variations": [
+        [
+          0.0,
+          0.3
+        ],
+        [
+          0.55,
+          0.3
+        ],
+        [
+          1.1,
+          0.3
+        ]
+      ]
+    },
+    "impact.metal": {
+      "start": 1.65,
+      "dur": 0.64,
+      "variations": [
+        [
+          1.65,
+          0.64
+        ],
+        [
+          2.54,
+          0.64
+        ]
+      ]
+    },
+    "impact.wood": {
+      "start": 3.4301,
+      "dur": 0.35,
+      "variations": [
+        [
+          3.4301,
+          0.35
+        ],
+        [
+          4.0301,
+          0.35
+        ]
+      ]
+    },
+    "impact.crit": {
+      "start": 4.6301,
+      "dur": 0.64
+    },
+    "voice.cheer": {
+      "start": 5.5201,
+      "dur": 1.4539
+    },
+    "voice.grunt": {
+      "start": 7.224,
+      "dur": 0.52,
+      "variations": [
+        [
+          7.224,
+          0.52
+        ],
+        [
+          7.9941,
+          0.52
+        ],
+        [
+          8.7641,
+          0.3805
+        ],
+        [
+          9.3946,
+          0.52
+        ]
+      ]
+    },
+    "voice.hurt": {
+      "start": 10.1647,
+      "dur": 0.64,
+      "variations": [
+        [
+          10.1647,
+          0.64
+        ],
+        [
+          11.0547,
+          0.64
+        ],
+        [
+          11.9448,
+          0.64
+        ]
+      ]
+    },
+    "voice.laugh": {
+      "start": 12.8348,
+      "dur": 0.7547
+    },
+    "pickup.food": {
+      "start": 13.8395,
+      "dur": 0.5299,
+      "variations": [
+        [
+          13.8395,
+          0.5299
+        ],
+        [
+          14.6194,
+          0.4933
+        ],
+        [
+          15.3628,
+          0.5768
+        ]
+      ]
+    },
+    "pickup.ammo": {
+      "start": 16.1895,
+      "dur": 0.3254,
+      "variations": [
+        [
+          16.1895,
+          0.3254
+        ],
+        [
+          16.765,
+          0.3435
+        ]
+      ]
+    },
+    "reward.chest": {
+      "start": 17.3584,
+      "dur": 1.1073
+    },
+    "reward.jackpot": {
+      "start": 18.7158,
+      "dur": 1.4815
+    },
+    "state.win": {
+      "start": 20.4472,
+      "dur": 1.4925
+    },
+    "state.lose": {
+      "start": 22.1897,
+      "dur": 1.48
+    },
+    "state.gameover": {
+      "start": 23.9198,
+      "dur": 2.32
+    },
+    "state.levelup": {
+      "start": 26.4898,
+      "dur": 1.7072
+    },
+    "state.newrecord": {
+      "start": 28.447,
+      "dur": 2.12
+    },
+    "match.blast": {
+      "start": 30.817,
+      "dur": 0.84
+    },
+    "match.shuffle": {
+      "start": 31.9071,
+      "dur": 0.8299
+    },
+    "break.glass": {
+      "start": 32.9869,
+      "dur": 1.0
+    },
+    "break.wood": {
+      "start": 34.237,
+      "dur": 0.92,
+      "variations": [
+        [
+          34.237,
+          0.92
+        ],
+        [
+          35.407,
+          0.92
+        ]
+      ]
+    },
+    "break.stone": {
+      "start": 36.5771,
+      "dur": 0.9357,
+      "variations": [
+        [
+          36.5771,
+          0.9357
+        ],
+        [
+          37.7628,
+          0.9742
+        ]
+      ]
+    },
+    "break.pot": {
+      "start": 38.987,
+      "dur": 0.84,
+      "variations": [
+        [
+          38.987,
+          0.84
+        ],
+        [
+          40.077,
+          0.84
+        ]
+      ]
+    },
+    "door.open": {
+      "start": 41.1671,
+      "dur": 0.8023
+    },
+    "door.close": {
+      "start": 42.2193,
+      "dur": 0.84
+    },
+    "voice.countdown.go": {
+      "start": 43.3093,
+      "dur": 0.92
+    },
+    "voice.yay": {
+      "start": 44.4794,
+      "dur": 1.12,
+      "variations": [
+        [
+          44.4794,
+          1.12
+        ],
+        [
+          45.8494,
+          1.12
+        ]
+      ]
+    },
+    "voice.aww": {
+      "start": 47.2195,
+      "dur": 1.12
+    },
+    "object.zip": {
+      "start": 48.5895,
+      "dur": 0.72,
+      "variations": [
+        [
+          48.5895,
+          0.72
+        ],
+        [
+          49.5596,
+          0.5973
+        ]
+      ]
+    },
+    "object.paper.crumple": {
+      "start": 50.4069,
+      "dur": 1.0014,
+      "variations": [
+        [
+          50.4069,
+          1.0014
+        ],
+        [
+          51.6583,
+          0.9545
+        ]
+      ]
+    },
+    "object.page.turn": {
+      "start": 52.8628,
+      "dur": 0.5577,
+      "variations": [
+        [
+          52.8628,
+          0.5577
+        ],
+        [
+          53.6705,
+          0.5894
+        ],
+        [
+          54.5099,
+          0.7029
+        ]
+      ]
+    },
+    "object.book.close": {
+      "start": 55.4628,
+      "dur": 0.92
+    },
+    "object.keyboard": {
+      "start": 56.6328,
+      "dur": 0.1764,
+      "variations": [
+        [
+          56.6328,
+          0.1764
+        ],
+        [
+          57.0592,
+          0.2497
+        ],
+        [
+          57.559,
+          0.3134
+        ],
+        [
+          58.1224,
+          0.1544
+        ],
+        [
+          58.5268,
+          0.3683
+        ]
+      ]
+    },
+    "object.camera": {
+      "start": 59.1451,
+      "dur": 0.64
+    },
+    "object.clock.tick": {
+      "start": 60.0351,
+      "dur": 1.6635
+    },
+    "object.lock": {
+      "start": 61.9486,
+      "dur": 0.72,
+      "variations": [
+        [
+          61.9486,
+          0.72
+        ],
+        [
+          62.9187,
+          0.72
+        ]
+      ]
+    },
+    "object.chain": {
+      "start": 63.8887,
+      "dur": 1.0268,
+      "variations": [
+        [
+          63.8887,
+          1.0268
+        ],
+        [
+          65.1655,
+          1.12
+        ]
+      ]
+    },
+    "object.rope": {
+      "start": 66.5355,
+      "dur": 1.0634
+    },
+    "object.glass.clink": {
+      "start": 67.8489,
+      "dur": 0.6156,
+      "variations": [
+        [
+          67.8489,
+          0.6156
+        ],
+        [
+          68.7145,
+          0.2638
+        ]
+      ]
+    },
+    "object.coin.drop": {
+      "start": 69.2282,
+      "dur": 0.563,
+      "variations": [
+        [
+          69.2282,
+          0.563
+        ],
+        [
+          70.0412,
+          0.6098
+        ],
+        [
+          70.901,
+          0.8065
+        ]
+      ]
+    },
+    "object.switch": {
+      "start": 71.9575,
+      "dur": 0.52,
+      "variations": [
+        [
+          71.9575,
+          0.52
+        ],
+        [
+          72.7276,
+          0.52
+        ]
+      ]
+    },
+    "object.balloon.pop": {
+      "start": 73.4976,
+      "dur": 0.1586,
+      "variations": [
+        [
+          73.4976,
+          0.1586
+        ],
+        [
+          73.9063,
+          0.38
+        ]
+      ]
+    },
+    "object.firework": {
+      "start": 74.5363,
+      "dur": 2.64
+    },
+    "game.spawn": {
+      "start": 77.4263,
+      "dur": 1.04
+    },
+    "game.checkpoint": {
+      "start": 78.7163,
+      "dur": 1.52
+    },
+    "game.wave.start": {
+      "start": 80.4864,
+      "dur": 1.1465
+    },
+    "game.tower.place": {
+      "start": 81.8829,
+      "dur": 0.4563,
+      "variations": [
+        [
+          81.8829,
+          0.4563
+        ],
+        [
+          82.5892,
+          0.3407
+        ]
+      ]
+    },
+    "game.shield.break": {
+      "start": 83.1799,
+      "dur": 1.12
+    },
+    "game.bullet.whizby": {
+      "start": 84.55,
+      "dur": 0.4825,
+      "variations": [
+        [
+          84.55,
+          0.4825
+        ],
+        [
+          85.2825,
+          0.3897
+        ],
+        [
+          85.9222,
+          0.4492
+        ]
+      ]
+    },
+    "game.ricochet": {
+      "start": 86.6214,
+      "dur": 0.7229,
+      "variations": [
+        [
+          86.6214,
+          0.7229
+        ],
+        [
+          87.5943,
+          0.92
+        ],
+        [
+          88.7644,
+          0.7046
+        ]
+      ]
+    },
+    "game.portal": {
+      "start": 89.719,
+      "dur": 1.8856
+    },
+    "door.wood.open": {
+      "start": 91.8545,
+      "dur": 0.7604,
+      "variations": [
+        [
+          91.8545,
+          0.7604
+        ],
+        [
+          92.8649,
+          1.44
+        ]
+      ]
+    },
+    "door.metal.open": {
+      "start": 94.5549,
+      "dur": 1.2349
+    },
+    "door.slide": {
+      "start": 96.0398,
+      "dur": 1.52
+    },
+    "door.knock": {
+      "start": 97.8099,
+      "dur": 0.7235,
+      "variations": [
+        [
+          97.8099,
+          0.7235
+        ],
+        [
+          98.7833,
+          0.5798
+        ]
+      ]
+    },
+    "door.bell": {
+      "start": 99.6131,
+      "dur": 2.12
+    },
+    "door.locked": {
+      "start": 101.9832,
+      "dur": 1.0088,
+      "variations": [
+        [
+          101.9832,
+          1.0088
+        ],
+        [
+          103.242,
+          0.966
+        ]
+      ]
+    },
+    "door.slam": {
+      "start": 104.4579,
+      "dur": 1.32,
+      "variations": [
+        [
+          104.4579,
+          1.32
+        ],
+        [
+          106.028,
+          0.6574
+        ]
+      ]
+    }
+  }
+}

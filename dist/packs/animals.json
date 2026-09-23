@@ -1,0 +1,282 @@
+{
+  "name": "animals",
+  "sprite": {
+    "webm": "packs/animals.webm",
+    "m4a": "packs/animals.m4a"
+  },
+  "spriteDuration": 66.9287,
+  "sounds": {
+    "animal.dog.bark": {
+      "start": 0.0,
+      "dur": 0.92,
+      "variations": [
+        [
+          0.0,
+          0.92
+        ],
+        [
+          1.17,
+          0.4007
+        ],
+        [
+          1.8208,
+          0.542
+        ]
+      ]
+    },
+    "animal.cat.meow": {
+      "start": 2.6128,
+      "dur": 1.04,
+      "variations": [
+        [
+          2.6128,
+          1.04
+        ],
+        [
+          3.9028,
+          1.04
+        ]
+      ]
+    },
+    "animal.bird.chirp": {
+      "start": 5.1929,
+      "dur": 0.72,
+      "variations": [
+        [
+          5.1929,
+          0.72
+        ],
+        [
+          6.1629,
+          0.72
+        ],
+        [
+          7.133,
+          0.7198
+        ]
+      ]
+    },
+    "animal.horse.neigh": {
+      "start": 8.1028,
+      "dur": 1.2547
+    },
+    "animal.cow.moo": {
+      "start": 9.6075,
+      "dur": 1.3372
+    },
+    "animal.sheep.bleat": {
+      "start": 11.1947,
+      "dur": 1.12
+    },
+    "animal.chicken.cluck": {
+      "start": 12.5647,
+      "dur": 0.7719,
+      "variations": [
+        [
+          12.5647,
+          0.7719
+        ],
+        [
+          13.5866,
+          0.8039
+        ]
+      ]
+    },
+    "animal.pig.oink": {
+      "start": 14.6405,
+      "dur": 0.7167
+    },
+    "animal.frog.croak": {
+      "start": 15.6073,
+      "dur": 0.7328,
+      "variations": [
+        [
+          15.6073,
+          0.7328
+        ],
+        [
+          16.5901,
+          0.7312
+        ]
+      ]
+    },
+    "animal.wolf.howl": {
+      "start": 17.5713,
+      "dur": 2.1905
+    },
+    "animal.snake.hiss": {
+      "start": 20.0118,
+      "dur": 1.12
+    },
+    "animal.bee.buzz": {
+      "start": 21.3819,
+      "dur": 1.32,
+      "variations": [
+        [
+          21.3819,
+          1.32
+        ],
+        [
+          22.9519,
+          1.1387
+        ]
+      ]
+    },
+    "creature.roar": {
+      "start": 24.3406,
+      "dur": 1.92
+    },
+    "creature.growl": {
+      "start": 26.5106,
+      "dur": 1.2602,
+      "variations": [
+        [
+          26.5106,
+          1.2602
+        ],
+        [
+          28.0209,
+          1.284
+        ]
+      ]
+    },
+    "creature.squeak": {
+      "start": 29.5549,
+      "dur": 0.64,
+      "variations": [
+        [
+          29.5549,
+          0.64
+        ],
+        [
+          30.4449,
+          0.64
+        ],
+        [
+          31.335,
+          0.64
+        ]
+      ]
+    },
+    "creature.die": {
+      "start": 32.225,
+      "dur": 1.04,
+      "variations": [
+        [
+          32.225,
+          1.04
+        ],
+        [
+          33.515,
+          0.9839
+        ]
+      ]
+    },
+    "farm.plant": {
+      "start": 34.7489,
+      "dur": 0.5896,
+      "variations": [
+        [
+          34.7489,
+          0.5896
+        ],
+        [
+          35.5886,
+          0.84
+        ]
+      ]
+    },
+    "farm.harvest": {
+      "start": 36.6786,
+      "dur": 0.92,
+      "variations": [
+        [
+          36.6786,
+          0.92
+        ],
+        [
+          37.8487,
+          0.7879
+        ],
+        [
+          38.8865,
+          0.7664
+        ]
+      ]
+    },
+    "farm.water": {
+      "start": 39.9029,
+      "dur": 1.52
+    },
+    "animal.dog.growl": {
+      "start": 41.6729,
+      "dur": 1.5048,
+      "variations": [
+        [
+          41.6729,
+          1.5048
+        ],
+        [
+          43.4278,
+          1.589
+        ]
+      ]
+    },
+    "animal.cat.purr": {
+      "start": 45.2668,
+      "dur": 3.1101
+    },
+    "animal.cat.hiss": {
+      "start": 48.6269,
+      "dur": 1.12,
+      "variations": [
+        [
+          48.6269,
+          1.12
+        ],
+        [
+          49.997,
+          0.9816
+        ]
+      ]
+    },
+    "animal.bird.flap": {
+      "start": 51.2286,
+      "dur": 0.6663,
+      "variations": [
+        [
+          51.2286,
+          0.6663
+        ],
+        [
+          52.1449,
+          0.8683
+        ]
+      ]
+    },
+    "animal.rooster": {
+      "start": 53.2632,
+      "dur": 1.5819
+    },
+    "animal.lion.roar": {
+      "start": 55.0951,
+      "dur": 1.9733
+    },
+    "animal.bear.growl": {
+      "start": 57.3184,
+      "dur": 2.0361
+    },
+    "animal.owl": {
+      "start": 59.6045,
+      "dur": 1.5341
+    },
+    "animal.seagull": {
+      "start": 61.3886,
+      "dur": 1.92
+    },
+    "animal.horse.gallop": {
+      "start": 63.5586,
+      "dur": 3.12
+    }
+  }
+}

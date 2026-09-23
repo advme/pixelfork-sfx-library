@@ -1,0 +1,334 @@
+{
+  "name": "fantasy",
+  "sprite": {
+    "webm": "packs/fantasy.webm",
+    "m4a": "packs/fantasy.m4a"
+  },
+  "spriteDuration": 88.628,
+  "sounds": {
+    "magic.fire": {
+      "start": 0.0,
+      "dur": 0.9476,
+      "variations": [
+        [
+          0.0,
+          0.9476
+        ],
+        [
+          1.1976,
+          0.8771
+        ]
+      ]
+    },
+    "magic.ice": {
+      "start": 2.3247,
+      "dur": 1.04
+    },
+    "rpg.potion": {
+      "start": 3.6147,
+      "dur": 0.7876,
+      "variations": [
+        [
+          3.6147,
+          0.7876
+        ],
+        [
+          4.6524,
+          0.7044
+        ]
+      ]
+    },
+    "rpg.scroll": {
+      "start": 5.6068,
+      "dur": 1.022
+    },
+    "rpg.armor.equip": {
+      "start": 6.8787,
+      "dur": 1.04,
+      "variations": [
+        [
+          6.8787,
+          1.04
+        ],
+        [
+          8.1688,
+          1.04
+        ]
+      ]
+    },
+    "rpg.sword.draw": {
+      "start": 9.4588,
+      "dur": 0.92,
+      "variations": [
+        [
+          9.4588,
+          0.92
+        ],
+        [
+          10.6289,
+          0.92
+        ]
+      ]
+    },
+    "rpg.spell.cast": {
+      "start": 11.7989,
+      "dur": 1.44
+    },
+    "rpg.curse": {
+      "start": 13.4889,
+      "dur": 1.3779
+    },
+    "rpg.enchant": {
+      "start": 15.1168,
+      "dur": 1.92
+    },
+    "rpg.quest.accept": {
+      "start": 17.2868,
+      "dur": 0.8757
+    },
+    "rpg.gold": {
+      "start": 18.4126,
+      "dur": 1.32,
+      "variations": [
+        [
+          18.4126,
+          1.32
+        ],
+        [
+          19.9826,
+          1.2309
+        ]
+      ]
+    },
+    "rpg.trap": {
+      "start": 21.4635,
+      "dur": 1.04,
+      "variations": [
+        [
+          21.4635,
+          1.04
+        ],
+        [
+          22.7536,
+          1.04
+        ]
+      ]
+    },
+    "magic.lightning.cast": {
+      "start": 24.0436,
+      "dur": 1.52
+    },
+    "magic.lightning.hit": {
+      "start": 25.8137,
+      "dur": 1.32,
+      "variations": [
+        [
+          25.8137,
+          1.32
+        ],
+        [
+          27.3837,
+          1.32
+        ]
+      ]
+    },
+    "magic.fire.cast": {
+      "start": 28.9537,
+      "dur": 1.44
+    },
+    "magic.fire.hit": {
+      "start": 30.6438,
+      "dur": 1.32,
+      "variations": [
+        [
+          30.6438,
+          1.32
+        ],
+        [
+          32.2138,
+          1.32
+        ]
+      ]
+    },
+    "magic.ice.cast": {
+      "start": 33.7839,
+      "dur": 1.44
+    },
+    "magic.ice.hit": {
+      "start": 35.4739,
+      "dur": 1.1883,
+      "variations": [
+        [
+          35.4739,
+          1.1883
+        ],
+        [
+          36.9122,
+          1.32
+        ]
+      ]
+    },
+    "magic.wind": {
+      "start": 38.4822,
+      "dur": 1.5163
+    },
+    "magic.earth": {
+      "start": 40.2484,
+      "dur": 1.72
+    },
+    "magic.holy": {
+      "start": 42.2185,
+      "dur": 2.12
+    },
+    "magic.dark": {
+      "start": 44.5885,
+      "dur": 1.8711
+    },
+    "magic.shield.up": {
+      "start": 46.7097,
+      "dur": 1.32
+    },
+    "magic.shield.hit": {
+      "start": 48.2797,
+      "dur": 0.92,
+      "variations": [
+        [
+          48.2797,
+          0.92
+        ],
+        [
+          49.4497,
+          0.92
+        ]
+      ]
+    },
+    "med.gate": {
+      "start": 50.6198,
+      "dur": 2.797
+    },
+    "med.drawbridge": {
+      "start": 53.6667,
+      "dur": 3.0037
+    },
+    "med.portcullis": {
+      "start": 56.9204,
+      "dur": 1.0458
+    },
+    "med.catapult": {
+      "start": 58.2162,
+      "dur": 1.1528
+    },
+    "med.siege.impact": {
+      "start": 59.619,
+      "dur": 2.32
+    },
+    "med.arrow.volley": {
+      "start": 62.189,
+      "dur": 1.8478
+    },
+    "med.arrow.hit": {
+      "start": 64.2868,
+      "dur": 0.72,
+      "variations": [
+        [
+          64.2868,
+          0.72
+        ],
+        [
+          65.2569,
+          0.72
+        ],
+        [
+          66.2269,
+          0.3427
+        ]
+      ]
+    },
+    "med.torch.mount": {
+      "start": 66.8197,
+      "dur": 0.8361,
+      "variations": [
+        [
+          66.8197,
+          0.8361
+        ],
+        [
+          67.9058,
+          1.12
+        ]
+      ]
+    },
+    "med.dungeon.door": {
+      "start": 69.2758,
+      "dur": 2.2924
+    },
+    "med.chest.lock": {
+      "start": 71.8183,
+      "dur": 1.1048,
+      "variations": [
+        [
+          71.8183,
+          1.1048
+        ],
+        [
+          73.1731,
+          1.2218
+        ]
+      ]
+    },
+    "med.coin.purse": {
+      "start": 74.6449,
+      "dur": 1.0811,
+      "variations": [
+        [
+          74.6449,
+          1.0811
+        ],
+        [
+          75.976,
+          1.12
+        ]
+      ]
+    },
+    "med.tavern": {
+      "start": 77.346,
+      "dur": 5.5448
+    },
+    "med.anvil": {
+      "start": 83.1408,
+      "dur": 0.3796,
+      "variations": [
+        [
+          83.1408,
+          0.3796
+        ],
+        [
+          83.7704,
+          0.3787
+        ],
+        [
+          84.3991,
+          0.3796
+        ],
+        [
+          85.0287,
+          0.38
+        ]
+      ]
+    },
+    "med.scroll.open": {
+      "start": 85.6587,
+      "dur": 1.2096,
+      "variations": [
+        [
+          85.6587,
+          1.2096
+        ],
+        [
+          87.1182,
+          1.2598
+        ]
+      ]
+    }
+  }
+}

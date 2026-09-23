@@ -1,0 +1,68 @@
+{
+  "name": "horror",
+  "sprite": {
+    "webm": "packs/horror.webm",
+    "m4a": "packs/horror.m4a"
+  },
+  "spriteDuration": 33.5998,
+  "sounds": {
+    "horror.heartbeat": {
+      "start": 0.0,
+      "dur": 1.92
+    },
+    "horror.whisper": {
+      "start": 2.17,
+      "dur": 2.0635
+    },
+    "horror.creak": {
+      "start": 4.4836,
+      "dur": 2.0619,
+      "variations": [
+        [
+          4.4836,
+          2.0619
+        ],
+        [
+          6.7955,
+          1.9959
+        ]
+      ]
+    },
+    "horror.jumpscare": {
+      "start": 9.0414,
+      "dur": 1.64
+    },
+    "horror.breathing": {
+      "start": 10.9314,
+      "dur": 2.2171
+    },
+    "horror.bell": {
+      "start": 13.3985,
+      "dur": 3.12
+    },
+    "horror.scream": {
+      "start": 16.7686,
+      "dur": 1.8505
+    },
+    "horror.growl.deep": {
+      "start": 18.869,
+      "dur": 2.5051
+    },
+    "horror.musicbox": {
+      "start": 21.6241,
+      "dur": 4.044
+    },
+    "horror.knock.slow": {
+      "start": 25.9182,
+      "dur": 1.7569
+    },
+    "horror.laugh": {
+      "start": 27.9251,
+      "dur": 1.8546
+    },
+    "horror.static": {
+      "start": 30.0297,
+      "dur": 3.32
+    }
+  }
+}

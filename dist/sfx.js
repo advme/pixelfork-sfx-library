@@ -16,10 +16,11 @@
 (function (global) {
   'use strict';
 
-  var VERSION = '0.8.0';
+  var VERSION = '0.9.0';
   var STORE_KEY = 'pixelfork.sfx';
   var CATEGORIES = ['ui', 'game', 'reward', 'music'];
   var MAX_VOICES = 24;          // hard cap on simultaneous one-shots
+  var LATE_PLAY_MS = 1200;      // drop a lazily-loaded play that arrives later than this
   var DEFAULT_MIN_GAP = 25;     // ms between two plays of the same name
 
   /* ---------------------------------------------------------------- state */
@@ -27,11 +28,13 @@
   var ctx = null;               // AudioContext (created on demand)
   var nodes = {};               // master + per-category GainNodes
   var packs = {};               // name -> { manifest, buffer }
+  var bundles = {};             // pack -> theme -> in-flight/settled load promise
+  var buffers = {};             // "pack:theme" -> decoded sprite
   var sounds = {};              // "ui.tap" -> definition (merged from packs)
   var voices = [];              // live one-shot sources
   var lastPlay = {};            // name -> timestamp, for throttling
   var lastVariant = {};         // name -> last variation index used
-  var music = { name: null, src: null, gain: null, token: 0 };
+  var music = { name: null, src: null, gain: null, el: null, token: 0 };
   var unlocked = false;
   var attached = false;
   var readyResolve;
@@ -188,22 +191,33 @@
         return r.json();
       })
       .then(function (manifest) {
+        var packName = manifest.name || pack;
         registerSounds(manifest);
-        packs[manifest.name || pack] = {
+        packs[packName] = {
           manifest: manifest,
           buffer: null,
-          trim: manifest.spriteTrim != null ? manifest.spriteTrim : 0.55
+          trim: manifest.spriteTrim != null ? manifest.spriteTrim : 0.55,
+          base: url.replace(/\/[^\/]*$/, '/')
         };
+
+        // Split library: the manifest is a small index and each theme is its
+        // own sprite. Load only what the game asks for; anything else is
+        // fetched the first time a sound from it is played.
+        if (manifest.bundles) {
+          var want = opts.themes || opts.preload || ['core'];
+          if (want === 'all') want = Object.keys(manifest.bundles);
+          return Promise.all([].concat(want).map(function (t) {
+            return ensureBundle(packName, t);
+          }));
+        }
+
+        // One-sprite pack (older manifests).
         if (!manifest.sprite) return null;          // names only, synth fallback
-        var file = BASE + pickFormat(manifest.sprite);
-        return fetch(file)
-          .then(function (r) { return r.arrayBuffer(); })
-          .then(function (data) {
-            var c = ensureContext();
-            if (!c) return null;
-            return c.decodeAudioData(data);
-          })
-          .then(function (buf) { packs[manifest.name || pack].buffer = buf; return buf; });
+        var file = packs[packName].base + pickFormat(manifest.sprite);
+        return fetchBuffer(file).then(function (buf) {
+          packs[packName].buffer = buf;
+          return buf;
+        });
       })
       .then(function () { readyResolve(SFX); return SFX; })
       .catch(function (err) {
@@ -212,6 +226,85 @@
         readyResolve(SFX);
         return SFX;
       });
+  }
+
+  function fetchBuffer(url) {
+    return fetch(url)
+      .then(function (r) {
+        if (!r.ok) throw new Error(url + ' → ' + r.status);
+        return r.arrayBuffer();
+      })
+      .then(function (data) {
+        var c = ensureContext();
+        if (!c) return null;
+        return c.decodeAudioData(data);
+      });
+  }
+
+  // Fetch one theme's sprite, once. Repeat calls get the same promise, so a
+  // burst of plays from an unloaded theme downloads it a single time.
+  function ensureBundle(packName, theme) {
+    var pack = packs[packName];
+    if (!pack || !pack.manifest.bundles || !pack.manifest.bundles[theme]) {
+      return Promise.resolve(null);
+    }
+    bundles[packName] = bundles[packName] || {};
+    if (bundles[packName][theme]) return bundles[packName][theme];
+
+    var info = pack.manifest.bundles[theme];
+    var p = fetch(pack.base + info.json)
+      .then(function (r) {
+        if (!r.ok) throw new Error(info.json + ' → ' + r.status);
+        return r.json();
+      })
+      .then(function (bundle) {
+        // The index carries each sound's description; the bundle carries where
+        // it sits in that theme's sprite. Join them here.
+        for (var name in bundle.sounds) {
+          var def = sounds[name];
+          if (!def) continue;
+          var slice = bundle.sounds[name];
+          def.start = slice.start;
+          def.dur = slice.dur;
+          if (slice.variations) def.variations = slice.variations;
+        }
+        return fetchBuffer(pack.base + pickFormat(bundle.sprite));
+      })
+      .then(function (buf) {
+        buffers[packName + ':' + theme] = buf;
+        emit('theme', { pack: packName, theme: theme });
+        return buf;
+      })
+      .catch(function (err) {
+        if (global.console) console.warn('[SFX] theme "' + theme + '" not loaded.', err.message);
+        bundles[packName][theme] = null;        // let a later play try again
+        return null;
+      });
+
+    bundles[packName][theme] = p;
+    return p;
+  }
+
+  // Load themes up front, e.g. SFX.preload(['vehicles', 'world']) on a loading
+  // screen. 'all' takes the whole library.
+  function preload(list) {
+    var names = Object.keys(packs);
+    var jobs = [];
+    names.forEach(function (packName) {
+      var all = packs[packName].manifest.bundles;
+      if (!all) return;
+      var want = list === 'all' || list == null ? Object.keys(all) : [].concat(list);
+      want.forEach(function (t) { jobs.push(ensureBundle(packName, t)); });
+    });
+    return Promise.all(jobs).then(function () { return SFX; });
+  }
+
+  // Which sprite holds this sound, if any.
+  function bufferFor(def) {
+    var pack = packs[def._pack];
+    if (!pack) return null;
+    if (pack.buffer) return pack.buffer;                     // one-sprite pack
+    return def.theme ? buffers[def._pack + ':' + def.theme] : null;
   }
 
   function registerSounds(manifest) {
@@ -423,7 +516,23 @@
     var volume = (def.gain != null ? def.gain : 1) * (opts.volume != null ? opts.volume : 1);
 
     var pack = packs[def._pack];
-    var buffer = pack && pack.buffer;
+    var buffer = bufferFor(def);
+
+    // The sound is in a theme this game has not loaded yet: fetch it and play
+    // as soon as it lands. A first play is late by the download, not lost.
+    if (!buffer && def.theme && pack && pack.manifest.bundles) {
+      var asked = performance.now();
+      ensureBundle(def._pack, def.theme).then(function (buf) {
+        if (!buf) return;
+        // Only honour it if the game has not moved on. A stale effect firing
+        // seconds later is worse than silence.
+        if (performance.now() - asked < LATE_PLAY_MS) {
+          lastPlay[name] = 0;
+          play(name, opts);
+        }
+      });
+      return null;
+    }
 
     if (buffer && def.start != null) {
       var slice = pickSlice(name, def);
@@ -431,7 +540,7 @@
       src.buffer = buffer;
       src.playbackRate.value = rate;
       var g = c.createGain();
-      g.gain.value = volume * (pack.trim == null ? 0.55 : pack.trim);
+      g.gain.value = volume * (pack && pack.trim != null ? pack.trim : 0.55);
       src.connect(g); g.connect(dest);
       if (opts.loop) {
         // Loop inside the sprite: the slice repeats, nothing after it is heard.
@@ -555,7 +664,7 @@
     opts = opts || {};
     var c = ensureContext();
     if (!c) return;
-    if (music.name === name && music.src) return;
+    if (music.name === name && (music.src || music.el)) return;
 
     var fade = opts.fade != null ? opts.fade : 0.8;
     stopMusic(fade);
@@ -567,37 +676,75 @@
 
     music.name = name;
     var token = ++music.token;
+    var loop = opts.loop !== false;
 
-    function start(buffer) {
-      if (token !== music.token) return;       // a newer call won the race
+    var g = c.createGain();
+    g.gain.setValueAtTime(0.0001, c.currentTime);
+    g.gain.linearRampToValueAtTime(1, c.currentTime + fade);
+    g.connect(nodes.music);
+    music.gain = g;
+
+    function startBuffer(buffer, when, offset) {
       var src = c.createBufferSource();
       src.buffer = buffer;
-      src.loop = opts.loop !== false;
-      var at = src.loop ? loopBounds(src, buffer, def) : 0;
-      // opts.offset: start this many seconds into the track (a negative value
-      // counts back from the end). Used to audition a loop seam without
-      // sitting through the whole track.
-      if (opts.offset) {
-        var len = src.loop ? src.loopEnd - src.loopStart : buffer.duration;
-        var off = opts.offset < 0 ? len + opts.offset : opts.offset;
-        at += Math.max(0, Math.min(len - 0.01, off));
-      }
-      var g = c.createGain();
-      g.gain.setValueAtTime(0.0001, c.currentTime);
-      g.gain.linearRampToValueAtTime(1, c.currentTime + fade);
-      src.connect(g); g.connect(nodes.music);
-      src.start(0, at);
+      src.loop = loop;
+      var at = loop ? loopBounds(src, buffer, def) : 0;
+      if (offset) at += offset;
+      src.connect(g);
+      src.start(when || 0, at);
       src.onended = function () {
         if (music.src !== src) return;         // replaced or stopped already
-        music = { name: null, src: null, gain: null, token: music.token };
+        music = { name: null, src: null, gain: null, el: null, token: music.token };
         emit('musicend', { name: name });
       };
       music.src = src;
-      music.gain = g;
-      emit('music', { name: name });
+      return src;
     }
 
-    if (musicCache[name]) { start(musicCache[name]); return; }
+    // Where in the track to begin. opts.offset counts back from the end when
+    // negative, so a caller can audition the loop seam.
+    function offsetFor(len) {
+      if (!opts.offset) return 0;
+      var off = opts.offset < 0 ? len + opts.offset : opts.offset;
+      return Math.max(0, Math.min(len - 0.01, off));
+    }
+
+    if (musicCache[name]) {                    // already decoded: no wait at all
+      var b = musicCache[name];
+      startBuffer(b, 0, offsetFor(def.dur || b.duration));
+      emit('music', { name: name });
+      return;
+    }
+
+    // Safari decodes one file at a time, and decodeAudioData on a pack sprite
+    // takes it tens of seconds. Music asked for during that wait used to sit in
+    // the queue behind it — silence for a minute or more. An audio element
+    // streams instead of decoding, so it starts straight away and never queues.
+    // The decoded buffer still arrives in the background and takes over at the
+    // loop point, because only a buffer can loop without a gap.
+    var el = null, elGain = null;
+    if (global.Audio && opts.stream !== false) {
+      try {
+        el = new global.Audio();
+        el.crossOrigin = 'anonymous';
+        el.preload = 'auto';
+        el.loop = loop;                        // gapped, but only until the swap
+        el.src = url;
+        // Its own gain, so the handover can cut the stream at exactly the
+        // sample the buffer starts — otherwise both play for a moment.
+        elGain = c.createGain();
+        c.createMediaElementSource(el).connect(elGain);
+        elGain.connect(g);
+        var len0 = def.dur || 0;
+        if (opts.offset && len0) el.currentTime = offsetFor(len0);
+        var p = el.play();
+        if (p && p.catch) p.catch(function () { /* autoplay blocked: unlock hooks retry */ });
+        music.el = el;
+        emit('music', { name: name });
+      } catch (e) {
+        el = null;                             // no element: fall back to decode
+      }
+    }
 
     fetch(url)
       .then(function (r) {
@@ -605,15 +752,69 @@
         return r.arrayBuffer();
       })
       .then(function (data) { return c.decodeAudioData(data); })
-      .then(function (buf) { musicCache[name] = buf; start(buf); })
+      .then(function (buf) {
+        musicCache[name] = buf;
+        if (token !== music.token) return;     // a newer call won the race
+        if (!el) { startBuffer(buf, 0, offsetFor(def.dur || buf.duration)); emit('music', { name: name }); return; }
+        handOver(buf);
+      })
       .catch(function (err) {
         if (global.console) console.warn('[SFX] music "' + name + '" could not load.', err.message);
       });
+
+    // Swap the streaming element for the decoded buffer at the track's end, so
+    // the handover lands on a boundary the listener expects. Both sides are cut
+    // and started on the audio clock, so the join is sample-accurate apart from
+    // the error in the element's reported position.
+    function handOver(buf) {
+      var len = def.dur || buf.duration;
+      if (!loop) {                             // one-shot: let the element finish
+        el.onended = function () {
+          if (music.el !== el) return;
+          music = { name: null, src: null, gain: null, el: null, token: music.token };
+          emit('musicend', { name: name });
+        };
+        return;
+      }
+
+      function schedule() {
+        if (token !== music.token || music.el !== el) return;
+        var left = len - (el.currentTime % len);
+        if (left > 0.3) { setTimeout(schedule, Math.min(2000, (left - 0.25) * 1000)); return; }
+
+        var at = c.currentTime + left;
+        el.loop = false;
+        elGain.gain.setValueAtTime(elGain.gain.value, Math.max(c.currentTime, at - 0.001));
+        elGain.gain.setValueAtTime(0, at);     // sample-accurate cut
+        startBuffer(buf, at, 0);
+        setTimeout(function () {
+          try { el.pause(); } catch (e) { /* already gone */ }
+          if (music.el === el) music.el = null;
+        }, (left + 0.15) * 1000);
+      }
+      schedule();
+    }
   }
 
   function stopMusic(fade) {
     music.token++;
-    if (!music.src) { music.name = null; return; }
+    var el = music.el;
+    if (el) {                                  // streaming handover not done yet
+      var gEl = music.gain;
+      var stopAt = (fade != null ? fade : 0.5);
+      if (gEl && ctx) {
+        var t0 = ctx.currentTime;
+        gEl.gain.cancelScheduledValues(t0);
+        gEl.gain.setValueAtTime(Math.max(0.0001, gEl.gain.value), t0);
+        gEl.gain.exponentialRampToValueAtTime(0.0001, t0 + stopAt);
+      }
+      setTimeout(function () { try { el.pause(); } catch (e) { /* gone */ } }, stopAt * 1000 + 60);
+      music.el = null;
+    }
+    if (!music.src) {
+      music = { name: null, src: null, gain: null, el: null, token: music.token };
+      return;
+    }
     var src = music.src, g = music.gain;
     fade = fade != null ? fade : 0.5;
     if (g && ctx) {
@@ -623,7 +824,7 @@
       g.gain.exponentialRampToValueAtTime(0.0001, t + fade);
     }
     try { src.stop(ctx.currentTime + fade + 0.05); } catch (e) { /* already stopped */ }
-    music = { name: null, src: null, gain: null, token: music.token };
+    music = { name: null, src: null, gain: null, el: null, token: music.token };
   }
 
   // Dip the music so a big moment (win, reward) cuts through.
@@ -792,6 +993,15 @@
     define: function (manifest) { registerSounds(manifest); packs[manifest.name] = { manifest: manifest, buffer: null }; return SFX; },
 
     // Internals, for the test pages only. Not part of the game-facing API.
+    preload: preload,
+    themes: function (pack) {
+      var p = packs[pack || Object.keys(packs)[0]];
+      return p && p.manifest.bundles ? Object.keys(p.manifest.bundles) : [];
+    },
+    loaded: function (theme, pack) {
+      return !!buffers[(pack || Object.keys(packs)[0]) + ':' + theme];
+    },
+
     debug: function () {
       return {
         context: ctx,
@@ -803,7 +1013,9 @@
         unlocked: unlocked,
         packs: Object.keys(packs).map(function (p) {
           return { name: p, hasBuffer: !!packs[p].buffer };
-        })
+        }),
+        themes: Object.keys(buffers),
+        music: { name: music.name, streaming: !!music.el, buffered: !!music.src }
       };
     }
   };

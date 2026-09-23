@@ -1,0 +1,98 @@
+{
+  "name": "holiday",
+  "sprite": {
+    "webm": "packs/holiday.webm",
+    "m4a": "packs/holiday.m4a"
+  },
+  "spriteDuration": 29.7539,
+  "sounds": {
+    "holiday.sleighbells": {
+      "start": 0.0,
+      "dur": 2.0686
+    },
+    "holiday.church.bells": {
+      "start": 2.3186,
+      "dur": 4.0998
+    },
+    "holiday.party.horn": {
+      "start": 6.6684,
+      "dur": 0.92,
+      "variations": [
+        [
+          6.6684,
+          0.92
+        ],
+        [
+          7.8385,
+          0.7478
+        ],
+        [
+          8.8362,
+          0.6638
+        ]
+      ]
+    },
+    "holiday.confetti": {
+      "start": 9.75,
+      "dur": 1.72
+    },
+    "holiday.birthday": {
+      "start": 11.72,
+      "dur": 2.0863
+    },
+    "holiday.cork.pop": {
+      "start": 14.0563,
+      "dur": 1.52,
+      "variations": [
+        [
+          14.0563,
+          1.52
+        ],
+        [
+          15.8263,
+          0.7692
+        ]
+      ]
+    },
+    "holiday.halloween.creak": {
+      "start": 16.8456,
+      "dur": 2.4479
+    },
+    "holiday.organ": {
+      "start": 19.5434,
+      "dur": 2.5278
+    },
+    "holiday.newyear": {
+      "start": 22.3212,
+      "dur": 2.9925
+    },
+    "holiday.cracker": {
+      "start": 25.5637,
+      "dur": 0.6519,
+      "variations": [
+        [
+          25.5637,
+          0.6519
+        ],
+        [
+          26.4657,
+          0.5857
+        ]
+      ]
+    },
+    "holiday.wrapping": {
+      "start": 27.3014,
+      "dur": 1.1316,
+      "variations": [
+        [
+          27.3014,
+          1.1316
+        ],
+        [
+          28.683,
+          0.8209
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,574 @@
+{
+  "name": "casual",
+  "sprite": {
+    "webm": "packs/casual.webm",
+    "m4a": "packs/casual.m4a"
+  },
+  "spriteDuration": 135.2472,
+  "sounds": {
+    "puzzle.tile.place": {
+      "start": 0.0,
+      "dur": 0.1407,
+      "variations": [
+        [
+          0.0,
+          0.1407
+        ],
+        [
+          0.3907,
+          0.1643
+        ],
+        [
+          0.805,
+          0.1626
+        ]
+      ]
+    },
+    "puzzle.tile.slide": {
+      "start": 1.2177,
+      "dur": 0.5831,
+      "variations": [
+        [
+          1.2177,
+          0.5831
+        ],
+        [
+          2.0508,
+          0.5335
+        ],
+        [
+          2.8343,
+          0.64
+        ]
+      ]
+    },
+    "puzzle.snap": {
+      "start": 3.7243,
+      "dur": 0.1769,
+      "variations": [
+        [
+          3.7243,
+          0.1769
+        ],
+        [
+          4.1512,
+          0.1553
+        ],
+        [
+          4.5565,
+          0.4285
+        ]
+      ]
+    },
+    "puzzle.jigsaw": {
+      "start": 5.2351,
+      "dur": 0.64,
+      "variations": [
+        [
+          5.2351,
+          0.64
+        ],
+        [
+          6.1251,
+          0.4339
+        ],
+        [
+          6.809,
+          0.5655
+        ]
+      ]
+    },
+    "puzzle.domino": {
+      "start": 7.6244,
+      "dur": 2.035
+    },
+    "puzzle.chess": {
+      "start": 9.9094,
+      "dur": 0.4284,
+      "variations": [
+        [
+          9.9094,
+          0.4284
+        ],
+        [
+          10.5878,
+          0.441
+        ],
+        [
+          11.2788,
+          0.4407
+        ]
+      ]
+    },
+    "puzzle.rotate": {
+      "start": 11.9695,
+      "dur": 0.3413,
+      "variations": [
+        [
+          11.9695,
+          0.3413
+        ],
+        [
+          12.5608,
+          0.3852
+        ],
+        [
+          13.196,
+          0.3922
+        ]
+      ]
+    },
+    "puzzle.lock": {
+      "start": 13.8382,
+      "dur": 0.2414,
+      "variations": [
+        [
+          13.8382,
+          0.2414
+        ],
+        [
+          14.3296,
+          0.2731
+        ]
+      ]
+    },
+    "puzzle.line.clear": {
+      "start": 14.8527,
+      "dur": 1.04,
+      "variations": [
+        [
+          14.8527,
+          1.04
+        ],
+        [
+          16.1427,
+          1.04
+        ]
+      ]
+    },
+    "puzzle.hint": {
+      "start": 17.4328,
+      "dur": 0.92
+    },
+    "puzzle.undo": {
+      "start": 18.6028,
+      "dur": 0.64
+    },
+    "puzzle.reset": {
+      "start": 19.4929,
+      "dur": 1.0356
+    },
+    "puzzle.correct": {
+      "start": 20.7784,
+      "dur": 0.92
+    },
+    "puzzle.wrong": {
+      "start": 21.9485,
+      "dur": 0.92
+    },
+    "puzzle.timer": {
+      "start": 23.1185,
+      "dur": 2.62
+    },
+    "puzzle.bomb.tick": {
+      "start": 25.9886,
+      "dur": 0.64,
+      "variations": [
+        [
+          25.9886,
+          0.64
+        ],
+        [
+          26.8786,
+          0.64
+        ]
+      ]
+    },
+    "tower.build": {
+      "start": 27.7687,
+      "dur": 1.12,
+      "variations": [
+        [
+          27.7687,
+          1.12
+        ],
+        [
+          29.1387,
+          0.8073
+        ]
+      ]
+    },
+    "tower.sell": {
+      "start": 30.196,
+      "dur": 1.2005
+    },
+    "tower.upgrade": {
+      "start": 31.6465,
+      "dur": 0.9319
+    },
+    "tower.unit.spawn": {
+      "start": 32.8284,
+      "dur": 0.7356,
+      "variations": [
+        [
+          32.8284,
+          0.7356
+        ],
+        [
+          33.814,
+          0.5893
+        ]
+      ]
+    },
+    "tower.unit.march": {
+      "start": 34.6533,
+      "dur": 2.4513
+    },
+    "tower.unit.die": {
+      "start": 37.3546,
+      "dur": 1.04,
+      "variations": [
+        [
+          37.3546,
+          1.04
+        ],
+        [
+          38.6447,
+          1.04
+        ],
+        [
+          39.9347,
+          1.04
+        ]
+      ]
+    },
+    "tower.wave": {
+      "start": 41.2248,
+      "dur": 2.32
+    },
+    "tower.base.damage": {
+      "start": 43.7948,
+      "dur": 1.52,
+      "variations": [
+        [
+          43.7948,
+          1.52
+        ],
+        [
+          45.5648,
+          1.52
+        ]
+      ]
+    },
+    "tower.repair": {
+      "start": 47.3349,
+      "dur": 1.328
+    },
+    "tower.target": {
+      "start": 48.9129,
+      "dur": 0.64,
+      "variations": [
+        [
+          48.9129,
+          0.64
+        ],
+        [
+          49.8029,
+          0.5466
+        ]
+      ]
+    },
+    "idle.tap": {
+      "start": 50.5995,
+      "dur": 0.3388,
+      "variations": [
+        [
+          50.5995,
+          0.3388
+        ],
+        [
+          51.1883,
+          0.2186
+        ],
+        [
+          51.6569,
+          0.2448
+        ],
+        [
+          52.1517,
+          0.2151
+        ],
+        [
+          52.6168,
+          0.2218
+        ]
+      ]
+    },
+    "idle.prestige": {
+      "start": 53.0886,
+      "dur": 2.3036
+    },
+    "idle.offline": {
+      "start": 55.6422,
+      "dur": 2.0393
+    },
+    "idle.autocollect": {
+      "start": 57.9315,
+      "dur": 0.72,
+      "variations": [
+        [
+          57.9315,
+          0.72
+        ],
+        [
+          58.9015,
+          0.4895
+        ],
+        [
+          59.641,
+          0.6007
+        ]
+      ]
+    },
+    "idle.multiplier": {
+      "start": 60.4917,
+      "dur": 1.04,
+      "variations": [
+        [
+          60.4917,
+          1.04
+        ],
+        [
+          61.7818,
+          1.04
+        ]
+      ]
+    },
+    "idle.milestone": {
+      "start": 63.0718,
+      "dur": 1.92
+    },
+    "idle.upgrade.chain": {
+      "start": 65.2419,
+      "dur": 1.4626
+    },
+    "idle.generator": {
+      "start": 66.9545,
+      "dur": 7.62
+    },
+    "idle.coin.rain": {
+      "start": 74.8246,
+      "dur": 2.0958
+    },
+    "idle.levelup": {
+      "start": 77.1704,
+      "dur": 1.32
+    },
+    "shop.ad.reward": {
+      "start": 78.7404,
+      "dur": 2.12
+    },
+    "shop.purchase.ok": {
+      "start": 81.1104,
+      "dur": 1.6618
+    },
+    "shop.purchase.fail": {
+      "start": 83.0222,
+      "dur": 1.32
+    },
+    "shop.restore": {
+      "start": 84.5922,
+      "dur": 1.52
+    },
+    "shop.subscribe": {
+      "start": 86.3623,
+      "dur": 2.32
+    },
+    "shop.streak": {
+      "start": 88.9323,
+      "dur": 0.8475
+    },
+    "shop.piggy": {
+      "start": 90.0299,
+      "dur": 2.12
+    },
+    "shop.wheel.spin": {
+      "start": 92.3999,
+      "dur": 8.62
+    },
+    "shop.wheel.stop": {
+      "start": 101.27,
+      "dur": 1.72
+    },
+    "shop.gift": {
+      "start": 103.24,
+      "dur": 1.5029
+    },
+    "shop.mail": {
+      "start": 104.9928,
+      "dur": 1.0309,
+      "variations": [
+        [
+          104.9928,
+          1.0309
+        ],
+        [
+          106.2737,
+          1.32
+        ]
+      ]
+    },
+    "shop.coin.spend": {
+      "start": 107.8437,
+      "dur": 0.9407,
+      "variations": [
+        [
+          107.8437,
+          0.9407
+        ],
+        [
+          109.0344,
+          1.04
+        ]
+      ]
+    },
+    "emote.clap": {
+      "start": 110.3245,
+      "dur": 0.6731,
+      "variations": [
+        [
+          110.3245,
+          0.6731
+        ],
+        [
+          111.2475,
+          1.2018
+        ]
+      ]
+    },
+    "emote.snap": {
+      "start": 112.6993,
+      "dur": 0.1021,
+      "variations": [
+        [
+          112.6993,
+          0.1021
+        ],
+        [
+          113.0514,
+          0.0975
+        ],
+        [
+          113.3988,
+          0.0927
+        ],
+        [
+          113.7415,
+          0.0848
+        ]
+      ]
+    },
+    "emote.whistle": {
+      "start": 114.0763,
+      "dur": 1.1281,
+      "variations": [
+        [
+          114.0763,
+          1.1281
+        ],
+        [
+          115.4545,
+          1.32
+        ]
+      ]
+    },
+    "emote.cheer.one": {
+      "start": 117.0245,
+      "dur": 1.52,
+      "variations": [
+        [
+          117.0245,
+          1.52
+        ],
+        [
+          118.7946,
+          1.4538
+        ]
+      ]
+    },
+    "emote.taunt": {
+      "start": 120.4984,
+      "dur": 1.32,
+      "variations": [
+        [
+          120.4984,
+          1.32
+        ],
+        [
+          122.0685,
+          1.32
+        ]
+      ]
+    },
+    "emote.kiss": {
+      "start": 123.6385,
+      "dur": 0.5307,
+      "variations": [
+        [
+          123.6385,
+          0.5307
+        ],
+        [
+          124.4192,
+          0.5097
+        ]
+      ]
+    },
+    "emote.sigh": {
+      "start": 125.1789,
+      "dur": 1.2384,
+      "variations": [
+        [
+          125.1789,
+          1.2384
+        ],
+        [
+          126.6672,
+          1.32
+        ]
+      ]
+    },
+    "emote.huh": {
+      "start": 128.2373,
+      "dur": 1.04,
+      "variations": [
+        [
+          128.2373,
+          1.04
+        ],
+        [
+          129.5273,
+          1.04
+        ]
+      ]
+    },
+    "emote.oops": {
+      "start": 130.8174,
+      "dur": 1.014,
+      "variations": [
+        [
+          130.8174,
+          1.014
+        ],
+        [
+          132.0814,
+          0.8866
+        ]
+      ]
+    },
+    "emote.drumroll": {
+      "start": 133.2179,
+      "dur": 1.7793
+    }
+  }
+}

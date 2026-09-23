@@ -1,0 +1,196 @@
+{
+  "name": "scifi",
+  "sprite": {
+    "webm": "packs/scifi.webm",
+    "m4a": "packs/scifi.m4a"
+  },
+  "spriteDuration": 76.8243,
+  "sounds": {
+    "scifi.scanner": {
+      "start": 0.0,
+      "dur": 1.52
+    },
+    "scifi.airlock": {
+      "start": 1.77,
+      "dur": 2.12
+    },
+    "scifi.powerdown": {
+      "start": 4.1401,
+      "dur": 1.92
+    },
+    "scifi.powerup": {
+      "start": 6.3101,
+      "dur": 1.8578
+    },
+    "scifi.glitch": {
+      "start": 8.4179,
+      "dur": 0.92,
+      "variations": [
+        [
+          8.4179,
+          0.92
+        ],
+        [
+          9.5879,
+          0.92
+        ],
+        [
+          10.758,
+          0.92
+        ]
+      ]
+    },
+    "scifi.hologram": {
+      "start": 11.928,
+      "dur": 1.32
+    },
+    "scifi.laser.charge": {
+      "start": 13.498,
+      "dur": 1.92
+    },
+    "scifi.shield.hit": {
+      "start": 15.6681,
+      "dur": 0.9325,
+      "variations": [
+        [
+          15.6681,
+          0.9325
+        ],
+        [
+          16.8506,
+          1.04
+        ]
+      ]
+    },
+    "scifi.alarm": {
+      "start": 18.1406,
+      "dur": 7.12
+    },
+    "scifi.engine.hum": {
+      "start": 25.5107,
+      "dur": 3.62
+    },
+    "scifi.warp": {
+      "start": 29.3807,
+      "dur": 2.2538
+    },
+    "scifi.door": {
+      "start": 31.8845,
+      "dur": 1.32,
+      "variations": [
+        [
+          31.8845,
+          1.32
+        ],
+        [
+          33.4546,
+          1.32
+        ]
+      ]
+    },
+    "scifi.computer.beep": {
+      "start": 35.0246,
+      "dur": 0.64,
+      "variations": [
+        [
+          35.0246,
+          0.64
+        ],
+        [
+          35.9147,
+          0.64
+        ],
+        [
+          36.8047,
+          0.64
+        ]
+      ]
+    },
+    "scifi.robot.talk": {
+      "start": 37.6948,
+      "dur": 1.52,
+      "variations": [
+        [
+          37.6948,
+          1.52
+        ],
+        [
+          39.4648,
+          1.52
+        ]
+      ]
+    },
+    "space.rocket.launch": {
+      "start": 41.2348,
+      "dur": 4.1085
+    },
+    "space.stage.sep": {
+      "start": 45.5933,
+      "dur": 1.39
+    },
+    "space.docking": {
+      "start": 47.2333,
+      "dur": 2.0811
+    },
+    "space.airlock.cycle": {
+      "start": 49.5644,
+      "dur": 3.12
+    },
+    "space.oxygen.alarm": {
+      "start": 52.9344,
+      "dur": 2.62
+    },
+    "space.zero.g": {
+      "start": 55.8044,
+      "dur": 1.3375
+    },
+    "space.cryo": {
+      "start": 57.3919,
+      "dur": 2.64
+    },
+    "space.radar": {
+      "start": 60.282,
+      "dur": 1.72,
+      "variations": [
+        [
+          60.282,
+          1.72
+        ],
+        [
+          62.252,
+          1.72
+        ]
+      ]
+    },
+    "space.hull.stress": {
+      "start": 64.2221,
+      "dur": 2.8145
+    },
+    "space.thruster": {
+      "start": 67.2865,
+      "dur": 1.12,
+      "variations": [
+        [
+          67.2865,
+          1.12
+        ],
+        [
+          68.6566,
+          1.12
+        ],
+        [
+          70.0266,
+          1.12
+        ]
+      ]
+    },
+    "space.beacon": {
+      "start": 71.3967,
+      "dur": 1.92
+    },
+    "space.warp.charge": {
+      "start": 73.5667,
+      "dur": 3.0076
+    }
+  }
+}

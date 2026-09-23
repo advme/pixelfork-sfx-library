@@ -23,6 +23,7 @@ plays its built-in synth stand-in for them, so nothing is ever silent.
 Needs ffmpeg (brew install ffmpeg). No Python packages required.
 """
 
+import collections
 import json
 import os
 import re
@@ -30,6 +31,8 @@ import shutil
 import subprocess
 import sys
 import tempfile
+
+import themes
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GAP = 0.25          # seconds of silence between sounds in the sprite
@@ -270,7 +273,11 @@ def build(pack):
 
     warnings = []
     work = tempfile.mkdtemp(prefix='sfxpack-')
-    pieces, cursor, built, missing, code_only = [], 0.0, [], [], []
+    # One sprite per theme: {theme: [pieces]} and a cursor per theme.
+    pieces = collections.defaultdict(list)
+    cursors = collections.defaultdict(float)
+    slices_by_theme = collections.defaultdict(dict)
+    built, missing, code_only = [], [], []
 
     gap_file = os.path.join(work, '_gap.wav')
     silence(gap_file, GAP)
@@ -311,59 +318,93 @@ def build(pack):
             definition.pop('variations', None)
             continue
 
+        theme = themes.theme_for(name, definition)
         slices = []
         for i, src in enumerate(files):
-            out = os.path.join(work, '{:03d}_{}_{}.wav'.format(len(pieces), name.replace('.', '_'), i))
+            out = os.path.join(work, '{}_{:03d}_{}_{}.wav'.format(
+                theme, len(pieces[theme]), name.replace('.', '_'), i))
             dur = prepare(src, out, warnings, definition.get('postFx'),
                           definition.get('minLevelDb'))
-            pieces.append(out)
-            slices.append([round(cursor, 4), round(dur, 4)])
-            cursor += dur + GAP
-            pieces.append(gap_file)
+            pieces[theme].append(out)
+            slices.append([round(cursors[theme], 4), round(dur, 4)])
+            cursors[theme] += dur + GAP
+            pieces[theme].append(gap_file)
 
-        definition['start'] = slices[0][0]
-        definition['dur'] = slices[0][1]
+        definition['theme'] = theme
         if len(slices) > 1:
-            definition['variations'] = slices
+            definition['takes'] = len(slices)   # the index says how many; the
+                                                # bundle says where each one is
+        entry = {'start': slices[0][0], 'dur': slices[0][1]}
+        if len(slices) > 1:
+            entry['variations'] = slices
+        slices_by_theme[theme][name] = entry
         # Real length, not the requested one. With several takes, the longest,
         # so a game timing around the sound never cuts it off.
         definition['duration'] = round(max(sl[1] for sl in slices), 2)
         built.append('{} ({})'.format(name, len(slices)))
 
     manifest = dict(reg)
-    if pieces:
-        concat_list = os.path.join(work, 'list.txt')
-        with open(concat_list, 'w') as fh:
-            for p in pieces:
-                fh.write("file '{}'\n".format(p.replace("'", r"'\''")))
+    bundles_dir = os.path.join(dist, 'packs')
+    # Wipe the bundle directory: a theme that loses its last sound must not
+    # leave a sprite behind that nothing points at.
+    if os.path.isdir(bundles_dir):
+        shutil.rmtree(bundles_dir)
+    os.makedirs(bundles_dir, exist_ok=True)
 
-        sprite_wav = os.path.join(work, 'sprite.wav')
+    bundles = {}
+    for theme in sorted(pieces):
+        concat_list = os.path.join(work, theme + '_list.txt')
+        with open(concat_list, 'w') as fh:
+            for piece in pieces[theme]:
+                fh.write("file '{}'\n".format(piece.replace("'", r"'\''")))
+
+        sprite_wav = os.path.join(work, theme + '.wav')
         r = run(['ffmpeg', '-y', '-f', 'concat', '-safe', '0', '-i', concat_list,
                  '-c:a', 'pcm_s16le', sprite_wav])
         if r.returncode != 0:
-            sys.exit('ffmpeg concat failed\n' + r.stderr[-800:])
+            sys.exit('ffmpeg concat failed for ' + theme + '\n' + r.stderr[-800:])
 
-        webm = os.path.join(dist, pack + '.webm')
-        m4a = os.path.join(dist, pack + '.m4a')
+        base = os.path.join(bundles_dir, theme)
         run(['ffmpeg', '-y', '-i', sprite_wav, '-c:a', 'libopus',
-             '-b:a', '64k', '-vbr', 'on', '-application', 'audio', webm])
+             '-b:a', '64k', '-vbr', 'on', '-application', 'audio', base + '.webm'])
         run(['ffmpeg', '-y', '-i', sprite_wav, '-c:a', 'aac',
-             '-b:a', '96k', '-movflags', '+faststart', m4a])
+             '-b:a', '96k', '-movflags', '+faststart', base + '.m4a'])
 
-        manifest['sprite'] = {'webm': pack + '.webm', 'm4a': pack + '.m4a'}
-        manifest['spriteDuration'] = round(cursor, 4)
-    else:
-        manifest['sprite'] = None
-        # No source audio: drop any sprite left over from an earlier build, so
-        # dist never ships a file the manifest does not point at.
-        for stale in (pack + '.webm', pack + '.m4a'):
-            path = os.path.join(dist, stale)
-            if os.path.exists(path):
-                os.remove(path)
-                print('  removed stale ' + stale)
+        bundle = {
+            'name': theme,
+            'sprite': {'webm': 'packs/' + theme + '.webm', 'm4a': 'packs/' + theme + '.m4a'},
+            'spriteDuration': round(cursors[theme], 4),
+            'sounds': slices_by_theme[theme],
+        }
+        with open(base + '.json', 'w') as fh:
+            json.dump(bundle, fh, indent=2)
+            fh.write('\n')
+
+        bundles[theme] = {
+            'json': 'packs/' + theme + '.json',
+            'sounds': len(slices_by_theme[theme]),
+            'seconds': round(cursors[theme], 1),
+            'kb': round(os.path.getsize(base + '.m4a') / 1024),
+        }
+
+    manifest['bundles'] = bundles
+    manifest['sprite'] = None          # nothing is in one big sprite any more
+
+    # The old single sprite would otherwise sit in dist for ever.
+    for stale in (pack + '.webm', pack + '.m4a'):
+        path = os.path.join(dist, stale)
+        if os.path.exists(path):
+            os.remove(path)
+            print('  removed the old single sprite: ' + stale)
 
     # The runtime does not need the generation prompts; keep the bundle lean.
     for definition in manifest['sounds'].values():
+        if definition.get('theme'):
+            # Sprite offsets live in the bundle file, not the index. Music keeps
+            # its 'dur': the runtime loops by it.
+            definition.pop('start', None)
+            definition.pop('dur', None)
+            definition.pop('variations', None)
         definition.pop('prompt', None)
         definition.pop('postFx', None)
         definition.pop('minLevelDb', None)
@@ -377,6 +418,11 @@ def build(pack):
     shutil.copyfile(os.path.join(ROOT, 'src', 'sfx.js'), os.path.join(dist, 'sfx.js'))
     shutil.rmtree(work, ignore_errors=True)
 
+    stray = themes.unknown_groups(n for n, d in reg['sounds'].items() if d.get('theme'))
+    if stray:
+        warnings.append('no theme claims these groups, they went to "{}": {}'
+                        .format(themes.DEFAULT, ', '.join(sorted(stray))))
+
     print('Pack "{}" v{}'.format(reg['name'], reg['version']))
     print('  synthesized by code (done, no file needed) : {}'.format(len(code_only)))
     print('  built from real audio                     : {}'.format(len(built)))
@@ -385,10 +431,16 @@ def build(pack):
     print('  still waiting for audio (stand-in playing) : {}'.format(len(missing)))
     for m in missing:
         print('      ' + m)
-    if pieces:
-        for f in (pack + '.webm', pack + '.m4a'):
-            p = os.path.join(dist, f)
-            print('  {:<14} {:>8.1f} KB'.format(f, os.path.getsize(p) / 1024))
+    if bundles:
+        print('  bundles (a game loads core plus what it needs):')
+        for theme in sorted(bundles, key=lambda t: -bundles[t]['kb']):
+            b = bundles[theme]
+            print('      {:<12} {:>3} sounds  {:>6.1f}s  {:>6.0f} KB m4a'
+                  .format(theme, b['sounds'], b['seconds'], b['kb']))
+        print('      {:<12} {:>3} sounds  {:>6.1f}s  {:>6.0f} KB m4a  (all of them)'
+              .format('TOTAL', sum(b['sounds'] for b in bundles.values()),
+                      sum(b['seconds'] for b in bundles.values()),
+                      sum(b['kb'] for b in bundles.values())))
     if music_built:
         total_kb = sum(os.path.getsize(os.path.join(dist_music, f))
                        for f in os.listdir(dist_music) if f.endswith('.webm')) / 1024

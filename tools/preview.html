@@ -3,6 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SFX Library — preview</title>
 <style>
+.theme { color: var(--accent); font-weight: 600; }
 .loading { padding: 24px; line-height: 1.6; color: #9aa4b2; max-width: 620px; }
 .loading code { color: #d7dde5; }
   :root {
@@ -99,7 +100,7 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
   const state = n => {
     const d = SFX.info(n) || {};
     if (d.files || d.file) return 'real';                     // music: its own streamed file
-    if (d.start != null) return 'real';                       // audio file in the sprite
+    if (d.theme || d.start != null) return 'real';            // audio, in that theme's sprite
     if (d.source === 'code') return 'code';                   // finished, made by code
     return 'stub';                                            // AI sound, audio not generated yet
   };
@@ -109,8 +110,15 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
     names.length + ' sounds · ' + count('code') + ' made by code · ' + count('real') +
     ' from real audio · ' + count('stub') + ' still waiting for audio';
 
+  const themeLine = () => {
+    const b = (SFX.debug().packs[0] || {}).name && SFX.themes();
+    const loaded = (b || []).filter(t => SFX.loaded(t));
+    return '<br><b>' + (b || []).length + ' themes</b> — a game loads <code>core</code> plus what it ' +
+      'needs, not all of it. Loaded here: <b>' + (loaded.join(', ') || 'none yet') + '</b>. ' +
+      'Playing a sound pulls in its theme on demand. Type a theme name in the search box to see it.';
+  };
   document.getElementById('note').innerHTML = count('stub') === 0
-    ? 'Every sound is final. Listen through the whole board before publishing a version.'
+    ? 'Every sound is final. Listen through the whole board before publishing a version.' + themeLine()
     : '<b>' + count('code') + ' sounds are finished</b> — they are made by code and never need a file. ' +
       '<b>' + count('stub') + ' are waiting for real audio</b> and are playing a rough stand-in until then. ' +
       'Generate those with the prompts in <code>packs/casual/SOUND-PROMPTS.md</code>, drop the files into ' +
@@ -129,6 +137,7 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
     const q = query.trim().toLowerCase();
     const visible = names.filter(n => matches(n, filter) &&
       (!q || n.toLowerCase().includes(q) ||
+       ((SFX.info(n) || {}).theme || '') === q ||
        ((SFX.info(n) || {}).whenToUse || '').toLowerCase().includes(q)));
 
     shown.textContent = visible.length === names.length
@@ -165,7 +174,7 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
         const label = { real: 'real audio', code: 'code', stub: 'needs audio' }[st];
         const card = document.createElement('div');
         card.className = 'card';
-        const takes = d.variations ? d.variations.length : 1;
+        const takes = d.variations ? d.variations.length : (d.takes || 1);
         card.innerHTML =
           '<div class="top"><span class="name"></span>' +
           '<span class="tag ' + st + '">' + label + '</span></div>' +
@@ -177,7 +186,8 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
             : '') +
           (takes > 1 ? '<button data-v>▶ All ' + takes + ' takes</button>' : '') +
           '<span class="takeno"></span>' +
-          '<span class="meta">' + lengthLabel(d) + '</span></div>';
+          '<span class="meta">' + lengthLabel(d) +
+          (d.theme ? ' · <b class="theme">' + d.theme + '</b>' : '') + '</span></div>';
         card.querySelector('.name').textContent = name;
         card.querySelector('.use').textContent = d.whenToUse || '';
         // Only a looping track is "music". The stingers are music-category
@@ -195,7 +205,7 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
           markMusic(card, name);
         };
         const v = card.querySelector('[data-v]');
-        if (v) v.onclick = () => d.variations.forEach((_, i) => setTimeout(() => SFX.play(name), i * 260));
+        if (v) v.onclick = () => { for (let i = 0; i < takes; i++) setTimeout(() => SFX.play(name), i * 260); };
         wireLoop(card, name, d, takes);
         grid.appendChild(card);
       });
@@ -215,11 +225,12 @@ SFX.load('casual', { url: '../dist/casual.json' }).then(() => {
   // as a range.
   function lengthLabel(d) {
     const f = t => t.toFixed(2) + 's';
-    if (d.variations && d.variations.length > 1) {
+    if (d.variations && d.variations.length > 1) {          // theme is loaded
       const ls = d.variations.map(v => v[1]);
       const lo = Math.min(...ls), hi = Math.max(...ls);
       return lo.toFixed(2) === hi.toFixed(2) ? f(lo) : f(lo) + '–' + f(hi);
     }
+    if (d.takes > 1 && d.duration != null) return d.takes + ' takes, up to ' + f(d.duration);
     if (d.dur != null) return f(d.dur);
     return d.duration != null ? f(d.duration) : '?';
   }
@@ -361,6 +372,8 @@ document.getElementById('combo').onclick = () => {
 };
 document.getElementById('audit').onclick = async () => {
   const btn = document.getElementById('audit');
+  btn.textContent = 'Loading every theme…';    // the board loads themes on demand
+  await SFX.preload('all');
   const d = SFX.debug(), an = d.context.createAnalyser();
   an.fftSize = 2048; d.master.connect(an);
   const buf = new Float32Array(an.fftSize), silent = [];

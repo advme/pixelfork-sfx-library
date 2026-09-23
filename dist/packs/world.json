@@ -1,0 +1,264 @@
+{
+  "name": "world",
+  "sprite": {
+    "webm": "packs/world.webm",
+    "m4a": "packs/world.m4a"
+  },
+  "spriteDuration": 165.7645,
+  "sounds": {
+    "water.splash": {
+      "start": 0.0,
+      "dur": 1.2,
+      "variations": [
+        [
+          0.0,
+          1.2
+        ],
+        [
+          1.45,
+          0.927
+        ],
+        [
+          2.6271,
+          1.2
+        ]
+      ]
+    },
+    "fire.crackle": {
+      "start": 4.0771,
+      "dur": 2.52
+    },
+    "ambience.wind": {
+      "start": 6.8471,
+      "dur": 8.12
+    },
+    "ambience.rain": {
+      "start": 15.2172,
+      "dur": 2.92
+    },
+    "ambience.forest": {
+      "start": 18.3872,
+      "dur": 3.62
+    },
+    "ambience.waves": {
+      "start": 22.2573,
+      "dur": 3.62
+    },
+    "ambience.cave": {
+      "start": 26.1273,
+      "dur": 8.92
+    },
+    "ambience.night": {
+      "start": 35.2973,
+      "dur": 3.62
+    },
+    "ambience.crowd": {
+      "start": 39.1673,
+      "dur": 3.12
+    },
+    "weather.thunder": {
+      "start": 42.5374,
+      "dur": 2.5689
+    },
+    "nature.leaves": {
+      "start": 45.3562,
+      "dur": 0.9168,
+      "variations": [
+        [
+          45.3562,
+          0.9168
+        ],
+        [
+          46.5231,
+          1.04
+        ],
+        [
+          47.8131,
+          1.04
+        ]
+      ]
+    },
+    "nature.water.flow": {
+      "start": 49.1031,
+      "dur": 3.32
+    },
+    "crowd.applause": {
+      "start": 52.6731,
+      "dur": 2.64
+    },
+    "crowd.boo": {
+      "start": 55.5632,
+      "dur": 1.92
+    },
+    "crowd.gasp": {
+      "start": 57.7332,
+      "dur": 1.0624
+    },
+    "water.drip": {
+      "start": 59.0456,
+      "dur": 0.92,
+      "variations": [
+        [
+          59.0456,
+          0.92
+        ],
+        [
+          60.2157,
+          0.6876
+        ],
+        [
+          61.1533,
+          0.5189
+        ]
+      ]
+    },
+    "water.tap": {
+      "start": 61.9222,
+      "dur": 2.52
+    },
+    "water.underwater": {
+      "start": 64.6922,
+      "dur": 5.32
+    },
+    "water.bubble": {
+      "start": 70.2623,
+      "dur": 1.32,
+      "variations": [
+        [
+          70.2623,
+          1.32
+        ],
+        [
+          71.8323,
+          1.1502
+        ],
+        [
+          73.2325,
+          1.32
+        ]
+      ]
+    },
+    "water.dive": {
+      "start": 74.8025,
+      "dur": 1.5061
+    },
+    "water.wave.crash": {
+      "start": 76.5587,
+      "dur": 2.4172
+    },
+    "water.fountain": {
+      "start": 79.2259,
+      "dur": 3.62
+    },
+    "fire.ignite": {
+      "start": 83.0959,
+      "dur": 1.4502
+    },
+    "fire.torch": {
+      "start": 84.7961,
+      "dur": 3.2778
+    },
+    "fire.extinguish": {
+      "start": 88.324,
+      "dur": 1.64
+    },
+    "fire.match": {
+      "start": 90.214,
+      "dur": 1.1042,
+      "variations": [
+        [
+          90.214,
+          1.1042
+        ],
+        [
+          91.5682,
+          1.32
+        ],
+        [
+          93.1383,
+          0.9576
+        ]
+      ]
+    },
+    "fire.lighter": {
+      "start": 94.3458,
+      "dur": 0.759,
+      "variations": [
+        [
+          94.3458,
+          0.759
+        ],
+        [
+          95.3548,
+          0.7256
+        ]
+      ]
+    },
+    "weather.rain.light": {
+      "start": 96.3305,
+      "dur": 4.52
+    },
+    "weather.rain.heavy": {
+      "start": 101.1004,
+      "dur": 5.62
+    },
+    "weather.rain.window": {
+      "start": 106.9705,
+      "dur": 3.62
+    },
+    "weather.storm.wind": {
+      "start": 110.8405,
+      "dur": 7.5233
+    },
+    "weather.thunder.distant": {
+      "start": 118.6138,
+      "dur": 2.7792
+    },
+    "weather.hail": {
+      "start": 121.643,
+      "dur": 4.9356
+    },
+    "weather.blizzard": {
+      "start": 126.8286,
+      "dur": 7.4073
+    },
+    "weather.sandstorm": {
+      "start": 134.4859,
+      "dur": 5.4821
+    },
+    "weather.foghorn": {
+      "start": 140.218,
+      "dur": 3.12
+    },
+    "weather.earthquake": {
+      "start": 143.5881,
+      "dur": 3.64
+    },
+    "weather.avalanche": {
+      "start": 147.4781,
+      "dur": 3.64
+    },
+    "weather.volcano": {
+      "start": 151.3682,
+      "dur": 3.5887
+    },
+    "weather.tornado": {
+      "start": 155.2068,
+      "dur": 7.0122
+    },
+    "weather.ice.crack": {
+      "start": 162.469,
+      "dur": 1.4139,
+      "variations": [
+        [
+          162.469,
+          1.4139
+        ],
+        [
+          164.1329,
+          1.3816
+        ]
+      ]
+    }
+  }
+}

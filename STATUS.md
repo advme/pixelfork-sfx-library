@@ -1,6 +1,6 @@
 # STATUS
 
-**Last updated:** 2026-09-22 · by **A (Claude)** · version **v0.8.0-A** · **published**: https://github.com/advme/pixelfork-sfx-library · served from GitHub Pages
+**Last updated:** 2026-09-24 · by **A (Claude)** · version **v0.9.0-A** · **published**: https://github.com/advme/pixelfork-sfx-library · served from GitHub Pages
 
 ## Next task
 **Listen through the board and flag what is wrong.** Music loops: use **⤓ Loop End** to hear
